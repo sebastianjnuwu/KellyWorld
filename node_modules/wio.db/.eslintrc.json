@@ -1,0 +1,75 @@
+{
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "commonjs": true
+    },
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ],
+        "semi-style": "error",
+        "no-extra-semi": "error",
+        "no-invalid-regexp": "error",
+        "eqeqeq": "error",
+        "use-isnan": "error",
+        "getter-return": "error",
+        "valid-typeof": "error",
+        "no-extra-bind": "error",
+        "no-eval": "error",
+        "no-eq-null": "error",
+        "no-labels": "error",
+        "no-multi-spaces": "error",
+        "no-multi-str": "error",
+        "no-new": "error",
+        "no-new-func": "error",
+        "no-new-wrappers": "error",
+        "no-redeclare": "error",
+        "array-bracket-newline": [
+            "off",
+            "always"
+        ],
+        "array-element-newline": [
+            "off"
+        ],
+        "block-spacing": [
+            "error",
+            "always"
+        ],
+        "brace-style": "error",
+        "camelcase": "error",
+        "comma-dangle": "error",
+        "comma-spacing": "error",
+        "func-call-spacing": [
+            "error",
+            "never"
+        ],
+        "lines-between-class-members": [
+            "error",
+            "always"
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 1000
+            }
+        ],
+        "max-lines": [
+            "error",
+            1000
+        ],
+        "no-new-object": "error",
+        "semi-spacing": "error",
+        "arrow-spacing": "error",
+        "arrow-parens": "error",
+        "constructor-super": "error",
+        "no-duplicate-imports": "error",
+        "no-var": "error",
+        "no-unused-vars": "warn"
+    }
+}
