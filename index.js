@@ -131,17 +131,18 @@ client.on('ready'), () => {
 	}
 }
 const { pt, en,es } = require("./src/lingua.js");
+
 const idioma = db.get(`idioma_${message.guildId}`) === 'pt' ? pt : en;
 
-client.on("messageCreate", async (message,idioma) => {
+client.on("messageCreate"), async (message,idioma) => {
     if (message.author.bot) return;
     if (message.channel.type == '')
-    return;
+    return
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
     let bot = new Discord.MessageEmbed()
     .setTitle(`Minhas informações`)
     .setColor("RANDOM")
-    .setDescription(`${idioma.mention.ola}`);
+    .setDescription(`${idioma.ola}`);
     message.channel.send({ embeds: [bot] })
     }
-});
+};
