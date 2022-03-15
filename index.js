@@ -120,24 +120,6 @@ client.on('ready', () => {
              1000 * 60
         );
     })
-	/*
-client.on('ready', (message) => {
-	const { JsonDatabase } = require("wio.db");
-	const db = new JsonDatabase({
-  databasePath:"./src/database/idioma.json"
-});
-	let guild = message.guild;
-	
-	const lingua = db.fetch(`idioma_${guild}`)
-    if ( lingua == null) {
-     return db.set(`idioma_${guild}`, pt)
-	}
-}); */
-
-const guild = message.guild;
-const idioma = db.get(`idioma_${guild}`) === 'pt' ? pt : en;
-if (idioma === null){ 
-
 
 
 client.on("messageCreate"), async (message) => {
