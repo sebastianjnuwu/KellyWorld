@@ -1,3 +1,4 @@
+# system to keep modules up to date
 version: 2
 updates:
   - package-ecosystem: "npm" 
