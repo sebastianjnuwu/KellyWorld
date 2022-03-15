@@ -1,7 +1,31 @@
-- name: Ping my site
+name: Scheduled Ping
 
-  uses: sebastianjn/is-my-site-up@v1.2 with: site: 'https://KellyWorld.kettraworld.repl.co'
+# This workflow is triggered at a scheduled interval of every 30 minutes
 
+on:
 
+  schedule:
 
+    # * is a special character in YAML so you have to quote this string.
 
+    # /30 denotes that it will run once every 30 minutes
+
+    - cron:  '*/30 * * * *'
+
+jobs:
+
+  pinger_job:
+
+    name: A job to ping
+
+    runs-on: ubuntu-latest
+
+    env:
+
+      URL: ${{ S_URL }}
+
+    steps:
+
+      - id: ping
+
+        uses: sisodiya2421/pinger@master
