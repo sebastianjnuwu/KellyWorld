@@ -60,7 +60,7 @@ client.on('ready'), () => {
 });
 	const a = db.fetch(`idioma_${guild.id}`)
 	if(idioma == null) {
-        return db.set(`idioma_${guild.id}`, pt)
+     return db.set(`idioma_${guild.id}`, pt)
 	}
 }
 
@@ -134,10 +134,9 @@ client.on('ready', () => {
         );
     })
 
-client.on ("MessageCreaten
-const idioma = db.get(`idioma_${message.guildId}`) === 'pt' ? pt : 
+const idioma = db.get(`idioma_${message.guildId}`) === 'pt' ? pt : en;
 
-client.on("messageCreate",(message,idioma) => {
+client.on("messageCreate", async (message,idioma) => {
 
     if (message.author.bot) return;
 
