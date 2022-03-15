@@ -119,17 +119,3 @@ client.on('ready', () => {
              1000 * 60
         );
     })
-
-/*
-client.on("messageCreate"), async (message) => {
-    if (message.author.bot) return;
-    if (message.channel.type == '')
-    return
-    if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-    let bot = new Discord.MessageEmbed()
-    .setTitle(`Minhas informações`)
-    .setColor("RANDOM")
-    .setDescription(`<:K_env:938833579981566043> Olá meu nome é Kelly World me chamou?`);
-    message.channel.send({ embeds: [bot] })
-    }
-}; */
