@@ -102,8 +102,8 @@ fs.readdir("./src/events/", (err, files) => {
 client.on('ready', () => {
 	
   let activities = [
-      `DELIVERY: Meu prefixo é # (hastag)!`, 
-	  `DELIVERY: Me chame para seu servidor!`, 
+      `DELIVERY: Meu prefixo é K.`, 
+	    `DELIVERY: Me chame para seu servidor!`, 
         ],
             i = 0; 
 	
