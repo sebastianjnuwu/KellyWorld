@@ -44,25 +44,11 @@ const env = require("dotenv").config()
 
 const fs = require("fs");
 
-const {pt,en,es} = require("./src/lingua.js");
-
 const colors = require('colors');
 
 client.login(process.env.token);
 
 const { joinVoiceChannel } = require('@discordjs/voice');
-
-client.on('ready'), () => {
-	
-	const { JsonDatabase } = require("wio.db");
-	const db = new JsonDatabase({
-  databasePath:"./src/database/idioma.json"
-});
-	const a = db.fetch(`idioma_${guild.id}`)
-	if(idioma == null) {
-     return db.set(`idioma_${guild.id}`, pt)
-	}
-}
 
 client.on('ready', () => {
 	
@@ -134,28 +120,28 @@ client.on('ready', () => {
         );
     })
 
+client.on('ready'), () => {
+	const { JsonDatabase } = require("wio.db");
+	const db = new JsonDatabase({
+  databasePath:"./src/database/idioma.json"
+});
+	const a = db.fetch(`idioma_${guild.id}`)
+	if(idioma == null) {
+     return db.set(`idioma_${guild.id}`, pt)
+	}
+}
+const { pt, en,es } = require("./src/lingua.js");
 const idioma = db.get(`idioma_${message.guildId}`) === 'pt' ? pt : en;
 
 client.on("messageCreate", async (message,idioma) => {
-
     if (message.author.bot) return;
-
     if (message.channel.type == '')
-
     return;
-
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-
     let bot = new Discord.MessageEmbed()
-
     .setTitle(`Minhas informações`)
-
     .setColor("RANDOM")
-
     .setDescription(`${idioma.mention.ola}`);
-
     message.channel.send({ embeds: [bot] })
-
     }
-
 });
