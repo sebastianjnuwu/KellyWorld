@@ -10,7 +10,7 @@ on:
 
     # /30 denotes that it will run once every 30 minutes
 
-    - cron:  '*/3 * * * *'
+    - cron:  '*/1 * * * *'
 
 jobs:
 
