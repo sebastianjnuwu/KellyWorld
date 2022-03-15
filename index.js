@@ -44,7 +44,7 @@ const env = require("dotenv").config()
 
 const fs = require("fs");
 
-const idioma = require("./src/lingua.js");
+const {pt_1,en_2,es_3} = require("./src/lingua.js");
 
 const colors = require('colors');
 
@@ -60,7 +60,7 @@ client.on('ready'), () => {
 });
 	const idioma = db.fetch(`idioma_${guild.id}`)
 	if(idioma == null) {
-        return db.set(`idioma_${guild.id}`, pt)
+        return db.set(`idioma_${guild.id}`, pt_1)
 	}
 }
 
