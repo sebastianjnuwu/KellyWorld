@@ -1,0 +1,7 @@
+- name: Ping my site
+
+  uses: sebastianjn/is-my-site-up@v1.2 with: site: 'https://KellyWorld.kettraworld.repl.co'
+
+
+
+
