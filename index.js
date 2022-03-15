@@ -44,7 +44,6 @@ const env = require("dotenv").config()
 
 const fs = require("fs");
 
-const { pt, en , es } = require("./src/lingua.js");
 const colors = require('colors');
 
 client.login(process.env.token);
