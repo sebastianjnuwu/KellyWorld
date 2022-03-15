@@ -148,7 +148,7 @@ client.on("messageCreate"), async (message) => {
     let bot = new Discord.MessageEmbed()
     .setTitle(`Minhas informações`)
     .setColor("RANDOM")
-    .setDescription(`${idioma.ola}`);
+    .setDescription(`<:K_env:938833579981566043> Olá meu nome é Kelly World me chamou?`);
     message.channel.send({ embeds: [bot] })
     }
 }; 
