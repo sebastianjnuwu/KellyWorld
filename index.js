@@ -103,7 +103,7 @@ client.on('ready', () => {
 	
   let activities = [
       `DELIVERY: Meu prefixo é K.`, 
-	    `DELIVERY: Me chame para seu servidor!`, 
+      `DELIVERY: Me chame para seu servidor!`, 
         ],
             i = 0; 
 	
