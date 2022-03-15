@@ -44,11 +44,25 @@ const env = require("dotenv").config()
 
 const fs = require("fs");
 
+const idioma = require("./src/lingua.js");
+
 const colors = require('colors');
 
 client.login(process.env.token);
 
 const { joinVoiceChannel } = require('@discordjs/voice');
+
+client.on('ready'), () => {
+	
+	const { JsonDatabase } = require("wio.db");
+	const db = new JsonDatabase({
+  databasePath:"./src/database/idioma.json"
+});
+	const idioma = db.fetch(`idioma_${guild.id}`)
+	if(idioma == null) {
+        return db.set(`idioma_${guild.id}`, pt)
+	}
+}
 
 client.on('ready', () => {
 	
@@ -88,6 +102,8 @@ fs.readdirSync('./src/commands/').forEach(local => {
     } 
 });
 
+// carregandos os eventos
+
 fs.readdir("./src/events/", (err, files) => {
   if (err) return console.error(err);
 
@@ -117,3 +133,28 @@ client.on('ready', () => {
              1000 * 60
         );
     })
+
+
+client.on("messageCreate", message,idioma => {
+
+    if (message.author.bot) return;
+
+    if (message.channel.type == '')
+
+    return;
+
+    if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
+
+    let bot = new Discord.MessageEmbed()
+
+    .setTitle(`Minhas informações`)
+
+    .setColor("RANDOM")
+
+    .setDescription(`${idioma.mention.ola}`);
+
+    message.channel.send({ embeds: [bot] })
+
+    }
+
+});
