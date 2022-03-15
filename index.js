@@ -44,7 +44,7 @@ const env = require("dotenv").config()
 
 const fs = require("fs");
 
-const {pt_1,en_2,es_3} = require("./src/lingua.js");
+const {pt,en,es} = require("./src/lingua.js");
 
 const colors = require('colors');
 
@@ -58,9 +58,9 @@ client.on('ready'), () => {
 	const db = new JsonDatabase({
   databasePath:"./src/database/idioma.json"
 });
-	const idioma = db.fetch(`idioma_${guild.id}`)
+	const a = db.fetch(`idioma_${guild.id}`)
 	if(idioma == null) {
-        return db.set(`idioma_${guild.id}`, pt_1)
+        return db.set(`idioma_${guild.id}`, pt)
 	}
 }
 
@@ -134,8 +134,10 @@ client.on('ready', () => {
         );
     })
 
+client.on ("MessageCreaten
+const idioma = db.get(`idioma_${message.guildId}`) === 'pt' ? pt : 
 
-client.on("messageCreate", message,idioma => {
+client.on("messageCreate",(message,idioma) => {
 
     if (message.author.bot) return;
 
