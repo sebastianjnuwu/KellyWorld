@@ -1,4 +1,4 @@
-//início de uma nova aventuru!
+
 var http = require('http');
 
 http.createServer(function (req, res) {
@@ -44,6 +44,7 @@ const env = require("dotenv").config()
 
 const fs = require("fs");
 
+const { pt, en , es } = require("./src/lingua.js");
 const colors = require('colors');
 
 client.login(process.env.token);
@@ -119,22 +120,27 @@ client.on('ready', () => {
              1000 * 60
         );
     })
-
-client.on('ready'), () => {
+	/*
+client.on('ready', (message) => {
 	const { JsonDatabase } = require("wio.db");
 	const db = new JsonDatabase({
   databasePath:"./src/database/idioma.json"
 });
-	const lingua = db.fetch(`idioma_${guild.id}`)
+	let guild = message.guild;
+	
+	const lingua = db.fetch(`idioma_${guild}`)
     if ( lingua == null) {
-     return db.set(`idioma_${guild.id}`, pt)
+     return db.set(`idioma_${guild}`, pt)
 	}
-}
-const { pt, en,es } = require("./src/lingua.js");
+}); */
 
-const idioma = db.get(`idioma_${message.guildId}`) === 'pt' ? pt : en;
+const guild = message.guild;
+const idioma = db.get(`idioma_${guild}`) === 'pt' ? pt : en;
+if (idioma === null){ 
 
-client.on("messageCreate"), async (message,idioma) => {
+
+
+client.on("messageCreate"), async (message) => {
     if (message.author.bot) return;
     if (message.channel.type == '')
     return
@@ -145,4 +151,4 @@ client.on("messageCreate"), async (message,idioma) => {
     .setDescription(`${idioma.ola}`);
     message.channel.send({ embeds: [bot] })
     }
-};
+}; 
