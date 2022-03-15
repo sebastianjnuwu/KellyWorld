@@ -120,7 +120,7 @@ client.on('ready', () => {
         );
     })
 
-
+/*
 client.on("messageCreate"), async (message) => {
     if (message.author.bot) return;
     if (message.channel.type == '')
@@ -132,4 +132,4 @@ client.on("messageCreate"), async (message) => {
     .setDescription(`<:K_env:938833579981566043> Olá meu nome é Kelly World me chamou?`);
     message.channel.send({ embeds: [bot] })
     }
-}; 
+}; */
