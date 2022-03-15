@@ -22,7 +22,7 @@ jobs:
 
     env:
 
-      URL: ${{ S_URL }}
+      URL: https://KellyWorld.kettraworld.repl.co
 
     steps:
 
