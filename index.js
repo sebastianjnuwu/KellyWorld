@@ -125,8 +125,8 @@ client.on('ready'), () => {
 	const db = new JsonDatabase({
   databasePath:"./src/database/idioma.json"
 });
-	const a = db.fetch(`idioma_${guild.id}`)
-	if(idioma == null) {
+	const lingua = db.fetch(`idioma_${guild.id}`)
+    if ( lingua == null) {
      return db.set(`idioma_${guild.id}`, pt)
 	}
 }
