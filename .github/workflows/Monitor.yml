@@ -6,7 +6,7 @@ on:
 
   schedule:
 
-    - cron:  "0 */2 * * *"
+    - cron:  "0 */12 * * *"
 
 jobs:
 
@@ -40,7 +40,7 @@ jobs:
 
           git add .
 
-          git commit -m "🗒️ Up!"
+          git commit -m "🗒️ update!!"
 
       - name: 🚀 Push changes
 
