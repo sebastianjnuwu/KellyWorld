@@ -1,13 +1,22 @@
-No"tmessage"tmessagetmessa"tmessagetmessatmessagetmessatmessagetmessatmessagetmessa onst willindo = new Discord.MessageEmbed()  .setDescription("ng sendo Calculado...**")
-  .setColor('#ff0f00')
-  message.channel.send(willindo).then(msg => {
+const Discord = require("discord.js");
+
+module.exports = {
+    name: "ping",
+    aliases: ["ping"],
+
+  run: async(client, message, msg, args) => {
+      
+  const embed = new Discord.MessageEmbed()
+  .setDescription("**Ping sendo Calculado...**")
+  .setColor(`RANDOM`)
+  message.channel.send({ embeds: [embed]}).then(msg => {
     setTimeout(() => {
-      let willping = new Discord.MessageEmbed()
-      .setTitle(`🏓 | Pong !`)
-      .setDescription(`Latência da API: **${Math.round(client.ws.ping)}ms**
-Latência do Servidor: **${msg.createdTimestamp - message.createdTimestamp}ms**`)
-      .setColor('#ff0f00')
-    msg.edit(willping)
+      let embed2 = new Discord.MessageEmbed()
+      .setTitle(`🏓 Pong!`)
+      .setDescription(`Latência da API: **${Math.round(client.ws.ping)}ms**\nLatência do Servidor: **${msg.createdTimestamp - message.createdTimestamp}ms**`)
+      .setColor(`RANDOM`)
+    msg.edit({embeds: [embed2]})
     }, 5000)
   });
-} 
+}
+}
