@@ -6,7 +6,7 @@ workflow_dispatch:
 
   schedule:
 
-    - cron:  "*/5 * * * *"
+    - cron:  "0 /5 * * * *"
 
 jobs:
 
@@ -22,13 +22,13 @@ jobs:
 
         with:
 
-          node-version: "16.7.0"
+          node-version: "12.18.3"
 
       
 
       - name: 🛸 Check status
 
-        run: npm install && npm start
+        run: npm install
 
       - name: ⌨️ Commit files
 
