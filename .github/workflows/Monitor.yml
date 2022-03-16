@@ -2,19 +2,11 @@ name: Monitor
 
 on:
 
- push:
-
-    branches: [ main ]
-
-  pull_request:
-
-    # The branches below must be a subset of the branches above
-
-    branches: [ main ]
+workflow_dispatch:
 
   schedule:
 
-    - cron:  "* */1 * * *"
+    - cron:  "*/5 * * * *"
 
 jobs:
 
@@ -36,7 +28,7 @@ jobs:
 
       - name: 🛸 Check status
 
-        run: npm install
+        run: npm install && npm start
 
       - name: ⌨️ Commit files
 
