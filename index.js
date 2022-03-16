@@ -40,14 +40,6 @@ const client = new Discord.Client({intents: 14071});
 
 const config = require("./config.json");
 
-const { JsonDatabase } = require("wio.db");
-const db = new JsonDatabase({
-  databasePath:"./src/database/database.json"
-});
-setInterval(function() {
-db.add("test", 1);
-}, 1.68e+6);
-
 const env = require("dotenv").config()
 
 const fs = require("fs");
