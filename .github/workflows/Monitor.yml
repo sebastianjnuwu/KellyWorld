@@ -1,9 +1,8 @@
 name: Monitor
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron:  "*/15 * * * *"
+    - cron:  "59 0 * * *"
 
 jobs:
   build:
