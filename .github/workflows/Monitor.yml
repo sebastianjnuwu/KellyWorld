@@ -21,10 +21,10 @@ jobs:
 
       - name: ⌨️ Commit files
         run: |
-          git config --local user.email "kettraworld@gmail.com"
-          git config --local user.name  "Rehhbeka"
+          git config --local user.email "sebastianjn007@gmail.com"
+          git config --local user.name  "sebastianjn"
           git add .
-          git commit -m "🗒️ Updated Summary"
+          git commit -m "🗒 update nos bancos de dados!"
 
       - name: 🚀 Push changes
         uses: ad-m/github-push-action@master
