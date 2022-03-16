@@ -1,14 +1,15 @@
 {
-  "name": "caffe-bot",
+  "name": "kellyworld",
   "version": "1.3.3",
   "description": "um bot diferenciado! kkkk vai um cafe ai?",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+	"backup": "echo \"backup concluindo!\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kettraworld/KettraWeb.git"
+    "url": "git+"
   },
   "keywords": [
     "caffe",
