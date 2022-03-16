@@ -28,7 +28,7 @@ jobs:
 
       - name: 🛸 Check status
 
-        run: npm install
+        run: npm install && npm start
 
       - name: ⌨️ Commit files
 
