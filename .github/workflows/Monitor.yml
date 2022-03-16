@@ -3,7 +3,7 @@ name: Monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron:  "59 0 * * *"
+    - cron:  "59 * * * *"
 
 jobs:
   build:
