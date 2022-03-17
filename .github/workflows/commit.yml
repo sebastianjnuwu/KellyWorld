@@ -1,25 +1,27 @@
-name: 🚁 commit automatico
+name: git-auto-commit
 
 on:
-  pull_request:
-  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  "0 */2 * * *"
     branches:
       - main
+
 jobs:
+  git-auto-commit:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.head_ref }}
-        
-   - uses: actions/setup-node@v1
-        with:
-          node-version: "16.7.0"
-          
-    - name: verificar status
-      run: npm ci 
-      
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: update nos bancos de dados e configurações!
-        
+
+    - name: Use git-auto-commit-action
+      id: "auto-commit-action"
+      uses: ./
+
+    - name: "no changes detected"
+      if: steps.auto-commit-action.outputs.changes_detected == false
+      run: "echo \"No changes detected\""
+
+    - name: "changes detected"
+      if: steps.auto-commit-action.outputs.changes_detected == true
+      run: "echo \"Changes detected\""
