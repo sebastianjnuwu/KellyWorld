@@ -6,7 +6,7 @@ on:
 
   schedule:
 
-    - cron:  "0 */2 * * *"
+    - cron:  "0 */12 * * *"
 
 jobs:
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: 🛸 Check status
 
-        run: npm ci && npm install && npm start
+        run: npm ci
 
       - name: ⌨️ Commit files
 
