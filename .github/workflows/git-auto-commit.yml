@@ -1,9 +1,9 @@
 name: git-auto-commit
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron:  "0 */2 * * *"
+workflow_dispatch:
+
+
     branches:
       - main
 
