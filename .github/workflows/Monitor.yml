@@ -14,10 +14,10 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: "12.18.3"
+          node-version: "16.7.0"
       
       - name: 🛸 Check status
-        run: npm install
+        run: npm ci
 
       - name: ⌨️ Commit files
         run: |
