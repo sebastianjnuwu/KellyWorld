@@ -2,7 +2,7 @@
 
   with:
 
-    # Optional. Commit message for the created commit.
+    # Optioal. Commit message for the created commit.
 
     # Defaults to "Apply automatic changes"
 
