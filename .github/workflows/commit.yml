@@ -28,7 +28,7 @@ jobs:
 
       - name: 🛸 Check status
 
-        run: npm ci && npm install
+        run: git status npm ci && npm install
 
       - name: ⌨️ Commit files
 
