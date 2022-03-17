@@ -1,9 +1,9 @@
-name: Monitor
+name: 🚁 commit automatico
 
 on:
   workflow_dispatch:
   schedule:
-    - cron:  "59 * * * *"
+    - cron:  "0 */2 * * *"
 
 jobs:
   build:
