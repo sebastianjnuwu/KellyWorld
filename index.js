@@ -1,4 +1,6 @@
 //iniciando.......
+const colors = require('colors');
+
 var http = require('http');
 
 http.createServer(function (req, res) {
@@ -15,23 +17,31 @@ const ping = new Date();
 }).listen(process.env.PORT);
 
     process.on('unhandledRejection', (reason, p) => {    
-       console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
-       console.log(reason, p);
+       console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');   
+       client.login(process.env.token).then(() => {
+       client.channels.fetch("933358218552442951").then((canal) => {
+       canal.send(reason, p)})})
     });
     
     process.on("uncaughtException", (err, origin) => {
         console.log(' [ ANTICLASH] | CATCH ERROR');
-        console.log(err, origin);
+        client.login(process.env.token).then(() => {
+        client.channels.fetch("933358218552442951").then((canal) => {
+        canal.send(err, origin)})})
     }) 
 
     process.on('uncaughtExceptionMonitor', (err, origin) => {
         console.log(' [ ANTICLASH ] | BLOQUEADO');
-        console.log(err, origin);
+        client.login(process.env.token).then(() => {
+        client.channels.fetch("933358218552442951").then((canal) => {
+        canal.send(err, origin)})})
     });
 
     process.on('multipleResolves', (type, promise, reason) => {
         console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
-        console.log(type, promise, reason);
+        client.login(process.env.token).then(() => {
+        client.channels.fetch("933358218552442951").then((canal) => {
+        canal.send(type, promise, reason)})})
     }); 
 
 const Discord = require("discord.js");
@@ -45,8 +55,6 @@ const config = require("./config.json");
 const env = require("dotenv").config()
 
 const fs = require("fs");
-
-const colors = require('colors');
 
 client.login(process.env.token);
 
