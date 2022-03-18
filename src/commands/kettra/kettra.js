@@ -9,9 +9,10 @@ run: async(client, message, args) => {
  let guild = message.guild.id;
  
 	if(guild.id == "893997835412971570") {
-    if (args[0] == 'convite') 
+	return 
+    if (args[0] == 'convite') {
      
- const embed = new Discord.MessageEmbed()
+ let embed = new Discord.MessageEmbed()
     .setTitle(`🌟 convide amigos para se juntar!`)
     .setDescription(`convide seus amigos por este link: https://kettraworld.github.io/discord`)
     .setColor('RANDOM')
@@ -29,4 +30,4 @@ run: async(client, message, args) => {
     } 
   }
 	 }
-}
+					  }
