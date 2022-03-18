@@ -36,6 +36,8 @@ const ping = new Date();
 
 const Discord = require("discord.js");
 
+const API = require("./src/apis/API.js");
+
 const client = new Discord.Client({intents: 14071});
 
 const config = require("./config.json");
