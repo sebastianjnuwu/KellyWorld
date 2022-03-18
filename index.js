@@ -119,3 +119,19 @@ client.on('ready', () => {
              1000 * 60
         );
     })
+
+client.on('guildMemberAdd', member => {
+    
+  const channel = member.guild.channels.cache.find(ch => ch.name === '🎑┇bem-vindos');
+  if (!channel) return;
+  
+  let embed = new Discord.MessageEmbed()
+
+  .setThumbnail(member.user.displayAvatarURL())
+  .setImage("https://raw.githubusercontent.com/sebastianjn/host/main/imagens/bemvindo.jpeg")
+ .setColor('RANDOM')
+ .setTitle (`Bem vindos a KettraWorld!`)
+ .setDescription(`${member.user.tag} Estamos atualmente com ${member.guild.memberCount} membros\nQue tal chamar mas amigos?\n\n**Quem Somos?**\n🎑 KettraWorld é um servidor de minecraft rpg com estilo medieval\nVoçe começara sua jornada com a gente e escrever sua própria história 📖\n\n**Veja nossas regras!**\nimportante que vocé lé as nossas regras para manter uma boa convivencia com as pessoas! **Digite K.ip e digo no pv!**`)
+.setTimestamp();
+channel.send({ content: `${member}`, embeds: [embed] });
+});
