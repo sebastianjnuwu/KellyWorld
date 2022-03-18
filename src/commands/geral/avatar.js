@@ -4,7 +4,7 @@ module.exports = {
   name: "avatar",
   aliases: ['avatar', 'avata'],
   async run(bot, message, args) {
-  let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
+  let user = message.mentions.users.first() || bot.users.cache.get(args[0]) || message.author;
   const EMBED = new Discord.MessageEmbed()
     .setTitle(`🖼 ${user.username}`)
     .setDescription(
