@@ -4,8 +4,11 @@ module.exports = {
     name: "sugerir",
     aliases: ["sugerir", "sugestão"],
 run: async (client, message, args) => {
-    
 message.delete();
+
+	if( message.guild.id !== "893997835412971570") {
+	  return
+	} else {
 
 const content = args.join(" ");
 
@@ -40,4 +43,5 @@ message.channel.send(`${message.author} a mensagem foi enviada com sucesso!`).th
             })
       }
   }
+}
 }
