@@ -5,7 +5,11 @@ module.exports = {
     aliases: ["ping"],
 
   run: async(client, message, msg, args) => {
-      
+  
+   if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
+    return message.reply("<:K_zan:924366252024164363>  eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ")
+  }
+  
   const embed = new Discord.MessageEmbed()
   .setDescription("**Ping sendo Calculado...**")
   .setColor(`RANDOM`)
