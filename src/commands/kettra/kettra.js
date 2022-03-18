@@ -6,9 +6,17 @@ module.exports = {
 
 run: async(client, message, args) => {
  
+<<<<<<< HEAD
  if(guild= "893997835412971570") {
 	 return;
   if(args[0] == 'convite') {
+=======
+	if( message.guild.id !== "893997835412971570") {
+	  return;
+	} else {
+	  
+	if (args[0] == 'convite') {
+>>>>>>> origin/main
      
  let embed = new Discord.MessageEmbed()
     .setTitle(`🌟 convide amigos para se juntar!`)
@@ -27,5 +35,6 @@ run: async(client, message, args) => {
 
     } 
   }
-	 }
+}
+}
 					  
