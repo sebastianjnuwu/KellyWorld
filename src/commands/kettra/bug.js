@@ -4,8 +4,10 @@ module.exports = {
     name: "bug",
     aliases: ["bug"],
 run: async (client, message, args) => {
-    
 message.delete();
+	if( message.guild.id !== "893997835412971570") {
+	  return
+	} else {
 const content = args.join(" ");
 
 if (!args[0]) {
@@ -41,3 +43,4 @@ if (!args[0]) {
          }
 								 }
 		}
+}
