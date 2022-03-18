@@ -5,9 +5,10 @@ module.exports = {
     aliases: ["kettra"],
 
 run: async(client, message, args) => {
-    
-    if (args[0] == 'convite') {
-      
+
+	if(guild.id == "893997835412971570") {
+    if (args[0] == 'convite') 
+     
  const embed = new Discord.MessageEmbed()
     .setTitle(`🌟 convide amigos para se juntar!`)
     .setDescription(`convide seus amigos por este link: https://kettraworld.github.io/discord`)
@@ -26,3 +27,4 @@ run: async(client, message, args) => {
     } 
   }
 	 }
+}
