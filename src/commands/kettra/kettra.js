@@ -5,7 +5,9 @@ module.exports = {
     aliases: ["kettra"],
 
 run: async(client, message, args) => {
-
+ 
+ let guild = message.guild.id;
+ 
 	if(guild.id == "893997835412971570") {
     if (args[0] == 'convite') 
      
