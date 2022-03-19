@@ -1,4 +1,4 @@
-# Welcome to the official KellyWorld repository!
+# 👋 Welcome to the official KellyWorld repository!
 
 <p align="center">
 My name is Kelly World I love drawings! <br> I love coffee ! how about buying it for me?
@@ -8,8 +8,8 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
   </a>
 </p>
 
-# Terms of Service and Privacy
+# 📜 Terms of Service and Privacy
 
-well as i'm going to be part of your server i need you to look at my terms of service it's like some rules of coexistence to see what i ask to work and of course for you to use a lot!
+In order for me to work well, I need some information from you and other users on Discord, for this I have terms of service, so you can see what I ask of you and, it's cl.
 
-📜 Read My Terms by [clicking here!](https://github.com/sebastianjn/KellyWorld/blob/main/SECURITY.md)
+KellyWorld and Development Team always wants the best for you, KellyWorld's terms are very simple it follows all discord rules according to the user user! if something happens that doesn't go with the discord guidelines, it's the responsibility of the user who commented on the infraction! and shall and shall be punished!
