@@ -6,28 +6,28 @@ module.exports = {
 
 if(!message.guild.me.permissions.has("ADMINISTRATOR")) {     return message.reply("<:K_zan:924366252024164363>  eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ") 
 }
-    if(!message.member.permissions.has('BAN_MEMBERS')) return message.reply(`${message.author}\n**Você não possui a permissão para banir membros.**`).then(mDel => {
+    if(!message.member.permissions.has('BAN_MEMBERS')) return message.reply(`${message.author} **Você não possui a permissão para banir membros.**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
       }, 10000)
     })
 
-    if(!message.guild.me.permissions.has('BAN_MEMBERS')) return message.reply(`${message.author}\n**Eu não tenho permissão para banir membros.**`).then(mDel => {
+    if(!message.guild.me.permissions.has('BAN_MEMBERS')) return message.reply(`${message.author} **Eu não tenho permissão para banir membros.**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
       }, 10000)
     })
 
-    if(!args[0]) return message.reply(`${message.author}\n**Você não informou o membro a ser banido.**`).then(mDel => {
+    if(!args[0]) return message.reply(`${message.author} **Você não informou o membro a ser banido.**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
       }, 10000)
     })
 
-    if(isNaN(args[0]) && !args[0].startsWith('<@') && !args[0].endsWith('>')) return message.reply(`${message.author}\n**Isto não é uma menção ou um id válido.**`).then(mDel => {
+    if(isNaN(args[0]) && !args[0].startsWith('<@') && !args[0].endsWith('>')) return message.reply(`${message.author} **Isto não é uma menção ou um id válido.**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
@@ -42,19 +42,19 @@ if(!message.guild.me.permissions.has("ADMINISTRATOR")) {     return message.repl
         message.delete().catch(o_U => {})
       }, 10000)
     })
-    if(member.id === message.author.id) return message.reply(`${message.author}\n**Você não pode banir a si mesmo.**`).then(mDel => {
+    if(member.id === message.author.id) return message.reply(`${message.author} **Você não pode banir a si mesmo.**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
       }, 10000)
     })
-    if(member.id === client.user.id) return message.reply(`${message.author}\n**Você não pode me banir usando o meu comando.**`).then(mDel => {
+    if(member.id === client.user.id) return message.reply(`${message.author} **Você não pode me banir!**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
       }, 10000)
     })
-    if(!member.bannable) return message.reply(`${message.author}\n**Eu não consigo banir este membro.**`).then(mDel => {
+    if(!member.bannable) return message.reply(`${message.author} **Eu não consigo banir este membro.**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
