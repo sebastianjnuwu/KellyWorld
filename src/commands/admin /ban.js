@@ -79,15 +79,10 @@ module.exports = {
         let emoji = reaction.map(x => x.emoji.name).toString()
 
         if(emoji === '✅') {
-          let embed = new MessageEmbed()
-          .setTitle('🛑 VOCÊ FOI BANIDO')
-          .setColor('RED')
-          .setDescription(`**Você foi banido no servidor \`${message.guild.name}\`.**`)
-          .addFields(
-            { name: '📌 Motivo', value: reason }
-          )
-          member.send({ embeds: [embed] }).catch(o_U => {})
-          msg.edit(`${message.author}\n**O membro \`${member.user.tag}\` foi banido do servidor com sucesso.**\n*Motivo: **${reason}***`).then(mDel => {
+      
+          member.send(`infelizmente vocé foi banido do servidor **${message.guild.name}, o motivo: **${reason}`).catch(o_U => {})
+          
+      msg.edit(`${message.author}\n**O membro \`${member.user.tag}\` foi banido do servidor com sucesso.**\n*Motivo: **${reason}***`).then(mDel => {
             setTimeout(() => {
               mDel.delete().catch(o_U => {})
               message.delete().catch(o_U => {})
