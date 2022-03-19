@@ -4,28 +4,32 @@ module.exports = {
   name: 'ban',
   run: async (client, message, args) => {
 
-if(!message.guild.me.permissions.has("ADMINISTRATOR")) {     return message.reply("<:K_zan:924366252024164363>  eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ") 
+    if(!message.guild.me.permissions.has("ADMINISTRATOR")) {    
+       return message.reply("<:K_zan:924366252024164363>  eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ") 
 }
-    if(!message.member.permissions.has('BAN_MEMBERS')) return message.reply(`${message.author} **Você não possui a permissão para banir membros.**`).then(mDel => {
-      setTimeout(() => {
-        mDel.delete().catch(o_U => {})
-        message.delete().catch(o_U => {})
-      }, 10000)
+    if(!message.member.permissions.has('BAN_MEMBERS')) 
+       return message.reply(`${message.author} **Você não possui a permissão para banir membros.**`).then(mDel => {
+           setTimeout(() => {
+              mDel.delete().catch(o_U => {})
+           message.delete().catch(o_U => {})
+        }, 10000)
     })
 
-    if(!message.guild.me.permissions.has('BAN_MEMBERS')) return message.reply(`${message.author} **Eu não tenho permissão para banir membros.**`).then(mDel => {
-      setTimeout(() => {
-        mDel.delete().catch(o_U => {})
-        message.delete().catch(o_U => {})
-      }, 10000)
-    })
+    if(!message.guild.me.permissions.has('BAN_MEMBERS'))
+       return message.reply(`${message.author} **Eu não tenho permissão para banir membros.**`).then(mDel => {
+           setTimeout(() => {
+              mDel.delete().catch(o_U => {})
+            message.delete().catch(o_U => {})
+         }, 10000)
+      })
 
-    if(!args[0]) return message.reply(`${message.author} **Você não informou o membro a ser banido.**`).then(mDel => {
+    if(!args[0]) 
+    return message.reply(`${message.author} **Você não informou o membro a ser banido.**`).then(mDel => {
       setTimeout(() => {
-        mDel.delete().catch(o_U => {})
+          mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
-      }, 10000)
-    })
+    }, 10000)
+  })
 
     if(isNaN(args[0]) && !args[0].startsWith('<@') && !args[0].endsWith('>')) return message.reply(`${message.author} **Isto não é uma menção ou um id válido.**`).then(mDel => {
       setTimeout(() => {
