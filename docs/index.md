@@ -5,7 +5,7 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 </br>
 <br>
  <img src="https://raw.githubusercontent.com/sebastianjn/host/main/imagens/mimosa.png" width="350" height="350">
-  </a>
+ 
 </p>
 
 # Terms of Service and Privacy
