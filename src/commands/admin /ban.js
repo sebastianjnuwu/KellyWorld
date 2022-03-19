@@ -48,7 +48,7 @@ if(!message.guild.me.permissions.has("ADMINISTRATOR")) {     return message.repl
         message.delete().catch(o_U => {})
       }, 10000)
     })
-    if(member.id === this.client.user.id) return message.reply(`${message.author}\n**Você não pode me banir usando o meu comando.**`).then(mDel => {
+    if(member.id === client.user.id) return message.reply(`${message.author}\n**Você não pode me banir usando o meu comando.**`).then(mDel => {
       setTimeout(() => {
         mDel.delete().catch(o_U => {})
         message.delete().catch(o_U => {})
@@ -82,7 +82,6 @@ if(!message.guild.me.permissions.has("ADMINISTRATOR")) {     return message.repl
           .addFields(
             { name: '📌 Motivo', value: reason }
           )
-          .setFooter(`Banido por ${message.author.username}`)
           member.send({ embeds: [embed] }).catch(o_U => {})
           msg.edit(`${message.author}\n**O membro \`${member.user.tag}\` foi banido do servidor com sucesso.**\n*Motivo: **${reason}***`).then(mDel => {
             setTimeout(() => {
