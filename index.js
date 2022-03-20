@@ -137,3 +137,4 @@ client.on('guildMemberAdd', member => {
 .setTimestamp();
 channel.send({ content: `${member}`, embeds: [embed] });
 });
+

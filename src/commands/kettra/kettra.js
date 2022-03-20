@@ -15,9 +15,9 @@ run: async(client, message, args) => {
  let embed = new Discord.MessageEmbed()
     .setTitle(`🌟 convide amigos para se juntar!`)
     .setDescription(`convide seus amigos por este link: https://kettraworld.github.io/discord`)
-    .setColor('RANDOM')
+    .setColor('RANDOM');
     
-   message.channel.send({ embeds: [embed] })
+   message.channel.send({ embeds: [embed] });
 
     } else if (args[0] == 'site') {
     
@@ -25,9 +25,9 @@ run: async(client, message, args) => {
      
     } else if (args[0] == 'voto') {
       
-        message.reply("vocé ja deu 1 voto para kettra? clique aqui: https://kettraworld.github.io/votar.html")
+        message.reply("vocé ja deu 1 voto para kettra? clique aqui: https://kettraworld.github.io/votar.html");
 
     } 
   }
 }
-}
+};
