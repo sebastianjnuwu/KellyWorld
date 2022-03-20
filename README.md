@@ -19,3 +19,7 @@ KellyWorld and Development Team always wants the best for you, KellyWorld's term
 # 📃 License
 
 ฅ^•ﻌ•^ฅ this repository is licensed: https://apache.org/licenses/LICENSE-2.0
+
+# ❤️ Donation 
+
+<img 
