@@ -134,7 +134,7 @@ client.on('guildMemberAdd', member => {
       .setImage("https://raw.githubusercontent.com/sebastianjn/host/main/imagens/bemvindo.jpeg")
       .setColor('RANDOM')
       .setTitle (`Bem vindos a KettraWorld!`)
-      .setDescription(`**Anjo:**  Olá Humano **${member.user.tag}!** Sou seu anjo da guarda em KettraWorld, com você **${member.guild.memberCount}** almas foram ajudadas por mim!\n\nAgora vamos ao que importa, o mundo que você renascera se chama Kettra, um magnífico mundo RPG onde você ira criar a sua história e junto de seus companheiros de aventura irão desbravar esse imenso lugar e descobrir todos os seus segredos.\n\nPor enquanto nos despedimos aqui, quando você entrar em Kettra estarei lá para te acompanhar e ajudar em sua nova jornada.\nUse **K.ip** para descobrir o caminho de como entrar em KettraWorld`)
+      .setDescription(`**Anjo:**  Olá Humano **${member.user.tag}!** Sou seu anjo da guarda em KettraWorld, com você **${member.guild.memberCount}** almas foram ajudadas por mim!\n\nAgora vamos ao que importa, o mundo que você renascera se chama Kettra, um magnífico mundo RPG onde você ira criar a sua história e junto de seus companheiros de aventura irão desbravar esse imenso lugar e descobrir todos os seus segredos.\n\nPor enquanto nos despedimos aqui, quando você entrar em Kettra estarei lá para te acompanhar e ajudar em sua nova jornada.\n\nUse **K.ip** para descobrir o caminho de como entrar em KettraWorld`)
       
  channel.send({ content: `${member}`, embeds: [embed] });
  
