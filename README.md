@@ -18,7 +18,7 @@ KellyWorld and Development Team always wants the best for you, KellyWorld's term
 
 # ❤️ Donation 
 
-☕ you have the power to make a difference, make a donation of any symbolic value for our developers to have a good coffee.
+you have the power to make a difference, make a donation of any symbolic value for our developers to have a good coffee ☕
 
 🌟 Make your donation [by clicking here!](https://ko-fi.com/sebastianjn007)
 
