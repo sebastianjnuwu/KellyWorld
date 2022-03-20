@@ -1,7 +1,6 @@
 const { Discord, Client } = require("discord.js");
 const dotenv = require("dotenv").config();
 const client = new Client({intents: 512});
-
 const mysql = require('mysql2');
 
  const connection = mysql.createConnection({
@@ -31,15 +30,19 @@ connection.query('SELECT * FROM transacao WHERE status_transacao = 2', function 
       
      client.login(process.env.token).then(() => {
      client.channels.fetch("916730351248867359").then((canal) => {
-     canal.send({ content: `ouro adicionar \`${nick}\` 1800` })})});
+     canal.send({ content: `ouro adicionar \`${nick}\` 1800` });
+     });
+ });
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("944959402329395210").then((canal) => {
-     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` })})})
+     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
+     });
+ });
      
      connection.query('DELETE FROM transacao WHERE transacao.uuid = ?', [`${uuid}`] , function(err, rows, fields) {
    
-})
+});
 
 }
 
@@ -49,15 +52,19 @@ if (id_pacote === 2 ) {
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("916730351248867359").then((canal) => {
-     canal.send({ content: `ouro adicionar \`${nick}\` 3500` })})})
+     canal.send({ content: `ouro adicionar \`${nick}\` 3500` });
+    });
+});
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("944959402329395210").then((canal) => {
-     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` })})})
+     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
+     });
+  });
     
     connection.query('DELETE FROM transacao WHERE transacao.uuid = ?', [`${uuid}`] , function(err, rows, fields) {
    
-})
+});
 
 }
 
@@ -66,15 +73,19 @@ if (id_pacote === 3 ) {
 
      client.login(process.env.token).then(() => {
      client.channels.fetch("916730351248867359").then((canal) => {
-     canal.send({ content: `ouro adicionar \`${nick}\` 4700` })})})
+     canal.send({ content: `ouro adicionar \`${nick}\` 4700` });
+     });
+ });
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("944959402329395210").then((canal) => {
-     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` })})})
+     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
+     });
+ });
 
 connection.query('DELETE FROM transacao WHERE transacao.uuid = ?', [`${uuid}`] , function(err, rows, fields) {
    
-})
+});
 
 }
 
@@ -82,15 +93,19 @@ if (id_pacote === 4 ) {
       
      client.login(process.env.token).then(() => {
      client.channels.fetch("916730351248867359").then((canal) => {
-     canal.send({ content: `ouro adicionar \`${nick}\` 7500` })})})
+     canal.send({ content: `ouro adicionar \`${nick}\` 7500` });
+     });
+ });
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("944959402329395210").then((canal) => {
-     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` })})})
+     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
+    });
+  });
     
     connection.query('DELETE FROM transacao WHERE transacao.uuid = ?', [`${uuid}`] , function(err, rows, fields) {
    
-})
+});
 
 }
 
@@ -99,15 +114,19 @@ if (id_pacote === 5 ) {
     
      client.login(process.env.token).then(() => {
      client.channels.fetch("916730351248867359").then((canal) => {
-     canal.send({ content: `ouro adicionar \`${nick}\` 10900` })})})
+     canal.send({ content: `ouro adicionar \`${nick}\` 10900` });
+     });
+ });
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("944959402329395210").then((canal) => {
-     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` })})})
+     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
+     });
+  });
     
     connection.query('DELETE FROM transacao WHERE transacao.uuid = ?', [`${uuid}`] , function(err, rows, fields) {
    
-})
+});
 
 }
 
@@ -115,15 +134,19 @@ if (id_pacote === 6 ) {
       
      client.login(process.env.token).then(() => {
      client.channels.fetch("916730351248867359").then((canal) => {
-     canal.send({ content: `ouro adicionar \`${nick}\` 26300` })})})
+     canal.send({ content: `ouro adicionar \`${nick}\` 26300` });
+     });
+  });
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("944959402329395210").then((canal) => {
-     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` })})})
+     canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
+     });
+  });
     
     connection.query('DELETE FROM transacao WHERE transacao.uuid = ?', [`${uuid}`] , function(err, rows, fields) {
    
-})
+});
 
 }
  // parou aqui!
