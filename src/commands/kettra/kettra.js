@@ -7,7 +7,9 @@ module.exports = {
 run: async(client, message, args) => {
  
 	if( message.guild.id !== "893997835412971570") {
-	  return
+		
+	  return;
+		
 	} else {
 	  
 	if (args[0] == 'convite') {

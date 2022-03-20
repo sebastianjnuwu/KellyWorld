@@ -1,5 +1,5 @@
 const { Discord, Client } = require("discord.js");
-const dotenv = require("dotenv").config()
+const dotenv = require("dotenv").config();
 const client = new Client({intents: 512});
 
 const mysql = require('mysql2');
@@ -11,9 +11,9 @@ const mysql = require('mysql2');
   database        : `${process.env.database}`
 });
 
-console.log("[Info] conectado com sucesso no mysql!")
+console.log("[Info] conectado com sucesso no mysql!");
 
-console.log("[Info] Api de pagamemto ligada!")
+console.log("[Info] Api de pagamemto ligada!");
 
 setInterval(function() {
 connection.query('SELECT * FROM transacao WHERE status_transacao = 2', function (error, results, fields) {
@@ -31,7 +31,7 @@ connection.query('SELECT * FROM transacao WHERE status_transacao = 2', function 
       
      client.login(process.env.token).then(() => {
      client.channels.fetch("916730351248867359").then((canal) => {
-     canal.send({ content: `ouro adicionar \`${nick}\` 1800` })})})
+     canal.send({ content: `ouro adicionar \`${nick}\` 1800` })})});
      
      client.login(process.env.token).then(() => {
      client.channels.fetch("944959402329395210").then((canal) => {
