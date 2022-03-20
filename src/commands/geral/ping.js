@@ -11,8 +11,8 @@ module.exports = {
   }
   
   const embed = new Discord.MessageEmbed()
-  .setDescription("**Ping sendo Calculado...**");
-  .setColor(`RANDOM`);
+  .setDescription("**Ping sendo Calculado...**")
+  .setColor(`RANDOM`)
   message.channel.send({ embeds: [embed]}).then(msg => {
     setTimeout(() => {
       let embed2 = new Discord.MessageEmbed()
