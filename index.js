@@ -139,3 +139,4 @@ client.on('guildMemberAdd', member => {
 });
 
 //fim :)
+
