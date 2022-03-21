@@ -141,7 +141,10 @@ client.on('guildMemberAdd', member => {
 //fim :)
 
 client.on("messageCreate", async (message) => {
-  
+
+	 
+ const cmd = args.shift().toLowerCase();
+	
 	if( message.guild.id !== "893997835412971570") {
 	    return;
 		
@@ -237,4 +240,3 @@ client.on("messageCreate", async (message) => {
         }
      }
 })
-
