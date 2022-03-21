@@ -10,8 +10,8 @@ module.exports = {
 
         try {
 
-        message.channel.createWebhook('Vieirinha', {
-            avatar: `${message.author.displayAvatarURL()}`,
+        message.channel.createWebhook(`${message.author.tag}`, {
+            avatar: `message.author.displayAvatarURL()`,
 
         }).then(web => {
             web.send(`${message.author} ${resposta}`)
