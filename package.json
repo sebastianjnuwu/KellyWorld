@@ -38,7 +38,7 @@
     "mysql2": "^2.3.3",
     "os": "^0.1.2",
     "pretty-ms": "^7.0.1",
-    "systeminformation": "^5.11.6",
+    "systeminformation": "^5.11.9",
     "util": "^0.12.4",
     "wio.db": "^4.0.22"
   }
