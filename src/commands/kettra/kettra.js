@@ -44,7 +44,7 @@ if (!args[1]) {
 } else {
   var canal = message.guild.channels.cache.find(ch => ch.id === "937357943790268417");
   
-  const message_msg = new MessageEmbed()
+  const message_msg = new Discord.MessageEmbed()
     .setColor("RANDOM")
     .setTitle(`:smile_cat: Temos uma novo bug!`)
     .setThumbnail(message.author.displayAvatarURL())
