@@ -68,7 +68,25 @@ if (!args[1]) {
                 }, 12000) 
             })
          }
-    }
+    } else if (args[0] == 'historia') {
+      message.delete();
+    const content2 = args.join(" ");
+
+if (!args[1]) {
+  return message.channel.send(`${message.author.username}, sua pergunta sobre a historia de kettra....`)
+} else if (content2.length > 1000) {
+  return message.channel.send(`${message.author.username}, forneça uma pergunta de no máximo 1000 caracteres.`);
+} else {
+  var canal = message.guild.channels.cache.find(ch => ch.id === "955517600236986389");
+  
+    canal.send(`${message.author} fez uma perguntou sore a historia: _${content2}`)
+    message.channel.send(`${message.author} a mensagem foi enviada com sucesso!`).then(k => {
+	setTimeout(() => {
+                    k.delete()
+               
+                }, 12000) 
+            })
+      }
   }
 }
 };
