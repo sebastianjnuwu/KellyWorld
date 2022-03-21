@@ -38,7 +38,7 @@ run: async(client, message, args) => {
     .setThumbnail(message.author.displayAvatarURL())
     .setDescription(`Enviado por ${message.author}\n\n**pergunta:** ${content}\nㅤ`)
     .setTimestamp()    
-    .setFooter({ text:`Obrigado ${message.author.tag} por qierwr conhecer mais sobre kettra...`})
+    .setFooter({ text:`Obrigado ${message.author.tag} por querer conhecer mais sobre kettra...`})
     
     message.channel.send(`${message.author} a mensagem foi enviada com sucesso!`).then(k => {
 	setTimeout(() => {
