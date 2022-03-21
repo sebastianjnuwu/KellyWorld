@@ -110,9 +110,7 @@ client.on('ready', () => {
       `DELIVERY: Me chame para seu servidor!`, 
         ],
             i = 0; 
-	
         setInterval(
-			
             () =>
                 client.user.setActivity(`${activities[i++ % activities.length]}`, {
                     type: "STREAMING",
@@ -140,4 +138,4 @@ client.on('guildMemberAdd', member => {
  
 });
 
- 
+//fim :)
