@@ -8,6 +8,9 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
   </a>
 </p>
 
+[![lincense](https://img.shields.io/badge/license-Apache-blue)](https://github.com/sebastianjn/KellyWorld/blob/main/LICENSE)
+[![]()]()
+
 # ❤️ Donation 
 
 you have the power to make a difference, make a donation of any symbolic value for our developers to have a good coffee ☕
