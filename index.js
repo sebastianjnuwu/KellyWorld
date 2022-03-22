@@ -106,7 +106,7 @@ fs.readdir("./src/events/", (err, files) => {
 client.on('ready', () => {
 	
   let activities = [
-      `DELIVERY: Meu prefixo é K.`, 
+      `DELIVERY: Meu prefixo é `, 
       `DELIVERY: Me chame para seu servidor!`, 
         ],
             i = 0; 
@@ -132,7 +132,7 @@ client.on('guildMemberAdd', member => {
       .setImage("https://raw.githubusercontent.com/sebastianjn/host/main/imagens/bemvindo.jpeg")
       .setColor('RANDOM')
       .setTitle (`Bem vindos a KettraWorld!`)
-      .setDescription(`**Anjo:**  Olá Humano **${member.user.tag}!** Sou seu anjo da guarda em KettraWorld, com você **${member.guild.memberCount}** almas foram ajudadas por mim!\n\nAgora vamos ao que importa, o mundo que você renascera se chama Kettra, um magnífico mundo RPG onde você ira criar a sua história e junto de seus companheiros de aventura irão desbravar esse imenso lugar e descobrir todos os seus segredos.\n\nPor enquanto nos despedimos aqui, quando você entrar em Kettra estarei lá para te acompanhar e ajudar em sua nova jornada.\n\nUse **K.kettra ip** para descobrir o caminho de como entrar em KettraWorld`)
+      .setDescription(`**Anjo:**  Olá Humano **${member.user.tag}!** Sou seu anjo da guarda em KettraWorld, com você **${member.guild.memberCount}** almas foram ajudadas por mim!\n\nAgora vamos ao que importa, o mundo que você renascera se chama Kettra, um magnífico mundo RPG onde você ira criar a sua história e junto de seus companheiros de aventura irão desbravar esse imenso lugar e descobrir todos os seus segredos.\n\nPor enquanto nos despedimos aqui, quando você entrar em Kettra estarei lá para te acompanhar e ajudar em sua nova jornada.\n\nUse **kettra ip** para descobrir o caminho de como entrar em KettraWorld`)
       
  channel.send({ content: `${member}`, embeds: [embed] });
  
@@ -141,8 +141,11 @@ client.on('guildMemberAdd', member => {
 //fim :)
 
 client.on("messageCreate", async (message) => {
-
-	 
+   if​(​message.author.bot​)​​return​; 
+ ​    ​if​(​message.channel.type​===​"dm"​)​return​; 
+ ​    ​if​(​!message.content.startsWith(config.prefix))​return; 
+  
+ ​    ​const​args​=​message.content.slice(config.prefix.length​).trim().split​(/ +/g)
  const cmd = args.shift().toLowerCase();
 	
 	if( message.guild.id !== "893997835412971570") {
@@ -150,7 +153,7 @@ client.on("messageCreate", async (message) => {
 		
    	} else {
 	  
-	if ( cmd == 'K.convite') {
+	if ( cmd == 'convite') {
      
     let embed = new Discord.MessageEmbed()
      .setTitle(`🌟 convide amigos para se juntar!`)
@@ -158,15 +161,15 @@ client.on("messageCreate", async (message) => {
      .setColor('RANDOM');
     message.channel.send({ embeds: [embed] });
 
-    } else if ( cmd == 'K.site') {
+    } else if ( cmd == 'site') {
     
    message.reply("ja deu um olhada em nosso site? não!\nLink: https://kettraworld.github.io");
      
-  } else if ( cmd == 'K.voto') {
+  } else if ( cmd == 'voto') {
       
    message.reply("vocé ja deu 1 voto para kettra? clique aqui: https://kettraworld.github.io/votar.html");
    
-    } else if ( cmd == 'K.ip') {
+    } else if ( cmd == 'ip') {
       
 		message.delete()
 		
@@ -174,7 +177,7 @@ client.on("messageCreate", async (message) => {
    message.channel.send(`${message.author}\n\n**Java Edition: \`kettraworld.jogar.io\`\nBedrock: \`190.115.197.81\`\nPorta: \`10001\`**`)
   })
       
-    } else if ( cmd == 'K.bug') {
+    } else if ( cmd == 'bug') {
       message.delete();
   const content = args.join(" ");
     if (!args[1]) {
@@ -209,7 +212,7 @@ client.on("messageCreate", async (message) => {
             })
          }
          
-    } else if (cmd== 'K.historia') {
+    } else if (cmd== 'historia') {
       message.delete();
     const content2 = args.join(" ");
 
@@ -232,7 +235,7 @@ client.on("messageCreate", async (message) => {
     
     message.channel.send(`${message.author} a mensagem foi enviada com sucesso!`).then(k => {
 	setTimeout(() => {
-                    k.delete()
+                    delete()
                
                 }, 12000) 
             })
