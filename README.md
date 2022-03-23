@@ -7,10 +7,19 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
  <img src="https://raw.githubusercontent.com/sebastianjn/sebastianjn/main/imagens/mimosa.png" width="350" height="350">
   </a>
 </p>
+</div>
 
 # 🪧 commands 
+
    • 📷 `K.avatar` - mostra o seu avatar e/ou/sem com menção ou id!
+   
+   • 🏓 `K.ping` - mostra o ping da api e o seu ping!
+   
    • 🖼️ `K.icon` - mostra o icone do servidor! 
+   
+   
+   
+   
 
 # ❤️ Donation 
 
