@@ -1,10 +1,16 @@
 //iniciando.......
-var http = require('http');
+const Discord = require("discord.js");
+
+const client = new Discord.Client({intents: 14071});
+
+client.login(process.env.token);
+
+const http = require('http');
 
 http.createServer(function (req, res) {
 res.setHeader("Content-Type", "application/json");
  res.writeHead(200);
-  res.end(`{ server : ${`);
+  res.end(`{ "server" : client.channels.cache.size }`);
 	
 const ping = new Date();
 	
@@ -34,11 +40,7 @@ const ping = new Date();
         console.log(type, promise, reason);
     }); 
 
-const Discord = require("discord.js");
-
 const API = require("./src/apis/API.js");
-
-const client = new Discord.Client({intents: 14071});
 
 const config = require("./config.json");
 
@@ -47,8 +49,6 @@ const env = require("dotenv").config()
 const fs = require("fs");
 
 const colors = require('colors');
-
-client.login(process.env.token);
 
 const { joinVoiceChannel } = require('@discordjs/voice');
 
