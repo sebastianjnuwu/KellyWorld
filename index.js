@@ -2,10 +2,7 @@
 var http = require('http');
 
 http.createServer(function (req, res) {
-res.setHeader("Content-Type", "application/json");
- res.writeHead(200);
-  res.end(`404 🌟`);
-	
+res.etHeadententType", application/jso es.writeHeaend(`404 🌟`);	
 const ping = new Date();
 	
   ping.setHours(ping.getHours() - 3);
@@ -106,7 +103,7 @@ fs.readdir("./src/events/", (err, files) => {
 client.on('ready', () => {
 	
   let activities = [
-      `DELIVERY: Meu prefixo é `, 
+      `DELIVERY: Meu prefixo é K.`, 
       `DELIVERY: Me chame para seu servidor!`, 
         ],
             i = 0; 
