@@ -13,6 +13,8 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 
    • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
    
+   • `K.clear` - command to delete messages (can only be deleted from 1 to 99)
+   
    • 🤬 `K.ban` - ban a user by server id or mention!
    
    • 🏓 `K.ping` - shows the ping of the api and your ping!
