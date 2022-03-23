@@ -8,7 +8,8 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
   </a>
 </p>
 
-# 🪧 commands
+# 🪧 commands 
+   • 📷 `K.avatar` - mostra o seu avatar e/ou/sem com menção ou id!
 
 
 # ❤️ Donation 
