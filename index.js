@@ -2,14 +2,18 @@
 var http = require('http');
 
 http.createServer(function (req, res) {
-res.etHeadententType", application/jso es.writeHeaend(`404 🌟`);	
+
+res.writeHead(200);
+
+res.end("estou online! U^ｪ^U");	
+
 const ping = new Date();
 	
   ping.setHours(ping.getHours() - 3);
 	
        console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
   
-}).listen(process.env.PORT);
+}).listen(process.env.PORT); // porta 8121
 
     process.on('unhandledRejection', (reason, p) => {    
        console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
