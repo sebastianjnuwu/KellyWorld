@@ -11,11 +11,13 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 
 # 🪧 commands 
 
-   • 📷 `K.avatar` - mostra o seu avatar e/ou/sem com menção ou id!
+   • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
    
-   • 🏓 `K.ping` - mostra o ping da api e o seu ping!
+   • 🤬 `K.ban` - ban a user by server id or mention!
    
-   • 🖼️ `K.icon` - mostra o icone do servidor! 
+   • 🏓 `K.ping` - shows the ping of the api and your ping!
+   
+   • 🖼️ `K.icon` - show the server icon! 
    
    
    
