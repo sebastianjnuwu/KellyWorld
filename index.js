@@ -2,9 +2,9 @@
 var http = require('http');
 
 http.createServer(function (req, res) {
-
+res.setHeader("Content-Type", "application/json");
  res.writeHead(200);
-  res.end("estou online! U^ｪ^U");
+  res.end(`{ server : ${`);
 	
 const ping = new Date();
 	
