@@ -10,7 +10,7 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 
 # 🪧 commands 
    • 📷 `K.avatar` - mostra o seu avatar e/ou/sem com menção ou id!
-
+   • 🖼️ `K.icon` - mostra o icone do servidor! 
 
 # ❤️ Donation 
 
