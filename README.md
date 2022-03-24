@@ -9,7 +9,7 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 </p>
 </div>
 
-> © Kelly World | First Project of Kettraworld
+> © Kelly World | All rights reserved!
 
 # 🪧 commands 
 
