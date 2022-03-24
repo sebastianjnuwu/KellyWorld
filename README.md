@@ -9,6 +9,8 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 </p>
 </div>
 
+> © Kelly World | All rights reserved!
+
 # 🪧 commands 
 
    • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
