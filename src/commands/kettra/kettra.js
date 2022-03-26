@@ -31,8 +31,8 @@ run: async(client, message, args) => {
       
 		message.delete()
 		
-    message.author.send(`${message.author}\n\n**Java Edition: \`kettraworld.jogar.io\`\nBedrock: \`190.115.197.81\`\nPorta: \`10001\`**`).catch((e) => {
-   message.channel.send(`${message.author}\n\n**Java Edition: \`kettraworld.jogar.io\`\nBedrock: \`190.115.197.81\`\nPorta: \`10001\`**`)
+    message.author.send(`${message.author}\n\n**Java Edition: \`br-arm-7.enxadahost.com\`\nBedrock: \`br-arm-7.enxadahost.com\`\nPorta: \`10001\`**`).catch((e) => {
+   message.channel.send(`${message.author}\n\n**Java Edition: \`br-arm-7.enxadahost.com:10972\`\nBedrock: \`br-arm-7.enxadahost.com\`\nPorta: \`10001\`**`)
   })
       
     }
