@@ -1,4 +1,9 @@
 //iniciando.......
+const db1 = require('quick.db');
+const { JsonDatabase } = require('kettraworld.db');
+const db = new JsonDatabase({
+  DatabaseJson:"./src/database/database.json"
+});
 var http = require('http');
 
 http.createServer(function (req, res) {
@@ -107,7 +112,7 @@ fs.readdir("./src/events/", (err, files) => {
 client.on('ready', () => {
 	
   let activities = [
-      `DELIVERY: Meu prefixo é K.`, 
+      `🌟`, 
       `DELIVERY: Me chame para seu servidor!`, 
         ],
             i = 0; 
