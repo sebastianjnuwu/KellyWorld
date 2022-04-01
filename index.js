@@ -10,7 +10,7 @@ http.createServer(function(req, res) {
 
   res.writeHead(200,{'content-type':'image/gif'});
 
-  fs.createReadStream('don.gif').pipe(res);
+  fs.createReadStream('Kelly.gif').pipe(res);
 
 const ping = new Date();
 	

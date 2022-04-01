@@ -1,6 +1,8 @@
-const {Client, Collection, Intents } = require('discord.js');
-const client = require('../../index')
-const Discord = require('discord.js')
+const { Client, Collection, Intents } = require('discord.js');
+const Discord = require('discord.js');
+//const client = require('./src/handler/index')
+const client = new Discord.Client({intents: 14071});
+//const Discord = require('discord.js')
 
 client.on("interactionCreate", async (interaction) => {
     if (!interaction.guild) return;
