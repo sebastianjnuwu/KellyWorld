@@ -97,7 +97,7 @@ fs.readdirSync('./src/commands/').forEach(local => {
     } 
 });
 
-// carregandos os eventos
+/* carregandos os eventos
 
 fs.readdir("./src/events/", (err, files) => {
   if (err) return console.error(err);
@@ -108,7 +108,7 @@ fs.readdir("./src/events/", (err, files) => {
     console.log(colors.cyan("[Info] ") + `carregando: ${eventName}`);
     client.on(eventName, event.bind(null, client));
   });
-}); 
+}); */
 
 client.on('ready', () => {
 	
