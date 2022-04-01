@@ -3,14 +3,14 @@ const db1 = require('quick.db');
 const { JsonDatabase } = require('kettraworld.db');
 const db = new JsonDatabase({
   DatabaseJson:"./src/database/database.json"
-});
-var http = require('http');
+}); 
+const fs = require("fs");
+const http = require('http');
+http.createServer(function(req, res) {
 
-http.createServer(function (req, res) {
+  res.writeHead(200,{'content-type':'image/gif'});
 
-res.writeHead(200);
-
-res.end("estou online! U^ｪ^U");	
+  fs.createReadStream('don.gif').pipe(res);
 
 const ping = new Date();
 	
@@ -50,8 +50,6 @@ const config = require("./config.json");
 
 const env = require("dotenv").config()
 
-const fs = require("fs");
-
 const colors = require('colors');
 
 client.login(process.env.token);
@@ -83,6 +81,9 @@ client.on("messageCreate", async (message) => {
       
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
+client.slashCommands = new Discord.Collection();
+client.config = require('./config.json')
+require("./src/handler")(client);
 client.categories = fs.readdirSync(`./src/commands/`);
 fs.readdirSync('./src/commands/').forEach(local => {
     const comandos = fs.readdirSync(`./src/commands/${local}`).filter(arquivo => arquivo.endsWith('.js'))
