@@ -23,6 +23,6 @@ const slashCommands = await globPromise(
         await client.application.commands.set(arrayOfSlashCommands);
 
     });
-  
+}
 // 
            

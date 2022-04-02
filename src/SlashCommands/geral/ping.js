@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 module.exports =  {
     name: "ping",
-    description: "Veja meu ping.",
+    description: "Que ver meu ping?",
     type: "CHAT_INPUT",    
     
     run: async (client, interaction, args) => {
@@ -11,7 +11,7 @@ module.exports =  {
         .setColor("#36393e")
         .setDescription(`**\\📡 Meu ping está em** \`${client.ws.ping}ms\`**.**`);
 
-        interaction.reply({ embeds: [don], ephemeral: true })
+        interaction.reply({ embeds: [don] });
 
     }
 }
