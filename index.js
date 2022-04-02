@@ -81,9 +81,6 @@ client.on("messageCreate", async (message) => {
       
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-client.slashCommands = new Discord.Collection();
-client.config = require('./config.json')
-require("./src/handler")(client);
 client.categories = fs.readdirSync(`./src/commands/`);
 fs.readdirSync('./src/commands/').forEach(local => {
     const comandos = fs.readdirSync(`./src/commands/${local}`).filter(arquivo => arquivo.endsWith('.js'))
