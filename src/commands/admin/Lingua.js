@@ -23,7 +23,7 @@ module.exports = {
   }
         }
         
-       if (!args[0]) {
+       if (!args[0] || args[0] !== "pt" && args[0] !== "en" && args[0] !== "es") {
      message.reply("para alterar o idioma deste servidor baste escolher dentre estes:\n🇧🇷 `K.setlanguage pt`\n🇪🇦 `K.setlanguage es`\n🇺🇸 `K.setlanguage en`\n").then(mDel => {
            setTimeout(() => {
               mDel.delete().catch(o_U => {})
@@ -44,7 +44,7 @@ module.exports = {
   } 
         }
         
-        if (!args[0]) {
+        if (!args[0] || args[0] !== "pt" && args[0] !== "en" && args[0] !== "es") {
          message.reply("to change the language of this server, just choose among these:\n🇧🇷 `K.setlanguage pt` idioma português\n🇪🇦 `K.setlanguage es` lengua española\n🇺🇸 `K.setlanguage en` language inglês").then(mDel => {
            setTimeout(() => {
               mDel.delete().catch(o_U => {})
@@ -63,7 +63,7 @@ module.exports = {
   }   
         }
 
-   if (!args[0]) {
+   if (!args[0] || args[0] !== "pt" && args[0] !== "en" && args[0] !== "es") {
    message.reply("para cambiar el idioma de este servidor, simplemente elija entre estos:\n🇧🇷 `K.setlanguage pt` idioma português\n🇪🇦 `K.setlanguage es` lengua española\n🇺🇸 `K.setlanguage en").then(mDel => {
            setTimeout(() => {
               mDel.delete().catch(o_U => {})
