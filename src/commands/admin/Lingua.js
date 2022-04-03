@@ -13,7 +13,7 @@ module.exports = {
     if( language == null ) { 
       db.set(`language_${message.guild.id}`, "pt");
     }
-        if (language === "pt") { 
+        if (language === "pt") {
         if (!message.member.permissions.has("MANAGE_GUILD")) {
             message.reply("Você não tem permissão para usar este comando! Para utilizá-lo, você precisa ter permissão para `Gerenciar mensagens`!").then(mDel => {
            setTimeout(() => {
@@ -22,7 +22,6 @@ module.exports = {
         }, 10000)
     })
   }
-        }
         
        if (!args[0] || args[0] !== "pt" && args[0] !== "en" && args[0] !== "es") {
      message.reply("para alterar o idioma deste servidor baste escolher dentre estes:\n🇧🇷 `K.setlanguage pt`\n🇪🇦 `K.setlanguage es`\n🇺🇸 `K.setlanguage en`\n").then(mDel => {
@@ -32,6 +31,7 @@ module.exports = {
         }, 10000)
     })
   }
+    }
         if (!language || language === "en") {
 
             if (!message.member.permissions.has("MANAGE_GUILD")) {
@@ -43,8 +43,6 @@ module.exports = {
         }, 10000)
     })
   } 
-        }
-        
         if (!args[0] || args[0] !== "pt" && args[0] !== "en" && args[0] !== "es") {
          message.reply("to change the language of this server, just choose among these:\n🇧🇷 `K.setlanguage pt` idioma português\n🇪🇦 `K.setlanguage es` lengua española\n🇺🇸 `K.setlanguage en` language inglês").then(mDel => {
            setTimeout(() => {
@@ -53,6 +51,7 @@ module.exports = {
         }, 10000)
     })
   }
+        }
         if (!language || language === "es") {
             if (!message.member.permissions.has("MANAGE_GUILD")) {
         message.reply("¡No tienes permitido usar este comando! ¡Para usarlo, debe tener el permiso 'Gestionar mensajes'!").then(mDel => {
@@ -62,7 +61,6 @@ module.exports = {
         }, 10000)
     })
   }   
-        }
 
    if (!args[0] || args[0] !== "pt" && args[0] !== "en" && args[0] !== "es") {
    message.reply("para cambiar el idioma de este servidor, simplemente elija entre estos:\n🇧🇷 `K.setlanguage pt` idioma português\n🇪🇦 `K.setlanguage es` lengua española\n🇺🇸 `K.setlanguage en` language inglês").then(mDel => {
@@ -72,6 +70,7 @@ module.exports = {
         }, 10000)
     })
   }
+        }
 
  if (args[0] === "pt") {
 
