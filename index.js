@@ -1,25 +1,4 @@
-//iniciando.......
 
-const db1 = require('quick.db');
-const { JsonDatabase } = require('kettraworld.db');
-const db = new JsonDatabase({
-  DatabaseJson:"./src/database/database.json"
-}); 
-const fs = require("fs");
-const http = require('http');
-http.createServer(function(req, res) {
-
-  res.writeHead(200,{'content-type':'image/gif'});
-
-  fs.createReadStream('Kelly.gif').pipe(res);
-
-const ping = new Date();
-	
-  ping.setHours(ping.getHours() - 3);
-	
-       console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-  
-}).listen(process.env.PORT); // porta 8121
 
     process.on('unhandledRejection', (reason, p) => {    
        console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
