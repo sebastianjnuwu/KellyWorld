@@ -6,7 +6,7 @@ on:
 
       - main
 
-name: 🚀 Deploy website on push
+name: 🚀 backup via ftp
 
 jobs:
 
