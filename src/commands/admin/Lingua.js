@@ -10,8 +10,9 @@ module.exports = {
     run: async(client, message, args) => {
 
  let language = db.get(`language_${message.guild.id}`);
-    if( language == null ) language = "pt";
-
+    if( language == null ) { 
+      db.set(`language_${message.guild.id}`, "pt");
+    }
         if (language === "pt") { 
         if (!message.member.permissions.has("MANAGE_GUILD")) {
             message.reply("Você não tem permissão para usar este comando! Para utilizá-lo, você precisa ter permissão para `Gerenciar mensagens`!").then(mDel => {
