@@ -64,7 +64,7 @@ module.exports = {
         }
 
    if (!args[0] || args[0] !== "pt" && args[0] !== "en" && args[0] !== "es") {
-   message.reply("para cambiar el idioma de este servidor, simplemente elija entre estos:\n🇧🇷 `K.setlanguage pt` idioma português\n🇪🇦 `K.setlanguage es` lengua española\n🇺🇸 `K.setlanguage en").then(mDel => {
+   message.reply("para cambiar el idioma de este servidor, simplemente elija entre estos:\n🇧🇷 `K.setlanguage pt` idioma português\n🇪🇦 `K.setlanguage es` lengua española\n🇺🇸 `K.setlanguage en` language inglês").then(mDel => {
            setTimeout(() => {
               mDel.delete().catch(o_U => {})
            message.delete().catch(o_U => {})
