@@ -1,11 +1,9 @@
-var http = require('http');
-
+const fs = require("fs");
+var http = require("http");
 http.createServer(function (req, res) {
-
 res.writeHead(200);
-
 res.end("{'token':'S2V0dHJhd29ybGQ='}");	
-	const ping = new Date();
+const ping = new Date();
 
   ping.setHours(ping.getHours() - 3);	
 
