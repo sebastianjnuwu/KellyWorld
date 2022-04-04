@@ -77,24 +77,11 @@ fs.readdirSync('./src/commands/').forEach(local => {
     } 
 });
 
-/* carregandos os eventos
-
-fs.readdir("./src/events/", (err, files) => {
-  if (err) return console.error(err);
-
-  files.forEach(file => {
-    const event = require(`./src/events/${file}`);
-    let eventName = file.split(".")[0];
-    console.log(colors.cyan("[Info] ") + `carregando: ${eventName}`);
-    client.on(eventName, event.bind(null, client));
-  });
-}); */
-
 client.on('ready', () => {
 	
   let activities = [
-      `🌟`, 
-      `DELIVERY: Me chame para seu servidor!`, 
+      `MUNDO DOS SABIOS!`, 
+      `SHOW: me compre um cafe?!`, 
         ],
             i = 0; 
         setInterval(
