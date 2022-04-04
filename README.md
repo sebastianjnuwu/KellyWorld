@@ -11,6 +11,14 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 
 > © Kelly World | All rights reserved!
 
+# 🌍 mutiliguage 
+
+Kelly world it was developed internally in Brazil, being native in Portuguese, over time learned the Spanish and English that is still in its functions....
+
+🇺🇸 --> 10% </br>
+🇧🇷 --> 100% </br>
+🇪🇦 --> 10% 
+
 # 🪧 commands 
 
    • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
