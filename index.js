@@ -1,4 +1,12 @@
+const Discord = require("discord.js");
+const client = new Discord.Client({intents: 14071});
+const { joinVoiceChannel } = require('@discordjs/voice');
+const colors = require('colors');
 const fs = require("fs");
+const env = require("dotenv").config()
+const API = require("./src/apis/API.js");
+const config = require("./config.json");
+client.login(process.env.token);
 var http = require("http");
 http.createServer(function (req, res) {
 res.writeHead(200);
@@ -30,22 +38,6 @@ const ping = new Date();
         console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
         console.log(type, promise, reason);
     }); 
-
-const Discord = require("discord.js");
-
-const API = require("./src/apis/API.js");
-
-const client = new Discord.Client({intents: 14071});
-
-const config = require("./config.json");
-
-const env = require("dotenv").config()
-
-const colors = require('colors');
-
-client.login(process.env.token);
-
-const { joinVoiceChannel } = require('@discordjs/voice');
 
 client.on('ready', () => {
 	
