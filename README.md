@@ -32,6 +32,8 @@ Kelly world it was developed internally in Brazil, being native in Portuguese, o
    • 🖼️ `K.icon` - show the server icon!
    
    • 🗣️ `K.say` - talk on some server channel used the bot!
+   
+   • 🌍 `K.setlanguage` - select a language for your server!
   
 # ❤️ Donation 
 
