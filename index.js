@@ -133,4 +133,64 @@ client.on('guildMemberAdd', member => {
  
 });
 
+client.on("messageCreate", message => {
+
+const { JsonDatabase } = require('kettraworld.db');
+
+const db = new JsonDatabase({
+
+  DatabaseJson:"./src/database/database.json"
+
+});
+
+    let language = db.get(`language_${message.guild.id}`);
+
+    if( language == null ) { 
+
+      db.set(`language_${message.guild.id}`, "pt");
+
+    }
+
+    
+
+    if (message.author.bot) return;
+
+    if (message.channel.type == "dm")
+
+    return
+
+    
+
+    if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
+
+        
+
+      if (language === "pt") {
+
+         message.reply("<:K_zan:924366252024164363> olá ${message.author} estou muita ocupada salvando gatinhos caso queira me ajudar agradeço........");
+
+        }
+
+        
+
+      if (!language || language === "en") {
+
+         message.reply("<:K_zan:924366252024164363> hello ${message.author} I'm too busy saving kittens if you want to help me thanks........");
+
+      }
+
+      
+
+      if (!language || language === "es") {
+
+         message.reply("<:K_zan:924366252024164363> hola ${message.author} Estoy demasiado ocupado salvando gatitos si quieres ayudarme gracias........");
+
+      }
+
+    
+
+    }
+
+});
+
 //fim :)
