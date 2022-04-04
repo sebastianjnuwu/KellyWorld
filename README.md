@@ -15,9 +15,9 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 
 Kelly world it was developed internally in Brazil, being native in Portuguese, over time learned the Spanish and English that is still in its functions....
 
-🇺🇸 --> 10% </br>
-🇧🇷 --> 100% </br>
-🇪🇦 --> 10% 
+🇺🇸 **language in english** --> 17% </br>
+🇧🇷 **language in portuguese** --> 100% </br>
+🇪🇦 **language in spanish** --> 16% 
 
 # 🪧 commands 
 
