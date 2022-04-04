@@ -127,14 +127,14 @@ const db = new JsonDatabase({
     return
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       if (language === "pt") {
-         message.reply("<:K_zan:924366252024164363> olá ${message.author} estou muita ocupada salvando gatinhos caso queira me ajudar agradeço........");
+         message.reply(`olá ${message.author.tag} estou muita ocupada salvando gatinhos caso queira me ajudar agradeço........`);
         }
       if (!language || language === "en") {
-         message.reply("<:K_zan:924366252024164363> hello ${message.author} I'm too busy saving kittens if you want to help me thanks........");
+         message.reply(`hello ${message.author.tag} I'm too busy saving kittens if you want to help me thanks........`);
       }
       if (!language || language === "es") {
 
-         message.reply("<:K_zan:924366252024164363> hola ${message.author} Estoy demasiado ocupado salvando gatitos si quieres ayudarme gracias........");
+         message.reply(`hola ${message.author.tag} Estoy demasiado ocupado salvando gatitos si quieres ayudarme gracias........`);
       }
     }
 });
