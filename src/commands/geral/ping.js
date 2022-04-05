@@ -46,6 +46,5 @@ module.exports = {
       message.reply({ embeds: [ping] })
     }
   }
-  
 }
    
