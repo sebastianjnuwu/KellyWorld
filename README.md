@@ -10,6 +10,8 @@ My name is Kelly World I love drawings! <br> I love coffee ! how about buying it
 </div>
 
 > © Kelly World | All rights reserved!
+>
+> **Add me to your server by [clicking here](https://discord.com/api/oauth2/authorize?client_id=932705411897905193&permissions=8&scope=bot%20applications.commands)**
 
 # 🌍 mutiliguage 
 
