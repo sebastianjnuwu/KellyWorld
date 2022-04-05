@@ -12,7 +12,7 @@ module.exports =  {
     
     run: async (client, interaction, args) => {
         
-    let language = db.get(`language_${message.guild.id}`);
+    let language = db.get(`language_${interaction.guild.id}`);
     
     if( language == null ) { 
       db.set(`language_${message.guild.id}`, "pt");
