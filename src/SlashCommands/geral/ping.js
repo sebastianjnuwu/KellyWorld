@@ -13,8 +13,8 @@ module.exports =  {
         
     let language = db.get(`language_${interaction.guild.id}`);
     if( language == null ) { 
-      db.set(`language_${message.guild.id}`, "pt");
-    };
+      db.set(`language_${messag.guild.id}`, "pt");
+    }
     
     if (language === "pt") {
         if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) {
@@ -45,6 +45,6 @@ module.exports =  {
         .setColor("RANDOM")
         .setDescription(`:ping_pong: **apestar!**\nMi ping actual está en \`${client.ws.ping}ms\`.`);
       interaction.reply({ embeds: [ping] })
-    };
-  };
-};
+    }
+  }
+}
