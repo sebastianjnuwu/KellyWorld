@@ -4,7 +4,6 @@ const db = new JsonDatabase({
   DatabaseJson:"./src/database/database.json"
 });
 
-
 module.exports =  {
     name: "ping", 
     description: "🏓 Information about my latency!", 
@@ -13,15 +12,13 @@ module.exports =  {
     run: async (client, interaction, args) => {
         
     let language = db.get(`language_${interaction.guild.id}`);
-    
     if( language == null ) { 
       db.set(`language_${message.guild.id}`, "pt");
-      
     };
     
     if (language === "pt") {
-       if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) {
-    return interaction.reply("<:K_zan:924366252024164363> eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ")
+        if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) {
+  return interaction.reply("<:K_zan:924366252024164363> eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ")
   };
   
       let ping = new Discord.MessageEmbed() 
@@ -48,6 +45,6 @@ module.exports =  {
         .setColor("RANDOM")
         .setDescription(`:ping_pong: **apestar!**\nMi ping actual está en \`${client.ws.ping}ms\`.`);
       interaction.reply({ embeds: [ping] })
-    }
-  } 
-} 
+    };
+  };
+};
