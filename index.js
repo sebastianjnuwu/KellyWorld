@@ -64,6 +64,9 @@ client.on("messageCreate", async (message) => {
       
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
+module.exports = client;
+client.slashCommands = new Discord.Collection();
+require("./src/handler")(client);
 client.categories = fs.readdirSync(`./src/commands/`);
 fs.readdirSync('./src/commands/').forEach(local => {
     const comandos = fs.readdirSync(`./src/commands/${local}`).filter(arquivo => arquivo.endsWith('.js'))
@@ -127,14 +130,14 @@ const db = new JsonDatabase({
     return
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       if (language === "pt") {
-         message.reply(`olá ${message.author.tag} estou muita ocupada salvando gatinhos caso queira me ajudar agradeço........`);
+         message.reply(`olá, estou muita ocupada salvando gatinhos caso queira me ajudar agradeço........`);
         }
       if (!language || language === "en") {
-         message.reply(`hello ${message.author.tag} I'm too busy saving kittens if you want to help me thanks........`);
+         message.reply(`hello, I'm too busy saving kittens if you want to help me thanks........`);
       }
       if (!language || language === "es") {
 
-         message.reply(`hola ${message.author.tag} Estoy demasiado ocupado salvando gatitos si quieres ayudarme gracias........`);
+         message.reply(`hola, Estoy demasiado ocupado salvando gatitos si quieres ayudarme gracias........`);
       }
     }
 });
