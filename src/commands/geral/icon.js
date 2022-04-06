@@ -48,8 +48,8 @@ module.exports = {
       };
       
     const embed = new Discord.MessageEmbed()
-       .setTitle(`Server icon:`)
-       .setDescription(`[Image link here](${sicon})`)
+       .setTitle(`Icono del servidor:`)
+       .setDescription(`[Enlace de imagen aquí](${sicon})`)
        .setImage(sicon)
        .setColor('#ef00ff')
     await message.channel.send({ embeds: [embed] })
