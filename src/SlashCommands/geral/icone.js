@@ -15,14 +15,15 @@ module.exports =  {
     if( language == null ) { 
       db.set(`language_${messag.guild.id}`, "pt");
     }
-    
-  const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
-  const svicon = interaction.guild.iconURL()
   
     if (language === "pt") {
         if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) {
   return interaction.reply("<:K_zan:924366252024164363> eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ")
   };
+  
+  const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
+  const svicon = interaction.guild.iconURL()
+  
   const embed = new Discord.interactionEmbed()
        .setTitle(`Ícone do servidor:`)
        .setDescription(`[Link da imagem aqui](${sicon})`)
@@ -36,6 +37,9 @@ module.exports =  {
     return interaction.reply("<:K_zan:924366252024164363> I'm without `ADMINISTRATOR` permission unfortunately I'm useless ಥ╭╮ಥ")
       };
       
+      const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
+  const svicon = interaction.guild.iconURL()
+      
     const embed = new Discord.interactionEmbed()
         .setTitle(`Server icon:`)
         .setDescription(`[Image link here](${sicon})`)
@@ -48,6 +52,9 @@ module.exports =  {
        if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) {
     return interaction.reply("<:K_zan:924366252024164363> No tengo permiso de `ADMINISTRADOR` lamentablemente soy un inútil ಥ╭╮ಥ")
       };
+      
+      const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
+  const svicon = interaction.guild.iconURL()
       
     const embed = new Discord.interactionEmbed()
        .setTitle(`Icono del servidor:`)
