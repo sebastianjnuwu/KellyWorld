@@ -75,6 +75,5 @@ module.exports = {
     .setColor("RED")
     message.reply({embeds: [EMBED]});
       }
-  
   //fim
 }};
