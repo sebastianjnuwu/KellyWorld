@@ -13,7 +13,7 @@ module.exports =  {
         
     let language = db.get(`language_${interaction.guild.id}`);
     if( language == null ) { 
-      db.set(`language_${messag.guild.id}`, "pt");
+      db.set(`language_${interaction.guild.id}`, "pt");
     }
   
     if (language === "pt") {
@@ -24,7 +24,7 @@ module.exports =  {
   const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
   const svicon = interaction.guild.iconURL()
   
-  const embed = new Discord.interactionEmbed()
+  const embed = new Discord.MessageEmbed()
        .setTitle(`Ícone do servidor:`)
        .setDescription(`[Link da imagem aqui](${sicon})`)
        .setImage(sicon)
@@ -40,7 +40,7 @@ module.exports =  {
       const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
   const svicon = interaction.guild.iconURL()
       
-    const embed = new Discord.interactionEmbed()
+    const embed = new Discord.MessageEmbed()
         .setTitle(`Server icon:`)
         .setDescription(`[Image link here](${sicon})`)
         .setImage(sicon)
@@ -56,7 +56,7 @@ module.exports =  {
       const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
   const svicon = interaction.guild.iconURL()
       
-    const embed = new Discord.interactionEmbed()
+    const embed = new Discord.MessageEmbed()
        .setTitle(`Icono del servidor:`)
        .setDescription(`[Enlace de imagen aquí](${sicon})`)
        .setImage(sicon)
