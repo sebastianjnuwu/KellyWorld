@@ -1,7 +1,6 @@
 const { Discord, Client } = require("discord.js");
-const dotenv = require("dotenv").config();
 const client = new Client({intents: 512});
-const mysql = require('mysql2');
+const mysql = require('kettraworld.db');
 
  const connection = mysql.createConnection({
   host            : `${process.env.host}`,
