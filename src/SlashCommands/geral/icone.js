@@ -29,7 +29,7 @@ module.exports =  {
        .setDescription(`[Link da imagem aqui](${sicon})`)
        .setImage(sicon)
        .setColor('#ef00ff')
-    await interaction.channel.send({ embeds: [embed] })
+    await interaction.reply({ embeds: [embed] })
     }
     
     if (!language || language === "en") {
@@ -45,7 +45,7 @@ module.exports =  {
         .setDescription(`[Image link here](${sicon})`)
         .setImage(sicon)
         .setColor('#ef00ff')
-    await interaction.channel.send({ embeds: [embed] })
+    await interaction.reply({ embeds: [embed] })
     }
     
        if (!language || language === "es") {
@@ -61,7 +61,7 @@ module.exports =  {
        .setDescription(`[Enlace de imagen aquí](${sicon})`)
        .setImage(sicon)
        .setColor('#ef00ff')
-    await interaction.channel.send({ embeds: [embed] })
+    await interaction.reply({ embeds: [embed] })
        }
 }
 	  }
