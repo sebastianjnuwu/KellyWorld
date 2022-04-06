@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-a
-=======
 const Discord = require("discord.js");
 const { JsonDatabase } = require('kettraworld.db');
 const db = new JsonDatabase({
@@ -61,4 +58,3 @@ module.exports =  {
        }
 }
 	  }
->>>>>>> origin/main
