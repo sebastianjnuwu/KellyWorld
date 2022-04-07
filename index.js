@@ -2,8 +2,9 @@ const Discord = require("discord.js");
 const client = new Discord.Client({intents: 14071});
 const { joinVoiceChannel } = require('@discordjs/voice');
 const colors = require('colors');
-const { fs, dotenv } = require("KettraWorld.db");
-const API = require("./src/apis/API.js");
+const { dotenv } = require("kettraworld.db");
+const fs = require("fs");
+const API = require("./src/apis/index.js");
 const config = require("./config.json");
 client.login(process.env.token);
 
