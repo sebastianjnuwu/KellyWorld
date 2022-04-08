@@ -1,3 +1,4 @@
+// iniciando....
 const Discord = require("discord.js");
 const client = new Discord.Client({intents: 14071});
 const { joinVoiceChannel } = require('@discordjs/voice');
