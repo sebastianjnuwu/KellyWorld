@@ -4,7 +4,7 @@
   "description": "um bot diferenciado! kkkk vai um cafe ai?",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm ci && node index.js",
     "backup": "echo \"backup concluindo!\""
   },
   "repository": {
