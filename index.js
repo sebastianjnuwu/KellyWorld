@@ -61,21 +61,12 @@ client.on("messageCreate", async (message) => {
       
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-module.exports = client;
 client.slashCommands = new Discord.Collection();
-require("./src/handler")(client);
 client.categories = fs.readdirSync(`./src/commands/`);
-fs.readdirSync('./src/commands/').forEach(local => {
-    const comandos = fs.readdirSync(`./src/commands/${local}`).filter(arquivo => arquivo.endsWith('.js'))
-    for(let file of comandos) {
-        let puxar= require(`./src/commands/${local}/${file}`)
-        if(puxar.name) {
-            client.commands.set(puxar.name, puxar)
-        } 
-        if(puxar.aliases && Array.isArray(puxar.aliases))
-        puxar.aliases.forEach(x => client.aliases.set(x, puxar.name))
-    } 
-});
+module.exports = client;
+require("./src/handler")(client);
+
+
 
 client.on('ready', () => {
 	
