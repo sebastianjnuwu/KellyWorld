@@ -9,10 +9,6 @@ const { mysql } = require('kettraworld.db');
   database        : `${process.env.database}`
 });
 
-console.log("[Info] conectado com sucesso no mysql!");
-
-console.log("[Info] Api de pagamemto ligada!");
-
 setInterval(function() {
 connection.query('SELECT * FROM transacao WHERE status_transacao = 2', function (error, results, fields) {
   if (error) throw error;
@@ -34,7 +30,7 @@ connection.query('SELECT * FROM transacao WHERE status_transacao = 2', function 
  });
      
      client.login(process.env.token).then(() => {
-     client.channels.fetch("944959402329395210").then((canal) => {
+     client.channels.fetch("901106951704952862").then((canal) => {
      canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
      });
  });
@@ -56,7 +52,7 @@ if (id_pacote === 2 ) {
 });
      
      client.login(process.env.token).then(() => {
-     client.channels.fetch("944959402329395210").then((canal) => {
+     client.channels.fetch("901106951704952862").then((canal) => {
      canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
      });
   });
@@ -77,7 +73,7 @@ if (id_pacote === 3 ) {
  });
      
      client.login(process.env.token).then(() => {
-     client.channels.fetch("944959402329395210").then((canal) => {
+     client.channels.fetch("901106951704952862").then((canal) => {
      canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
      });
  });
@@ -97,7 +93,7 @@ if (id_pacote === 4 ) {
  });
      
      client.login(process.env.token).then(() => {
-     client.channels.fetch("944959402329395210").then((canal) => {
+     client.channels.fetch("901106951704952862").then((canal) => {
      canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
     });
   });
@@ -118,7 +114,7 @@ if (id_pacote === 5 ) {
  });
      
      client.login(process.env.token).then(() => {
-     client.channels.fetch("944959402329395210").then((canal) => {
+     client.channels.fetch("901106951704952862").then((canal) => {
      canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
      });
   });
@@ -138,7 +134,7 @@ if (id_pacote === 6 ) {
   });
      
      client.login(process.env.token).then(() => {
-     client.channels.fetch("944959402329395210").then((canal) => {
+     client.channels.fetch("901106951704952862").then((canal) => {
      canal.send({ content: `> <:K_stonks:939162797835710495> **Nova compra realizada!**\n> 🤔 Quem comprou: **${nick}**\n> 🗓️ data: **${data_transacao}**\n> 📦 id do pacote: **${id_pacote}**` });
      });
   });
