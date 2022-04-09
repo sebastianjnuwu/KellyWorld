@@ -117,14 +117,13 @@ const db = new JsonDatabase({
     if (message.channel.type == "dm")
     return
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-      if (language === "pt") {
+      if (language == "pt") {
          message.reply(`olá, estou muita ocupada salvando gatinhos caso queira me ajudar agradeço........`);
         }
-      if (!language || language === "en") {
+      if (language == "en") {
          message.reply(`hello, I'm too busy saving kittens if you want to help me thanks........`);
       }
-      if (!language || language === "es") {
-
+      if (language == "es") {
          message.reply(`hola, Estoy demasiado ocupado salvando gatitos si quieres ayudarme gracias........`);
       }
     }
