@@ -4,7 +4,7 @@
 My name is Kelly World I love drawings! <br> I love coffee ! how about buying it for me?
 </br>
 <br>
- <img src="https://raw.githubusercontent.com/sebastianjn/sebastianjn/main/imagens/mimosa.png" width="350" height="350">
+ <img src="https://raw.githubusercontent.com/sebastianjnuwu/sebastianjnuwu/main/imagens/mimosa.png" width="350" height="350">
   </a>
 </p>
 </div>
