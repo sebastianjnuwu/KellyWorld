@@ -23,7 +23,7 @@ if (!args[0]) {
     .setColor("RANDOM")
     .setTitle(`:smile_cat: Temos uma nova sugestão!`)
     .setThumbnail(message.author.displayAvatarURL())
-    .setDescription(`Enviado por ${message.author}\n\n**sugestão:** ${content}\nㅤ`)
+    .setDescription(`Enviado por ${message.author.username}\n\n**sugestão:** ${content}\nㅤ`)
     .setTimestamp()    
     .setFooter({ text:`Obrigado por sugerir ${message.author.tag} ...`})
 
