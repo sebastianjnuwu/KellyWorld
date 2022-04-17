@@ -36,7 +36,7 @@ module.exports = {
     message.reply({embeds: [EMBED]});
       }
       
-          if (!language || language === "en") {
+          if (language === "en") {
       if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
     return message.reply("<:K_zan:924366252024164363> I'm without `ADMINISTRATOR` permission unfortunately I'm useless ಥ╭╮ಥ")
       };
@@ -56,7 +56,7 @@ module.exports = {
     message.reply({embeds: [EMBED]});
       }
       
-      if (!language || language === "es") {
+      if (language === "es") {
        if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
     return message.reply("<:K_zan:924366252024164363> No tengo permiso de `ADMINISTRADOR` lamentablemente soy un inútil ಥ╭╮ಥ")
       };
