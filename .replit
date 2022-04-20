@@ -1,2 +1,2 @@
 linguage = "nodejs"
-run = "npm ci && node index.js"
+run = "node index.js"
