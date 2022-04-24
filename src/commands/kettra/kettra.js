@@ -31,7 +31,7 @@ run: async(client, message, args) => {
       
 		message.delete()
 		
-    message.author.send(`${message.author}\n\n**Java Edition: \`br-arm-7.enxadahost.com\`\nBedrock: \`br-arm-7.enxadahost.com\`\nPorta: \`10001\`**`).catch((e) => {
+    message.author.send(`${message.author}\n\n**Java Edition: \`br-arm-7.enxadahost.com:10972\`\nBedrock: \`br-arm-7.enxadahost.com\`\nPorta: \`10001\`**`).catch((e) => {
    message.channel.send(`${message.author}\n\n**Java Edition: \`br-arm-7.enxadahost.com:10972\`\nBedrock: \`br-arm-7.enxadahost.com\`\nPorta: \`10001\`**`)
   })
       
