@@ -64,7 +64,7 @@ fs.readdirSync('./src/commands/').forEach(local => {
 client.on("messageCreate", async (message) => {
     let prefix = config.prefix;
       if (message.author.bot) return;
-      if (message.channel.type == 'dm') return;     
+      if (message.channel.type == '') return;     
        if (!message.content.toLowerCase().startsWith(prefix.toLowerCase())) return;
       const args = message.content.slice(prefix.length).trim().split(/ +/g);
       let cmd = args.shift().toLowerCase()
