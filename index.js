@@ -1,22 +1,8 @@
 // iniciando.........
-const Discord = require("discord.js");
-const client = new Discord.Client({intents: 14071});
-const { joinVoiceChannel } = require('@discordjs/voice');
-const { fs, colors, dotenv } = require("kettraworld.db");
-const API = require("./src/apis/index.js");
-const config = require("./config.json");
-client.login(process.env.token);
+console.log("[ Info ] iniciando projeto...");
 
-var http = require("http");
-http.createServer(function (req, res) {
-res.writeHead(200);
-res.end("{'token':'S2V0dHJhd29ybGQ='}");	
-const ping = new Date();
-ping.setHours(ping.getHours() - 3);	
-console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-}).listen(process.env.PORT); 
-
-    process.on('unhandledRejection', (reason, p) => {    
+// anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
+process.on('unhandledRejection', (reason, p) => {    
        console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
        console.log(reason, p);
     });
@@ -35,6 +21,23 @@ console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes
         console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
         console.log(type, promise, reason);
     }); 
+    
+const Discord = require("discord.js");
+const client = new Discord.Client({intents: 14071});
+const { joinVoiceChannel } = require('@discordjs/voice');
+const { fs, colors, dotenv } = require("kettraworld.db");
+const API = require("./src/apis/index.js");
+const config = require("./config.json");
+client.login(process.env.token);
+
+var http = require("http");
+http.createServer(function (req, res) {
+res.writeHead(200);
+res.end("{'token':'S2V0dHJhd29ybGQ='}");	
+const ping = new Date();
+ping.setHours(ping.getHours() - 3);	
+console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+}).listen(process.env.PORT); 
 
 client.on('ready', () => {
 	
