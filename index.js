@@ -4,7 +4,6 @@
 // 🌇 Our main objective in this project: Help cats and make people aware of what they go through and the mistreatment they have suffered!
 
 // iniciando.........
-console.log("[ Info ] iniciando projeto...");
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on('unhandledRejection', (reason, p) => {    
@@ -50,7 +49,8 @@ client.on('ready', () => {
 console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`)
 console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`)
 console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`)
-})
+
+});
       
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
