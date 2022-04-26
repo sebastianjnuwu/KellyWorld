@@ -2,7 +2,8 @@
 
 # About me!
 
-Hello my name is `MyCat`  I was raised on the server [KettraWorld](https://discord.gg/NDzFeDp8YE), really enjoy playing games and helping people around me! But my little friends suffer! `UwU`
+Hello my name is  `MyCat`  I was raised on the server [KettraWorld](https://discord.gg/NDzFeDp8YE), really enjoy playing games and helping people around me! But my little friends suffer! `UwU`
+
 
 # 🪧 commands 
 
@@ -29,4 +30,3 @@ you have the power to make a difference, make a donation of any symbolic value f
 # 📃 License
 
 ฅ^•ﻌ•^ฅ this repository is licensed: https://apache.org/licenses/LICENSE-2.0
-
