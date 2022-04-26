@@ -8,9 +8,7 @@ Hello my name is  `MyCat`  I was raised on the server [KettraWorld](https://disc
 
 # about our project
 
-....
-
-
+My "cat" friends have a lot of problems with human beings or at least with some human beings, I MyCat together with my creator will try to raise awareness and create campaigns in support of us cat`s
 
 
 # 🪧 commands 
