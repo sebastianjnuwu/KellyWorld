@@ -1,25 +1,3 @@
-# 👋 Welcome to the official KellyWorld repository!
-
-<p align="center">
-My name is Kelly World I love drawings! <br> I love coffee ! how about buying it for me?
-</br>
-<br>
- <img src="https://raw.githubusercontent.com/sebastianjnuwu/sebastianjnuwu/main/imagens/mimosa.png" width="350" height="350">
-  </a>
-</p>
-</div>
-
-> © Kelly World | All rights reserved!
->
-> **Add me to your server by [clicking here](https://discord.com/api/oauth2/authorize?client_id=932705411897905193&permissions=8&scope=bot%20applications.commands)**
-
-# 🌍 mutiliguage 
-
-Kelly world it was developed internally in Brazil, being native in Portuguese, over time learned the Spanish and English that is still in its functions....
-
-🇺🇸 **language in english** --> 17% </br>
-🇧🇷 **language in portuguese** --> 100% </br>
-🇪🇦 **language in spanish** --> 16% 
 
 # 🪧 commands 
 
