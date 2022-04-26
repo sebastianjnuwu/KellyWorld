@@ -6,7 +6,7 @@ Hello my name is  `MyCat`  I was raised on the server [KettraWorld](https://disc
 
 <img align="left" src="https://media.discordapp.net/attachments/962361906373468230/968650138815987752/foto_de_gato_triste_-_Download_gratis_png.jpg" width="300"/>
 
-# about our project
+# About our project!
 
 My "cat" friends have a lot of problems with human beings or at least with some human beings, I MyCat together with my creator will try to raise awareness and create campaigns in support of us cat`s
 
