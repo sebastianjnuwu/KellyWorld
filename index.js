@@ -1,6 +1,7 @@
 // ♥️ project creator: Sebastian Jn
 // 🔍 Original Creator's Github: https://github.com/sebastianjnuwu
 // 🩸 Support our project:
+// 🌇 Our main objective in this project:
 
 // iniciando.........
 console.log("[ Info ] iniciando projeto...");
