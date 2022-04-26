@@ -76,17 +76,14 @@ client.on("messageCreate", async (message) => {
       });
       
 client.on('ready', () => {
-	
-  let activities = [
-      `MUNDO DOS SABIOS!`, 
-      `SHOW: me compre um cafe?!`, 
-        ],
+  
+  let activities = [ `New challenges: 🌟 Support against animal violence`,`New project: 😺 cat support`, ],
             i = 0; 
         setInterval(
             () =>
                 client.user.setActivity(`${activities[i++ % activities.length]}`, {
                     type: "STREAMING",
-                    url: "https://www.twitch.tv/sebastianjn007" 
+                    url: "https://www.twitch.tv/sebastianjnuwu" 
                 }),
              1000 * 60
         );
@@ -119,9 +116,9 @@ const db = new JsonDatabase({
     if( language == null ) { 
       db.set(`language_${message.guild.id}`, "pt");
     }
-
+    
     if (message.author.bot) return;
-    if (message.channel.type == "dm")
+    if (message.channel.type == "")
     return
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       if (language == "pt") {
@@ -136,4 +133,15 @@ const db = new JsonDatabase({
     }
 });
 
-//fim :)
+
+// Hello moto! My name is Sebastian I live in the northeast of Brazil, this is another creation of mine to help the kittens who suffer every day ಠ_ಠ 
+
+// Social media: @sebastianjnuwu
+
+// Want to buy me a coffee? Lol I've been awake for days and the coffee is over! ;-;
+
+// ☕ Buy coffee:  https://ko-fi.com/sebastianjnuwu
+
+// Will it be the end of KellyWorld? Will this be the end of this wonderful project? In order to help and educate people about how to take care of their cats who suffer every day from mistreatment! /ᐠ｡ꞈ｡ᐟ\
+
+// 👻 Did you like my work? Contact me: sebastianjnuwu@gmail.com
