@@ -116,7 +116,7 @@ client.on('guildMemberAdd', member => {
  
 });
 
-// Message when the boy is mentioned he responds! (3 languages ​​lol)
+// Message when the boy is mentioned he responds! (3 language​lol)
 client.on("messageCreate", message => {
   
 const { JsonDatabase } = require('kettraworld.db');
