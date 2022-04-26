@@ -1,3 +1,6 @@
+
+
+
 // iniciando.........
 console.log("[ Info ] iniciando projeto...");
 
@@ -21,7 +24,8 @@ process.on('unhandledRejection', (reason, p) => {
         console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
         console.log(type, promise, reason);
     }); 
-    
+
+// Soon after we are requesting the packages and files that our application will need to have its functioning in addition to logging in to discord!
 const Discord = require("discord.js");
 const client = new Discord.Client({intents: 14071});
 const { joinVoiceChannel } = require('@discordjs/voice');
