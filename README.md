@@ -2,7 +2,7 @@
 
 # About me!
 
-Hello my name is `MyCat` I was raised on the server [KettraWorld](https://discord.gg/NDzFeDp8YE), really enjoy playing games and helping people around me! And I try to make people aware of my cause!   `UwU`
+Hello my name is `MyCat` I was raised on the server [KettraWorld](https://discord.gg/NDzFeDp8YE), really enjoy playing games and helping people around me! But my little friends suffer! `UwU`
 
 # 🪧 commands 
 
