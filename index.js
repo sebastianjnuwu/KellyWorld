@@ -134,10 +134,10 @@ const db = new JsonDatabase({
          message.reply("Olá meu nome é `MyCat` Você me chamou?");
         }
       if (language == "en") {
-         message.reply(`hello, I'm too busy saving kittens if you want to help me thanks........`);
+         message.reply("Hello my name is `MyCat` Did you call me?");
       }
       if (language == "es") {
-         message.reply(`hola, Estoy demasiado ocupado salvando gatitos si quieres ayudarme gracias........`);
+         message.reply("");
       }
     }
 });
