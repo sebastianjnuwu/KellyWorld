@@ -4,6 +4,9 @@
 
 Hello my name is  `MyCat`  I was raised on the server [KettraWorld](https://discord.gg/NDzFeDp8YE), really enjoy playing games and helping people around me! But my little friends suffer!   `UwU`
 
+<img align="right" src="" width="300"/>
+
+
 # 🪧 commands 
 
    • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
