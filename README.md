@@ -2,6 +2,8 @@
 
 <img align="right" src="https://images-ext-2.discordapp.net/external/O04ENeR2bvzHGscCLrjf14dxwVPRFcXwfrI1VCv2Wac/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/932705411897905193/9bebc14f036c11585199ed5887ef6fbf.png" width="300"/>
 
+# About me! 😺
+
 # 🪧 commands 
 
    • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
