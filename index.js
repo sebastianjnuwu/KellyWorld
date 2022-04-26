@@ -116,11 +116,15 @@ client.on('guildMemberAdd', member => {
  
 });
 
+// Message when the boy is mentioned he responds! (3 languages ​​lol)
 client.on("messageCreate", message => {
+  
 const { JsonDatabase } = require('kettraworld.db');
+
 const db = new JsonDatabase({
   DatabaseJson:"./src/database/database.json"
 });
+
     let language = db.get(`language_${message.guild.id}`);
     if( language == null ) { 
       db.set(`language_${message.guild.id}`, "pt");
@@ -129,13 +133,16 @@ const db = new JsonDatabase({
     if (message.author.bot) return;
     if (message.channel.type == "")
     return
+
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       if (language == "pt") {
          message.reply("Olá meu nome é `MyCat` Você me chamou?");
         }
+        
       if (language == "en") {
          message.reply("Hello my name is `MyCat` Did you call me?");
       }
+      
       if (language == "es") {
          message.reply("Hola mi nombre es `MyCat` ¿Me llamaste?");
       }
