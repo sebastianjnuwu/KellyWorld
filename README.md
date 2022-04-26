@@ -4,7 +4,7 @@
 
 Hello my name is  `MyCat`  I was raised on the server [KettraWorld](https://discord.gg/NDzFeDp8YE), really enjoy playing games and helping people around me! But my little friends suffer!   `UwU`
 
-<img align="left" src="https://media.discordapp.net/attachments/962361906373468230/968650138815987752/foto_de_gato_triste_-_Download_gratis_png.jpg" width="300"/>
+<img align="left" src="https://media.discordapp.net/attachments/962361906373468230/968655176472887326/kisspng-cat-food-kitten-dog-adorable-cat-png-5a78cf7fb447b3.6524993915178668797384.jpg" width="300"/>
 
 # About our project!
 
