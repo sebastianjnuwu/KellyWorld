@@ -9,7 +9,9 @@ Hello my name is  `MyCat`  I was raised on the server [KettraWorld](https://disc
 # About our project!
 
 My "cat" friends have a lot of problems with human beings or at least with some human beings, I MyCat together with my creator will try to raise awareness and create campaigns in support of us cat`s
+
 </br>
+
 `MyCat` - "In search of a better future for cats"
 
 If you want me on your server click [here](#)
