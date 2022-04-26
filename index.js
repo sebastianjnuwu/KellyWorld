@@ -131,7 +131,7 @@ const db = new JsonDatabase({
     return
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       if (language == "pt") {
-         message.reply(`olá, estou muita ocupada salvando gatinhos caso queira me ajudar agradeço........`);
+         message.reply("Olá meu nome é `MyCat` Você me chamou?");
         }
       if (language == "en") {
          message.reply(`hello, I'm too busy saving kittens if you want to help me thanks........`);
