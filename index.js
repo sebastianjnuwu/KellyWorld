@@ -137,7 +137,7 @@ const db = new JsonDatabase({
          message.reply("Hello my name is `MyCat` Did you call me?");
       }
       if (language == "es") {
-         message.reply("");
+         message.reply("Hola mi nombre es `MyCat` ¿Me llamaste?");
       }
     }
 });
