@@ -1,5 +1,5 @@
-
-
+// ♥️ project creator: Sebastian Jn
+// 🔍 Original Creator's Github: https://github.com/sebastianjnuwu
 
 // iniciando.........
 console.log("[ Info ] iniciando projeto...");
