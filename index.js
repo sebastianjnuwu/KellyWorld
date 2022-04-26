@@ -1,7 +1,7 @@
 // ♥️ project creator: Sebastian Jn
 // 🔍 Original Creator's Github: https://github.com/sebastianjnuwu
-// 🩸 Support our project:
-// 🌇 Our main objective in this project:
+// 🩸 Support our project: https://mycat.kettraworld.repl.co/
+// 🌇 Our main objective in this project: Help cats and make people aware of what they go through and the mistreatment they have suffered!
 
 // iniciando.........
 console.log("[ Info ] iniciando projeto...");
