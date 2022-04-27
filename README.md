@@ -22,6 +22,7 @@ By `MyCat` & `Sebastian`
 
 Commands are something that is made to amuse and entertain you! A bot without Commands is not a bot! See some of my commands and explanations about them below!
    
+   • 📸 `K.avatar` - Show your avatar and also with id or mention!
    • 🌎 `K.setlanguage` - to change the server language!
   
 # ❤️ Donation 
