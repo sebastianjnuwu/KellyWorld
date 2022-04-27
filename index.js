@@ -9,22 +9,22 @@
 process.on('unhandledRejection', (reason, p) => {    
        console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
        console.log(reason, p);
-    });
+});
     
-    process.on("uncaughtException", (err, origin) => {
+process.on("uncaughtException", (err, origin) => {
         console.log(' [ ANTICLASH] | CATCH ERROR');
         console.log(err, origin);
-    }) 
+});
 
-    process.on('uncaughtExceptionMonitor', (err, origin) => {
+process.on('uncaughtExceptionMonitor', (err, origin) => {
         console.log(' [ ANTICLASH ] | BLOQUEADO');
         console.log(err, origin);
-    });
+});
 
-    process.on('multipleResolves', (type, promise, reason) => {
+process.on('multipleResolves', (type, promise, reason) => {
         console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
         console.log(type, promise, reason);
-    }); 
+}); 
 
 // Soon after we are requesting the packages and files that our application will need to have its functioning in addition to logging in to discord!
 const Discord = require("discord.js");
