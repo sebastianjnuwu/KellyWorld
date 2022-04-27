@@ -48,6 +48,10 @@ app.listen(process.env.PORT, (req, res) => {
   
 });
 
+app.get('/', (req, res) => {
+  res.render('inicio')
+})
+
 client.on('ready', () => {
 	
 console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
