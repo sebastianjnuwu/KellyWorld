@@ -50,7 +50,9 @@ app.listen(process.env.PORT, (req, res) => {
 client.on('ready', () => {
 	
 console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`)
+
 console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`)
+
 console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`)
 
 });
