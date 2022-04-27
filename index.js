@@ -38,7 +38,10 @@ client.login(process.env.token);
 const app = express()
 
 // Site do MyCat!
-
+app.use(express.static('public'))
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+app.set('view engine', 'ejs')
 
 
 client.on('ready', () => {
