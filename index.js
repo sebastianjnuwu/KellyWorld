@@ -35,25 +35,26 @@ const { fs, colors, dotenv } = require("kettraworld.db");
 const API = require("./src/apis/index.js");
 const config = require("./config.json");
 client.login(process.env.token);
-const app = express()
+const app = express();
 
 // Site do MyCat!
-app.use(express.static('public'))
-app.use(express.json())
-app.use(express.urlencoded({extended: false}))
-app.set('view engine', 'ejs')
+app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.set('view engine', 'ejs');
 
 app.listen(process.env.PORT, (req, res) => {
   console.log('[ Info ] - Server is running!');
-})
+  
+});
 
 client.on('ready', () => {
 	
-console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`)
+console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
 
-console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`)
+console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`);
 
-console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`)
+console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`);
 
 });
       
@@ -166,3 +167,4 @@ const db = new JsonDatabase({
 // 🌟 Will it be the end of KellyWorld? Will this be the end of this wonderful project? In order to help and educate people about how to take care of their cats who suffer every day from mistreatment! /ᐠ｡ꞈ｡ᐟ\
 
 // 👻 Did you like my work? Contact me: sebastianjnuwu@gmail.com
+
