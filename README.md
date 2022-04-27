@@ -22,7 +22,7 @@ By `MyCat` & `Sebastian`
 
 Commands are something that is made to amuse and entertain you! A bot without Commands is not a bot! See some of my commands and explanations about them below!
    
-   • 🌎 `K.setlanguage` - to change the server language!
+   • 🌎 `K.setlanguage` - to change the server language! ( Available languages ​​En, Es, Pt )
   
 # ❤️ Donation 
 
