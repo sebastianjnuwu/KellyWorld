@@ -86,7 +86,7 @@ client.on("messageCreate", async (message) => {
       
 client.on('ready', () => {
   
-  let activities = [ `New challenges: 🌟 Support against animal violence`,`New project: 😺 cat support`, ],
+  let activities = [ `New challenges: 🌟 Support against animal violence`,`New project: 😺 cat support`,`New news : ♥️ Sixth life being used!` ],
             i = 0; 
         setInterval(
             () =>
