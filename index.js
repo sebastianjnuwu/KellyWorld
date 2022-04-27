@@ -37,6 +37,12 @@ const config = require("./config.json");
 client.login(process.env.token);
 const app = express();
 
+const ping = new Date();
+  ping.setHours(ping.getHours() - 3);
+  console.log(`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+ response.sendStatus(200);
+});
+
 // Site do MyCat!
 app.use(express.static('public'));
 app.use(express.json());
