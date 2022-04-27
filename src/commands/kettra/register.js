@@ -88,6 +88,6 @@ let verified = db.get(`site_${message.author.id}`);
 });
 
 });
+      }
    }
-  }
-	}
+}
