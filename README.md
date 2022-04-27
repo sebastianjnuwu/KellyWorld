@@ -17,6 +17,10 @@ My "cat" friends have a lot of problems with human beings or at least with some 
 If you want me on your server click [here](#)
 
 By `MyCat` & `Sebastian`
+
+# 🔍 commands
+
+Commands are something I run to amuse and entertain you! A bot if! Commands is not bot! See some of the !eight commands and explanations about it right below! 
   
 # ❤️ Donation 
 
