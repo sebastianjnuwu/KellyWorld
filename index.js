@@ -44,7 +44,7 @@ app.use(express.urlencoded({extended: false}))
 app.set('view engine', 'ejs')
 
 app.listen(process.env.PORT, (req, res) => {
-  console.log('Server is running');
+  console.log('[ Info ] - Server is running!');
 })
 
 client.on('ready', () => {
