@@ -24,6 +24,8 @@ Commands are something that is made to amuse and entertain you! A bot without Co
    
    • 📸 `K.avatar` - Show your avatar and also with id or mention!
    
+   • 🖼️ `K.icon` - Show the server icon!
+   
    • 🌎 `K.setlanguage` - to change the server language!
   
 # ❤️ Donation 
