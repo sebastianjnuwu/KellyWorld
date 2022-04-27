@@ -35,8 +35,10 @@ const { fs, colors, dotenv } = require("kettraworld.db");
 const API = require("./src/apis/index.js");
 const config = require("./config.json");
 client.login(process.env.token);
+const app = express()
 
 // Site do MyCat!
+
 
 
 client.on('ready', () => {
