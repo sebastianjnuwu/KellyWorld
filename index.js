@@ -36,10 +36,10 @@ const API = require("./src/apis/index.js");
 const config = require("./config.json");
 client.login(process.env.token);
 const app = express();
-const router = express.Router();
+const ping = new Date();
 
-router.use((req, res, next) => {
-  console.log('Time: ', Date.now())
+app.use((req, res, next) => {
+  console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
   next()
 })
 
