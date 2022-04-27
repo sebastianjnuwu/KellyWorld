@@ -17,22 +17,6 @@ My "cat" friends have a lot of problems with human beings or at least with some 
 If you want me on your server click [here](#)
 
 By `MyCat` & `Sebastian`
-
-# 🪧 commands 
-
-   • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
-   
-   • 🤬 `K.ban` - ban a user by server id or mention!
-   
-   • 🧹 `K.clear` - command to delete messages from 1 to 99!
-   
-   • 🏓 `K.ping` - shows the ping of the api and your ping!
-   
-   • 🖼️ `K.icon` - show the server icon!
-   
-   • 🗣️ `K.say` - talk on some server channel used the bot!
-   
-   • 🌍 `K.setlanguage` - select a language for your server!
   
 # ❤️ Donation 
 
