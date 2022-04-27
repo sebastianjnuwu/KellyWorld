@@ -33,6 +33,8 @@ const { joinVoiceChannel } = require('@discordjs/voice');
 const { fs, colors, dotenv } = require("kettraworld.db");
 const API = require("./src/apis/index.js");
 const config = require("./config.json");
+
+// login? UwU
 client.login(process.env.token);
 
 var http = require("http");
