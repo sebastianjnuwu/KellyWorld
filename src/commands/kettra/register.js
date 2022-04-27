@@ -76,7 +76,7 @@ let verified = db.get(`site_${message.author.id}`);
   from: 'kettraworld@gmail.com',
   to: `${args[0]}`,
   subject: 'Seja Bem-Vindo a Kettra world',
-  text: `\nOla ${usuario} para poder acessar nosso site por favor confirme se realmente vocé é quem diz ser!\n\nConfirma email: ${site}${token}\n\n"Kettra World preza pela sua privacida e segurança"\n\nKettraWorld | Brasil-São Paulo capital | @EquipeKettraWorld`
+  text: `\nOla ${usuario} para poder acessar nosso site por favor confirme se realmente vocé é quem diz ser!\n\nConfirma email: ${site}${token}\n\n"Kettra World preza pela sua privacida e segurança"`
 };
         
   transporter.sendMail(mailOptions, function(error, info){
