@@ -36,12 +36,13 @@ const API = require("./src/apis/index.js");
 const config = require("./config.json");
 client.login(process.env.token);
 const app = express();
+const router = express.Router();
 
-const ping = new Date();
-  ping.setHours(ping.getHours() - 3);
-  console.log(`Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
- response.sendStatus(200);
-});
+router.use((req, res, next) => {
+  console.log('Time: ', Date.now())
+  next()
+})
+
 
 // Site do MyCat!
 app.use(express.static('public'));
