@@ -26,6 +26,8 @@ Commands are something that is made to amuse and entertain you! A bot without Co
    
    • 🖼️ `K.icon` - Show the server icon!
    
+   • 🏓 `K.ping` - Show MyCat ping!
+   
    • 🌎 `K.setlanguage` - to change the server language!
   
 # ❤️ Donation 
