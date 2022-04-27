@@ -21,11 +21,8 @@ By `MyCat` & `Sebastian`
 # 🔍 commands
 
 Commands are something that is made to amuse and entertain you! A bot without Commands is not a bot! See some of my commands and explanations about them below!
-
-<details>
- <summary>• 🌎 <h2>K.setlanguage</h2> - to change the server language!</summary>
- 🥲
-  </details>
+   
+   • 🌎 `K.setlanguage` - to change the server language!
   
 # ❤️ Donation 
 
