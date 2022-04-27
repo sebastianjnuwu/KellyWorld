@@ -67,7 +67,19 @@ console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.siz
 console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`);
 
 });
-      
+
+client.on("ready", () => {
+  
+  let activities = [ `Minecraft em Kettra World 🌟`,`` ],
+    i = 0;
+  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
+     type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu"
+      }), 5000); 
+  client.user
+  .setStatus("dnd");
+  
+});
+
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 module.exports = client;
@@ -99,20 +111,6 @@ client.on("messageCreate", async (message) => {
       if(!command) return canal.send(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`)
       command.run(client, message, args)
       });
-      
-client.on('ready', () => {
-  
-  let activities = [ `New challenges: 🌟 Support against animal violence`,`New project: 😺 cat support`,`New news : ♥️ Sixth life being used!` ],
-            i = 0; 
-        setInterval(
-            () =>
-                client.user.setActivity(`${activities[i++ % activities.length]}`, {
-                    type: "STREAMING",
-                    url: "https://www.twitch.tv/sebastianjnuwu" 
-                }),
-             1000 * 60
-        );
-    })
 
 client.on('guildMemberAdd', member => {
 
