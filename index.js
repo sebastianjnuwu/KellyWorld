@@ -149,7 +149,7 @@ const db = new JsonDatabase({
 
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       if (language == "pt") {
-         message.reply("Olá meu nome é `MyCat` Você me chamou?");
+         message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
         }
         
       if (language == "en") {
@@ -163,15 +163,4 @@ const db = new JsonDatabase({
 });
 
 
-// 👋 Hello moto! My name is Sebastian I live in the northeast of Brazil, this is another creation of mine to help the kittens who suffer every day ಠ_ಠ 
-
-// 📸 Social media: @sebastianjnuwu
-
-// 🥺 Want to buy me a coffee? Lol I've been awake for days and the coffee is over! ;-;
-
-// ☕ Buy coffee:  https://ko-fi.com/sebastianjnuwu
-
-// 🌟 Will it be the end of KellyWorld? Will this be the end of this wonderful project? In order to help and educate people about how to take care of their cats who suffer every day from mistreatment! /ᐠ｡ꞈ｡ᐟ\
-
-// 👻 Did you like my work? Contact me: sebastianjnuwu@gmail.com
-
+// fim? 
