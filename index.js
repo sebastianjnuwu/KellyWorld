@@ -106,7 +106,7 @@ client.on("messageCreate", async (message) => {
       let cmd = args.shift().toLowerCase()
       if(cmd.length === 0) return;
       let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
-      let canal = client.channels.cache.get(`962361906373468230`)
+      let canal = client.channels.cache.get(`969290884300537868`)
       if(!command) return canal.send(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`)
       command.run(client, message, args)
       });
