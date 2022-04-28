@@ -1,3 +1,5 @@
+<h1 align="center">KellyWorld</h1>
+
 # 🔍 commands 
 
    •  📸 `K.avatar` - Show your avatar and also with id or mention!
