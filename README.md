@@ -1,12 +1,12 @@
 # 🔍 commands 
 
-   • 📸 `K.avatar` - Show your avatar and also with id or mention!
+   •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
-   • 🖼️ `K.icon` - Show the server icon!
+   •  🖼️ `K.icon` - Show the server icon!
    
-   • 🏓 `K.ping` - Show MyCat ping!
+   •  🏓 `K.ping` - Show KellyWorld ping!
    
-   • 🌎 `K.setlanguage` - to change the server language!
+   •  🌎 `K.setlanguage` - to change the server language!
   
 # ❤️ Donation 
 
