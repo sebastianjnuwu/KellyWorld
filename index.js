@@ -69,7 +69,7 @@ console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuari
 
 client.on("ready", () => {
   
-  let activities = [ `Minecraft em Kettra World 🌟`,`` ],
+  let activities = [ `Minecraft em Kettra World 🌟`,],
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
      type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu"
@@ -153,14 +153,13 @@ const db = new JsonDatabase({
         }
         
       if (language == "en") {
-         message.reply("Hello my name is `MyCat` Did you call me?");
+         message.reply("hello did you call me? I'm too busy, too many souls to take care of.......");
       }
       
       if (language == "es") {
-         message.reply("Hola mi nombre es `MyCat` ¿Me llamaste?");
+         message.reply("hola me llamaste? Estoy demasiado ocupado, demasiadas almas para cuidar.......");
       }
     }
 });
-
 
 // fim? 
