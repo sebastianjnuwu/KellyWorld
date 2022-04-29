@@ -1,6 +1,7 @@
 <h1 align="center">KellyWorld</h1>
 
 "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness."
+
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://discord.gg/NDzFeDp8YE"><img src="https://discordapp.com/api/guilds/893997835412971570/widget.png"></a>
