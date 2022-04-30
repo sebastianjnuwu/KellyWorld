@@ -7,7 +7,6 @@
   <a href="https://discord.gg/NDzFeDp8YE"><img src="https://discordapp.com/api/guilds/893997835412971570/widget.png"></a>
 </p>
 
-
 # 🔍 commands 
 
    •  📸 `K.avatar` - Show your avatar and also with id or mention!
