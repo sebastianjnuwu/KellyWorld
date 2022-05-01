@@ -22,5 +22,5 @@ module.exports = {
  };
       let help = new Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle('')
+      .setTitle('🔍 commandos!')
  };
