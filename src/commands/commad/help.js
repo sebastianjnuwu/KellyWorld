@@ -23,7 +23,7 @@ module.exports = {
       .setColor("RANDOM")
       .setTitle('🔍 commandos!')
 	  .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
-      .setDescription('"Esta menina tem dois lados um é o sol o outro é a lua. Com o sol ela expressa felicidade e alegria. Com a lua ele expressa seu medo e tristeza."\n\n• 📸  `K.avatar` - Mostre seu avatar e também com id ou menção!\n\n• 🖼️  `icon` - Mostre o ícone do servidor!\n\n• 🏓  `K.ping` - Mostrar ping KellyWorld!\n\n• 🌎  `K.setlanguage` - para alterar o idioma do servidor!')
+      .setDescription('"Esta menina tem dois lados um é o sol o outro é a lua. Com o sol ela expressa felicidade e alegria. Com a lua ele expressa seu medo e tristeza."\n\n')
       message.reply({ embeds: [help] })
  };
 	  
