@@ -20,5 +20,6 @@ module.exports = {
    if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
        return message.reply("<:K_zan:924366252024164363> eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ")
  };
-  
+      let help = new Discord.MessageEmbed()
+      .setColor("RANDOM")
  };
