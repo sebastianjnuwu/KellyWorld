@@ -24,4 +24,5 @@ module.exports = {
       .setColor("RANDOM")
       .setTitle('🔍 commandos!')
       .setDescription('ㅤ\n\n"Esta menina tem dois lados um é o sol o outro é a lua. Com o sol ela expressa felicidade e alegria. Com a lua ele expressa seu medo e tristeza."\n\n• 📸 `K.avatar` - Mostre seu avatar e também com id ou menção!\n• 🖼️ `icon` - Mostre o ícone do servidor!\n• 🏓 `K.ping` - Mostrar ping KellyWorld!\n• 🌎 `K.setlanguage` - para alterar o idioma do servidor!')
+      message.reply({ embeds: [help] })
  };
