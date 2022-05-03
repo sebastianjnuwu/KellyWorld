@@ -1,5 +1,7 @@
 <h1 align="center">KellyWorld</h1>
 
+![](https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/src/imagens/KellyWorld.png)
+
 "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness."
 
 
