@@ -28,9 +28,7 @@ module.exports = {
 		  const permalink = post.data.permalink;
 			const memeUrl = `https://reddit.com${permalink}`;
 			const memeImage = post.data.url;
-			const memeTitle = post.data.title;
-
-		    ping.setTitle(`${memeTitle}`)
+	
 	    	ping.setColor('RANDOM')
     		ping.setImage(memeImage)
     		
