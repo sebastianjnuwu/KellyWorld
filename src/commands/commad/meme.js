@@ -63,7 +63,6 @@ module.exports = {
     return message.reply("<:K_zan:924366252024164363> No tengo permiso de `ADMINISTRADOR` lamentablemente soy un inútil ಥ╭╮ಥ")
       };
       
-            
 	let ping = new Discord.MessageEmbed()
 	  got('https://www.reddit.com/r/memesES/random/.json').then(response => {
 			const [list] = JSON.parse(response.body);
