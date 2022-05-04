@@ -1,7 +1,5 @@
-// ♥️ project creator: Sebastian Jn
+// ♥️ project creator: Sebastian Jn (╯°□°）╯︵ ┻━┻
 // 🔍 Original Creator's Github: https://github.com/sebastianjnuwu
-// 🩸 Support our project: https://mycat.kettraworld.repl.co/
-// 🌇 Our main objective in this project: Help cats and make people aware of what they go through and the mistreatment they have suffered!
 
 // iniciando.........
 
@@ -36,10 +34,10 @@ const API = require("./src/apis/index.js");
 const config = require("./config.json");
 client.login(process.env.token);
 const app = express();
-const router = express.Router();
+const ping = new Date();
 
-router.use((req, res, next) => {
-  console.log('Time: ', Date.now())
+app.use((req, res, next) => {
+  console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
   next()
 })
 
@@ -71,7 +69,7 @@ console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuari
 
 client.on("ready", () => {
   
-  let activities = [ `Minecraft em Kettra World 🌟`,`` ],
+  let activities = [ `Minecraft em Kettra World 🌟`,],
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
      type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu"
@@ -108,7 +106,7 @@ client.on("messageCreate", async (message) => {
       let cmd = args.shift().toLowerCase()
       if(cmd.length === 0) return;
       let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
-      let canal = client.channels.cache.get(`962361906373468230`)
+      let canal = client.channels.cache.get(`969290884300537868`)
       if(!command) return canal.send(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`)
       command.run(client, message, args)
       });
@@ -151,29 +149,17 @@ const db = new JsonDatabase({
 
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       if (language == "pt") {
-         message.reply("Olá meu nome é `MyCat` Você me chamou?");
+         message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
         }
         
       if (language == "en") {
-         message.reply("Hello my name is `MyCat` Did you call me?");
+         message.reply("hello did you call me? I'm too busy, too many souls to take care of.......");
       }
       
       if (language == "es") {
-         message.reply("Hola mi nombre es `MyCat` ¿Me llamaste?");
+         message.reply("hola me llamaste? Estoy demasiado ocupado, demasiadas almas para cuidar.......");
       }
     }
 });
 
-
-// 👋 Hello moto! My name is Sebastian I live in the northeast of Brazil, this is another creation of mine to help the kittens who suffer every day ಠ_ಠ 
-
-// 📸 Social media: @sebastianjnuwu
-
-// 🥺 Want to buy me a coffee? Lol I've been awake for days and the coffee is over! ;-;
-
-// ☕ Buy coffee:  https://ko-fi.com/sebastianjnuwu
-
-// 🌟 Will it be the end of KellyWorld? Will this be the end of this wonderful project? In order to help and educate people about how to take care of their cats who suffer every day from mistreatment! /ᐠ｡ꞈ｡ᐟ\
-
-// 👻 Did you like my work? Contact me: sebastianjnuwu@gmail.com
-
+// fim? 

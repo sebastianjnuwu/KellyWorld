@@ -1,34 +1,24 @@
-<img align="right" src="https://images-ext-2.discordapp.net/external/O04ENeR2bvzHGscCLrjf14dxwVPRFcXwfrI1VCv2Wac/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/932705411897905193/9bebc14f036c11585199ed5887ef6fbf.png" width="300"/>
+<h1 align="center">KellyWorld</h1>
 
-# 👋 About me!
+<img src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/public/KellyWorld.png" size="175" width="250" ><img src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/public/KellyWorld.png" size="175" width="250" >
 
-Hello my name is  `MyCat`  I was raised on the server [KettraWorld](https://discord.gg/NDzFeDp8YE), really enjoy playing games and helping people around me! But my little friends suffer!   `UwU`
+"This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness."
 
-<img align="left" src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/src/imagens/gatinho.png" width="300"/>
 
-# About our project!
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <a href="https://discord.gg/NDzFeDp8YE"><img src="https://discordapp.com/api/guilds/893997835412971570/widget.png"></a>
+</p>
 
-My "cat" friends have a lot of problems with human beings or at least with some human beings, I MyCat together with my creator will try to raise awareness and create campaigns in support of us cat`s
+# 🔍 commands 
 
-</br>
-
-`MyCat` - "In search of a better future for cats"
-
-If you want me on your server click [here](#)
-
-By `MyCat` & `Sebastian`
-
-# 🔍 commands
-
-Commands are something that is made to amuse and entertain you! A bot without Commands is not a bot! See some of my commands and explanations about them below!
+   •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
-   • 📸 `K.avatar` - Show your avatar and also with id or mention!
+   •  🖼️ `K.icon` - Show the server icon!
    
-   • 🖼️ `K.icon` - Show the server icon!
+   •  🏓 `K.ping` - Show KellyWorld ping!
    
-   • 🏓 `K.ping` - Show MyCat ping!
-   
-   • 🌎 `K.setlanguage` - to change the server language!
+   •  🌎 `K.setlanguage` - to change the server language!
   
 # ❤️ Donation 
 
@@ -39,3 +29,4 @@ you have the power to make a difference, make a donation of any symbolic value f
 # 📃 License
 
 ฅ^•ﻌ•^ฅ this repository is licensed: https://apache.org/licenses/LICENSE-2.0
+
