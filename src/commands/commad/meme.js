@@ -30,13 +30,13 @@ module.exports = {
 			const memeImage = post.data.url;
 			const memeTitle = post.data.title;
 
-		   ping.setTitle(`${memeTitle}`);
-		ping.setColor('RANDOM');
-		ping.setImage(memeImage);
+		    ping.setTitle(`${memeTitle}`)
+	    	ping.setColor('RANDOM')
+    		ping.setImage(memeImage)
+    		
 		message.reply({ embeds: [ping] })
     })
 		.catch(console.error);
-
 	}
 	}
 }
