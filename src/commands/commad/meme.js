@@ -37,7 +37,26 @@ module.exports = {
 		.catch(console.error);
 	}
 	
+	if (language === "en") {
+      if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
+    return message.reply("<:K_zan:924366252024164363> I'm without `ADMINISTRATOR` permission unfortunately I'm useless ಥ╭╮ಥ")
+      };
+      
+	let ping = new Discord.MessageEmbed()
+	  got('https://www.reddit.com/r/memes/random/.json').then(response => {
+			const [list] = JSON.parse(response.body);
+			const [post] = list.data.children;
+		  const permalink = post.data.permalink;
+			const memeUrl = `https://reddit.com${permalink}`;
+			const memeImage = post.data.url;
 	
+	    	ping.setColor('RANDOM')
+    		ping.setImage(memeImage)
+    		
+		message.reply({ embeds: [ping] })
+    })
+		.catch(console.error);
+	}
 	
 	
 	}
