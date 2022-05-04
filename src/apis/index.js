@@ -9,6 +9,7 @@ const { mysql } = require('kettraworld.db');
   database        : `${process.env.database}`
 });
 
+
 setInterval(function() {
 connection.query('SELECT * FROM transacao WHERE status_transacao = 2', function (error, results, fields) {
   if (error) throw error;
