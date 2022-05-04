@@ -1,6 +1,6 @@
-earconst Discord = require("discord.js");
-
-
+const Discord = require("discord.js");
+const got = require('got');
+const { JsonDatabase } = require('kettraworld.db');
 const db = new JsonDatabase({
   DatabaseJson:"./src/database/database.json"
 });
