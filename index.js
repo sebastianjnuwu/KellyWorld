@@ -112,20 +112,14 @@ client.on("messageCreate", async (message) => {
       });
 
 client.on('guildMemberAdd', member => {
-
- const channel = member.guild.channels.cache.find(ch => ch.name === '🎑┇bem-vindos');
- 
+  
+  const deletarMsgComTempo = (msg, segundos = 30) =>
+        setTimeout(() => msg.delete().catch(() => {}), segundos * 3000);
+        
+ const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
   if (!channel) return;
   
-  let embed = new Discord.MessageEmbed()
-
-      .setThumbnail(member.user.displayAvatarURL())
-      .setImage("https://raw.githubusercontent.com/sebastianjn/sebastianjn/main/imagens/bemvindo.jpeg")
-      .setColor('RANDOM')
-      .setTitle (`Bem vindos a KettraWorld!`)
-      .setDescription(`**Anjo:**  Olá Humano **${member.user.tag}!** Sou seu anjo da guarda em KettraWorld, com você **${member.guild.memberCount}** almas foram ajudadas por mim!\n\nAgora vamos ao que importa, o mundo que você renascera se chama Kettra, um magnífico mundo RPG onde você ira criar a sua história e junto de seus companheiros de aventura irão desbravar esse imenso lugar e descobrir todos os seus segredos.\n\nPor enquanto nos despedimos aqui, quando você entrar em Kettra estarei lá para te acompanhar e ajudar em sua nova jornada.\n\nUse **K.kettra ip** para descobrir o caminho de como entrar em KettraWorld`)
-      
- channel.send({ content: `${member}`, embeds: [embed] });
+  channel.send("${member} Seja Bem-vindo(a) ao mundo Kettra!").then(deletarMsgComTempo);
  
 });
 
