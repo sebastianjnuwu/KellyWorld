@@ -20,7 +20,7 @@ module.exports = {
         
         const options = {
             method: "GET",
-            url: "https://reddit.com/r/dankmemes/random/.json",
+            url: "https://reddit.com/r/MEMEBR/random/.json",
         };
 
         axios.request(options).then(response => {
