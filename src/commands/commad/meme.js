@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
-const axios = require("axios").default;
-const { JsonDatabase } = require('kettraworld.db');
+const axios = require("axios"efaulconst { JsonDatabase } = require('kettraworld.db');
 const db = new JsonDatabase({
   DatabaseJson:"./src/database/database.json"
 });
