@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const got = require('got');
+const randomPuppy = require('random-puppy')
 const { JsonDatabase } = require('kettraworld.db');
 const db = new JsonDatabase({
   DatabaseJson:"./src/database/database.json"
@@ -22,19 +23,13 @@ module.exports = {
   };
   
       let ping = new Discord.MessageEmbed()
-	  got('https://www.reddit.com/r/MEMEBRASIL/random/.json').then(response => {
-			const [list] = JSON.parse(response.body);
-			const [post] = list.data.children;
-		  const permalink = post.data.permalink;
-			const memeUrl = `https://reddit.com${permalink}`;
-			const memeImage = post.data.url;
-	
+  const subReddits = ['dankmemes']
+  const random = subReddits[Math.floor(Math.random() * subReddits.length)]
+  const img = await randomPuppy(random)
 	    	ping.setColor('RANDOM')
-    		ping.setImage(memeImage)
+    		ping.setImage(img)
     		
 		message.reply({ embeds: [ping] })
-    })
-		.catch(console.error);
 	}
 	
 	if (language === "en") {
