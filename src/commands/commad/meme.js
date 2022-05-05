@@ -35,7 +35,7 @@ module.exports = {
             message.reply({ embeds: [memeEmbed] });
         }).catch(err => {
             console.log(err);
-            return message.reply({ content: ":x: Unfortunately, something went wrong with the API, and your meme could not be loaded." });
+            return message.reply({ content: ":x:" });
         });
     }
 }
