@@ -28,6 +28,7 @@
   "homepage": "https://github.com/sebastianjn/KellyWorld",
   "dependencies": {
     "@discordjs/voice": "^0.9.0",
+    "axios": "^0.27.2",
     "colors": "^1.4.0",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
