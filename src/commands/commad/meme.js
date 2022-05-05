@@ -22,7 +22,7 @@ module.exports = {
   };
   
       let meme = new Discord.MessageEmbed()
-	  got('https://www.reddit.com/r/MEMEBR/random/.json').then(response => {
+	  got('https://www.reddit.com/r/MemesBR/random/.json').then(response => {
 			const [list] = JSON.parse(response.body);
 			const [post] = list.data.children;
 		  const permalink = post.data.permalink;
