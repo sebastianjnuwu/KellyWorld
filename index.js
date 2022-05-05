@@ -119,7 +119,7 @@ client.on('guildMemberAdd', member => {
  const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
   if (!channel) return;
   
-  channel.send("${member} Seja Bem-vindo(a) ao mundo Kettra!").then(deletarMsgComTempo);
+  channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(deletarMsgComTempo);
  
 });
 
