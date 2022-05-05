@@ -113,8 +113,8 @@ client.on("messageCreate", async (message) => {
 
 client.on('guildMemberAdd', member => {
   
-  const deletarMsgComTempo = (msg, segundos = 30) =>
-        setTimeout(() => msg.delete().catch(() => {}), segundos * 3000);
+  const deletarMsgComTempo = (msg, segundos = 50) =>
+        setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
         
  const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
   if (!channel) return;
