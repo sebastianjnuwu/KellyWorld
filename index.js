@@ -29,8 +29,8 @@ const Discord = require("discord.js");
 const express = require('express');
 const client = new Discord.Client({intents: 14071});
 const { joinVoiceChannel } = require('@discordjs/voice');
-const { fs, colors, dotenv } = require("kettraworld.db");
-const API = require("./src/apis/index.js");
+const { fs, colors, dotenv } = require("kettraworld.db"); /*
+const API = require("./src/apis/index.js"); */
 const config = require("./config.json");
 client.login(process.env.token);
 const app = express();
