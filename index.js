@@ -38,8 +38,6 @@ app.use((req, res, next) => {
   next()
 })
 
-
-// Site do MyCat!
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -69,7 +67,7 @@ client.on("ready", () => {
   let activities = [ `Minecraft em Kettra World 🌟`,],
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
-     type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu"
+     type: "PLAYING", url: "https://www.twitch.tv/sebastianjnuwu"
       }), 5000); 
   client.user
   .setStatus("dnd");
