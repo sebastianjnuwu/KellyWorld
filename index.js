@@ -24,13 +24,12 @@ process.on('multipleResolves', (type, promise, reason) => {
         console.log(type, promise, reason);
 }); 
 
-const Discord = require("discord.js");
-const express = require('express');
-const client = new Discord.Client({intents: 14071});
-const { joinVoiceChannel } = require('@discordjs/voice');
 const { fs, colors, dotenv } = require("kettraworld.db"); 
+const Discord = require("discord.js");
+const client = new Discord.Client({intents: 14071});
 const config = require("./config.json");
 client.login(process.env.token);
+const express = require('express');
 const app = express();
 const ping = new Date();
 
