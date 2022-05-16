@@ -93,5 +93,13 @@ client.on("messageCreate", message => {
 app.use((req, res, next) => {
   console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
   next()
-})
+});
+
+// site of the bot that will be in the application
+app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.set('view engine', 'ejs');
+
+
 // fim? 
