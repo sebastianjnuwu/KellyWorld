@@ -5,6 +5,9 @@ const { fs, colors, dotenv } = require("kettraworld.db");
 const Discord = require("discord.js");
 const client = new Discord.Client({intents: 14071});
 const config = require("./config.json");
+const express = require('express');
+const ping = new Date();
+const app = express();
 client.login(process.env.token); // login 
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
