@@ -81,7 +81,6 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   
   channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(DEL);
- 
 });
 
 // Message when the boy is mentioned he responds! (3 language​lol)
@@ -89,7 +88,9 @@ client.on("messageCreate", message => {
     if (message.author.bot) return;
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-         message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
+    
+     message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
+     
 });
 
 // fim? 
