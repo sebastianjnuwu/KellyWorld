@@ -105,4 +105,9 @@ app.set('view engine', 'ejs');
 app.listen(process.env.PORT, (req, res) => {
   console.log('[Info] - servidor ligado na porta: ${process.env.PORT}');
 });
+
+// start of website
+app.get('/', (req, res) => {
+  res.render('inicio')
+});
 // fim? 
