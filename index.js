@@ -26,28 +26,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client({intents: 14071});
 const config = require("./config.json");
 client.login(process.env.token);
-const express = require('express');
-const app = express();
-const ping = new Date();
 
-app.use((req, res, next) => {
-  console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-  next()
-})
-
-app.use(express.static('public'));
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.set('view engine', 'ejs');
-
-app.listen(process.env.PORT, (req, res) => {
-  console.log('[ Info ] - Server is running!');
-  
-});
-
-app.get('/', (req, res) => {
-  res.render('inicio')
-})
 
 client.on('ready', () => {
 	
