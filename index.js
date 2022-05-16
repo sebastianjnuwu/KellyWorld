@@ -8,7 +8,14 @@ const config = require("./config.json");
 const express = require('express');
 const ping = new Date();
 const app = express();
-client.login(process.env.token); // login 
+client.login(process.env.token); 
+
+// useful information
+client.on('ready', () => {
+console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
+console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`);
+console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`);
+});
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on('unhandledRejection', (reason, p) => {    
