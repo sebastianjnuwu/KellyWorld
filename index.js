@@ -56,6 +56,7 @@ fs.readdirSync('./src/commands/').forEach(local => {
     } 
 });
 
+// event
 client.on("messageCreate", async (message) => {
     let prefix = config.prefix;
       if (message.author.bot) return;
@@ -69,6 +70,7 @@ client.on("messageCreate", async (message) => {
       command.run(client, message, args)
 });
 
+// kettraworld server welcome screen
 client.on('guildMemberAdd', member => {
   const DEL = (msg, segundos = 50) => setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
   const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
