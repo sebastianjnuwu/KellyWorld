@@ -68,20 +68,19 @@ client.on("messageCreate", async (message) => {
       let cmd = args.shift().toLowerCase()
       if(cmd.length === 0) return;
       let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
-      let canal = client.channels.cache.get(`969290884300537868`)
-      if(!command) return canal.send(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`)
+      if(!command) return console.log(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`)
       command.run(client, message, args)
-      });
+});
 
 client.on('guildMemberAdd', member => {
   
-  const deletarMsgComTempo = (msg, segundos = 50) =>
-        setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
+  const DEL = (msg, segundos = 50) =>
+  setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
         
  const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
   if (!channel) return;
   
-  channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(deletarMsgComTempo);
+  channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(DEL);
  
 });
 
@@ -89,7 +88,7 @@ client.on('guildMemberAdd', member => {
 client.on("messageCreate", message => {
     if (message.author.bot) return;
     if (message.channel.type == "") return
-    if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
+    if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
          message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
 });
 
