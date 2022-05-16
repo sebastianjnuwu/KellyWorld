@@ -30,15 +30,12 @@ process.on('multipleResolves', (type, promise, reason) => {
 
 // activity status of our bot
 client.on("ready", () => {
-  
   let activities = [ `Minecraft em Kettra World 🌟`, `Minecraft: caçando os deuses ^^ `]
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "PLAYING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
   client.user
   .setStatus("dnd");
-  
 });
-
 
 // hadler of normal and slash commands
 client.commands = new Discord.Collection();
@@ -73,13 +70,9 @@ client.on("messageCreate", async (message) => {
 });
 
 client.on('guildMemberAdd', member => {
-  
-  const DEL = (msg, segundos = 50) =>
-  setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
-        
- const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
+  const DEL = (msg, segundos = 50) => setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
+  const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
   if (!channel) return;
-  
   channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(DEL);
 });
 
@@ -88,9 +81,7 @@ client.on("messageCreate", message => {
     if (message.author.bot) return;
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-    
      message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
-     
 });
 
 // fim? 
