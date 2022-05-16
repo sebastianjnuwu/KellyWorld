@@ -1,5 +1,12 @@
 // ♥️ project creator: Sebastian Jn (╯°□°）╯︵ ┻━┻
 
+// all packages used in the project
+const { fs, colors, dotenv } = require("kettraworld.db"); 
+const Discord = require("discord.js");
+const client = new Discord.Client({intents: 14071});
+const config = require("./config.json");
+client.login(process.env.token); // login 
+
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on('unhandledRejection', (reason, p) => {    
        console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
@@ -20,13 +27,6 @@ process.on('multipleResolves', (type, promise, reason) => {
         console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
         console.log(type, promise, reason);
 }); 
-
-const { fs, colors, dotenv } = require("kettraworld.db"); 
-const Discord = require("discord.js");
-const client = new Discord.Client({intents: 14071});
-const config = require("./config.json");
-client.login(process.env.token);
-
 
 client.on('ready', () => {
 	
