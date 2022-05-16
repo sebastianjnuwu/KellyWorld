@@ -66,7 +66,7 @@ client.on("messageCreate", async (message) => {
       let cmd = args.shift().toLowerCase()
       if(cmd.length === 0) return;
       let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
-      if(!command) return console.log(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`)
+      if(!command) return console.log(colors.red(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`));
       command.run(client, message, args)
 });
 
