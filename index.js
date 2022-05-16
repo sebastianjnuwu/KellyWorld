@@ -89,4 +89,9 @@ client.on("messageCreate", message => {
      message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
 });
 
+// ping system together with uptimerobot
+app.use((req, res, next) => {
+  console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+  next()
+})
 // fim? 
