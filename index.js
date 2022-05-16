@@ -101,5 +101,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 
-
+// se door that the website will be created!
+app.listen(process.env.PORT, (req, res) => {
+  console.log('[Info] - servidor ligado na porta: ${process.env.PORT}');
+});
 // fim? 
