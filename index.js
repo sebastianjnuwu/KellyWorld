@@ -1,7 +1,4 @@
 // ♥️ project creator: Sebastian Jn (╯°□°）╯︵ ┻━┻
-// 🔍 Original Creator's Github: https://github.com/sebastianjnuwu
-
-// iniciando.........
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on('unhandledRejection', (reason, p) => {    
