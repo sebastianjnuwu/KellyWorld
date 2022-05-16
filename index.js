@@ -28,6 +28,7 @@ process.on('multipleResolves', (type, promise, reason) => {
         console.log(type, promise, reason);
 }); 
 
+// activity status of our bot
 client.on("ready", () => {
   
   let activities = [ `Minecraft em Kettra World 🌟`, `Minecraft: caçando os deuses ^^ `]
@@ -38,6 +39,8 @@ client.on("ready", () => {
   
 });
 
+
+// hadler of normal and slash commands
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 module.exports = client;
@@ -84,35 +87,10 @@ client.on('guildMemberAdd', member => {
 
 // Message when the boy is mentioned he responds! (3 language​lol)
 client.on("messageCreate", message => {
-  
-const { JsonDatabase } = require('kettraworld.db');
-
-const db = new JsonDatabase({
-  DatabaseJson:"./src/database/database.json"
-});
-
-    let language = db.get(`language_${message.guild.id}`);
-    if( language == null ) { 
-      db.set(`language_${message.guild.id}`, "pt");
-    }
-    
     if (message.author.bot) return;
-    if (message.channel.type == "")
-    return
-
+    if (message.channel.type == "") return
     if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-      if (language == "pt") {
          message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
-        }
-        
-      if (language == "en") {
-         message.reply("hello did you call me? I'm too busy, too many souls to take care of.......");
-      }
-      
-      if (language == "es") {
-         message.reply("hola me llamaste? Estoy demasiado ocupado, demasiadas almas para cuidar.......");
-      }
-    }
 });
 
 // fim? 
