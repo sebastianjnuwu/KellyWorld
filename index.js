@@ -28,22 +28,12 @@ process.on('multipleResolves', (type, promise, reason) => {
         console.log(type, promise, reason);
 }); 
 
-client.on('ready', () => {
-	
-console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
-
-console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`);
-
-console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`);
-
-});
-
 client.on("ready", () => {
   
   let activities = [ `Minecraft em Kettra World 🌟`,],
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
-     type: "PLAYING", url: "https://www.twitch.tv/sebastianjnuwu"
+     type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu"
       }), 5000); 
   client.user
   .setStatus("dnd");
