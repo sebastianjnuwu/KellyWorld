@@ -94,6 +94,7 @@ client.on("messageCreate", message => {
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
      message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
+	}
 });
 
 // ping system together with uptimerobot
@@ -109,12 +110,13 @@ app.use(express.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 
 // se door that the website will be created!
-app.listen(process.env.PORT, (req, res) => {
-  console.log('[Info] - servidor ligado na porta: ${process.env.PORT}');
+app.listen(8080, (req, res) => {
+  console.log(`[Info] - servidor ligado na porta: 8080`);
 });
 
 // start of website
 app.get('/', (req, res) => {
   res.render('inicio')
 });
+
 // fim? 
