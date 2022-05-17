@@ -93,7 +93,10 @@ client.on("messageCreate", message => {
     if (message.author.bot) return;
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-     message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
+      const mgs = ['Olá me chamou? Estou muita ocupada são muitas almas para cuidar....','então estou escutando musica agora não me perturbem!'];
+      let mes = () => mgs[~~(Math.random() * mgs.length)];
+      
+     message.reply(`${mes()}`);
 	}
 });
 
