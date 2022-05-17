@@ -93,7 +93,7 @@ client.on("messageCreate", message => {
     if (message.author.bot) return;
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-      const mgs = ['<:K_Magnifico:963485603343761428> Olaa estava dormindo sonhando em ser.........','<:K_Belissimo:963485576244375572> Olá como eu posso te ajudar? Só lamento ter acabado o café!','<:K_bleh:955490018665857085> seu seu seu..... Eu estava sonhando e você me acordou quero te matar!',':K_stonks:  quer me mandar pix? kettraworld@gmail.com','','','','','','','',''];
+      const mgs = ['<:K_Magnifico:963485603343761428> Olaa estava dormindo sonhando em ser.........','<:K_Belissimo:963485576244375572> Olá como eu posso te ajudar? Só lamento ter acabado o café!','<:K_bleh:955490018665857085> seu seu seu..... Eu estava sonhando e você me acordou quero te matar!',':K_stonks:  quer me mandar pix? kettraworld@gmail.com','<:K_env:938833579981566043> sabia que não gosto de ser mencionada?','<:K_1:947545373298290698>',':K_hehe: queria ser rica, mais rica não posso ser, pq tem o sebastian me fazendo de escrava.....','','','','',''];
       let mes = () => mgs[~~(Math.random() * mgs.length)];
       
      message.reply(`${mes()}`);
