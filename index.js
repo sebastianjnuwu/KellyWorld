@@ -40,9 +40,9 @@ process.on('multipleResolves', (type, promise, reason) => {
 
 // activity status of our bot
 client.on("ready", () => {
-  let activities = [ `Minecraft em Kettra World 🌟`, `Minecraft: caçando os deuses ^^ `]
+  let activities = [ "Minecraft em Kettra World 🌟"]
     i = 0;
-  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "PLAYING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
+  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
   client.user
   .setStatus("dnd");
 });
