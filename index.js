@@ -3,7 +3,7 @@
 // all packages used in the project
 const { fs, colors, dotenv } = require("kettraworld.db"); 
 const Discord = require("discord.js");
-const client = new Discord.Client({ intents: 32767, ws: { properties: { $browser: "Discord iOS" }} }); 
+const client = new Discord.Client({ intents: 32767 });
 const config = require("./config.json");
 const express = require('express');
 const ping = new Date();
