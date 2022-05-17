@@ -93,7 +93,7 @@ client.on("messageCreate", message => {
     if (message.author.bot) return;
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-      const mgs = ['','','','','','','','','','','',''];
+      const mgs = ['<:K_Magnifico:963485603343761428> Olaa estava dormindo sonhando em ser.........','','','','','','','','','','',''];
       let mes = () => mgs[~~(Math.random() * mgs.length)];
       
      message.reply(`${mes()}`);
