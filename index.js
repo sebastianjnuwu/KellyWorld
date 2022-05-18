@@ -1,6 +1,6 @@
 // ♥️ project creator: Sebastian Jn (╯°□°）╯︵ ┻━┻
 // ⚙️ where projects are created:
-// ฅ^•ﻌ•^ฅ my GITHUB:
+// ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
 // all packages used in the project
 const { fs, colors, dotenv } = require("kettraworld.db"); 
