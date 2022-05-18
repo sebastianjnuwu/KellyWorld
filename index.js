@@ -96,8 +96,8 @@ client.on("messageCreate", message => {
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       const mgs = [ 
-        '<:K_sip:955489719674892368> alguém me marcou aff......',
-        ''
+        `<:K_sip:955489719674892368> alguém me marcou aff......`,
+        `<:K_mds:955490139323379742> ahhhhh ${message.author} não me perturbe!`
         ];
       let mes = () => mgs[~~(Math.random() * mgs.length)];
       
