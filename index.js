@@ -99,7 +99,8 @@ client.on("messageCreate", message => {
         '<:K_sip:955489719674892368>',
         '<:K_mds:955490139323379742>',
         '<:K_env:938833579981566043>',
-        '<:K_stonks:939162797835710495>'
+        '<:K_stonks:939162797835710495>',
+        '<:K_raiva:939161370505658388>'
         ];
       let mes = () => mgs[~~(Math.random() * mgs.length)];
       
