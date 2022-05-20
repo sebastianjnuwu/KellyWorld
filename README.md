@@ -16,6 +16,8 @@
    
    •  🖼️ `K.icon` - Show the server icon!
    
+   •  😂 `K.meme` - random reddit memes
+   
    •  🏓 `K.ping` - Show KellyWorld ping!
    
    •  🌎 `K.setlanguage` - to change the server language!

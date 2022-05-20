@@ -1,7 +1,23 @@
 // ♥️ project creator: Sebastian Jn (╯°□°）╯︵ ┻━┻
-// 🔍 Original Creator's Github: https://github.com/sebastianjnuwu
+// ⚙️ where projects are created:
+// ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
-// iniciando.........
+// all packages used in the project
+const { fs, colors, dotenv } = require("kettraworld.db"); 
+const Discord = require("discord.js");
+const client = new Discord.Client({ intents: 32767 });
+const config = require("./config.json");
+const express = require('express');
+const ping = new Date();
+const app = express();
+client.login(process.env.token); 
+
+// useful information
+client.on('ready', () => {
+console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
+console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`);
+console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`);
+});
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on('unhandledRejection', (reason, p) => {    
@@ -24,61 +40,16 @@ process.on('multipleResolves', (type, promise, reason) => {
         console.log(type, promise, reason);
 }); 
 
-// Soon after we are requesting the packages and files that our application will need to have its functioning in addition to logging in to discord!
-const Discord = require("discord.js");
-const express = require('express');
-const client = new Discord.Client({intents: 14071});
-const { joinVoiceChannel } = require('@discordjs/voice');
-const { fs, colors, dotenv } = require("kettraworld.db");
-const API = require("./src/apis/index.js");
-const config = require("./config.json");
-client.login(process.env.token);
-const app = express();
-const ping = new Date();
-
-app.use((req, res, next) => {
-  console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-  next()
-})
-
-
-// Site do MyCat!
-app.use(express.static('public'));
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.set('view engine', 'ejs');
-
-app.listen(process.env.PORT, (req, res) => {
-  console.log('[ Info ] - Server is running!');
-  
-});
-
-app.get('/', (req, res) => {
-  res.render('inicio')
-})
-
-client.on('ready', () => {
-	
-console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
-
-console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`);
-
-console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`);
-
-});
-
+// activity status of our bot
 client.on("ready", () => {
-  
-  let activities = [ `Minecraft em Kettra World 🌟`,],
+  let activities = [ "Minecraft em Kettra World 🌟"]
     i = 0;
-  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, {
-     type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu"
-      }), 5000); 
+  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
   client.user
   .setStatus("dnd");
-  
 });
 
+// hadler of normal and slash commands
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 module.exports = client;
@@ -97,6 +68,7 @@ fs.readdirSync('./src/commands/').forEach(local => {
     } 
 });
 
+// event
 client.on("messageCreate", async (message) => {
     let prefix = config.prefix;
       if (message.author.bot) return;
@@ -106,60 +78,58 @@ client.on("messageCreate", async (message) => {
       let cmd = args.shift().toLowerCase()
       if(cmd.length === 0) return;
       let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
-      let canal = client.channels.cache.get(`969290884300537868`)
-      if(!command) return canal.send(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`)
+      if(!command) return console.log(colors.red(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`));
       command.run(client, message, args)
-      });
+});
 
+// kettraworld server welcome screen
 client.on('guildMemberAdd', member => {
-
- const channel = member.guild.channels.cache.find(ch => ch.name === '🎑┇bem-vindos');
- 
+  const DEL = (msg, segundos = 50) => setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
+  const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
   if (!channel) return;
-  
-  let embed = new Discord.MessageEmbed()
-
-      .setThumbnail(member.user.displayAvatarURL())
-      .setImage("https://raw.githubusercontent.com/sebastianjn/sebastianjn/main/imagens/bemvindo.jpeg")
-      .setColor('RANDOM')
-      .setTitle (`Bem vindos a KettraWorld!`)
-      .setDescription(`**Anjo:**  Olá Humano **${member.user.tag}!** Sou seu anjo da guarda em KettraWorld, com você **${member.guild.memberCount}** almas foram ajudadas por mim!\n\nAgora vamos ao que importa, o mundo que você renascera se chama Kettra, um magnífico mundo RPG onde você ira criar a sua história e junto de seus companheiros de aventura irão desbravar esse imenso lugar e descobrir todos os seus segredos.\n\nPor enquanto nos despedimos aqui, quando você entrar em Kettra estarei lá para te acompanhar e ajudar em sua nova jornada.\n\nUse **K.kettra ip** para descobrir o caminho de como entrar em KettraWorld`)
-      
- channel.send({ content: `${member}`, embeds: [embed] });
- 
+  channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(DEL);
 });
 
 // Message when the boy is mentioned he responds! (3 language​lol)
 client.on("messageCreate", message => {
-  
-const { JsonDatabase } = require('kettraworld.db');
-
-const db = new JsonDatabase({
-  DatabaseJson:"./src/database/database.json"
+    if (message.author.bot) return;
+    if (message.channel.type == "") return
+    if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
+      const mgs = [ 
+        '<:K_avemaria:924362194941001749>',
+        '<:K_mds:955490139323379742>',
+        '<:K_env:938833579981566043>',
+        '<:K_stonks:939162797835710495>',
+        '<:K_raiva:939161370505658388>',
+        '<:k_cruz:938867436676083793>',
+        '<:K_suco:941391675073388545>'
+        ];
+      let mes = () => mgs[~~(Math.random() * mgs.length)];
+      
+     message.reply(`${mes()}`);
+	}
 });
 
-    let language = db.get(`language_${message.guild.id}`);
-    if( language == null ) { 
-      db.set(`language_${message.guild.id}`, "pt");
-    }
-    
-    if (message.author.bot) return;
-    if (message.channel.type == "")
-    return
+// ping system together with uptimerobot
+app.use((req, res, next) => {
+  console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+  next()
+});
 
-    if(message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
-      if (language == "pt") {
-         message.reply("Olá me chamou? Estou muita ocupada são muitas almas para cuidar.......");
-        }
-        
-      if (language == "en") {
-         message.reply("hello did you call me? I'm too busy, too many souls to take care of.......");
-      }
-      
-      if (language == "es") {
-         message.reply("hola me llamaste? Estoy demasiado ocupado, demasiadas almas para cuidar.......");
-      }
-    }
+// site of the bot that will be in the application
+app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.set('view engine', 'ejs');
+
+// se door that the website will be created!
+app.listen(8080, (req, res) => {
+  console.log(`[Info] - servidor ligado na porta: 8080`);
+});
+
+// start of website
+app.get('/', (req, res) => {
+  res.render('inicio')
 });
 
 // fim? 
