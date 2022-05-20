@@ -1,6 +1,7 @@
 <h1 align="center">KellyWorld</h1>
 
-<img src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/public/KellyWorld.png" size="175" width="250" ><img src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/public/KellyWorld.png" size="175" width="250" >
+<p align="center">
+  <a><img alt="License" src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/public/KellyWorld.png"/></a></p>
 
 "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness."
 
