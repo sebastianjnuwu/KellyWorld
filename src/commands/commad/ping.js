@@ -26,7 +26,7 @@ module.exports = {
       message.reply({ embeds: [ping] })
     };
       
-    if (!language || language === "en") {
+    if (language === "en") {
       if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
     return message.reply("<:K_zan:924366252024164363> I'm without `ADMINISTRATOR` permission unfortunately I'm useless ಥ╭╮ಥ")
       };
@@ -36,7 +36,7 @@ module.exports = {
         .setDescription(`:ping_pong: **pong!**\nMy current ping is at \`${client.ws.ping}ms\`.`);
       message.reply({ embeds: [ping] })
   };
-   if (!language || language === "es") {
+   if (language === "es") {
        if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
     return message.reply("<:K_zan:924366252024164363> No tengo permiso de `ADMINISTRADOR` lamentablemente soy un inútil ಥ╭╮ಥ")
       };

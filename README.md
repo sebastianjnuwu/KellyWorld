@@ -1,41 +1,26 @@
-# 👋 Welcome to the official KellyWorld repository!
+<h1 align="center">KellyWorld</h1>
+
+<img src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/public/KellyWorld.png" size="175" width="250" ><img src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/main/public/KellyWorld.png" size="175" width="250" >
+
+"This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness."
+
 
 <p align="center">
-My name is Kelly World I love drawings! <br> I love coffee ! how about buying it for me?
-</br>
-<br>
- <img src="https://raw.githubusercontent.com/sebastianjnuwu/sebastianjnuwu/main/imagens/mimosa.png" width="350" height="350">
-  </a>
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <a href="https://discord.gg/NDzFeDp8YE"><img src="https://discordapp.com/api/guilds/893997835412971570/widget.png"></a>
 </p>
-</div>
 
-> © Kelly World | All rights reserved!
->
-> **Add me to your server by [clicking here](https://discord.com/api/oauth2/authorize?client_id=932705411897905193&permissions=8&scope=bot%20applications.commands)**
+# 🔍 commands 
 
-# 🌍 mutiliguage 
-
-Kelly world it was developed internally in Brazil, being native in Portuguese, over time learned the Spanish and English that is still in its functions....
-
-🇺🇸 **language in english** --> 17% </br>
-🇧🇷 **language in portuguese** --> 100% </br>
-🇪🇦 **language in spanish** --> 16% 
-
-# 🪧 commands 
-
-   • 📷 `K.avatar` - shows your avatar and/or/without mention or id!
+   •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
-   • 🤬 `K.ban` - ban a user by server id or mention!
+   •  🖼️ `K.icon` - Show the server icon!
    
-   • 🧹 `K.clear` - command to delete messages from 1 to 99!
+   •  😂 `K.meme` - random reddit memes
    
-   • 🏓 `K.ping` - shows the ping of the api and your ping!
+   •  🏓 `K.ping` - Show KellyWorld ping!
    
-   • 🖼️ `K.icon` - show the server icon!
-   
-   • 🗣️ `K.say` - talk on some server channel used the bot!
-   
-   • 🌍 `K.setlanguage` - select a language for your server!
+   •  🌎 `K.setlanguage` - to change the server language!
   
 # ❤️ Donation 
 
