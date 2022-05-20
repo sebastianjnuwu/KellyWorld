@@ -12,6 +12,8 @@
 
 # 🔍 commands 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9be2adb645f84f718c9ad133e8e4c4f8)](https://app.codacy.com/gh/sebastianjnuwu/KellyWorld?utm_source=github.com&utm_medium=referral&utm_content=sebastianjnuwu/KellyWorld&utm_campaign=Badge_Grade_Settings)
+
    •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
    •  🖼️ `K.icon` - Show the server icon!
