@@ -90,7 +90,7 @@ client.on("guildMemberAdd", member => {
   channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(DEL);
 });
 
-// Message when the boy is mentioned he responds! (3 language​lol)
+//Message when the boy is mentioned he responds! (3 language​lol)
 client.on("messageCreate", (message) => {
   if (message.author.bot) return;
   if (message.channel.type == "") return
@@ -105,23 +105,24 @@ client.on("messageCreate", (message) => {
 	}
 });
 
-// ping system together with uptimerobot
+//Ping system together with uptimerobot
 app.use((req, res, next) => {
 console.log(colors.yellow("[Info]")+` Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
 next();
 });
 
-// site of the bot that will be in the application
+//Site of the bot that will be in the application
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: false }));
 app.set("view engine", "ejs");
 
-// se door that the website will be created!
-app.listen(8080, (req, res) => console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`)
+//Se door that the website will be created!
+app.listen(8080, (req, res) => 
+  console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`)
 );
 
-// start of website
+//Start of website
 app.get("/", (req, res) => {
   res.render("inicio")
 });
