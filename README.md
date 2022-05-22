@@ -25,6 +25,10 @@
    
    •  🌎 `K.setlanguage` - to change the server language!
 
+<h1> ❤️ contributors </h1>
+
+![](https://contrib.rocks/image?repo=sebastianjnuwu/KellyWorld)
+
 <h1> 📃 License </h1>
 
 ฅ^•ﻌ•^ฅ this repository is licensed: https://apache.org/licenses/LICENSE-2.0
