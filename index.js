@@ -101,8 +101,7 @@ client.on("messageCreate", message => {
           `<:K_rei:939165290846093392>`
         ];
       let mes = () => mgs[~~(Math.random() * mgs.length)];
-      
-     message.reply(`${mes()}`);
+      message.reply(`${mes()}`);
 	}
 });
 
