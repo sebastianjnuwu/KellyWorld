@@ -1,6 +1,6 @@
 const { glob } = require("glob");
 const { promisify } = require("util");
-const { Client } = require("discord.js");
+const Discord = require("discord.js");
 const globPromise = promisify(glob);
 
 module.exports = async (client) => {
