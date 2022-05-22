@@ -99,16 +99,16 @@ client.on("messageCreate", message => {
           `<:K_env:938833579981566043>`,
           `<:K_zan:924366252024164363>`,
           `<:K_rei:939165290846093392>`
-        ];
-      let mes = () => mgs[~~(Math.random() * mgs.length)];
-      message.reply(`${mes()}`);
+        ]; 
+    let mes = () => mgs[~~(Math.random() * mgs.length)];
+     message.reply(`${mes()}`);
 	}
 });
 
 // ping system together with uptimerobot
 app.use((req, res, next) => {
 console.log(colors.yellow("[Info]")+` Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-next()
+next();
 });
 
 // site of the bot that will be in the application
