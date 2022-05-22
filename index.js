@@ -114,7 +114,7 @@ next()
 // site of the bot that will be in the application
 app.use(express.static("public"));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false }));
 app.set("view engine", "ejs");
 
 // se door that the website will be created!
@@ -123,7 +123,7 @@ app.listen(8080, (req, res) => console.log(colors.cyan("[Info]")+` servidor liga
 
 // start of website
 app.get("/", (req, res) => {
-res.render("inicio")
+  res.render("inicio")
 });
-
-// fim? 
+    
+//@sebastianjnuwu
