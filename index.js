@@ -107,7 +107,7 @@ client.on("messageCreate", message => {
 
 // ping system together with uptimerobot
 app.use((req, res, next) => {
-  console.log(`[Info] Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+  console.log(colors.yellow("[Info] ") + `Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
   next()
 });
 
@@ -119,7 +119,7 @@ app.set('view engine', 'ejs');
 
 // se door that the website will be created!
 app.listen(8080, (req, res) => {
-  console.log(`[Info] - servidor ligado na porta: 8080`);
+  console.log(colors.cyan("[Info] ") + `[Info] - servidor ligado na porta: 8080`);
 });
 
 // start of website
