@@ -45,7 +45,7 @@ client.on("ready", () => {
   let activities = [ "Minecraft em Kettra World 🌟"]
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
-  client.user
+   client.user
   .setStatus("dnd");
 });
 
@@ -96,13 +96,9 @@ client.on("messageCreate", message => {
     if (message.channel.type == "") return
     if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) {
       const mgs = [ 
-        '<:K_avemaria:924362194941001749>',
-        '<:K_mds:955490139323379742>',
-        '<:K_env:938833579981566043>',
-        '<:K_stonks:939162797835710495>',
-        '<:K_raiva:939161370505658388>',
-        '<:k_cruz:938867436676083793>',
-        '<:K_suco:941391675073388545>'
+          `<:K_env:938833579981566043>`,
+          `<:K_zan:924366252024164363>`,
+          `<:K_rei:939165290846093392>`
         ];
       let mes = () => mgs[~~(Math.random() * mgs.length)];
       
