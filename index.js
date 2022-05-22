@@ -82,10 +82,11 @@ client.on("messageCreate", async (message) => {
       command.run(client, message, args)
 });
 
-// kettraworld server welcome screen
+//Kettraworld server welcome screen
 client.on("guildMemberAdd", member => {
   const DEL = (msg, segundos = 50) => setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
-  const channel = member.guild.channels.cache.find(ch => ch.name === '👋┇bem-vindos');
+  const channel = member.guild.channels.cache.find(
+  (ch) => ch.name === '👋┇bem-vindos');
   if (!channel) return;
   channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(DEL);
 });
