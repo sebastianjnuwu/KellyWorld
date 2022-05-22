@@ -3,12 +3,10 @@ const { promisify } = require("util");
 const globPromise = promisify(glob);
 
 module.exports = async (client) => {
-    
-const slashCommands = await globPromise(`${process.cwd()}/src/SlashCommands/*/*.js`);
-
-const arrayOfSlashCommands = [];
-slashCommands.map((value) => {
-const file = require(value);
+  const slashCommands = await globPromise(`${process.cwd()}/src/SlashCommands/*/*.js`);
+  const arrayOfSlashCommands = [];
+  slashCommands.map((value) => {
+  const file = require(value);
 
 if (!file?.name) return;
 client.slashCommands.set(file.name, file);
