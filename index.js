@@ -3,7 +3,7 @@
 // ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
 // all packages used in the project
-const { fs, colors, dotenv } = require("kettraworld.db"); 
+const { fs, colors } = require("kettraworld.db"); 
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: 32767 });
 const config = require("./config.json");
@@ -14,9 +14,9 @@ client.login(process.env.token);
 
 // useful information
 client.on("ready", () => {
-console.log(colors.cyan("[Info]")+` ${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
-console.log(colors.cyan("[Info]")+` tendo acesso a ${client.channels.cache.size} canais!`);
-console.log(colors.cyan("[Info]")+` contendo ${client.users.cache.size} usuarios!`);
+ console.log(colors.cyan("[Info]")+` ${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
+ console.log(colors.cyan("[Info]")+` tendo acesso a ${client.channels.cache.size} canais!`);
+ console.log(colors.cyan("[Info]")+` contendo ${client.users.cache.size} usuarios!`);
 });
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
