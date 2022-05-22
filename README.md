@@ -24,12 +24,7 @@
    •  🏓 `K.ping` - Show KellyWorld ping!
    
    •  🌎 `K.setlanguage` - to change the server language!
-  
-# ❤️ Donation 
 
-you have the power to make a difference, make a donation of any symbolic value for our developers to have a good coffee ☕
+# 📃 License 
 
-🌟 Make your donation [by clicking here!](https://ko-fi.com/sebastianjn007)
-
-# 📃 License <br>
 ฅ^•ﻌ•^ฅ this repository is licensed: https://apache.org/licenses/LICENSE-2.0
