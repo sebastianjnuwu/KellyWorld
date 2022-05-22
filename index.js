@@ -1,5 +1,5 @@
 // ♥️ project creator: Sebastian Jn (╯°□°）╯︵ ┻━┻
-// ⚙️ where projects are created:
+// ⚙️ where projects are created: https://kettraworld.github.io/discord
 // ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
 // all packages used in the project
