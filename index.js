@@ -118,9 +118,8 @@ app.use(express.urlencoded({extended: false}));
 app.set("view engine", "ejs");
 
 // se door that the website will be created!
-app.listen(8080, (req, res) => 
-console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`));
-
+app.listen(8080, (req, res) => console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`)
+);
 
 // start of website
 app.get("/", (req, res) => {
