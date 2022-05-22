@@ -8,19 +8,19 @@ module.exports = async (client) => {
   slashCommands.map((value) => {
   const file = require(value);
 
-if (!file?.name) return;
-client.slashCommands.set(file.name, file);
+  if (!file?.name) return;
+  client.slashCommands.set(file.name, file);
 
-if (["MESSAGE", "USER"].includes(file.type)) delete file.description;
-arrayOfSlashCommands.push(file);
+  if (["MESSAGE", "USER"].includes(file.type)) delete file.description;
+  arrayOfSlashCommands.push(file);
 });
 
 client.on("ready", async () => {
-await client.application.commands.set(arrayOfSlashCommands);
+  await client.application.commands.set(arrayOfSlashCommands);
 });
   
-const eventFiles = await globPromise(`${process.cwd()}/src/events/*.js`);
-eventFiles.map((value) => require(value)
+  const eventFiles = await globPromise(`${process.cwd()}/src/events/*.js`);
+  eventFiles.map((value) => require(value)
 );
 
 };
