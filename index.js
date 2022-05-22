@@ -56,7 +56,6 @@ module.exports = client;
 client.slashCommands = new Discord.Collection();
 require("./src/handler")(client);
 client.categories = fs.readdirSync("./src/commands/");
-<<<<<<< HEAD
 fs.readdirSync("./src/commands/").forEach(local => {
     const comandos = fs.readdirSync('./src/commands/${local}).filter(arquivo => arquivo.endsWith(".js"))
 =======
