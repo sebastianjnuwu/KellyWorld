@@ -57,7 +57,7 @@ client.slashCommands = new Discord.Collection();
 require("./src/handler")(client);
 client.categories = fs.readdirSync("./src/commands/");
 fs.readdirSync("./src/commands/").forEach(local => {
-    const comandos = fs.readdirSync("./src/commands/${local}").filter(arquivo => arquivo.endsWith('.js'))
+    const comandos = fs.readdirSync('./src/commands/${local}).filter(arquivo => arquivo.endsWith(".js"))
     for(let file of comandos) {
         let puxar= require("./src/commands/${local}/${file}")
         if(puxar.name) {
@@ -119,8 +119,8 @@ app.set("view engine", "ejs");
 
 // se door that the website will be created!
 app.listen(8080, (req, res) => 
-console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`);
-});
+console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`));
+
 
 // start of website
 app.get("/", (req, res) => {
