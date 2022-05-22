@@ -7,16 +7,16 @@ const { fs, colors, dotenv } = require("kettraworld.db");
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: 32767 });
 const config = require("./config.json");
-const express = require('express');
+const express = require("express");
 const ping = new Date();
 const app = express();
 client.login(process.env.token); 
 
 // useful information
-client.on('ready', () => {
-console.log(colors.cyan("[Info] ") + `${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
-console.log(colors.cyan("[Info] ") + `tendo acesso a ${client.channels.cache.size} canais!`);
-console.log(colors.cyan("[Info] ") + `contendo ${client.users.cache.size} usuarios!`);
+client.on("ready", () => {
+console.log(colors.cyan("[Info]")+` ${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
+console.log(colors.cyan("[Info]")+` tendo acesso a ${client.channels.cache.size} canais!`);
+console.log(colors.cyan("[Info] ")+` contendo ${client.users.cache.size} usuarios!`);
 });
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
@@ -42,7 +42,7 @@ process.on('multipleResolves', (type, promise, reason) => {
 
 // activity status of our bot
 client.on("ready", () => {
-  let activities = [ "Minecraft em Kettra World 🌟"]
+  let activities = ["Minecraft em Kettra World 🌟"];
     i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
    client.user
@@ -107,8 +107,8 @@ client.on("messageCreate", message => {
 
 // ping system together with uptimerobot
 app.use((req, res, next) => {
-  console.log(colors.yellow("[Info] ") + `Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
-  next()
+console.log(colors.yellow("[Info]")+` Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+next()
 });
 
 // site of the bot that will be in the application
@@ -118,13 +118,13 @@ app.use(express.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 
 // se door that the website will be created!
-app.listen(8080, (req, res) => {
-  console.log(colors.cyan("[Info] ") + `[Info] - servidor ligado na porta: 8080`);
+app.listen(8080, (req, res) => 
+console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`);
 });
 
 // start of website
 app.get('/', (req, res) => {
-  res.render('inicio')
+res.render('inicio')
 });
 
 // fim? 
