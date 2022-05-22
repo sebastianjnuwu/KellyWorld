@@ -56,10 +56,11 @@ module.exports = client;
 client.slashCommands = new Discord.Collection();
 require("./src/handler")(client);
 client.categories = fs.readdirSync("./src/commands/");
-fs.readdirSync("./src/commands/").forEach(local => {
-    const comandos = fs.readdirSync("./src/commands/${local}").filter(arquivo => arquivo.endsWith('.js'))
+client.categories = fs.readdirSync(`./src/commands/`);
+fs.readdirSync('./src/commands/').forEach(local => {
+    const comandos = fs.readdirSync(`./src/commands/${local}`).filter(arquivo => arquivo.endsWith('.js'))
     for(let file of comandos) {
-        let puxar= require("./src/commands/${local}/${file}")
+        let puxar= require(`./src/commands/${local}/${file}`)
         if(puxar.name) {
             client.commands.set(puxar.name, puxar)
         } 
