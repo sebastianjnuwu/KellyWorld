@@ -25,6 +25,6 @@
    
    •  🌎 `K.setlanguage` - to change the server language!
 
-# 📃 License 
+<h1> 📃 License </h1>
 
 ฅ^•ﻌ•^ฅ this repository is licensed: https://apache.org/licenses/LICENSE-2.0
