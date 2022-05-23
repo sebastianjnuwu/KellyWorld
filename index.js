@@ -20,18 +20,18 @@ client.on("ready", () => {
 });
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
-process.on('unhandledRejection', (reason, p) => {    
-  console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
+process.on("unhandledRejection", (reason, p) => {    
+  console.log("[ ANTICLASH ] | SCRIPT REJEITADO");    
   console.log(reason, p);
 });
     
 process.on("uncaughtException", (err, origin) => {
-  console.log(' [ ANTICLASH] | CATCH ERROR');
+  console.log("[ ANTICLASH] | CATCH ERROR");
   console.log(err, origin);
 });
 
-process.on('uncaughtExceptionMonitor', (err, origin) => {
-  console.log(' [ ANTICLASH ] | BLOQUEADO');
+process.on("uncaughtExceptionMonitor", (err, origin) => {
+  console.log("[ ANTICLASH ] | BLOQUEADO");
   console.log(err, origin);
 });
 
