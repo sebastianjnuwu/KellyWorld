@@ -35,8 +35,8 @@ process.on("uncaughtExceptionMonitor", (err, origin) => {
   console.log(err, origin);
 });
 
-process.on('multipleResolves', (type, promise, reason) => {
-  console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
+process.on("multipleResolves", (type, promise, reason) => {
+  console.log("[ ANTICLASH ] | VÁRIOS ERROS");
   console.log(type, promise, reason);
 }); 
 
@@ -83,7 +83,7 @@ client.on("messageCreate", async (message) => {
 });
 
 //Kettraworld server welcome screen
-client.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", (member) => {
   const DEL = (msg, segundos = 50) => setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
   const channel = member.guild.channels.cache.find(
   (ch) => ch.name === '👋┇bem-vindos');
