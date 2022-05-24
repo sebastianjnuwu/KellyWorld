@@ -1,5 +1,5 @@
 //Importing the packages used in this command!
-const { Message,MessageEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 //Import module accepted by hadler!
 module.exports = {
