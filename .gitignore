@@ -2,3 +2,5 @@
 node_modules/
 # ignore garbage
 package-lock.json
+# ignore .env 
+.env
