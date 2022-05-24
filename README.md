@@ -17,13 +17,14 @@
 
    •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
+   •  🪠 `K.clear` - clear the chat 
+   
    •  🖼️ `K.icon` - Show the server icon!
    
    •  😂 `K.meme` - random reddit memes
    
    •  🏓 `K.ping` - Show KellyWorld ping!
    
-   •  🌎 `K.setlanguage` - to change the server language!
 
 <h1> ❤️ contributors </h1>
 
