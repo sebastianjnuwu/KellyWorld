@@ -12,7 +12,7 @@ const ping = new Date();
 const app = express();
 client.login(process.env.token); 
 
-// useful information
+//Useful information
 client.on("ready", () => {
  console.log(colors.cyan("[Info]")+` ${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
  console.log(colors.cyan("[Info]")+` tendo acesso a ${client.channels.cache.size} canais!`);
