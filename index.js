@@ -2,7 +2,7 @@
 // ⚙️ where projects are created: https://kettraworld.github.io/discord
 // ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
-// all packages used in the project
+//All packages used in the project
 const { fs, colors } = require("kettraworld.db"); 
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: 32767 });
@@ -19,7 +19,7 @@ client.on("ready", () => {
  console.log(colors.cyan("[Info]")+` contendo ${client.users.cache.size} usuarios!`);
 });
 
-// anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
+//Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on("unhandledRejection", (reason, p) => {    
   console.log("[ ANTICLASH ] | SCRIPT REJEITADO");    
   console.log(reason, p);
@@ -37,7 +37,7 @@ process.on("multipleResolves", (type, promise, reason) => {
   console.log(type, promise, reason);
 }); 
 
-// activity status of our bot
+//Activity status of our bot
 client.on("ready", () => {
   let activities = ["Minecraft em Kettra World 🌟"];
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
@@ -45,7 +45,7 @@ client.on("ready", () => {
   .setStatus("dnd");
 });
 
-// hadler of normal and slash commands
+//Hadler of normal and slash commands
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 module.exports = client;
