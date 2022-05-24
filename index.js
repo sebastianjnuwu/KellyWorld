@@ -24,7 +24,7 @@ process.on("unhandledRejection", (reason, p) => {
   console.log("[ ANTICLASH ] | SCRIPT REJEITADO");    
   console.log(reason, p);
 });
-    
+
 process.on("uncaughtException", (err, origin) => {
   console.log("[ ANTICLASH] | CATCH ERROR");
   console.log(err, origin);
@@ -43,7 +43,6 @@ process.on("multipleResolves", (type, promise, reason) => {
 // activity status of our bot
 client.on("ready", () => {
   let activities = ["Minecraft em Kettra World 🌟"];
-  i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
   client.user
   .setStatus("dnd");
