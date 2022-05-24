@@ -19,13 +19,12 @@ module.exports = {
   const EMBED = new Discord.MessageEmbed()
     .setTitle(`🖼 ${user.username}`)
     .setDescription(
-      `**Clique [aqui](${user.displayAvatarURL({
+      `**Click [here](${user.displayAvatarURL({
         dynamic: "gif",
         format: "png"
-      })}) para baixar a imagem!**`
+      })}) to download the image!**`
     )
-    .setImage(
-      user.displayAvatarURL({ dynamic: "gif", format: "png", size: 4096 })
+    .setImage(user.displayAvatarURL({ dynamic: "gif", format: "png", size: 4096 })
     )
     .setColor("RED")
     message.reply({embeds: [EMBED]});
