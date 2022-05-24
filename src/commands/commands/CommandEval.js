@@ -58,7 +58,9 @@ module.exports = {
          //error message if the code is not correct!
 					message.react('❌')
 					message.reply({embeds:[embed]})
-	}
+	
 }
 //will be the end of the code? I think so!
+}
+  }
 }
