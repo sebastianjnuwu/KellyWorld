@@ -6,11 +6,6 @@ module.exports = {
     name: "ping",
     aliases: ['ping'],
   run: async(client, message) => {
-    
- //simple If to check if the bot contains admin permission
-  if(!message.guild.me.permissions.has("ADMINISTRATOR") {
-      return message.reply("<:K_zan:924366252024164363> eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ")
-  })
   
   //We define our message in embed
  let ping = new Discord.MessageEmbed() 
