@@ -17,19 +17,17 @@
 
    •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
-   •  🪠 `K.clear` - clear the chat 
+   •  🪠 `K.clear` - clear the chat.
    
    •  🖼️ `K.icon` - Show the server icon!
    
-   •  😂 `K.meme` - random reddit memes
+   •  😂 `K.meme` - random reddit memes.
    
    •  🏓 `K.ping` - Show KellyWorld ping!
    
-   •  🗣️ `K.say` - speak in a channel using bot
-   
+   •  🗣️ `K.say` - speak in a channel using bot.
 
 <h1> ❤️ contributors </h1>
-
 ![](https://contrib.rocks/image?repo=sebastianjnuwu/KellyWorld)
 
 <h1> 📃 License </h1>
