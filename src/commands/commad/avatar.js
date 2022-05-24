@@ -11,7 +11,7 @@ module.exports = {
     
     let language = db.get(`language_${message.guild.id}`);
     if( language == null ) { 
-      db.set(`language_${messag.guild.id}`, "pt");
+      db.set(`language_${message.guild.id}`, "pt");
     }
   
   let user = message.mentions.users.first() || bot.users.cache.get(args[0]) || message.author;
