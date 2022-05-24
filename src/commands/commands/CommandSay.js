@@ -1,5 +1,3 @@
-//Importing the packages used in this command!
-const Discord = require ("discord.js");
 
 //Import module accepted by hadler!
 module.exports = {
