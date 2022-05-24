@@ -18,8 +18,8 @@ module.exports = {
   
       if (language === "pt") {
       if(!message.guild.me.permissions.has("ADMINISTRATOR")) {
-           return message.reply("<:K_zan:924366252024164363> eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ")
-  };
+           return message.reply("<:K_zan:924366252024164363> eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ");
+      }
   
   const EMBED = new Discord.MessageEmbed()
     .setTitle(`🖼 ${user.username}`)
