@@ -17,7 +17,7 @@ if (!args[0]) {
 } else if (content.length > 1000) {
   return message.channel.send(`${message.author.username}, forneça uma sugestão de no máximo 1000 caracteres.`);
 } else {
-  var canal = message.guild.channels.cache.find(ch => ch.id === "933873226092781578");
+  const canal = message.guild.channels.cache.find(ch => ch.id === "933873226092781578");
   
   const message_msg = new MessageEmbed()
     .setColor("RANDOM")
