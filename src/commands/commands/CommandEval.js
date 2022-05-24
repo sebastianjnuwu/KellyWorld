@@ -14,14 +14,13 @@ module.exports = {
 	const code = args.join(" ")
 	if(!code) return message.reply(`Você esqueceu do codigo.`)
 	
-	if(code.includes("config.token"))return message.author.send(config.token)
-	
 	if(message.author.id === '932678185970192404'){
 
 	if(code.includes("config.token"))return message.reply({content:`Eu não caio nessa.`})
 	}
 
 	try{
+	  
 	  	const result = await eval(code)
 			let output = result
 
@@ -29,9 +28,8 @@ module.exports = {
 						output = inspect(result)
 		}
 		const embed = new Discord.MessageEmbed()
-		.setDescription(`Console:
-					\`\`\`js
-					${code}
+		.setDescription(`Console:\`\`\`js 
+		     ${code}
 					\`\`\`
 					Resultado:
 					\`\`\`js
