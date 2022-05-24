@@ -41,8 +41,7 @@ process.on("multipleResolves", (type, promise, reason) => {
 client.on("ready", () => {
   let activities = ["Minecraft em Kettra World 🌟"];
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
-  client.user
-  .setStatus("dnd");
+  client.user.setStatus("dnd");
 });
 
 //Hadler of normal and slash commands
