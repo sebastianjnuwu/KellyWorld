@@ -25,6 +25,8 @@
    
    •  🏓 `K.ping` - Show KellyWorld ping!
    
+   •  🗣️ `K.say` - speak in a channel using bot
+   
 
 <h1> ❤️ contributors </h1>
 
