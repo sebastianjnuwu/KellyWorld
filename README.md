@@ -26,6 +26,7 @@
    •  🗣️ `K.say` - speak in a channel using bot.
 
 <h1> ❤️ contributors </h1>
+
 ![](https://contrib.rocks/image?repo=sebastianjnuwu/KellyWorld)
 
 <h1> 📃 License </h1>
