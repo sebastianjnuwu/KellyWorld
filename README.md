@@ -23,6 +23,8 @@
    
    •  🏓 `K.ping` - Show KellyWorld ping!
    
+   •  ❓ `K.help` - shows available commands!
+   
    •  🗣️ `K.say` - speak in a channel using bot.
 
 <h1> ❤️ contributors </h1>
