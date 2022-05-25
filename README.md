@@ -19,7 +19,7 @@
    
    •  🪠 `K.clear` - clear the chat.
    
-   •  😂 `K.meme` - random reddit memes.
+   •  💻 `K.eval` - allows the bot owner to execute code!
    
    •  🏓 `K.ping` - Show KellyWorld ping!
    
