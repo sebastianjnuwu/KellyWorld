@@ -31,6 +31,7 @@
 
 <h1> ❤️ contributors </h1>
 
+Thanks to all the <strong>Contributors</strong> who helped to form the bot <strong>Kelly!</strong>
 ![](https://contrib.rocks/image?repo=sebastianjnuwu/KellyWorld)
 
 <h1> 📃 License </h1>
