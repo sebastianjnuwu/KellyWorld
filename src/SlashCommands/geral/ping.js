@@ -6,7 +6,7 @@ module.exports =  {
   name: "ping", 
   description: "🏓 Information about my latency!", 
   type: "CHAT_INPUT",
-  run: async (client, interaction, args) => {
+  run: async (client, interaction) => {
   
   //we define the embede message!
   let ping = new Discord.MessageEmbed() 
