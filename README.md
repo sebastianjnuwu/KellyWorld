@@ -19,8 +19,6 @@
    
    •  🪠 `K.clear` - clear the chat.
    
-   •  🖼️ `K.icon` - Show the server icon!
-   
    •  😂 `K.meme` - random reddit memes.
    
    •  🏓 `K.ping` - Show KellyWorld ping!
