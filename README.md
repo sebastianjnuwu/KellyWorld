@@ -17,6 +17,8 @@
 
    •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
+   •  ⛓️ `K.castigo` - punish the person on discord!
+   
    •  🪠 `K.clear` - clear the chat.
    
    •  💻 `K.eval` - allows the bot owner to execute code!
