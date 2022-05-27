@@ -21,6 +21,8 @@
    
    •  🪠 `K.clear` - clear the chat.
    
+   •  🌟 `K.sugestão` - submit a suggestion to the KettraWorld server!
+   
    •  💻 `K.eval` - allows the bot owner to execute code!
    
    •  🏓 `K.ping` - Show KellyWorld ping!
