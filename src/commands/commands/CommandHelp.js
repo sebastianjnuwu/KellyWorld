@@ -16,5 +16,5 @@ module.exports = {
        
       message.reply({ embeds: [help] });
   }
-  //is this the end of the code? yes it is the end of the code! hahahaha
+  //is this the end of the code? yes it is the end of the code! 
 };
