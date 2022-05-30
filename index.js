@@ -15,6 +15,7 @@ const options = {
 	hour: 'numeric',
 	minute: 'numeric'
 };
+const date = new Intl.DateTimeFormat([], options);
 
 //Useful information
 client.on("ready", () => {
