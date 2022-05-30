@@ -6,11 +6,15 @@
 const { fs, colors } = require("kettraworld.db"); 
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: 32767 });
+client.login(process.env.token); 
 const config = require("./config.json");
 const express = require("express");
-const ping = new Date();
 const app = express();
-client.login(process.env.token); 
+const options = {
+	timeZone: 'America/Sao_Paulo',
+	hour: 'numeric',
+	minute: 'numeric'
+};
 
 //Useful information
 client.on("ready", () => {
@@ -105,7 +109,7 @@ client.on("messageCreate", (message) => {
 
 //Ping system together with uptimerobot
 app.use((req, res, next) => {
-console.log(colors.yellow("[Info]")+` Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+console.log(colors.yellow("[Info]")+` Ping recebido as ${date.format(new Date())}`);
 next();
 });
 
