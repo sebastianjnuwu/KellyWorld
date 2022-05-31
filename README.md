@@ -6,6 +6,9 @@
 "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness."
 
 <p align="center">
+<a href="https://top.gg/bot/932705411897905193">
+  <img src="https://top.gg/api/widget/owner/932705411897905193.svg">
+</a>
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/>
 </a>
 <a href="https://www.codacy.com/gh/sebastianjnuwu/KellyWorld/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sebastianjnuwu/KellyWorld&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/faf1a272f7af48dcb2177c1d93bf436b"/></a>
