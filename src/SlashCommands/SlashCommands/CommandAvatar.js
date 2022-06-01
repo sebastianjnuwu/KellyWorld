@@ -1,5 +1,7 @@
 //importing the packages that will be used!
-const Discord = require("discord.js");
+const {
+    MessageEmbed
+} = require('discord.js')
 
 //Slash Commands export module
 module.exports = {
@@ -7,24 +9,24 @@ module.exports = {
     description: "📷 show your avatar or that of your friends!",
   type: "CHAT_INPUT",
     options: [{
-        name:'usuario',
+        name: 'membro',
         type: 'USER',
-        description: 'Seleciona um usuário',
+        description: 'Seleciona o usuário',
         required: false,
     }],
     run: async (client, interaction, options) => {
-       
-//we define the user!
-const user = interaction.options.geUser('usuario') || interaction.member.user
+        const user = interaction.options.getUser('membro') || interaction.member.user
 
-        const embed = new Discord.MessageEmbed()
-            .setTitle(`🖼️ Avatar de ${user.username}`)
+        const embed = new MessageEmbed()
+            .setTitle(`Avatar de ${user.username}`)
             .setColor('BLUE')
             .setImage(user.displayAvatarURL({
                 dynamic: true,
                 size: 1024
             }))
+            .setDescription(`[Png](${user.avatarURL({ format: 'png' })}) | [Webp](${user.avatarURL({ dynamic: true })}) | [Jpg](${user.avatarURL({ format: 'jpg' })})`)
         
         await interaction.reply({ embeds: [embed] });
-    } //will be the end of the command? I think so!
-}
+    }
+    //I think it's the end!
+} 
