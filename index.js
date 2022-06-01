@@ -6,8 +6,8 @@
 const { fs, colors } = require("kettraworld.db"); 
 const Discord = require("discord.js");
 const { MongoClient } = require('mongodb');
-const url = process.env.mongourl;
-const client = new MongoClient(url);
+const url = process.env.url;
+const cliente = new MongoClient(url);
 const client = new Discord.Client({ intents: 32767 });
 client.login(process.env.token); 
 const config = require("./config.json");
@@ -18,10 +18,10 @@ const date = new Intl.DateTimeFormat([], options);
 
 //connection to mongodb database
 try {
-  client.connect();
+  cliente.connect();
   console.log(colors.cyan("[Info]")+' conectado no mongodb!');
 } catch (e) {
- client.close();
+ cliente.close();
  console.log(colors.red("[Info]")+' Não foi possível conectar no mongodb!');
 };
 
