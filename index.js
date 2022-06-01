@@ -5,17 +5,25 @@
 //All packages used in the project
 const { fs, colors } = require("kettraworld.db"); 
 const Discord = require("discord.js");
+const { MongoClient } = require('mongodb');
+const url = process.env.mongourl;
+const client = new MongoClient(url);
 const client = new Discord.Client({ intents: 32767 });
 client.login(process.env.token); 
 const config = require("./config.json");
 const express = require("express");
 const app = express();
-const options = {
-	timeZone: 'America/Sao_Paulo',
-	hour: 'numeric',
-	minute: 'numeric'
-};
+const options = {	timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
 const date = new Intl.DateTimeFormat([], options);
+
+//connection to mongodb database
+try {
+  client.connect();
+  console.log(colors.cyan("[Info]")+' conectado no mongodb!');
+} catch (e) {
+ client.close();
+ console.log(colors.red("[Info]")+' Não foi possível conectar no mongodb!');
+};
 
 //Useful information
 client.once("ready", () => {
