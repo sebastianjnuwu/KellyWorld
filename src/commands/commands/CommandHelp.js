@@ -10,7 +10,7 @@ module.exports = {
   //We define the message in embed!
   let help = new Discord.MessageEmbed()
        .setColor("RANDOM")
-       .setTitle('🔍 commandos!')
+       .setTitle("<:K_Confirmado:947545327374843965> Ajuda da Kelly")
 	     .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
        .setDescription('')
        .addFields(
