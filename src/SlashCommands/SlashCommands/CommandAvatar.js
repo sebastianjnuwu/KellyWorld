@@ -18,13 +18,13 @@ module.exports = {
         const user = interaction.options.getUser('membro') || interaction.member.user
 
         const embed = new MessageEmbed()
-            .setTitle(`Avatar de ${user.username}`)
+            .setTitle(`🖼️ Avatar de ${user.username}`)
             .setColor('BLUE')
             .setImage(user.displayAvatarURL({
                 dynamic: true,
                 size: 1024
             }))
-            .setDescription(`[Png](${user.avatarURL({ format: 'png' })}) | [Webp](${user.avatarURL({ dynamic: true })}) | [Jpg](${user.avatarURL({ format: 'jpg' })})`)
+            .setDescription(`Faça o download clicando [aqui.](${user.avatarURL({ format: 'png' })})`)
         
         await interaction.reply({ embeds: [embed] });
     }
