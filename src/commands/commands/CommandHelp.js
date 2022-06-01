@@ -14,8 +14,8 @@ module.exports = {
 	     .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
        .setDescription(`Ola ${mensage.author} meu nome é **KellyWorld**, mais você pode também me chamar de _"Kelly"_, eu sou um ser que sonha com a paz, Às vezes ela demora pra acontecer, às vezes não acontece. Mas você tem que acordar.`)
        .addFields(
-		{ name: '<:K_:947545349151653898> Quer ver algumas das coisas que eu fasso?', value: '"_cuidado com poderes grandes possibilidades!_"' },
-		{ name: '\u200B', value: '\u200B' },
+		{ name: '<:K_:947545349151653898> Quer ver algumas das coisas que eu fasso?', value: '"Com grandes poderes vêm grandes responsabilidades_"' },
+		{ name: '', value: '\u200B' },
 		{ name: 'Inline field title', value: 'Some value here', inline: true },
 		{ name: 'Inline field title', value: 'Some value here', inline: true },
 	)
