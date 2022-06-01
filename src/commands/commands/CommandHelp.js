@@ -12,7 +12,13 @@ module.exports = {
        .setColor("RANDOM")
        .setTitle('🔍 commandos!')
 	     .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
-       
+       .setDescription('')
+       .addFields(
+		{ name: 'Regular field title', value: 'Some value here' },
+		{ name: '\u200B', value: '\u200B' },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+		{ name: 'Inline field title', value: 'Some value here', inline: true },
+	)
        
       message.reply({ embeds: [help] });
   }
