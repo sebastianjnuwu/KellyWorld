@@ -25,8 +25,6 @@ const user = interaction.options.geUser('usuario') || interaction.member.user
                 size: 1024
             }))
         
-        await interaction.followUp({
-            embeds: [embed]
-        }); 
+        await interaction.reply({ embeds: [embed] });
     } //will be the end of the command? I think so!
 }
