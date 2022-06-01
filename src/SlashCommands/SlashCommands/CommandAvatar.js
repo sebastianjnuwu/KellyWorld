@@ -5,6 +5,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: 'avatar',
     description: "📷 show your avatar or that of your friends!",
+  type: "CHAT_INPUT",
     options: [{
         name:'usuario',
         type: 'USER',
@@ -14,7 +15,7 @@ module.exports = {
     run: async (client, interaction, options) => {
        
 //we define the user!
-const user = interaction.options.geUser('usuario')) || interaction.member.user
+const user = interaction.options.geUser('usuario') || interaction.member.user
 
         const embed = new Discord.MessageEmbed()
             .setTitle(`🖼️ Avatar de ${user.username}`)
