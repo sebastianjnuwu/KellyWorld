@@ -10,7 +10,7 @@ client.login(process.env.token);
 const config = require("./config.json");
 const express = require("express");
 const app = express();
-const options = {	timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
+const options = { timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
 const date = new Intl.DateTimeFormat([], options);
 
 //Useful information
