@@ -16,7 +16,7 @@ module.exports = {
        .addFields(
 		{ name: '<:K_:947545349151653898> Quer ver algumas das coisas que eu fasso?', value: '"Com grandes poderes vêm grandes responsabilidades_"' },
 		{ name: 'Veja alguns dos meus comandos clicando [aqui](https://github.com/sebastianjnuwu/KellyWorld#-commands) são muitos não consigo lembrar de todos.', value: '\u200B' },
-		{ name: '<:K_env:938833579981566043> encontrou algum bug? Avise-me [aqui](https://github.com/sebastianjnuwu/KellyWorld/issues)', value: '', inline: true },
+		{ name: '<:K_env:938833579981566043> encontrou algum bug? Avise-me [aqui](https://github.com/sebastianjnuwu/KellyWorld/issues)', value: '\u200B', inline: true },
 	)
        
       message.reply({ embeds: [help] });
