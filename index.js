@@ -2,24 +2,25 @@
 // ⚙️ where projects are created: https://kettraworld.github.io/discord
 // ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
-// all packages used in the project
+//All packages used in the project
 const { fs, colors } = require("kettraworld.db"); 
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: 32767 });
+client.login(process.env.token); 
 const config = require("./config.json");
 const express = require("express");
-const ping = new Date();
 const app = express();
-client.login(process.env.token); 
+const options = { timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
+const date = new Intl.DateTimeFormat([], options);
 
-// useful information
-client.on("ready", () => {
+//Useful information
+client.once("ready", () => {
  console.log(colors.cyan("[Info]")+` ${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
  console.log(colors.cyan("[Info]")+` tendo acesso a ${client.channels.cache.size} canais!`);
  console.log(colors.cyan("[Info]")+` contendo ${client.users.cache.size} usuarios!`);
 });
 
-// anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
+//Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on("unhandledRejection", (reason, p) => {    
   console.log("[ ANTICLASH ] | SCRIPT REJEITADO");    
   console.log(reason, p);
@@ -37,15 +38,16 @@ process.on("multipleResolves", (type, promise, reason) => {
   console.log(type, promise, reason);
 }); 
 
-// activity status of our bot
+//Activity status of our bot
 client.on("ready", () => {
   let activities = ["Minecraft em Kettra World 🌟"];
-  setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
-  client.user
-  .setStatus("dnd");
+let	i = 0;
+  setInterval(() => 
+client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
+  client.user.setStatus("dnd");
 });
 
-// hadler of normal and slash commands
+//Hadler of normal and slash commands
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 module.exports = client;
@@ -104,7 +106,7 @@ client.on("messageCreate", (message) => {
 
 //Ping system together with uptimerobot
 app.use((req, res, next) => {
-console.log(colors.yellow("[Info]")+` Ping recebido às ${ping.getUTCHours()}:${ping.getUTCMinutes()}:${ping.getUTCSeconds()}`);
+console.log(colors.yellow("[Info]")+` Ping recebido as ${date.format(new Date())}`);
 next();
 });
 
@@ -124,4 +126,4 @@ app.get("/", (req, res) => {
   res.render("inicio")
 });
     
-//@sebastianjnuwu && @kettraworld
+//The end?

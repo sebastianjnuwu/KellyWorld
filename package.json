@@ -1,26 +1,26 @@
 {
   "name": "kellyworld",
-  "version": "1.3.5",
-  "description": "um bot diferenciado! kkkk vai um cafe ai?",
+  "version": "1.3.7",
+  "description": "Meu nome é KellyWorld.....",
   "main": "index.js",
   "scripts": {
-    "start": "npm ci && node index.js",
-    "backup": "echo \"backup concluindo!\""
+    "start": "npm install && node index.js",
+    "destroy": "rm -rf *"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sebastianjn/KellyWorld.git"
   },
   "keywords": [
-    "caffe",
-    "caffe-bot",
-    "economia",
-    "discord",
+    "KellyWorld",
+    "KettraWorld",
+    "DiscordJs",
+    "djsV13",
     "javascript",
-    "bot-economia",
-    "sebastianjn007"
+    "bot-discord",
+    "sebastianjnuwu"
   ],
-  "author": "sebastianjn007",
+  "author": "sebastianjnuwu",
   "license": "Apache-2.0 License",
   "bugs": {
     "url": "https://github.com/sebastianjn/KellyWorld/issues"
@@ -37,7 +37,7 @@
     "express": "^4.18.1",
     "fs": "^0.0.1-security",
     "glob": "^8.0.3",
-    "got": "^11.8.3",
+    "got": "^12.1.0",
     "kettraworld.db": "^1.1.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.3",
@@ -48,7 +48,6 @@
     "os": "^0.1.2",
     "path": "^0.12.7",
     "pretty-ms": "^7.0.1",
-    "quick.db": "^7.1.3",
     "random-puppy": "^1.1.0",
     "systeminformation": "^5.11.15",
     "util": "^0.12.4"
