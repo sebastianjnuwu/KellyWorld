@@ -2,12 +2,12 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "sugerir",
-    aliases: ["sugerir", "sugestão"],
+    aliases: ["sugerir", "sugestão","sugestao"],
 run: async (client, message, args) => {
 message.delete();
 
-	if( message.guild.id !== "893997835412971570") {
-	  return
+	if(message.guild.id !== "893997835412971570") {
+   	 return
 	} else {
 
 const content = args.join(" ");
@@ -23,7 +23,7 @@ if (!args[0]) {
     .setColor("RANDOM")
     .setTitle(`:smile_cat: Temos uma nova sugestão!`)
     .setThumbnail(message.author.displayAvatarURL())
-    .setDescription(`Enviado por ${message.author.username}\n\n**sugestão:** ${content}\nㅤ`)
+    .setDescription(`Enviado por ${message.author.username}\n\n**sugestão:** \`${content}\`\nㅤ`)
     .setTimestamp()    
     .setFooter({ text:`Obrigado por sugerir ${message.author.tag} ...`})
 
@@ -37,11 +37,10 @@ if (!args[0]) {
   
 message.channel.send(`${message.author} a mensagem foi enviada com sucesso!`).then(k => {
 	setTimeout(() => {
-                    k.delete()
-               
-                }, 12000) 
-            })
-      }
+  k.delete()
+  }, 12000) 
+  })
+  }
   }
 }
 }

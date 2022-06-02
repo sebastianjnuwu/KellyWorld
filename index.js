@@ -20,30 +20,26 @@ client.on("ready", () => {
 });
 
 // anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
-process.on('unhandledRejection', (reason, p) => {    
-  console.log(' [ ANTICLASH ] | SCRIPT REJEITADO');    
+process.on("unhandledRejection", (reason, p) => {    
+  console.log("[ ANTICLASH ] | SCRIPT REJEITADO");    
   console.log(reason, p);
 });
-    
 process.on("uncaughtException", (err, origin) => {
-  console.log(' [ ANTICLASH] | CATCH ERROR');
+  console.log("[ ANTICLASH] | CATCH ERROR");
   console.log(err, origin);
 });
-
-process.on('uncaughtExceptionMonitor', (err, origin) => {
-  console.log(' [ ANTICLASH ] | BLOQUEADO');
+process.on("uncaughtExceptionMonitor", (err, origin) => {
+  console.log("[ ANTICLASH ] | BLOQUEADO");
   console.log(err, origin);
 });
-
-process.on('multipleResolves', (type, promise, reason) => {
-  console.log(' [ ANTICLASH ] | VÁRIOS ERROS');
+process.on("multipleResolves", (type, promise, reason) => {
+  console.log("[ ANTICLASH ] | VÁRIOS ERROS");
   console.log(type, promise, reason);
 }); 
 
 // activity status of our bot
 client.on("ready", () => {
   let activities = ["Minecraft em Kettra World 🌟"];
-  i = 0;
   setInterval( () => client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
   client.user
   .setStatus("dnd");
@@ -83,7 +79,7 @@ client.on("messageCreate", async (message) => {
 });
 
 //Kettraworld server welcome screen
-client.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", (member) => {
   const DEL = (msg, segundos = 50) => setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
   const channel = member.guild.channels.cache.find(
   (ch) => ch.name === '👋┇bem-vindos');
@@ -128,4 +124,4 @@ app.get("/", (req, res) => {
   res.render("inicio")
 });
     
-//@sebastianjnuwu
+//@sebastianjnuwu && @kettraworld
