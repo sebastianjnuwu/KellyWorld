@@ -1,17 +1,18 @@
-//The packages used for the command work!
 const { Message, GuildMember } = require('discord.js');
 const ms = require('ms');
 
-//Command import module accepted by hadler
 module.exports = {
   name: "castigo",
   aliases: ['castigo'],
   async run(client, message, args) {
 
-//Time to delete messages
 const deletarMsgComTempo = (msg, segundos = 10) =>
         setTimeout(() => msg.delete().catch(() => {}), segundos * 1000);
         
+if(!message.guild.me.permissions.has("ADMINISTRATOR")) {    
+       return message.reply("<:K_zan:924366252024164363>  eu tou sem ah permissão de `ADMINISTRADOR` infelizmente sou inútil ಥ╭╮ಥ") 
+}
+
     if (!message.member.permissions.has('MODERATE_MEMBERS'))
         return message.channel
             .send('Você não tem permissão para usar esse comando')
@@ -45,7 +46,6 @@ const deletarMsgComTempo = (msg, segundos = 10) =>
 
     const botNaoConseguePunir = message.guild.me.roles.highest
         .comparePositionTo(membro.roles.highest) < 0;
-        
     if (botNaoConseguePunir)
         return message.channel
             .send(`O cargo de ${membro.displayName} é maior do que o meu`)
@@ -58,14 +58,28 @@ const deletarMsgComTempo = (msg, segundos = 10) =>
 
     /** @type { GuildMember } */
 
-   const membroEmTimeout = await membro.timeout(tempo, motivo);
-   message.channel.send(`${membroEmTimeout} está em timeout até <t:${~~( membroEmTimeout.communicationDisabledUntilTimestamp / 1000)}>`);
+        const membroEmTimeout = await membro.timeout(tempo, motivo);
+
+        message.channel.send(
+
+            `${membroEmTimeout} está em timeout até <t:${~~(
+
+                membroEmTimeout.communicationDisabledUntilTimestamp / 1000
+
+            )}>`
+
+        );
+
     }
+
     catch (error) {
+
         message.channel.send('Erro ao aplicar punição');
+
         console.log(error);
 
     }
-  }
-  //end of code I think so! ugh
+
+}
+
 };

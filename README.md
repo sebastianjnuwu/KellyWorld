@@ -17,23 +17,16 @@
 
    •  📸 `K.avatar` - Show your avatar and also with id or mention!
    
-   •  ⛓️ `K.castigo` - punish the person on discord!
+   •  🖼️ `K.icon` - Show the server icon!
    
-   •  🪠 `K.clear` - clear the chat.
-   
-   •  🌟 `K.sugestão` - submit a suggestion to the KettraWorld server!
-   
-   •  💻 `K.eval` - allows the bot owner to execute code!
+   •  😂 `K.meme` - random reddit memes
    
    •  🏓 `K.ping` - Show KellyWorld ping!
    
-   •  ❓ `K.help` - shows available commands!
-   
-   •  🗣️ `K.say` - speak in a channel using bot.
+   •  🌎 `K.setlanguage` - to change the server language!
 
 <h1> ❤️ contributors </h1>
 
-Thanks to all the <strong>Contributors</strong> who helped to form the bot <strong>Kelly!</strong>
 ![](https://contrib.rocks/image?repo=sebastianjnuwu/KellyWorld)
 
 <h1> 📃 License </h1>
