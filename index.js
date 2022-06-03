@@ -13,13 +13,6 @@ const app = express();
 const options = { timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
 const date = new Intl.DateTimeFormat([], options);
 
-//Useful information
-client.once("ready", () => {
- console.log(colors.cyan("[Info]")+` ${client.user.tag} foi iniciada em ${client.guilds.cache.size} sevidores!`);
- console.log(colors.cyan("[Info]")+` tendo acesso a ${client.channels.cache.size} canais!`);
- console.log(colors.cyan("[Info]")+` contendo ${client.users.cache.size} usuarios!`);
-});
-
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on("unhandledRejection", (reason, p) => {    
   console.log("[ ANTICLASH ] | SCRIPT REJEITADO");    
@@ -64,20 +57,6 @@ fs.readdirSync('./src/commands/').forEach(local => {
         if(puxar.aliases && Array.isArray(puxar.aliases))
         puxar.aliases.forEach(x => client.aliases.set(x, puxar.name))
     } 
-});
-
-//Event
-client.on("messageCreate", async (message) => {
-  let prefix = config.prefix;
-  if (message.author.bot) return;
-  if (message.channel.type == '') return;     
-  if (!message.content.toLowerCase().startsWith(prefix.toLowerCase())) return;
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  let cmd = args.shift().toLowerCase()
-  if(cmd.length === 0) return;
-  let command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
-  if(!command) return console.log(colors.red(`Erro 121: o usuario ${message.author.tag} execultou o comando que nao existe: ${prefix}${cmd}`));
-  command.run(client, message, args)
 });
 
 //Ping system together with uptimerobot
