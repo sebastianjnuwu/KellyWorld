@@ -80,16 +80,7 @@ client.on("messageCreate", async (message) => {
   command.run(client, message, args)
 });
 
-/* /Kettraworld server welcome screen
-client.on("guildMemberAdd", (member) => {
-  const DEL = (msg, segundos = 50) => setTimeout(() => msg.delete().catch(() => {}), segundos * 5000);
-  const channel = member.guild.channels.cache.find(
-  (ch) => ch.name === '👋┇bem-vindos');
-  if (!channel) return;
-  channel.send(`${member} Seja Bem-vindo(a) ao mundo Kettra!`).then(DEL);
-}); */
-
-//Message when the boy is mentioned he responds! (3 language​lol)
+//Message when the boy is mentioned he responds! 
 client.on("messageCreate", (message) => {
   if (message.author.bot) return;
   if (message.channel.type == "") return
