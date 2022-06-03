@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
-const client = require('./../../index.js');
+const client = require("./../../index.js");
+const { colors } = require("kettraworld.db");
 
 //Useful information
 client.once("ready", () => {

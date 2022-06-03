@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
-const client = require('./../../index.js')
-const config = require('./../../config.js')
+const client = require("./../../index.js");
+const { colors } = require("kettraworld.db");
+const config = require("./../../config.json");
 
 //Event
 client.on("messageCreate", async (message) => {
