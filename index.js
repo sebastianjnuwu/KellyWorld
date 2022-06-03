@@ -80,6 +80,7 @@ client.on("messageCreate", async (message) => {
   command.run(client, message, args)
 });
 
+/*
 //Message when the boy is mentioned he responds! 
 client.on("messageCreate", (message) => {
   if (message.author.bot) return;
@@ -93,7 +94,7 @@ client.on("messageCreate", (message) => {
   let mes = () => mgs[~~(Math.random() * mgs.length)];
   message.reply(`${mes()}`);
 	}
-});
+}); */
 
 //Ping system together with uptimerobot
 app.use((req, res, next) => {
