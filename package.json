@@ -49,8 +49,6 @@
     "path": "^0.12.7",
     "pretty-ms": "^7.0.1",
     "random-puppy": "^1.1.0",
-    "reconlx": "^2.5.6",
-    "sequelize": "^6.20.1",
     "systeminformation": "^5.11.15",
     "util": "^0.12.4"
   }
