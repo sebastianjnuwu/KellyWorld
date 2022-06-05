@@ -8,6 +8,9 @@ module.exports = {
   aliases: ['castigo'],
   async run(client, message, args) {
 
+//delete command messages after executed!
+message.delete();
+    
 //Time to delete messages
 const deletarMsgComTempo = (msg, segundos = 10) =>
 setTimeout(() => msg.delete().catch(() => {}), segundos * 1000);
