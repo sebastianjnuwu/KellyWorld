@@ -10,18 +10,16 @@ module.exports = {
 
 //Time to delete messages
 const deletarMsgComTempo = (msg, segundos = 10) =>
-
-        setTimeout(() => msg.delete().catch(() => {}), segundos * 1000);
-
+setTimeout(() => msg.delete().catch(() => {}), segundos * 1000);
 
     if (!message.member.permissions.has('MODERATE_MEMBERS'))
         return message.channel
-            .send('Você não tem permissão para usar esse comando!')
+            .send(`${message.author} Você não tem permissão para usar esse comando!`)
             .then(deletarMsgComTempo);
 
     if (!message.guild.me.permissions.has('MODERATE_MEMBERS'))
         return message.channel
-            .send('Eu não tenho a permissão necessária para isso!')
+            .send(`${message.author} Eu não tenho a permissão necessária para isso!`)
             .then(deletarMsgComTempo);
 
    const modoUso = `${message.author} utilize assim **K.castigo @user motivo**`;
