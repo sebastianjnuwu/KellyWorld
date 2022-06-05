@@ -24,7 +24,7 @@ const deletarMsgComTempo = (msg, segundos = 10) =>
             .send('Eu não tenho a permissão necessária para isso!')
             .then(deletarMsgComTempo);
 
-    const modoUso = 'K.castigo `@user` `motivo`';
+   const modoUso = `${message.author} utilize assim **K.castigo @user motivo**`;
 
     /** @type {GuildMember} */
     const membro = message.mentions.members.first() ||
@@ -47,23 +47,23 @@ const deletarMsgComTempo = (msg, segundos = 10) =>
 
     if (botNaoConseguePunir)
         return message.channel
-            .send(`O cargo de ${membro.displayName} é maior do que o meu!`)
+            .send(`${message.author} O cargo de ${membro.displayName} é maior do que o meu!`)
             .then(deletarMsgComTempo);
 
     if (membro.isCommunicationDisabled())
-        return message.reply('Esse user já está em timeout!');
+        return message.channel.send(`${message.author} Esse usuário já está em timeout!`).then(deletarMsgComTempo);
 
     try {
     /** @type { GuildMember } */
         const membroEmTimeout = await membro.timeout(tempo, motivo);
-        message.reply(
-            `${membroEmTimeout} está em timeout até <t:${~~(
+        message.channel.send(
+            `${message.author} o ${membroEmTimeout} está em timeout até <t:${~~(
                 membroEmTimeout.communicationDisabledUntilTimestamp / 1000
             )}>`
-        );
+        ).then(deletarMsgComTempo);
     }
     catch (error) {
-        message.reply('Erro ao aplicar punição!');
+    message.channel.send(`${message.author} Desculpa me desculpa mesmo não consegui fazer o que foi solicitado.....`).then(deletarMsgComTempo);
         console.log(error);
     }
   }
