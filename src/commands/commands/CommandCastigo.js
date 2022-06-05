@@ -9,7 +9,7 @@ module.exports = {
   async run(client, message, args) {
 
 //Time to delete messages
-const deletarMsgComTempo = (msg, segundos = 10) => setTimeout(() => msg.delete().catch(() => {}), segundos * 1000);
+const deletarMsgComTempo = (msg, segundos = 10) => setTimeout(() => msg.delete().catch(() => {}), segundos * 10);
         
     if (!message.member.permissions.has('MODERATE_MEMBERS'))
         return message.reply('Você não tem permissão para usar esse comando')
