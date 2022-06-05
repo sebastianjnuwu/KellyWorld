@@ -49,17 +49,17 @@ const deletarMsgComTempo = (msg, segundos = 10) =>
             .then(deletarMsgComTempo);
 
     if (membro.isCommunicationDisabled())
-        return message.reply('Esse user já está em timeout');
+        return message.reply('Esse user já está em timeout').then(deletarMsgComTempo);
 
     try {
 
     /** @type { GuildMember } */
 
    const membroEmTimeout = await membro.timeout(tempo, motivo);
-   message.reply(`${membroEmTimeout} está em timeout até <t:${~~( membroEmTimeout.communicationDisabledUntilTimestamp / 1000)}>`);
+   message.reply(`${membroEmTimeout} está em timeout até <t:${~~( membroEmTimeout.communicationDisabledUntilTimestamp / 1000)}>`).then(deletarMsgComTempo);
     }
     catch (error) {
-        message.reply('Erro ao aplicar punição');
+        message.reply('Erro ao aplicar punição').then(deletarMsgComTempo);
         console.log(error);
 
     }
