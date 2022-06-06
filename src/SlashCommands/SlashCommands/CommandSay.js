@@ -10,7 +10,7 @@ module.exports =  {
     {
       name: 'canal',
       description: 'Qual canal onde sera enviada a mensagem?',
-      type: 'GUILD_TEXT',
+      type: 'CHANNEL',
       required: true,
     },
     {
@@ -30,7 +30,7 @@ module.exports =  {
       return interaction.reply({ content: "<:K_negado:943604703378415688> você não tem a permissão necessaria para usar este comando, você precisa ter a permissão de `ADMINISTRADOR`", ephemeral: true });
   
  // we define the channel where the message will be sent
-  let canal = interaction.options.getChannel("canal");
+  let canal = interaction.options.getTextChannel("canal");
   
   //we define the message that will be quoted
   let mensagem = interaction.options.getString("mensagem");
