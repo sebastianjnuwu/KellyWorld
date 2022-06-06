@@ -3,16 +3,16 @@
 // ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
 //All packages used in the project
-const Discord = require("discord.js");
-const client = new Discord.Client({ intents: 32767 });
-const colors = require("colors");
-const fs = require("fs");
-client.login(process.env.token); 
-const config = require("./config.json");
-const express = require("express");
-const app = express();
 const options = { timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
 const date = new Intl.DateTimeFormat([], options);
+const Discord = require("discord.js");
+const client = new Discord.Client({ intents: 32767 });
+const config = require("./config.json");
+const express = require("express");
+const colors = require("colors");
+client.login(process.env.token); 
+const fs = require("fs");
+const app = express();
 
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on("unhandledRejection", (reason, p) => {    
