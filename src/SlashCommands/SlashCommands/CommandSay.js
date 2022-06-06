@@ -34,7 +34,9 @@ module.exports =  {
   //we define the message that will be quoted
   let mensagem = interaction.options.getString("mensagem");
   
+  //send the message on the indicated channel
   interaction.reply({content: `${mensagem}`});
 
   }
+  //finally finished the slash code '-'
 }
