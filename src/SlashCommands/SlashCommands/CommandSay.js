@@ -21,7 +21,9 @@ module.exports =  {
         required: true,
     }],
   run: async (client, args, options, interaction) => {
-  
+
+    const member = interaction.member;
+    
   // permission the bot needs to use the command
   if (!interaction.member.me.permissions.has('ADMINISTRATOR'))
        return interaction.reply({ content: "<:K_negado:943604703378415688> Eu preciso da permissão de `ADMINISTRADOR` para executar este comando!", ephemeral: true }); 
