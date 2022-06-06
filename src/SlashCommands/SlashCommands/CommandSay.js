@@ -1,46 +1,45 @@
-//importing the packages that will be used!
-const Discord = require("discord.js");
+const { MessageEmbed, version, CommandInteraction, Client } = require("discord.js");
+const Discord = require("discord.js")
 
-//import module
-module.exports =  {
-  name: "say", 
-  description: "🗣️ talk in a chat using the bot", 
-  type: "CHAT_INPUT",
-  options: [
-    {
-      name: 'canal',
-      description: 'Qual canal onde sera enviada a mensagem?',
-      type: 'CHANNEL',
-      channelTypes: ['GUILD_TEXT'] ,
-      required: true,
-    },
-    {
-        name: 'mensagem',
-        description: 'Digite as palavras que você quer que eu fale!',
-        type: 'STRING',
-        required: true,
-    }],
-  run: async (client, args, options, interaction) => {
+module.exports = {
+    name: 'say',
+    description: , '🗣️ message using Kelly in a channel'
+    type: 'CHAT_INPUT',
+    options: [
+        {
+            name: 'description',
+            description: 'Tell me the description',
+            type: 'STRING',
+            required: true,
+        },
+        {
+            name: 'canal',
+            description: 'Enter the channel you want to send',
+            type: 'CHANNEL',
+            required: false,
+        }
+    ],
+    run: async (client, interaction, args) => {
 
-     const member = await interaction.member;
-    
-  // permission the bot needs to use the command
-  if (!interaction.member.me.permissions.has('ADMINISTRATOR'))
-       return interaction.reply({ content: "<:K_negado:943604703378415688> Eu preciso da permissão de `ADMINISTRADOR` para executar este comando!", ephemeral: true }); 
-  
-  //the necessary permission that the member must have
-  if (!interaction.member.permissions.has("ADMINISTRATOR")) 
-      return interaction.reply({ content: "<:K_negado:943604703378415688> você não tem a permissão necessaria para usar este comando, você precisa ter a permissão de `ADMINISTRADOR`", ephemeral: true });
-  
- // we define the channel where the message will be sent
-  let canal = interaction.options.getTextChannel("canal");
-  
-  //we define the message that will be quoted
-  let mensagem = interaction.options.getString("mensagem");
-  
-  //send the message on the indicated channel
-  interaction.reply({content: `${mensagem}`});
+      
+        let description = interaction.options.getString("description");
+        let canal = interaction.options.getChannel('canal') || interaction.channel;
+      try {
 
-  }
-  //finally finished the slash code '-'
-}
+if(!interaction.member.permissions.has("MANAGE_MESSAGES")) return interaction.reply({ content: "Você não tem permissão para usar este comando!", ephemeral: true})
+  
+
+        interaction.reply({ content: `Anúncio enviado com sucesso no canal: <#${canal.id}>`, ephemeral: true })
+        canal.send({content: `${description}`})
+
+
+  } catch (err) {
+
+        let dev_don = new Discord.MessageEmbed()
+        .setDescription(`:noo: | ${interaction.user} Opss... algo de errado não está certo. User \`/reportbug\` para reportar! `)
+        .setColor("#36393e")
+        interaction.reply({embeds: [dev_don]});
+        
+    }
+ }
+} 
