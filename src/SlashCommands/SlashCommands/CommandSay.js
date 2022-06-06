@@ -3,18 +3,18 @@ const Discord = require("discord.js")
 
 module.exports = {
     name: 'say',
-    description: , '🗣️ message using Kelly in a channel'
+    description:  '🗣️ message using Kelly in a channel',
     type: 'CHAT_INPUT',
     options: [
         {
             name: 'description',
-            description: 'Tell me the description',
+            description: 'coloque a mensagem a ser enviada!',
             type: 'STRING',
             required: true,
         },
         {
             name: 'canal',
-            description: 'Enter the channel you want to send',
+            description: 'o canal a ser enviada!',
             type: 'CHANNEL',
             required: false,
         }
