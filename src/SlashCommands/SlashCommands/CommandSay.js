@@ -20,7 +20,10 @@ module.exports =  {
         type: 'STRING',
         required: true,
     }],
-  run: async (client, args, options, member, interaction) => {
+  run: async (client, args, options, interaction) => {
+  
+  //we define the member variable
+  const member = message.author;
   
   //permission the bot needs to use the command
   if (!interaction.member.me.permissions.has('ADMINISTRATOR'))
