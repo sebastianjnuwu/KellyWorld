@@ -5,7 +5,7 @@ const ms = require('ms');
 //Command import module accepted by hadler
 module.exports = {
   name: "castigo",
-  aliases: ['castigo'],
+  aliases: ['castigo','timeout'],
   async run(client, message, args) {
 
 //delete command messages after executed!
@@ -32,6 +32,10 @@ setTimeout(() => msg.delete().catch(() => {}), segundos * 1000);
         message.guild.members.cache.get(args[0]) ||
         await message.guild.members.fetch(args[0]).catch(() => {});
 
+    if(membro.id === message.author.id) return message.channel.send(`${message.author} **Você não pode castiga-se a si mesmo.**`).then(deletarMsgComTempo);
+
+ if(membro.id === client.user.id) return message.channel.send(`${message.author} **Você não pode me castigar 7-7.**`).then(deletarMsgComTempo)
+    
     if (!membro) return message.channel.send(modoUso).then(deletarMsgComTempo);
 
     if (args.length < 2)
