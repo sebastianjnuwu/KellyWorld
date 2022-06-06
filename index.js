@@ -16,13 +16,10 @@ const app = express();
 
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on('unhandledRejection', error => {
-  console.error(colors.red("[Info]")+" Ocorreu um erro na aplicação! Detalhes embaixo:");
+  console.error(colors.red("[Info]")+" Ocorreu um erro detalhes embaixo:");
   console.error(error.stack);
 });
-process.on('uncaughtException', error => {
-    console.error(
-    console.error(error.stack);
-});
+
 
 //Activity status of our bot
 client.on("ready", () => {
