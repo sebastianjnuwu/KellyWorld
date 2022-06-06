@@ -1,2 +1,2 @@
 language = "nodejs"
-run = "npm install && clear && node index.js"
+run = "clear && node index.js"
