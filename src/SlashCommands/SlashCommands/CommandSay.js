@@ -11,7 +11,7 @@ module.exports =  {
       name: 'canal',
       description: 'Qual canal onde sera enviada a mensagem?',
       type: ApplicationCommandOptionType.Channel,
-      channelTypes: [ChannelType.GuildText]
+      channelTypes: [ChannelType.GuildText],
       required: true,
     },
     {
