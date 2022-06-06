@@ -8,9 +8,13 @@ module.exports = {
  //first If to check if the person has permission to use it!
   if (!message.member.permissions.has("ADMINISTRATOR"))
     return message.reply(
-      "Você não possui a permissão nescessária para utilizar esse comando 🥲"
+      "Você não possui a permissão nescessária para utilizar esse comando!"
     );
-    
+
+    if (!message.guild.me.permissions.has('ADMINISTRATOR'))
+        return message.channel
+            .send(`${message.author} Eu não tenho a permissão necessária para isso!`);
+            
    //We define the channel where the message should be sent as a mention!
     const canal = message.mentions.channels.first();
     
