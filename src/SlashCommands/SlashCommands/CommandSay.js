@@ -34,7 +34,7 @@ module.exports =  {
   //we define the message that will be quoted
   let mensagem = interaction.options.getString("mensagem");
   
-  
+  interaction.reply({content: `${mensagem}`});
 
   }
 }
