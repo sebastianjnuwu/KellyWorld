@@ -20,7 +20,6 @@ process.on('unhandledRejection', error => {
   console.error(error.stack);
 });
 
-
 //Activity status of our bot
 client.on("ready", () => {
  let activities = ["Minecraft em Kettra World 🌟"];
