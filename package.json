@@ -4,7 +4,7 @@
   "description": "Hey! Meu nome é KellyWorld!",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -13,10 +13,10 @@
   "keywords": [
     "KellyWorld",
     "KettraWorld",
-    "Sebastian"
+    "SebastianUwU"
   ],
   "author": "sebastianjnuwu",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/sebastianjnuwu/KellyWorld/issues"
   },
