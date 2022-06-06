@@ -20,14 +20,11 @@ module.exports =  {
         type: 'STRING',
         required: true,
     }],
-  run: async (client, args, options, interaction) => {
+  run: async (client, args, member, options, interaction) => {
   
-  //we define the member variable
-  const member = interaction.user;
-  
-  //permission the bot needs to use the command
+  // permission the bot needs to use the command
   if (!interaction.member.me.permissions.has('ADMINISTRATOR'))
-       return interaction.reply({ content: "<:K_negado:943604703378415688> Eu preciso da permissão de `ADMINISTRADOR` para executar este comando!", ephemeral: true });
+       return interaction.reply({ content: "<:K_negado:943604703378415688> Eu preciso da permissão de `ADMINISTRADOR` para executar este comando!", ephemeral: true }); 
   
   //the necessary permission that the member must have
   if (!interaction.member.permissions.has("ADMINISTRATOR")) 
