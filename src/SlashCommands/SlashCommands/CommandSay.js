@@ -22,8 +22,13 @@ module.exports =  {
   if (!interaction.member.permissions.has("ADMINISTRATOR")) 
       return interaction.reply({ content: "<:K_negado:943604703378415688> você não tem a permissão necessaria para usar este comando, você precisa ter a permissão de `ADMINISTRADOR`", ephemeral: true });
   
+ // we define the channel where the message will be sent
+  let canal = interaction.options.getChannel("canal");
+  
   //we define the message that will be quoted
   let mensagem = interaction.options.getString("mensagem");
   
+  
+
   }
 }
