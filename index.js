@@ -15,22 +15,14 @@ const fs = require("fs");
 const app = express();
 
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
-process.on("unhandledRejection", (reason, p) => {    
-  console.log("[ ANTICLASH ] | SCRIPT REJEITADO");    
-  console.log(reason, p);
+process.on('unhandledRejection', error => {
+  console.error(colors.red("[Info]")+" Ocorreu um erro na aplicação! Detalhes embaixo:");
+  console.error(error.stack);
 });
-process.on("uncaughtException", (err, origin) => {
-  console.log("[ ANTICLASH] | CATCH ERROR");
-  console.log(err, origin);
+process.on('uncaughtException', error => {
+    console.error(
+    console.error(error.stack);
 });
-process.on("uncaughtExceptionMonitor", (err, origin) => {
-  console.log("[ ANTICLASH ] | BLOQUEADO");
-  console.log(err, origin);
-});
-process.on("multipleResolves", (type, promise, reason) => {
-  console.log("[ ANTICLASH ] | VÁRIOS ERROS");
-  console.log(type, promise, reason);
-}); 
 
 //Activity status of our bot
 client.on("ready", () => {
