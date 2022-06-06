@@ -15,8 +15,7 @@ module.exports = {
         {
             name: 'canal',
             description: 'o canal a ser enviada!',
-            type: 'CHANNEL',
-            required: false,
+         type            required: false,
         }
     ],
     run: async (client, interaction, args) => {
