@@ -10,7 +10,7 @@ module.exports =  {
     {
       name: 'canal',
       description: 'Qual canal onde sera enviada a mensagem?',
-      type: 'CHANNEL',
+      type: 'TEXT',
       required: true,
     },
     {
