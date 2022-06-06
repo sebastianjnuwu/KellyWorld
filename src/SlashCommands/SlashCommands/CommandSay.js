@@ -13,9 +13,9 @@ module.exports = {
             description: 'o canal a ser enviada!',
             type: 'CHANNEL',
             channelTypes: ['GUILD_TEXT'] ,
-            required: false,
+            required: true,
         },
-                {
+        {
             name: 'mensagem',
             description: 'coloque a mensagem a ser enviada!',
             type: 'STRING',
@@ -24,8 +24,8 @@ module.exports = {
     run: async (client, interaction, args) => {
    
   //we set the message and channel variable
-  let mensagem  = interaction.options.getString("mensagem");
   let canal = interaction.options.getChannel('canal') || interaction.channel;
+  let mensagem  = interaction.options.getString("mensagem");
   
   try {
 
