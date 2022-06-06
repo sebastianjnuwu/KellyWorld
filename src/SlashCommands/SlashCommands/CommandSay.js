@@ -6,7 +6,13 @@ module.exports =  {
   name: "say", 
   description: "🗣️ talk in a chat using the bot", 
   type: "CHAT_INPUT",
-  options: [{
+  options: [
+    {
+      name: 'canal'
+      description: 'Qual canal onde sera enviada a mensagem?'
+      type: 'CHANNEL'
+    },
+    {
         name: 'mensagem',
         description: 'Digite as palavras que você quer que eu fale!',
         type: 'STRING',
