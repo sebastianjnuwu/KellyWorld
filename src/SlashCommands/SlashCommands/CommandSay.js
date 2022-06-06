@@ -22,7 +22,8 @@ module.exports =  {
     }],
   run: async (client, args, options, interaction) => {
 
-    const member = interaction.member;
+     const member = await interaction.options.getUser('user') || interaction.user 
+
     
   // permission the bot needs to use the command
   if (!interaction.member.me.permissions.has('ADMINISTRATOR'))
