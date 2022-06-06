@@ -20,7 +20,7 @@ module.exports =  {
         type: 'STRING',
         required: true,
     }],
-  run: async (client, args, options, interaction) => {
+  run: async (client, args, options, member, interaction) => {
   
   //permission the bot needs to use the command
   if (!interaction.member.me.permissions.has('ADMINISTRATOR'))
