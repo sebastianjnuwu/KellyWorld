@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = require("./../../index.js");
-const { colors } = require("kettraworld.db");
+const colors = require("colors");
 const config = require("./../../config.json");
 
 //Event

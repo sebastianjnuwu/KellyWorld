@@ -3,9 +3,10 @@
 // ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
 //All packages used in the project
-const { fs, colors } = require("kettraworld.db"); 
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: 32767 });
+const colors = require("colors");
+const fs = require("fs");
 client.login(process.env.token); 
 const config = require("./config.json");
 const express = require("express");
