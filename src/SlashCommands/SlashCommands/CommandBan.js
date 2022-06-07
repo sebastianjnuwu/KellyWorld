@@ -20,7 +20,7 @@ module.exports = {
         }],
     run: async (client, interaction, options) => {
 
-   let user = interaction.options.getUser('usuario');
+   let user = interaction.options.getMember('usuario');
    
    let motivo = interaction.options.getString("motivo") || `Você não inseriu um motivo.`;
 
