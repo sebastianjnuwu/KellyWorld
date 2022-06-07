@@ -14,23 +14,6 @@ client.login(process.env.token);
 const fs = require("fs");
 const app = express();
 
-//Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
-process.on('unhandledRejection', error => {
-  const e = client.channels.cache.get("983663638537707571");
-  e.send(`**[Info] - as ${date.format(new Date())} ocorreu o erro:**\n\`\`\`
-  ${error.stack}\`\`\``);
-  console.error(colors.red("[Info]")+" Ocorreu um erro verifique nas logs!");
-});
-
-//Activity status of our bot
-client.on("ready", () => {
- let activities = ["Minecraft em Kettra World 🌟"];
- let i = 0;
- setInterval(() => 
- client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "STREAMING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
-  client.user.setStatus("dnd");
-});
-
 //Hadler of normal and slash commands
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -48,6 +31,15 @@ fs.readdirSync('./src/commands/').forEach(local => {
         if(puxar.aliases && Array.isArray(puxar.aliases))
         puxar.aliases.forEach(x => client.aliases.set(x, puxar.name))
     } 
+});
+
+
+//Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
+process.on('unhandledRejection', error => {
+  const e = client.channels.cache.get("983663638537707571");
+  e.send(`**[Info] - as ${date.format(new Date())} ocorreu o erro:**\n\`\`\`
+  ${error.stack}\`\`\``);
+  console.error(colors.red("[Info]")+" Ocorreu um erro verifique nas logs!");
 });
 
 //Ping system together with uptimerobot
