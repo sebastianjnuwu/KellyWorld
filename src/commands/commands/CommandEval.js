@@ -34,10 +34,10 @@ module.exports = {
 		
 		// we define the message in embed of the result!
 		const embed = new Discord.MessageEmbed()
-		.setDescription(`Console:\`\`\`js 
+		.setDescription(`**Console:**\`\`\`js 
 		     ${code}
 					\`\`\`	
-Resultado:
+**Resultado:**
 					\`\`\`js
 					${output}
 					\`\`\``).setColor(`#b026d6`)
