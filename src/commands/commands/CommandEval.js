@@ -36,12 +36,11 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 		.setDescription(`Console:\`\`\`js 
 		     ${code}
-					\`\`\`
-					Resultado:
+					\`\`\`	
+Resultado:
 					\`\`\`js
 					${output}
-					\`\`\`
-					`).setColor(`#b026d6`)
+					\`\`\``).setColor(`#b026d6`)
 
 					message.reply({embeds:[embed]});
 				
