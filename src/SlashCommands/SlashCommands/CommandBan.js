@@ -20,7 +20,7 @@ module.exports = {
         }],
     run: async (client, interaction, options) => {
 
-   let user = interaction.options.getUser('usuario');
+   let user = interaction.options.getMember('usuario');
    
    let motivo = interaction.options.getString("motivo") || `Você não inseriu um motivo.`;
 
@@ -33,7 +33,7 @@ module.exports = {
     
    if(user.id === interaction.user.id) return interaction.reply({ content: "Você não pode ser banir! tá doido?", ephemeral: true });
     
-   if(user.id.member.roles.highest.position > interaction.guild.me.roles.highest.position ) return interaction.reply({ content: "o cargo do usuario é maior que o meu!", ephemeral: true });
+   if(user.id.member.roles.highest.position > interaction.guild.me.roles.highest.position ) return interaction.reply({ content: "o cargo do usuario é maior que o meu!", ephemeral: true }); 
     
 interaction.guild.members.ban(user, { reason: motivo });
 
