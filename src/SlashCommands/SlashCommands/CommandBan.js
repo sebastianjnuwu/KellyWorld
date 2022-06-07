@@ -33,7 +33,7 @@ module.exports = {
     
    if(user.id === interaction.user.id) return interaction.reply({ content: "Você não pode ser banir! tá doido?", ephemeral: true });
     
-   if(interaction.member.roles.highest.position > interaction.guild.me.roles.highest.position ) return interaction.reply({ content: "o cargo do usuario é maior que o meu!", ephemeral: true });
+   if(!interaction.member.roles.highest.position > interaction.guild.me.roles.highest.position ) return interaction.reply({ content: "o cargo do usuario é maior que o meu!", ephemeral: true });
     
 interaction.guild.members.ban(user, { reason: motivo });
 
