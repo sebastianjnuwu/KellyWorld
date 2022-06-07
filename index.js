@@ -18,7 +18,7 @@ const app = express();
 process.on('unhandledRejection', error => {
   const e = client.channels.cache.get("983663638537707571");
   e.send(`**[Info] - as ${date.format(new Date())} ocorreu o erro:**\n\`\`\`
-  ${erro.stack}\`\`\``);
+  ${error.stack}\`\`\``);
   console.error(colors.red("[Info]")+" Ocorreu um erro verifique nas logs!");
 });
 
