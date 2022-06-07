@@ -6,7 +6,7 @@
 const options = { timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
 const date = new Intl.DateTimeFormat([], options);
 const Discord = require("discord.js");
-const client = new Discord.Client({ intents: 32767, ws: { properties: { $browser: "Discord iOS" }} }); 
+const client = new Discord.Client({ intents: 32767, ws: { properties: { $browser: "Discord iOS" }} });
 //const client = new Discord.Client({ intents: 32767 });
 const config = require("./config.json");
 const express = require("express");
