@@ -18,7 +18,7 @@ module.exports = {
 
     if (!interaction.member.permissions.has("MANAGE_MESSAGES")) return interaction.reply({ content: `:K_negado: | Você não possui permissão para utilizar este comando.`, ephemeral: true });
     
-    if (delamount <= 0)) return interaction.reply({ content: `Voce pode apagar apenas de 1 a 99 mensagens`, ephemeral: true });
+    if (delamount <= 0) return interaction.reply({ content: `Voce pode apagar apenas de 1 a 99 mensagens`, ephemeral: true });
 
     if (parseInt(delamount) > 99) return interaction.reply({ content: `Voce pode apagar apenas de 1 a 99 mensagens`, ephemeral: true });
 
