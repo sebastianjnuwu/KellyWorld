@@ -6,7 +6,7 @@ const {
 //Slash Commands export module
 module.exports = {
     name: 'avatar',
-    description: "📷 show your avatar or that of your friends!",
+    description: "📷 quer ver seu avatar ou de algum amigo?",
   type: "CHAT_INPUT",
     options: [{
         name: 'membro',
