@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 //Slash Commands export module
 module.exports =  {
   name: "ping", 
-  description: "🏓 Information about my latency!", 
+  description: "🏓 Quer ver o meu ping?", 
   type: "CHAT_INPUT",
   run: async (client, interaction) => {
   
