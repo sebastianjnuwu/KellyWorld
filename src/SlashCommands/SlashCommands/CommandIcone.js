@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 //Slash Commands export module
 module.exports =  {
     name: "icon", 
-    description: "🖼️ Want to see the server icon?", 
+    description: "🖼️ Quer ver o icone deste servidor?", 
     type: "CHAT_INPUT",
     run: async (client, interaction) => {
   
@@ -13,7 +13,7 @@ module.exports =  {
   
   //We define the embed message
   const embed = new Discord.MessageEmbed()
-       .setTitle(`Ícone do servidor:`)
+       .setTitle(`🖼️ icone do servidor:`)
        .setDescription(`[Link da imagem aqui](${sicon})`)
        .setImage(sicon)
        .setColor('#ef00ff')
