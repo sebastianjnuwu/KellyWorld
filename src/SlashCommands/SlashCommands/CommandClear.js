@@ -4,7 +4,7 @@ const Discord = require('discord.js')
 //módulo de importação de comandos em slash
 module.exports = {
     name: 'clear',
-    description: '🧹 clean your junk chat!',
+    description: '🗑️ limpar as mensagens do canal?',
     type: 'CHAT_INPUT',
     options: [{
         name: 'quantidade',
