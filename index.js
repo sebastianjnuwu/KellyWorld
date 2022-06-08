@@ -16,10 +16,7 @@ const app = express();
 
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on('unhandledRejection', error => {
-  const e = client.channels.cache.get("983663638537707571");
-  e.send(`**[Info] - as ${date.format(new Date())} ocorreu o erro:**\n\`\`\`
-  ${error.stack}\`\`\``);
-  console.error(colors.red("[Info]")+" Ocorreu um erro verifique nas logs!");
+ console.error(colors.red("[Info]")+" Ocorreu um erro verifique:\n" + error.stack);
 });
 
 //Hadler of normal and slash commands
