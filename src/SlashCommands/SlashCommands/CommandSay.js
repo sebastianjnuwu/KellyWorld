@@ -5,7 +5,7 @@ const Discord = require("discord.js")
 //import module supported by hadler
 module.exports = {
     name: 'say',
-    description:  '🗣️ message using Kelly in a channel',
+    description:  '🗣️ fale como se fosse eu em certo canal!',
     type: 'CHAT_INPUT',
     options: [
         {
