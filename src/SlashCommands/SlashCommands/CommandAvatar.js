@@ -6,7 +6,7 @@ const {
 //Slash Commands export module
 module.exports = {
     name: 'avatar',
-    description: "📷 quer ver seu avatar ou de algum amigo?",
+    description: "📷 ja viu seu avatar? ou de algum membro do servidor?",
   type: "CHAT_INPUT",
     options: [{
         name: 'membro',
@@ -18,7 +18,7 @@ module.exports = {
         const user = interaction.options.getUser('membro') || interaction.member.user
 
         const embed = new MessageEmbed()
-            .setTitle(`🖼️ Avatar de ${user.username}`)
+            .setTitle(`📸 Avatar de ${user.username}`)
             .setColor('BLUE')
             .setImage(user.displayAvatarURL({
                 dynamic: true,
