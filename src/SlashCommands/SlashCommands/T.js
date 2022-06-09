@@ -44,6 +44,8 @@ module.exports = {
  if(user.id === client.user.id) return interaction.reply({ content: "Por que?", ephemeral: true });
     
  if(user.id === interaction.user.id) return interaction.reply({ content: "Você não pode se castigar!", ephemeral: true });
+ 
+  if(user.id === interaction.guild.ownerId) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não posso castigar o dono(a) do servidor!", ephemeral: true });
     
  if(user.roles.highest.position > interaction.guild.me.roles.highest.position ) return interaction.reply({ content: "<:K_negado:943604703378415688> | o cargo do usuario é maior que o meu!", ephemeral: true });
    
