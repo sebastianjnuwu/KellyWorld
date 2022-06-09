@@ -32,7 +32,9 @@ module.exports = {
    
    let t = interaction.options.getNumber('tempo');
    
-   let tempo = t * 60;
+   if (t <= 0) return interaction.reply({ content: `<:K_negado:943604703378415688> | Não existe minutos !enores que 0!`, ephemeral: true });
+
+   let tempo = ms(`${t}m`);
    
    let motivo = interaction.options.getString("motivo") || `Você não inseriu um motivo.`;
    
