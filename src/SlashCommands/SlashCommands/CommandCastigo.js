@@ -36,7 +36,7 @@ module.exports = {
  //
   let motivo = interaction.options.getString("motivo") || `Você não inseriu um motivo.`;
  
- if(!interaction.guild.me.permissions.has("MODERATE_MEMBERS")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
+ if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
  
  if(!interaction.member.permissions.has("MODERATE_MEMBERS")) return          interaction.reply({ content: "<:K_negado:943604703378415688> | Você não possui permissão para utilizar este comando, permissão necessária `MODERATE_MEMBERS`...", ephemeral: true });
  
