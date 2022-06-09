@@ -4,33 +4,36 @@ const ms = require('ms');
 
 //command import using with hadler
 module.exports = {
-    name: 'castigo',
-    description: '⛓️ quer castigar alguém?',
-    type: 'CHAT_INPUT',
-    options: [{
-        name: 'usuario',
-        type: 'USER',
-        description: 'Mencione um usuário para ser castigado!',
-        required: true,
-    },
-    {
-        name: 'tempo',
-        description: 'tempo em minutos para o usuário sair do castigo!',
-        type: 'NUMBER',
-        required: true,
-    },
-    {
-        name: "motivo",
-        type: 'STRING',
-        description: "Seleciona o motivo do castigo dedea usuário!.",
-        required: false,
-        }],
+  name: 'castigo',
+  description: '⛓️ quer castigar alguém?',
+  type: 'CHAT_INPUT',
+  options: [{
+   name: 'usuario',
+   type: 'USER',
+   description: 'Mencione um usuário para ser castigado!',
+   required: true,
+  },
+  {
+    name: 'tempo',
+    description: 'tempo em minutos para o usuário sair do castigo!',
+    type: 'NUMBER',
+    required: true,
+  },
+  {
+    name: "motivo",
+    type: 'STRING',
+    description: "Seleciona o motivo do castigo dedea usuário!.",
+    required: false,
+  }],
   run: async (client, interaction, options) => {
 
+// we define the user variable that will be punished!
   let user = interaction.options.getMember('usuario');
-   
+
+// we define the time variable!
   let t = interaction.options.getNumber('tempo');
-   
+ 
+ //
   let motivo = interaction.options.getString("motivo") || `Você não inseriu um motivo.`;
  
  if(!interaction.guild.me.permissions.has("MODERATE_MEMBERS")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
