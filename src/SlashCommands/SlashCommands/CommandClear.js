@@ -16,6 +16,8 @@ module.exports = {
     
     let delamount = interaction.options.getNumber('quantidade');
 
+    if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
+    
     if (!interaction.member.permissions.has("MANAGE_MESSAGES")) return interaction.reply({ content: `<:K_negado:943604703378415688> | Você não possui permissão para utilizar este comando.`, ephemeral: true });
     
     if (delamount <= 0) return interaction.reply({ content: `<:K_negado:943604703378415688> | Voce pode apagar apenas de 1 a 99 mensagens`, ephemeral: true });
