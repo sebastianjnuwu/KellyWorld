@@ -15,7 +15,7 @@ const fs = require("fs");
 const app = express();
 
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
-process.on('unhandledRejection', error => {
+process.on("unhandledRejection", error => {
  console.error(colors.red("[Info]")+" Ocorreu um erro verifique:\n" + error.stack);
 });
 
