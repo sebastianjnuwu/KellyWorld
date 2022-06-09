@@ -1,5 +1,6 @@
 //listing the packages used!
-const Discord = require('discord.js')
+const Discord = require('discord.js');
+const ms = require('ms');
 
 //command import using with hadler
 module.exports = {
