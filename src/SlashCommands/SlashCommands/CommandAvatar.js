@@ -1,29 +1,32 @@
-//importing the packages that will be use
-const { MessageAttachment } = require("discord.js");
-const { profileImage } = require("discord-arts");
+//importing the packages that will be used!
+const {
+    MessageEmbed
+} = require('discord.js')
 
-//importação aceitar pela hadler
+//Slash Commands export module
 module.exports = {
-    name: "perfil",
-    description: "📷 mostrar o seu perfil!",
-    type: 'CHAT_INPUT',
-  options: [
-    {
-        name: "user",
-        type: "USER",
-        description: "Selecione um usuário",
-        required: false
+    name: 'avatar',
+    description: "📷 ja viu seu avatar? ou de algum membro do servidor?",
+  type: "CHAT_INPUT",
+    options: [{
+        name: 'membro',
+        type: 'USER',
+        description: 'Seleciona o usuário',
+        required: false,
+    }],
+    run: async (client, interaction, options) => {
+        const user = interaction.options.getUser('membro') || interaction.member.user
+
+        const embed = new MessageEmbed()
+            .setTitle(`📸 Avatar de ${user.username}`)
+            .setColor('BLUE')
+            .setImage(user.displayAvatarURL({
+                dynamic: true,
+                size: 1024
+            }))
+            .setDescription(`Faça o download clicando [aqui.](${user.avatarURL({ format: 'png' })})`)
+        
+        await interaction.reply({ embeds: [embed] });
     }
-
-],
-
-  run: async(client, interaction, args) => { 
-
-        const discordUser = interaction.options.getUser("user") || interaction.user;
-        await interaction.deferReply();
-        const bufferImg = await profileImage(discordUser);
-        const imgAttachment = new MessageAttachment(bufferImg, "profile.png");
-
-        interaction.followUp({ files: [imgAttachment] });
-    }
-};
+    //I think it's the end!
+} 
