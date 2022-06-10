@@ -1,37 +1,39 @@
-//importing used packages
+// importing the packages/libraries used this command!
 const { MessageEmbed, version, CommandInteraction, Client } = require("discord.js");
 const Discord = require("discord.js")
 
-//import module supported by hadler
+// slash command import module supported by hadler.
 module.exports = {
     name: 'say',
     description:  '🗣️ fale como se fosse eu em certo canal!',
     type: 'CHAT_INPUT',
-    options: [
-        {
-            name: 'canal',
-            description: 'o canal a ser enviada!',
-            type: 'CHANNEL',
-            channelTypes: ['GUILD_TEXT'] ,
-            required: true,
-        },
-        {
-            name: 'mensagem',
-            description: 'coloque a mensagem a ser enviada!',
-            type: 'STRING',
-            required: true,
-       }],
-    run: async (client, interaction, args) => {
+  options: [{
+    name: 'canal',
+    description: 'o canal a ser enviada!',
+    type: 'CHANNEL',
+    channelTypes: ['GUILD_TEXT'] ,
+    required: true,
+  },
+  {
+    name: 'mensagem',
+    description: 'coloque a mensagem a ser enviada!',
+    type: 'STRING',
+    required: true,
+  }],
+  run: async (client, interaction, args) => {
    
-  //we set the message and channel variable
+  // we define the channel variable.
   let canal = interaction.options.getChannel('canal') || interaction.channel;
+  
+  // we define the channel variable.
   let mensagem  = interaction.options.getString("mensagem");
   
   try {
 
+ // we define an if that checks if the bot has the necessary permission to execute the command!
  if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
  
-//first If saying that the user does not have permission
+// we define an if that checks if the user has the necessary permission to execute the command!
 if(!interaction.member.permissions.has("MANAGE_MESSAGES")) return interaction.reply({ content: "<:K_negado:943604703378415688> | Você não tem permissão para usar este comando!", ephemeral: true});
 
  //saying it sent the message to x channel 
@@ -42,12 +44,10 @@ if(!interaction.member.permissions.has("MANAGE_MESSAGES")) return interaction.re
 
   //if there is any mistake
   } catch (err) {
-
-   let Erro = new Discord.MessageEmbed()
-     .setDescription(`<:K_negado:943604703378415688> | ${interaction.user} Opss... algo de errado não está certo.`)
-        .setColor("#36393e")
-        interaction.reply({embeds: [Erro]});
-        
-    }
- } //finally finished the code lol it took a little work
-} 
+  
+  // if there is an error....
+  interaction.reply({ content: "<:K_negado:943604703378415688> | algo de errado nao estar certo!", ephemeral: true });
+  
+  }
+ } 
+};
