@@ -1,12 +1,12 @@
-//importing the packages that will be used!
+// importing the packages/libraries used this command!
 const Discord = require("discord.js");
 
-//Slash Commands export module
+// slash command import module supported by hadler.
 module.exports =  {
     name: "icon", 
     description: "🖼️ Quer ver o icone deste servidor?", 
     type: "CHAT_INPUT",
-    run: async (client, interaction) => {
+  run: async (client, interaction) => {
   
   //Server icon variables that will be used!
   const sicon = interaction.guild.iconURL({ dynamic : true, format: "png", size: 1024});
@@ -17,8 +17,9 @@ module.exports =  {
        .setDescription(`[Link da imagem aqui](${sicon})`)
        .setImage(sicon)
        .setColor('#ef00ff')
-    await interaction.reply({ embeds: [embed] });
+       
+  // sending the embed message.
+  await interaction.reply({ embeds: [embed] });
     
-    }
-    //will it be the end of the code? I think so!
+  }
 };
