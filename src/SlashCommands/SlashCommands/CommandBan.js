@@ -24,7 +24,7 @@ module.exports = {
   let user = interaction.options.getMember('usuario');
    
   // we define the reason variable.
-  let motivo = interaction.options.getString("motivo") || `${interaction.não inseriu um motivo.`;
+  let motivo = interaction.options.getString("motivo") || `Não especificado...`;
 
  // we define an if that checks if the bot has the necessary permission to execute the command!
   if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
