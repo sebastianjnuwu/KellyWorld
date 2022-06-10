@@ -1,7 +1,7 @@
-//importing the packages that will be used!
+// importing the packages/libraries used this command!
 const Discord = require("discord.js");
 
-//Slash Commands export module
+// slash command import module supported by hadler.
 module.exports =  {
   name: "ping", 
   description: "🏓 Quer ver o meu ping?", 
@@ -12,8 +12,9 @@ module.exports =  {
   let ping = new Discord.MessageEmbed() 
      .setColor("RANDOM")
      .setDescription(`:ping_pong: **pong!**\nMeu ping atual encontra-se em \`${client.ws.ping}ms\`.`);
+  
+  // sending the message in embed.
   interaction.reply({ embeds: [ping] });
-      
+ 
   }
-  //will it be the end of the code? I think so!
 };
