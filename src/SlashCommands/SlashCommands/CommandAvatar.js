@@ -1,9 +1,7 @@
-//importing the packages that will be used!
-const {
-    MessageEmbed
-} = require('discord.js')
+// importing the packages/libraries used this command!
+const {  MessageEmbed } = require('discord.js')
 
-//Slash Commands export module
+// slash command import module supported by hadler.
 module.exports = {
     name: 'avatar',
     description: "📷 ja viu seu avatar? ou de algum membro do servidor?",
@@ -14,19 +12,20 @@ module.exports = {
         description: 'Seleciona o usuário',
         required: false,
     }],
-    run: async (client, interaction, options) => {
-        const user = interaction.options.getUser('membro') || interaction.member.user
+  run: async (client, interaction, options) => {
 
-        const embed = new MessageEmbed()
-            .setTitle(`📸 Avatar de ${user.username}`)
-            .setColor('BLUE')
-            .setImage(user.displayAvatarURL({
-                dynamic: true,
-                size: 1024
-            }))
-            .setDescription(`Faça o download clicando [aqui.](${user.avatarURL({ format: 'png' })})`)
-        
-        await interaction.reply({ embeds: [embed] });
-    }
-    //I think it's the end!
-} 
+  // we define the member variable that will show the avatar.
+  const user = interaction.options.getUser('membro') || interaction.member.user
+   
+   // we define the message in embed.
+  const embed = new MessageEmbed()
+         .setTitle(`📸 Avatar de ${user.username}`)
+         .setColor('BLUE')
+         .setImage(user.displayAvatarURL({ dynamic: true, size: 1024 }))
+         .setDescription(`Faça o download clicando [aqui.](${user.avatarURL({ format: 'png' })})`)
+  
+  // and finally we send the message in embed.  
+  await interaction.reply({ embeds: [embed] });
+  
+  }
+};
