@@ -1,5 +1,5 @@
 // importing the packages/libraries used this command!
-const {  MessageEmbed } = require('discord.js')
+const { MessageEmbed } = require('discord.js');
 
 // slash command import module supported by hadler.
 module.exports = {
