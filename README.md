@@ -14,6 +14,8 @@
 <a href="https://www.codacy.com/gh/sebastianjnuwu/KellyWorld/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sebastianjnuwu/KellyWorld&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/faf1a272f7af48dcb2177c1d93bf436b"/></a>
 <a href="https://discord.gg/NDzFeDp8YE"><img src="https://discordapp.com/api/guilds/893997835412971570/widget.png">
 </a>
+<a href="https://top.gg/bot/932705411897905193">
+  <img src="https://top.gg/api/widget/status/932705411897905193.svg"></a>
 </p>
 
 # 🔍 commands 
