@@ -7,10 +7,10 @@ module.exports = {
     description: '🗑️ limpar as mensagens do canal?',
     type: 'CHAT_INPUT',
   options: [{
-     name: 'quantidade',
-     description: 'Número de mensagens para serem apagadas.',
-     type: 'NUMBER',
-     required: true,
+    name: 'quantidade',
+    description: 'Número de mensagens para serem apagadas.',
+    type: 'NUMBER',
+    required: true,
   }],
   run: async (client, interaction, options) => {
   
