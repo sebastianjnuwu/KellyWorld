@@ -5,13 +5,13 @@ const {  MessageEmbed } = require('discord.js')
 module.exports = {
     name: 'avatar',
     description: "📷 ja viu seu avatar? ou de algum membro do servidor?",
-  type: "CHAT_INPUT",
-    options: [{
-        name: 'membro',
-        type: 'USER',
-        description: 'Seleciona o usuário',
-        required: false,
-    }],
+    type: "CHAT_INPUT",
+  options: [{
+    name: 'membro',
+    type: 'USER',
+    description: 'Seleciona o usuário',
+    required: false,
+  }],
   run: async (client, interaction, options) => {
 
   // we define the member variable that will show the avatar.
