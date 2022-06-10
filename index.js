@@ -2,7 +2,7 @@
 // ⚙️ where projects are created: https://kettraworld.github.io/discord
 // ฅ^•ﻌ•^ฅ my GITHUB: https://github.com/sebastianjnuwu
 
-//All packages used in the project
+//All packages used in the project...
 const options = { timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numeric' };
 const date = new Intl.DateTimeFormat([], options);
 const Discord = require("discord.js");
