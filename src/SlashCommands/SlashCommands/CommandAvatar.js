@@ -17,7 +17,7 @@ module.exports = {
   run: async (client, interaction, options) => {
 
   // we define the member variable that will show the avatar.
-  const discordUser = interaction.options.getUser("user") || interaction.user; = interaction.options.getUser('membro') || interaction.member.user
+  const discordUser = interaction.options.getUser("user") || interaction.user;
    
 
      await interaction.deferReply();
