@@ -4,7 +4,7 @@
   "description": "Hey! Meu nome é KellyWorld!",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "npm install && clear && node index.js"
   },
   "repository": {
     "type": "git",
