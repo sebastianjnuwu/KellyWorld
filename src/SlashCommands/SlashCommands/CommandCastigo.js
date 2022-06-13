@@ -4,8 +4,8 @@ const ms = require('ms');
 
 // slash command import module supported by hadler.
 module.exports = {
-   name: 'castigo',
-   description: '⛓️ quer castigar alguém?',
+   name: 'punishment',
+   description: '⛓️ want to punish someone?',
    type: 'CHAT_INPUT',
   options: [{
    name: 'usuario',
