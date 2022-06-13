@@ -6,7 +6,7 @@ const { profileImage } = require("discord-arts");
 // slash command import module supported by hadler.
 module.exports = {
     name: 'profile',
-    description: "📸 Have you looked at your avatar today?",
+    description: "📸 have you seen your profile today?",
     type: "CHAT_INPUT",
   options: [{
     name: 'membro',
