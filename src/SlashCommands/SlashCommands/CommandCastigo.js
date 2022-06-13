@@ -10,19 +10,19 @@ module.exports = {
   options: [{
    name: 'usuario',
    type: 'USER',
-   description: 'Mencione um usuário para ser castigado!',
+   description: 'Mention a user to get punished!',
    required: true,
   },
   {
     name: 'tempo',
-    description: 'tempo em minutos para o usuário sair do castigo!',
+    description: 'time in minutes for user to get out of punishment!',
     type: 'NUMBER',
     required: true,
   },
   {
     name: "motivo",
     type: 'STRING',
-    description: "Seleciona o motivo do castigo dedea usuário!.",
+    description: "Select the reason for the punishment of the user!",
     required: false,
   }],
   run: async (client, interaction, options) => {
