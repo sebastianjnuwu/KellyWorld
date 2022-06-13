@@ -5,11 +5,11 @@ const Discord = require("discord.js")
 // slash command import module supported by hadler.
 module.exports = {
     name: 'say',
-    description:  '🗣️ fale como se fosse eu em certo canal!',
+    description:  '🗣️ talk as if it were me on a certain channel!',
     type: 'CHAT_INPUT',
   options: [{
     name: 'canal',
-    description: 'o canal a ser enviada!',
+    description: 'the channel to be sent!',
     type: 'CHANNEL',
     channelTypes: ['GUILD_TEXT'] ,
     required: true,
