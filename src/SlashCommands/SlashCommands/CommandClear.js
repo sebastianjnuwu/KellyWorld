@@ -4,11 +4,11 @@ const Discord = require('discord.js')
 // slash command import module supported by hadler.
 module.exports = {
     name: 'clear',
-    description: '🗑️ limpar as mensagens do canal?',
+    description: '🗑️ clear channel messages?',
     type: 'CHAT_INPUT',
   options: [{
     name: 'quantidade',
-    description: 'Número de mensagens para serem apagadas.',
+    description: 'Number of messages to be deleted.',
     type: 'NUMBER',
     required: true,
   }],
