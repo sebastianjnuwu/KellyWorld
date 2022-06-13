@@ -51,7 +51,7 @@ app.use(express.urlencoded({extended: false }));
 app.set("view engine", "ejs");
 
 //Se door that the website will be created!
-app.listen(process.env.port, (req, res) => 
+app.listen(process.env.PORT || 8080, (req, res) => 
   console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`)
 );
 
