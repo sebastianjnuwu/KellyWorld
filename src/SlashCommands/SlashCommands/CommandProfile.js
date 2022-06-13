@@ -11,7 +11,7 @@ module.exports = {
   options: [{
     name: 'membro',
     type: 'USER',
-    description: 'Seleciona o usuário',
+    description: 'select user',
     required: false,
   }],
   run: async (client, interaction, options) => {
