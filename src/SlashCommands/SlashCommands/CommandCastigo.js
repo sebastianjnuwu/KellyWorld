@@ -4,23 +4,23 @@ const ms = require('ms');
 
 // slash command import module supported by hadler.
 module.exports = {
-   name: 'punishment',
+   name: 'Punishment',
    description: '⛓️ want to punish someone?',
    type: 'CHAT_INPUT',
   options: [{
-   name: 'Usuario',
+   name: 'USER',
    type: 'USER',
    description: 'Mention a user to get punished!',
    required: true,
   },
   {
-    name: 'Time',
+    name: 'TIME',
     description: 'time in minutes for user to get out of punishment!',
     type: 'NUMBER',
     required: true,
   },
   {
-    name: "Reason",
+    name: "REASON",
     type: 'STRING',
     description: "Select the reason for the punishment of the user!",
     required: false,
@@ -28,13 +28,13 @@ module.exports = {
   run: async (client, interaction, options) => {
 
 // we define the user variable that will be punished!
-  let user = interaction.options.getMember('Usuario');
+  let user = interaction.options.getMember('USER');
 
 // we define the time variable!
-  let t = interaction.options.getNumber('Time');
+  let t = interaction.options.getNumber('TIME');
  
  // we define the reason variable.
-  let motivo = interaction.options.getString("Reason") || `Não especificado...`;
+  let motivo = interaction.options.getString("REASON") || `Não especificado...`;
  
  // we define an if that checks if the bot has the necessary permission to execute the command!
  if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
