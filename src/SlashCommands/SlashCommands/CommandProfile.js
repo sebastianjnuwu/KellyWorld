@@ -5,11 +5,11 @@ const { profileImage } = require("discord-arts");
 
 // slash command import module supported by hadler.
 module.exports = {
-    name: 'profile',
+    name: 'Profile',
     description: "📸 have you seen your profile today?",
     type: "CHAT_INPUT",
   options: [{
-    name: 'membro',
+    name: 'USER',
     type: 'USER',
     description: 'select user',
     required: false,
@@ -17,7 +17,7 @@ module.exports = {
   run: async (client, interaction, options) => {
 
   // we define the member variable that will show the avatar.
-  const discordUser = interaction.options.getUser('membro') || interaction.member.user
+  const discordUser = interaction.options.getUser('USER') || interaction.member.user
 
    await interaction.deferReply();
    const bufferImg = await profileImage(discordUser);
