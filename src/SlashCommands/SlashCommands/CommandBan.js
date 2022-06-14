@@ -7,13 +7,13 @@ module.exports = {
     description: '🔨 ban someone from the server!',
     type: 'CHAT_INPUT',
     options: [{
-        name: 'usuario',
+        name: 'username',
         type: 'USER',
         description: 'Mention a user.',
         required: true,
     },
     {
-        name: "motivo",
+        name: "reason",
         type: 'STRING',
         description: "Select the reason for banning this user.",
         required: false,
@@ -21,10 +21,10 @@ module.exports = {
   run: async (client, interaction, options) => {
 
   // we define the member variable.
-  let user = interaction.options.getMember('usuario');
+  let user = interaction.options.getMember('username');
    
   // we define the reason variable.
-  let motivo = interaction.options.getString("motivo") || `Não especificado...`;
+  let motivo = interaction.options.getString("reason") || `Não especificado...`;
 
  // we define an if that checks if the bot has the necessary permission to execute the command!
   if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
