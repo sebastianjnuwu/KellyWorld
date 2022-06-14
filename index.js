@@ -13,11 +13,11 @@ const colors = require("colors");
 client.login(process.env.token); 
 const fs = require("fs");
 const app = express();
-
+/*
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on("unhandledRejection", error => {
  console.error(colors.red("[Info]")+" Ocorreu um erro verifique:\n" + error.stack);
-});
+});*/
 
 //Hadler of normal and slash commands
 client.commands = new Discord.Collection();
