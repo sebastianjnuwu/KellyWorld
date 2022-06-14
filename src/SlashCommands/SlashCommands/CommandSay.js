@@ -16,7 +16,7 @@ module.exports = {
   },
   {
     name: 'mensagem',
-    description: 'coloque a mensagem a ser enviada!',
+    description: 'enter the message to be sent!',
     type: 'STRING',
     required: true,
   }],
