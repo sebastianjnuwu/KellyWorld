@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 // slash command import module supported by hadler.
 module.exports =  {
     name: "icon", 
-    description: "🖼️ Quer ver o icone deste servidor?", 
+    description: "🖼️ Want to see the icon of this server?", 
     type: "CHAT_INPUT",
   run: async (client, interaction) => {
   
