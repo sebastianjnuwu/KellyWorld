@@ -8,19 +8,19 @@ module.exports = {
    description: '⛓️ want to punish someone?',
    type: 'CHAT_INPUT',
   options: [{
-   name: 'username',
+   name: 'Usuario',
    type: 'USER',
    description: 'Mention a user to get punished!',
    required: true,
   },
   {
-    name: 'time',
+    name: 'Time',
     description: 'time in minutes for user to get out of punishment!',
     type: 'NUMBER',
     required: true,
   },
   {
-    name: "reason",
+    name: "Reason",
     type: 'STRING',
     description: "Select the reason for the punishment of the user!",
     required: false,
@@ -28,13 +28,13 @@ module.exports = {
   run: async (client, interaction, options) => {
 
 // we define the user variable that will be punished!
-  let user = interaction.options.getMember('username');
+  let user = interaction.options.getMember('Usuario');
 
 // we define the time variable!
-  let t = interaction.options.getNumber('time');
+  let t = interaction.options.getNumber('Time');
  
  // we define the reason variable.
-  let motivo = interaction.options.getString("reason") || `Não especificado...`;
+  let motivo = interaction.options.getString("Reason") || `Não especificado...`;
  
  // we define an if that checks if the bot has the necessary permission to execute the command!
  if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
