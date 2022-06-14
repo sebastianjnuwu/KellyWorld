@@ -4,18 +4,18 @@ const Discord = require("discord.js")
 
 // slash command import module supported by hadler.
 module.exports = {
-    name: 'Say',
+    name: 'say',
     description:  '🗣️ talk as if it were me on a certain channel!',
     type: 'CHAT_INPUT',
   options: [{
-    name: 'CHANNEL',
+    name: 'canal',
     description: 'the channel to be sent!',
     type: 'CHANNEL',
     channelTypes: ['GUILD_TEXT'] ,
     required: true,
   },
   {
-    name: 'MESSAGE',
+    name: 'mensagem',
     description: 'enter the message to be sent!',
     type: 'STRING',
     required: true,
@@ -23,10 +23,10 @@ module.exports = {
   run: async (client, interaction, args) => {
    
   // we define the channel variable.
-  let canal = interaction.options.getChannel('CHANNEL');
+  let canal = interaction.options.getChannel('canal') || interaction.channel;
   
   // we define the channel variable.
-  let mensagem  = interaction.options.getString("MESSAGE");
+  let mensagem  = interaction.options.getString("mensagem");
   
   try {
 

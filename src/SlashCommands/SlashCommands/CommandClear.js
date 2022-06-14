@@ -3,11 +3,11 @@ const Discord = require('discord.js')
 
 // slash command import module supported by hadler.
 module.exports = {
-    name: 'Clear',
+    name: 'clear',
     description: '🗑️ clear channel messages?',
     type: 'CHAT_INPUT',
   options: [{
-    name: 'NUMBER',
+    name: 'quantidade',
     description: 'Number of messages to be deleted.',
     type: 'NUMBER',
     required: true,
@@ -15,7 +15,7 @@ module.exports = {
   run: async (client, interaction, options) => {
   
   //we set the variable of how many messages to delete!
-  let delamount = interaction.options.getNumber('NUMBER');
+  let delamount = interaction.options.getNumber('quantidade');
 
   // we define an if that checks if the bot has the necessary permission to execute the command!
   if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });

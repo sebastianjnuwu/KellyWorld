@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 
 // slash command import module supported by hadler.
 module.exports =  {
-  name: "Ping", 
+  name: "ping", 
   description: "🏓 Want to see my ping?", 
   type: "CHAT_INPUT",
   run: async (client, interaction) => {

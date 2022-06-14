@@ -3,17 +3,17 @@ const Discord = require('discord.js')
 
 // slash command import module supported by hadler.
 module.exports = {
-    name: 'Ban',
+    name: 'ban',
     description: '🔨 ban someone from the server!',
     type: 'CHAT_INPUT',
     options: [{
-        name: 'USER',
+        name: 'usuario',
         type: 'USER',
         description: 'Mention a user.',
         required: true,
     },
     {
-        name: "REASON",
+        name: "motivo",
         type: 'STRING',
         description: "Select the reason for banning this user.",
         required: false,
@@ -21,10 +21,10 @@ module.exports = {
   run: async (client, interaction, options) => {
 
   // we define the member variable.
-  let user = interaction.options.getMember('USER');
+  let user = interaction.options.getMember('usuario');
    
   // we define the reason variable.
-  let motivo = interaction.options.getString("REASON") || `Não especificado...`;
+  let motivo = interaction.options.getString("motivo") || `Não especificado...`;
 
  // we define an if that checks if the bot has the necessary permission to execute the command!
   if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
