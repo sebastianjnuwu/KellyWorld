@@ -4,18 +4,18 @@ const Discord = require('discord.js')
 // slash command import module supported by hadler.
 module.exports = {
     name: 'ban',
-    description: '🔨 banir alguem do servidor!',
+    description: '🔨 ban someone from the server!',
     type: 'CHAT_INPUT',
     options: [{
         name: 'usuario',
         type: 'USER',
-        description: 'Mencione um usuário.',
+        description: 'Mention a user.',
         required: true,
     },
     {
         name: "motivo",
         type: 'STRING',
-        description: "Seleciona o motivodo banimento desse usuario.",
+        description: "Select the reason for banning this user.",
         required: false,
         }],
   run: async (client, interaction, options) => {
