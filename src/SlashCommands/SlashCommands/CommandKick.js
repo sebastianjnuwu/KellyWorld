@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 
 // slash command import module supported by hadler.
 module.exports = {
-    name: 'kick,
+    name: 'kick',
     description: '🦶 kick someone off the server.',
     type: 'CHAT_INPUT',
     options: [{
