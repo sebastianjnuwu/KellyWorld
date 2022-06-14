@@ -8,14 +8,14 @@ module.exports = {
     description:  '🗣️ talk as if it were me on a certain channel!',
     type: 'CHAT_INPUT',
   options: [{
-    name: 'channel',
+    name: 'Channel',
     description: 'the channel to be sent!',
     type: 'CHANNEL',
     channelTypes: ['GUILD_TEXT'] ,
     required: true,
   },
   {
-    name: 'message',
+    name: 'Message',
     description: 'enter the message to be sent!',
     type: 'STRING',
     required: true,
@@ -23,10 +23,10 @@ module.exports = {
   run: async (client, interaction, args) => {
    
   // we define the channel variable.
-  let canal = interaction.options.getChannel('channel') || interaction.channel;
+  let canal = interaction.options.getChannel('Channel') || interaction.channel;
   
   // we define the channel variable.
-  let mensagem  = interaction.options.getString("message");
+  let mensagem  = interaction.options.getString("Message");
   
   try {
 
