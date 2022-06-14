@@ -45,7 +45,7 @@ module.exports = {
   if(user.roles.highest.position > interaction.guild.me.roles.highest.position ) return interaction.reply({ content: "<:K_negado:943604703378415688> | o cargo do usuario é maior que o meu!", ephemeral: true });
  
  // banning the user....
- interaction.guild.members.kick(user, { reason: motivo });
+ interaction.guild.members.kick(user, motivo);
 
  // successful the command send this message.
  interaction.reply({ content: `${user} foi expulso com sucesso!`});
