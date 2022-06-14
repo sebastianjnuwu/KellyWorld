@@ -30,7 +30,7 @@ module.exports = {
   if(!interaction.guild.me.permissions.has("ADMINISTRATOR")) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não tenho a permissão de `ADMINISTRADOR`.....", ephemeral: true });
 
 // we define an if that checks if the user has the necessary permission to execute the command!
-  if(!interaction.member.permissions.has("BAN_MEMBERS")) return          interaction.reply({ content: "<:K_negado:943604703378415688> | Você não possui permissão para utilizar este comando.", ephemeral: true });
+  if(!interaction.member.permissions.has("KICK_MEMBERS")) return          interaction.reply({ content: "<:K_negado:943604703378415688> | Você não possui permissão para utilizar este comando.", ephemeral: true });
   
   // we set a variable to not kick the server owner.
   if(user.id === interaction.guild.ownerId) return interaction.reply({ content: "<:K_negado:943604703378415688> | eu não posso expulsar o dono(a) do servidor!", ephemeral: true });
