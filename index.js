@@ -7,8 +7,8 @@ const options = { timeZone: 'America/Sao_Paulo', hour: 'numeric',	minute: 'numer
 const date = new Intl.DateTimeFormat([], options);
 const Discord = require("discord.js");
 const client = new Discord.Client({ intents: 32767, ws: { properties: { $browser: "Discord iOS" }} });
-//const DBL = require('top.gg');
-//const dbl = new DBL(process.env.topgg, { webhookPort: process.env.PORT, webhookAuth: 'Kelly' })
+const DBL = require('top.gg');
+const dbl = new DBL(process.env.topgg, { webhookPort: process.env.PORT || 8080, webhookAuth: 'kelly' })
 const config = require("./config.json");
 const express = require("express");
 const colors = require("colors");
@@ -19,6 +19,15 @@ const app = express();
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on("unhandledRejection", error => {
  console.error(colors.red("[Info]")+" Ocorreu um erro verifique:\n" + error.stack);
+});
+
+// check the people who vote for Kelly on the topgg website.
+const dbl = new DBL(yourDBLTokenHere, { webhookPort: 5000, webhookAuth: 'password' });
+dbl.webhook.on('ready', hook => {
+  console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
+});
+dbl.webhook.on('vote', vote => {
+  console.log(`User with ID ${vote.user} just voted!`);
 });
 
 //Hadler of normal and slash commands
