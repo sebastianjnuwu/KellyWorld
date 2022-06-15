@@ -22,7 +22,6 @@ process.on("unhandledRejection", error => {
 });
 
 // check the people who vote for Kelly on the topgg website.
-const dbl = new DBL(yourDBLTokenHere, { webhookPort: 5000, webhookAuth: 'password' });
 dbl.webhook.on('ready', hook => {
   console.log(`Webhook running at http://${hook.hostname}:${hook.port}${hook.path}`);
 });
