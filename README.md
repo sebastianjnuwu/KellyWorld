@@ -48,6 +48,61 @@ token=
 npm start 
 ```
 
+see the entire bot structure:
+```ascii
+ 📂 KellyWorld
+  ├── 📂 .github
+  │    ├── 📂 workflows
+  │    │    ├── 📄 codacy.yml
+  │    │    ├── 📄 codeql.yml
+  │    │    ├── 📄 dependency-review.yml
+  │    │    └── 📄 ftp.yml
+  │    ├── 📄 FUNDING.yml
+  │    └── 📄 dependabot.yml
+  ├── 📂 public
+  │    └── 📸 KellyWorld.png
+  ├── 📂 src
+  │    ├── 📂 SlashCommands
+  │    │    └── 📂 SlashCommands
+  │    │         ├── 📄 CommandBan.js
+  │    │         ├── 📄 CommandCastigo.js
+  │    │         ├── 📄 CommandClear.js
+  │    │         ├── 📄 CommandIcone.js
+  │    │         ├── 📄 CommandKick.js
+  │    │         ├── 📄 CommandPing.js
+  │    │         ├── 📄 CommandProfile.js   
+  │    │         └── 📄 CommandSay.js
+  │    ├── 📂 commands
+  │    │    └── 📂 commands
+  │    │         ├── 📄 CommandAvatar.js
+  │    │         ├── 📄 CommandCastigo.js
+  │    │         ├── 📄 CommandClear.js
+  │    │         ├── 📄 CommandEval.js      
+  │    │         ├── 📄 CommandHelp.js   
+  │    │         ├── 📄 CommandIcone.js     
+  │    │         ├── 📄 CommandPing.js     
+  │    │         ├── 📄 CommandSay.js
+  │    │         └── 📄 CommandSugerir.js
+  │    ├── 📂 events
+  │    │    ├── 📄 MensagemCreate.js
+  │    │    ├── 📄 Status.js
+  │    │    ├── 📄 guildMemberAdd.js
+  │    │    ├── 📄 interactionCreate.js
+  │    │    ├── 📄 messageCreate.js
+  │    │    └── 📄 ready.js
+  │    └── 📂 handler
+  │         └── 📄 index.js
+  ├── 📂 views
+  │    └── 🌐 inicio.ejs
+  ├── 📄 .gitattributes
+  ├── 📄 .gitignore
+  ├── 📄 LICENSE
+  ├── 📄 README.md
+  ├── 📄 config.json
+  ├── 📄 index.js
+  └── 📄 package.json
+```
+     
 <h1> ❤️ contributors </h1>
 
 Thanks to all the <strong>Contributors</strong> who helped to form the bot <strong>Kelly!</strong>
