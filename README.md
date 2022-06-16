@@ -14,7 +14,7 @@
 
 # 🔧 developers 
 
-a currently [KellyWorld](https://top.gg/bot/932705411897905193) is publicly available for use on your server, but if you don't feel safe you can start your own instance of our bot remembering that we don't support about small rookie mistakes. Chances are you know what you're doing.
+currently [KellyWorld](https://top.gg/bot/932705411897905193) is publicly available for use on your server, but if you don't feel safe you can start your own instance of our bot. Hope you know what to be making
 
 
 <h1> ❤️ contributors </h1>
