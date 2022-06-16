@@ -10,9 +10,10 @@ const client = new Discord.Client({ intents: 32767, ws: { properties: { $browser
 const config = require("./config.json");
 const express = require("express");
 const colors = require("colors");
-client.login(process.env.token); 
+require('dotenv').config()
 const fs = require("fs");
 const app = express();
+client.login(process.env.token); 
 
 //Anticlash just after server to keep our application online even if errors occur internally with codes or external connections!
 process.on("unhandledRejection", error => {
