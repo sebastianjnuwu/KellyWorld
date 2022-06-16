@@ -14,7 +14,21 @@
 
 # 🔧 developers 
 
-currently [KellyWorld](https://top.gg/bot/932705411897905193) is publicly available for use on your server, but if you don't feel safe you can start your own instance of our bot. Hope you know what to be making
+currently [KellyWorld](https://top.gg/bot/932705411897905193) is publicly available for use on your server, but if you don't feel safe you can start your own instance of our bot. Hope you know what to be making 
+
+**1-** preparing the environment where the bot is.
+```
+git clone https://github.com/sebastianjnuwu/KellyWorld
+```
+also
+```
+cd KellyWorld
+```
+
+**2-** now we download the necessary dependencies from our bot. Important that you have [nodejs](https://nodejs.org/en/download/) installed version => 16.
+```
+npm install --save
+```
 
 
 <h1> ❤️ contributors </h1>
