@@ -16,7 +16,7 @@
 
 currently [KellyWorld](https://top.gg/bot/932705411897905193) is publicly available for use on your server, but if you don't feel safe you can start your own instance of our bot. Hope you know what to be making 
 
-**1-** preparing the environment where the bot is.
+**1 -** preparing the environment where the bot is.
 ```
 git clone https://github.com/sebastianjnuwu/KellyWorld
 ```
@@ -25,22 +25,27 @@ also
 cd KellyWorld
 ```
 
-**2-** now we download the necessary dependencies from our bot. Important that you have [nodejs](https://nodejs.org/en/download/) installed version => 16.
+**2 -** now we download the necessary dependencies from our bot. Important that you have [nodejs](https://nodejs.org/en/download/) installed version => 16.
 ```
 npm install --save
 ```
 
-**3-** create a file called `.env` in the main directory and place the following items:
+**3 -** create a file called `.env` in the main directory and place the following items:
 ```
 # Inside the .env file put the main information of your bot.
 token=
 ```
 
-**4-** if you want to change the prefix just go to the `config.json` file:
+**4 -** if you want to change the prefix just go to the `config.json` file:
 ```
 {
 	"prefix" : "K."
 }
+```
+
+**5 -** now with all the steps done, just give this command and your bot will be online:
+```
+npm start 
 ```
 
 <h1> ❤️ contributors </h1>
