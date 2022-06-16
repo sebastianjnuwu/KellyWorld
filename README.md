@@ -39,9 +39,7 @@ token=
 **4-** if you want to change the prefix just go to the `config.json` file:
 ```
 {
-
 	"prefix" : "K."
-
 }
 ```
 
