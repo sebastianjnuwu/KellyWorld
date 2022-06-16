@@ -30,6 +30,20 @@ cd KellyWorld
 npm install --save
 ```
 
+**3-** create a file called `.env` in the main directory and place the following items:
+```
+# Inside the .env file put the main information of your bot.
+token=
+```
+
+**4-** if you want to change the prefix just go to the `config.json` file:
+```
+{
+
+	"prefix" : "K."
+
+}
+```
 
 <h1> ❤️ contributors </h1>
 
