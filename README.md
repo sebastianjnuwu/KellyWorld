@@ -1,4 +1,4 @@
-<h1 align="center">KellyWorld</h1>
+<h1 align="center">🌟 KellyWorld 🌟</h1>
 
 <p align="center">
 <a><img alt="" src="https://raw.githubusercontent.com/sebastianjnuwu/KellyWorld/KellyWorld/public/KellyWorld.png"/></a></p>
