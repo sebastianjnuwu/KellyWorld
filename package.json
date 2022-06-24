@@ -23,7 +23,7 @@
   "homepage": "https://github.com/sebastianjnuwu/KellyWorld#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "discord-arts": "^0.0.5",
+    "discord-arts": "^0.0.6",
     "discord.js": "^13.8.0",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
