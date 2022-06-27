@@ -1,5 +1,7 @@
 {
   "permissions" : {
+    "BotAdministrator" : "➥ No puedo ejecutar este comando sin el permiso `Administrator.`",
+   "Administrador": "➥ {{user}} ¡No tiene permiso para usar este comando! Para usarlo, debe tener permiso de `Administrador`",
     "BotManageMessages" : "➥ No puedo ejecutar este comando sin el permiso `Gestionar mensajes.`",
     "ManageMessages": "➥ {{user}} ¡No tienes permitido usar este comando! Para usarlo, debe tener el permiso `Gestionar mensajes.`",
     "BotManageGuild": " ➥ No puedo ejecutar este comando sin el permiso `Administrar servidor.`",
@@ -23,5 +25,10 @@
     "nopnum": "no pusiste la cantidad de mensajes a borrar...",
     "mxmnum": "Solo puedo borrar hasta 99 mensajes...",
     "yes": "eliminando mensajes..."
+  },
+ "say" : {
+    "nopchannel": "no mencionaste un canal para enviar el mensaje...",
+    "nopmessage": "no pusiste el mensaje para ser enviado!",
+    "yes": "el mensaje ha sido enviado al canal {{canal}}...."
   }
 }

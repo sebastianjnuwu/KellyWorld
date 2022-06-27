@@ -12,11 +12,11 @@ export default {
  
  let mensagem = args.slice(1).join(' ');
  
- if (!canal) return message.channel.send(`${message.author} Você não mencionou um canal!`).then(d);
+ if (!canal) return message.reply(`${t('commands:say.nopchannel')}`).then(d);
  
- if (!mensagem) return message.reply("Defina uma mensagem!").then(d);
+ if (!mensagem) return message.reply(`${t('commands:say.nopmessage')}`).then(d);
  
-  canal.send(mensagem);
-  message.reply(`enviado no canal ${canal}`)
+    canal.send(mensagem);
+    message.reply(`${t('commands:say.yes',{ canal: String(canal)})}`).then(d);
   }
 };

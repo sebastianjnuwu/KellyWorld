@@ -1,5 +1,7 @@
 {
   "permissions" : {
+   "BotAdministrator" : "➥ I cannot execute this command without `Administrator.`' permission",
+  "Administrator": "➥ {{user}} You do not have permission to use this command! To use it, you must have `Administrator` permission",
    "BotManageMessages" : "➥ I cannot run this command without `Manage Messages.` permission.",
     "ManageMessages": "➥ {{user}} You are not allowed to use this command! To use it, you need to have `Manage Messages.` permission.",
     "BotManageGuild": "➥ I cannot run this command without `Manage Server.` permission.",
@@ -23,5 +25,10 @@
     "nopnum": "you didn't put the number of messages to be deleted...",
     "mxmnum": "I can only delete up to 99 messages...",
     "yes": "deleting messages..."
+  },
+    "say" : {
+    "nopchannel": "you didn't mention a channel to send the message...",
+    "nopmessage": "you didn't put the message to be sent!",
+    "yes": "message has been sent to channel {{canal}}...."
   }
 }

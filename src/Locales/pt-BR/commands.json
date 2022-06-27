@@ -1,5 +1,7 @@
 {
   "permissions" : {
+    "BotAdministrator" : "➥ eu não posso executar este comando sem a permissão de `Administrador.`",
+    "Administrator" : "➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Administrador.`",
     "BotManageMessages" : "➥ eu não posso executar este comando sem a permissão de `Gerenciar Mensagens.`",
     "ManageMessages": "➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Mensagens.`",
     "BotManageGuild": "➥ eu não posso executar este comando sem a permissão de `Gerenciar Servidor.`",
@@ -23,5 +25,10 @@
     "nopnum": "você não colocou o número de mensagens a serem apagadas...",
     "mxmnum": "posso apagar somente ate 99 mensagens...",
     "yes": "deletando as mensagens..."
+  },
+  "say" : {
+    "nopchannel": "você não mencionou um canal para ser enviada a mensagem...",
+    "nopmessage": "você não colocou a mensagem para ser enviada!",
+    "yes": "messagem foi enviada para o canal {{canal}}...."
   }
 }
