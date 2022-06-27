@@ -26,17 +26,17 @@ KellyWorld is a discord bot made in [javascript](https://en.m.wikipedia.org/wiki
 
 There are some people who don't trust bots and such, afraid of what they might do to the server and users, don't worry Kelly is trustworthy if you don't want to use the bot [publicly](https://top.gg/bot/932705411897905193) you can start your own bot on your server with total security, we ask that you have [nodejs =>16.9.0](https://nodejs.org/en/download/) installed and also [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable), grab your coffee, turn on the music and let's get started....
 
-Clone our repository:
+• Clone our repository:
 ```
 git clone https://github.com/sebastianjnuwu/KellyWorld
 ```
 
-Install all necessary dependencies using:
+• Install all necessary dependencies using:
 ```
 yarn install
 ```
 
-Create a file called `config.yml` with the following information and fill it in:
+• Create a file called `config.yml` with the following information and fill it in:
 ```yml
 # put your bot token here...
 token: ''
@@ -46,7 +46,7 @@ connections:
   database: ''
 ```
 
-Make your changes if you wish, and then turn on the bot:
+• Make your changes if you wish, and then turn on the bot:
 ```
 yarn start
 ```
