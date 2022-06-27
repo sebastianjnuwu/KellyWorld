@@ -1,0 +1,27 @@
+{
+  "permissions" : {
+    "BotManageMessages" : "➥ eu não posso executar este comando sem a permissão de `Gerenciar Mensagens.`",
+    "ManageMessages": "➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Mensagens.`",
+    "BotManageGuild": "➥ eu não posso executar este comando sem a permissão de `Gerenciar Servidor.`",
+    "ManageGuild" : "➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Servidor.`"
+  },
+  "ping": "Meu ping é este....",
+  "lang": {
+      "messagem": "Olá, selecione uns dos Idiomas disponível para utilizar em seu servidor:\n🇺🇲 english: `en`  🇧🇷 português: `pt`   🇪🇸 español: `es`"
+  },
+  "antiinvite": {
+    "messagem": "ativar ou desativar?",
+    "enabled": "broqueador de convites foi ativado!",
+    "disabled": "broqueador de convites foi desativado!"
+  },
+  "prefix": {
+      "nop": "{{user}} você não inseriu um prefixo!",
+      "min": "{{user}} o prefixo deve conter somente uma carácter",
+      "set": "{{user}} prefixo foi definido como: `{{prefixo}}`"
+  },
+  "clear" : {
+    "nopnum": "você não colocou o número de mensagens a serem apagadas...",
+    "mxmnum": "posso apagar somente ate 99 mensagens...",
+    "yes": "deletando as mensagens..."
+  }
+}

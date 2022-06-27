@@ -1,0 +1,27 @@
+{
+  "permissions" : {
+   "BotManageMessages" : "➥ I cannot run this command without `Manage Messages.` permission.",
+    "ManageMessages": "➥ {{user}} You are not allowed to use this command! To use it, you need to have `Manage Messages.` permission.",
+    "BotManageGuild": "➥ I cannot run this command without `Manage Server.` permission.",
+    "ManageGuild" : "➥ {{user}} You are not allowed to use this command! To use it, you need to have `Manage Server.` permission."
+  },
+  "ping": "My ping is this....",
+  "lang": {
+      "messagem": "Hello, select one of the languages available to use on your server:\n🇺🇲 english: `en`  🇧🇷 português: `pt`   🇪🇸 español: `es`"
+  },
+    "antiinvite": {
+    "messagem": "enable or disable?",
+    "enabled": "invite blocker has been activated!",
+    "disabled": "invite blocker has been disabled!"
+  },
+  "prefix": {
+      "nop": "{{user}} you did not enter a prefix!",
+      "min": "{{user}} prefix must contain a character",
+      "set": "{{user}} prefix was defined as: `{{prefixo}}`"
+  },
+    "clear" : {
+    "nopnum": "you didn't put the number of messages to be deleted...",
+    "mxmnum": "I can only delete up to 99 messages...",
+    "yes": "deleting messages..."
+  }
+}

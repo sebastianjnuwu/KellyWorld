@@ -1,0 +1,27 @@
+{
+  "permissions" : {
+    "BotManageMessages" : "➥ No puedo ejecutar este comando sin el permiso `Gestionar mensajes.`",
+    "ManageMessages": "➥ {{user}} ¡No tienes permitido usar este comando! Para usarlo, debe tener el permiso `Gestionar mensajes.`",
+    "BotManageGuild": " ➥ No puedo ejecutar este comando sin el permiso `Administrar servidor.`",
+    "ManageGuild" : " ➥ {{user}} ¡No tienes permiso para usar este comando! Para usarlo, debe tener el permiso `Administrar servidor.`"
+  },
+  "ping": "mi ping es este....",
+  "lang": {
+      "messagem": "Hola, seleccione uno de los idiomas disponibles para usar en su servidor:\n🇺🇲 english: `en`  🇧🇷 português: `pt`   🇪🇸 español: `es`"
+  },
+  "antiinvite": {
+    "messagem": "¿habilitar o deshabilitar?",
+    "enabled": "¡Se ha activado el bloqueador de invitaciones!",
+    "disabled": "el bloqueador de invitaciones ha sido deshabilitado!"
+  },
+  "prefix": {
+      "nop": "{{user}} usted no ingresó un prefijo!",
+      "min": "{{user}} el prefijo debe contener un caracter",
+      "set": "{{user}} prefijo se define como: `{{prefixo}}`"
+  },
+    "clear" : {
+    "nopnum": "no pusiste la cantidad de mensajes a borrar...",
+    "mxmnum": "Solo puedo borrar hasta 99 mensajes...",
+    "yes": "eliminando mensajes..."
+  }
+}

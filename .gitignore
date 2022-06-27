@@ -1,0 +1,9 @@
+# ignoring the file that contains important information
+config.yml
+
+# ignoring the file that contains garbage.
+yarn-error.log
+yarn.lock
+
+# ignoring modules folder
+node_modules
