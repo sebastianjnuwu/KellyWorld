@@ -1,34 +1,48 @@
 {
-  "permissions" : {
-   "BotAdministrator" : "➥ I cannot execute this command without `Administrator.`' permission",
-  "Administrator": "➥ {{user}} You do not have permission to use this command! To use it, you must have `Administrator` permission",
-   "BotManageMessages" : "➥ I cannot run this command without `Manage Messages.` permission.",
-    "ManageMessages": "➥ {{user}} You are not allowed to use this command! To use it, you need to have `Manage Messages.` permission.",
-    "BotManageGuild": "➥ I cannot run this command without `Manage Server.` permission.",
-    "ManageGuild" : "➥ {{user}} You are not allowed to use this command! To use it, you need to have `Manage Server.` permission."
-  },
-  "ping": "My ping is this....",
-  "lang": {
-      "messagem": "Hello, select one of the languages available to use on your server:\n🇺🇲 english: `en`  🇧🇷 português: `pt`   🇪🇸 español: `es`"
-  },
-    "antiinvite": {
-    "messagem": "enable or disable?",
-    "enabled": "invite blocker has been activated!",
-    "disabled": "invite blocker has been disabled!"
-  },
-  "prefix": {
-      "nop": "{{user}} you did not enter a prefix!",
-      "min": "{{user}} prefix must contain a character",
-      "set": "{{user}} prefix was defined as: `{{prefixo}}`"
-  },
-    "clear" : {
-    "nopnum": "you didn't put the number of messages to be deleted...",
-    "mxmnum": "I can only delete up to 99 messages...",
-    "yes": "deleting messages..."
-  },
-    "say" : {
-    "nopchannel": "you didn't mention a channel to send the message...",
-    "nopmessage": "you didn't put the message to be sent!",
-    "yes": "message has been sent to channel {{canal}}...."
+  "UserPermissions" : {
+    "Administrator" : "ಠ_ಠ ➥ {{user}} You are not allowed to use this command! To use it, you need to have `Administrator.` permission.",
+    "ManageGuild" : "ಠ_ಠ ➥ {{user}} You are not allowed to use this command! To use it, you need to have `Manage Server.` permission.",
+    "ManageMessages": "ಠ_ಠ ➥ {{user}} You are not allowed to use this command! To use it, you need to have `Manage Messages.` permission."
+},
+  "BotPermissions" : {
+    "Administrator": "ರ_ರ I don't have the `Administrator` permission I am completely powerless!",
+    "ManageGuild": "ರ_ರ I don't have the `Manage Server` permission I am completely powerless!",
+    "ManageMessages": "ರ_ರ I don't have the `Manage messages` permission I am completely powerless!"
+},
+  "antiinvite": {
+    "Message": "?-? do you want invitation puncher on or off?",
+    "Enabled": "Invite blocker being on, huh...",
+    "Disabled": "Phew.... Less work, Invite Blocker is off"
+},
+  "Ban": {
+    "Reason" : "Not specified...",
+    "Message": "(✿^‿^) I don't have crystal ball to know who you want to banish, mention or enter id...",
+    "InvalidUser": "ಥ╭╮ಥ I couldn't find this user, I don't think he is part of this world...",
+    "NoOwner": "⊙.☉ Too bold to banish someone of high importance...",
+    "NoAuthor": ";-; if you're sad you don't have to banish yourself, listen to Spotify that passes.",
+    "NoClient": "(╯︵╰,) you want to banish me what a hate.....",
+    "NoRole": "(°﹏°;) my job is less....",
+    "YesBan": "(;ŏ﹏ŏ) You can even go to heaven, but you won't enter here anymore..."
+},
+  "clear": {
+    "NoNumber": "(｡ŏ﹏ŏ) put the number of messages to be deleted, I don't want to delete your history...",
+    "Mxm": "⊙﹏⊙ I can only delete up to 99 messages, aff...",
+    "Yes": "O_0 deleting messages..."
+},
+  "Language": {
+    "mensagem": "O_o  I'm paying the course fees, but I can speak these languages:\n🇺🇲 english: `en`  🇧🇷 português: `pt`"
+},
+  "Ping": {
+    "mensagem": "My ping is this...."
+},
+  "Prefix": {
+    "NoPrefix": "?-? {{user}} you did not enter a prefix!",
+    "Min": "._. {{user}} the prefix must contain only one character",
+    "Set": "^_^ {{user}} prefix was defined as: `{{prefixo}}`"
+},
+  "Say": {
+    "NoChannel": "#_# you didn't mention a channel to send the message...",
+    "NoMessage": "-_- you didn't put the message to be sent!",
+    "yes": "(^^) message has been sent to the channel {{canal}}...."
   }
 }

@@ -33,9 +33,6 @@ export default {
       t = i18next.getFixedT('pt-BR');
       break;
     case 2:
-      t = i18next.getFixedT('es-ES');
-      break;
-    case 3:
       t = i18next.getFixedT('en-US');
       break;
     }

@@ -9,7 +9,7 @@ export default {
  const minutes = Math.floor(client.uptime / 60000) % 60;
  const seconds = Math.floor(client.uptime / 1000) % 60;
 
-  message.reply({ content: `**🏓 ${t('commands:ping')}**\n> :zap: **Api ping** › __${client.ws.ping}__ms\n> :stopwatch: **Gateway Ping** › __${gateway}__ms\n> 📡 **Shards** ›   __${message.guild.shard.id + 1}/${client.ws.shards.size}__\n> :hourglass_flowing_sand: **Uptime** › __${hours}__ hours, __${minutes}__ minutes and __${seconds}__ seconds`});
+  message.reply({ content: `**🏓 ${t('commands:Ping.mensagem')}**\n> :zap: **Api ping** › __${client.ws.ping}__ms\n> :stopwatch: **Gateway Ping** › __${gateway}__ms\n> 📡 **Shards** ›   __${message.guild.shard.id + 1}/${client.ws.shards.size}__\n> :hourglass_flowing_sand: **Uptime** › __${hours}__ hours, __${minutes}__ minutes and __${seconds}__ seconds`});
    
   }
 };
