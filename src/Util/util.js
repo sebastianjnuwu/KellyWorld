@@ -3,9 +3,9 @@ import { WebhookClient } from 'discord.js';
 export default {
   async sendLogs({ content, type }) {
     switch(type) {
-     case 'log':
+     case 'command':
        new WebhookClient({
-        url: global.config.logs.logs
+        url: global.config.logs.command
       }).send({ content });
        break;
     }

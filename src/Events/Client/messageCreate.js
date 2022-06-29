@@ -1,4 +1,5 @@
 import i18next from 'i18next';
+import Day from 'dayjs';
 
 export default {
   name: 'messageCreate',
@@ -46,6 +47,12 @@ export default {
   if(command.ownerOnly && !client.owners.some(id => id === message.author.id)) return;
   
   const d = msg => setTimeout(() => { msg.delete().catch(() => {}); message.delete().catch(() => {})}, 10000);
+  
+  client.utils.sendLogs({
+      type: 'command',
+      content: `\`---\`\nData: **${Day(Date.now()).format('DD/MM/YYYY HH:mm:ss')}**\nComando **${command.name}** executado no servidor **${message.guild.name}** (\`${message.guild.id}\`)\nUsuario: **${message.author.tag}** (\`${message.author.id}\`)\n\`---\``
+    });
+    
   await command.exec({ client, message, args, d, t });
  
   }
