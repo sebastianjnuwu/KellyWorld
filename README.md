@@ -44,6 +44,11 @@ token: ''
 # connection to mongo db.
 connections:
   database: ''
+  
+# log system via webhook 
+logs:
+  command: ''
+  guild: ''
 ```
 
 • Make your changes if you wish, and then turn on the bot:
