@@ -9,8 +9,7 @@ export default {
       _id: message.guild.id
     });
     if (!GUILD) return;
-
-
+    
     let t = GUILD.lang || 1;
 
     switch (t) {
@@ -18,12 +17,12 @@ export default {
       t = i18next.getFixedT('pt-BR');
       break;
     case 2:
-      t = i18next.getFixedT('es-ES');
-      break;
-    case 3:
       t = i18next.getFixedT('en-US');
       break;
     }
+    
+    if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) return message.reply({ content: t('events:mention')});
+    
     if (GUILD.antiinvite && message.member) {
       if (message.member.permissions.has('ManageMessages')) return;
 

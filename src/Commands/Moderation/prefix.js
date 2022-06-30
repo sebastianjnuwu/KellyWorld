@@ -10,7 +10,7 @@ export default {
 
   if (!args[0]) return message.reply(`**${t('commands:Prefix.NoPrefix', { user: String(message.author.username)})}**`).then(d);
 
-  if (args[0].length > 2) return message.reply(`**${t('commands:Prefix.Min', { user: String(message.author.username)})}**`).then(d);
+  if (args[0].length > 1) return message.reply(`**${t('commands:Prefix.Min', { user: String(message.author.username)})}**`).then(d);
 
   await client.db.guild.findOneAndUpdate({ _id: message.guild.id }, {  $set: { prefix: args[0] } });
     
