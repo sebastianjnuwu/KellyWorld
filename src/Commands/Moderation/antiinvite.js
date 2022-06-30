@@ -1,7 +1,7 @@
 
 export default {
   name: 'antiinvite',
-  aliases: ['anticonvites', 'antinvite'],
+  aliases: ['anticonvites','anti-inivite','antinvite'],
   ownerOnly: false,
   async exec({ client, message, args, d, t }) {
       
