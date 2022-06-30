@@ -7,6 +7,7 @@
   "BotPermissions" : {
     "Administrator": "ರ_ರ Eu não tenho a permissão de `Administrador` estou completamente sem poderes!",
     "ManageGuild": "ರ_ರ Eu não tenho a permissão de `Gerenciar servidor` estou completamente sem poderes!",
+    "ManageWebhooks": "ರ_ರ Eu não tenho a permissão de `Gerenciar Webhooks` estou completamente sem poderes!",
     "ManageMessages": "ರ_ರ Eu não tenho a permissão de `Gerenciar mensagens` estou completamente sem poderes!"
 },
   "antiinvite": {
