@@ -11,7 +11,7 @@ export default {
  
  // bot activity status
  setInterval(() => { 
-      client.user.setActivity(`Kelly - ${client.guilds.cache.size.toLocaleString()} Servers` , { type: ActivityType.Watching });
+      client.user.setActivity(`Kelly - ${client.guilds.cache.size.toLocaleString()} Servers` , { type: 3 });
     }, 60 * 60 * 1000);
   }
 }; 
