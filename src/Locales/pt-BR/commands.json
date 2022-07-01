@@ -1,0 +1,49 @@
+{
+  "UserPermissions" : {
+    "Administrator" : "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Administrador.`",
+    "ManageGuild" : "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Servidor.`",
+    "ManageMessages": "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Mensagens.`"
+},
+  "BotPermissions" : {
+    "Administrator": "ರ_ರ Eu não tenho a permissão de `Administrador` estou completamente sem poderes!",
+    "ManageGuild": "ರ_ರ Eu não tenho a permissão de `Gerenciar servidor` estou completamente sem poderes!",
+    "ManageWebhooks": "ರ_ರ Eu não tenho a permissão de `Gerenciar Webhooks` estou completamente sem poderes!",
+    "ManageMessages": "ರ_ರ Eu não tenho a permissão de `Gerenciar mensagens` estou completamente sem poderes!"
+},
+  "antiinvite": {
+    "Message": "?-? você quer broqueiador de convites ligado ou desligado?",
+    "Enabled": "Broqueiador de convites estar ligado, aff...",
+    "Disabled": "Ufa.... Menos trabalho, Broqueiador de convites estar desligado."
+},
+  "Ban": {
+    "Reason" : "Não especificado...",
+    "Message": "(✿^‿^) Eu não tenho bola de cristal para saber quem você quer banir, mencione ou insira o id...",
+    "InvalidUser": "ಥ╭╮ಥ Não consegui encontrar este usuário, acho que ele não faz parte deste mundo...",
+    "NoOwner": "⊙.☉ Muito ousado querendo banir alguém de alta importância...",
+    "NoAuthor": ";-; se você estar triste não precisa se banir, ouça Spotify que passa.",
+    "NoClient": "(╯︵╰,) você quer me banir que ódio.....",
+    "NoRole": "(°﹏°;) meu cargo é menor....",
+    "YesBan": "(;ŏ﹏ŏ) pode ir ate para o céu mais aqui não entrará mais..."
+},
+  "clear": {
+    "NoNumber": "(｡ŏ﹏ŏ) coloque o numero de mensagens a serem apagadas, não quero apagar a sua história...",
+    "Mxm": "⊙﹏⊙ só posso apagar ate 99 mensagens, aff...",
+    "Yes": "O_0 apagando as mensagens..."
+},
+  "Language": {
+    "mensagem": "O_o  Tou pagando as parcelas do curso, mas consigo falar esses idiomas:\n🇺🇲 english: `en`  🇧🇷 português: `pt`"
+},
+  "Ping": {
+    "mensagem": "Meu ping é este...."
+},
+  "Prefix": {
+    "NoPrefix": "?-? {{user}} você não inseriu um prefixo!",
+    "Min": "._. {{user}} o prefixo deve conter somente uma carácter",
+    "Set": "^_^ {{user}} prefixo foi definido como: `{{prefixo}}`"
+},
+  "Say": {
+    "NoChannel": "#_# você não mencionou um canal para ser enviada a mensagem...",
+    "NoMessage": "-_- você não colocou a mensagem para ser enviada!",
+    "yes": "(^^) messagem foi enviada para o canal {{canal}}...."
+  }
+}

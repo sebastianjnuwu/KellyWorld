@@ -1,36 +1,46 @@
 {
+
   "name": "kellyworld",
-  "version": "1.13.9",
-  "description": "Hey! Meu nome é KellyWorld!",
-  "main": "index.js",
+
+  "version": "1.14.0-dev",
+
+  "description": "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness.",
+
+  "main": "Kelly.js",
+
   "scripts": {
-    "start": "node index.js"
+
+    "start": "node Kelly.js"
+
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sebastianjnuwu/KellyWorld.git"
-  },
-  "keywords": [
-    "KellyWorld",
-    "KettraWorld",
-    "SebastianUwU"
-  ],
-  "author": "sebastianjnuwu",
+
+  "type": "module",
+
+  "repository": "https://github.com/sebastianjnuwu/KellyWorld",
+
+  "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
+
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/sebastianjnuwu/KellyWorld/issues"
-  },
-  "homepage": "https://github.com/sebastianjnuwu/KellyWorld#readme",
+
   "dependencies": {
+
     "colors": "^1.4.0",
-    "discord-arts": "^0.0.5",
-    "discord.js": "^13.8.0",
-    "dotenv": "^16.0.1",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "fs": "^0.0.1-security",
+
+    "dayjs": "^1.11.3",
+
+    "discord.js": "^14.0.0-dev.1655985916-70b42bb",
+
     "glob": "^8.0.3",
-    "ms": "^2.1.3",
-    "util": "^0.12.4"
+
+    "i18next": "^21.8.10",
+
+    "i18next-fs-backend": "^1.1.4",
+
+    "js-yaml": "^4.1.0",
+
+    "mongoose": "^6.4.0"
+
   }
+
 }
+
