@@ -4,11 +4,15 @@ import express from 'express';
 import { load } from 'js-yaml';
 import { readFileSync } from 'node:fs';
 import KellyWorld from './src/Client.js';
+import { AutoPoster } from 'topgg-autoposter';
 //global.config = load(readFileSync('./config.yml', 'utf8'));
 
 const client = new KellyWorld();
 const app = express();
 client.start();
+
+//AutoPoster(global.config.connections.topgg, client);
+AutoPoster(process.env.topgg, client);
 
 const trainerror = (error) => {
   if (error.toString().includes('Missing Permissions') || error.toString().includes('Missing acess')) return;
@@ -23,7 +27,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT || 8080, (req, res) =>
-  console.log(colors.cyan("[Info]")+` servidor ligado na porta: 8080`)
+  console.log(colors.cyan("[Info]") + ` servidor ligado na porta: 8080`)
 );
 
 export default client;
