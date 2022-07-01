@@ -44,6 +44,7 @@ token: ''
 # connection to mongo db.
 connections:
   database: ''
+  topgg: ''
   
 # log system via webhook 
 logs:
