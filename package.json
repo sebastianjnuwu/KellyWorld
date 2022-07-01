@@ -1,23 +1,46 @@
 {
+
   "name": "kellyworld",
+
   "version": "1.14.0-dev",
+
   "description": "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness.",
+
   "main": "Kelly.js",
+
   "scripts": {
+
     "start": "node Kelly.js"
+
   },
+
   "type": "module",
+
   "repository": "https://github.com/sebastianjnuwu/KellyWorld",
+
   "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
+
   "license": "Apache-2.0",
+
   "dependencies": {
+
     "colors": "^1.4.0",
+
     "dayjs": "^1.11.3",
+
     "discord.js": "^14.0.0-dev.1655985916-70b42bb",
+
     "glob": "^8.0.3",
+
     "i18next": "^21.8.10",
+
     "i18next-fs-backend": "^1.1.4",
+
     "js-yaml": "^4.1.0",
+
     "mongoose": "^6.4.0"
+
   }
+
 }
+
