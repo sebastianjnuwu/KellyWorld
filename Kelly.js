@@ -4,7 +4,7 @@ import colors from 'colors';
 import { readFileSync } from 'node:fs';
 import { AutoPoster } from 'topgg-autoposter';
 import KellyWorld from './src/Client.js';
-global.config = load(readFileSync('./config.yml', 'utf8'));
+//global.config = load(readFileSync('./config.yml', 'utf8'));
 
 const client = new KellyWorld();
 client.start();
