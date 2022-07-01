@@ -1,5 +1,5 @@
 <p align="center">
- <a><img alt="" src="https://cdn.discordapp.com/avatars/932705411897905193/f03da9d483cf683c85fd456591592625.png?size=2048" width=300 height=275></a>
+ <a><img alt="perfil" src="https://media.discordapp.net/attachments/991506128972304414/992385035070087178/CC_20220701_080255.png" width=300 height=275></a>
 </p>
 
 "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness."
