@@ -40,8 +40,10 @@ async start() {
     this.loadCommands();
     this.localeManager = new LocaleManager(this);
     this.localeManager.loadLocales();
-    connect(global.config.connections.database).catch(() => {});
-    await super.login(global.config.token);
+   // connect(global.config.connections.database).catch(() => {});
+   // await super.login(global.config.token);
+   connect(process.env.database).catch(() => {});
+   await super.login(process.env.token);
   }
   
 async loadEvents() {
