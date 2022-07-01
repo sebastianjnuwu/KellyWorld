@@ -11,7 +11,7 @@ export default {
 
     exec(cmd, (err, res) => {
       if(err) return message.reply(`\`\`\`${err}\`\`\``);
-      message.reply({ content: `\`\`\`\n$ ${cmd}\n\n${res.replace(ANSI_REGEX, '')}\`\`\`` });
+      message.reply({ content: `\`\`\`\n$ ${cmd}\n\n${res.replace(ANSI_REGEX, '').slice(0, 1900)}\`\`\`` });
     });
   },
 };
