@@ -10,9 +10,8 @@ export default {
  console.log(colors.brightGreen("[Info]")+` containing ${client.users.cache.size} users!`);
  
  // bot activity status
- let activities = [ 'Kelly help - ${client.guilds.cache.size} servers!' ];
- let i = 0;
- setInterval(() => 
- client.user.setActivity(`${activities[i++ % activities.length]}`, { type: "PLAYING", url: "https://www.twitch.tv/sebastianjnuwu" }), 8000); 
+ setInterval(() => { 
+      client.user.setActivity(`Kelly - ${client.guilds.cache.size.toLocaleString()} Servers`);
+    }, 60 * 60 * 1000);
   }
 }; 
