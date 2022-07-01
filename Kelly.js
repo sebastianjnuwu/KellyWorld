@@ -2,7 +2,6 @@
 import colors from 'colors';
 import express from 'express';
 import { load } from 'js-yaml';
-import colors from 'colors';
 import { readFileSync } from 'node:fs';
 import KellyWorld from './src/Client.js';
 //global.config = load(readFileSync('./config.yml', 'utf8'));
