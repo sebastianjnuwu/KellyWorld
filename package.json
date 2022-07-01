@@ -13,6 +13,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "dayjs": "^1.11.3",
+    "express": "^4.18.1",
     "discord.js": "^14.0.0-dev.1655985916-70b42bb",
     "glob": "^8.0.3",
     "i18next": "^21.8.10",
