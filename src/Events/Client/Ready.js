@@ -10,8 +10,6 @@ export default {
  console.log(colors.brightGreen("[Info]")+` containing ${client.users.cache.size} users!`);
  
  // bot activity status
- setInterval(() => { 
-      client.user.setActivity(`Kelly - ${client.guilds.cache.size.toLocaleString()} Servers` , { type: 3 });
-    }, 60 * 60 * 1000);
+ client.user.setActivity(`KettraWorld - New Prefix: Kelly`, { type: 1 });
   }
 }; 
