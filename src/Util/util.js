@@ -5,12 +5,12 @@ export default {
     switch(type) {
      case 'command':
        new WebhookClient({
-        url: global.config.logs.command
+        url: process.env.command
       }).send({ content });
        break;
        case 'guild':
        new WebhookClient({
-        url: global.config.logs.guild
+        url: process.env.guild
       }).send({ content });
        break;
     }
