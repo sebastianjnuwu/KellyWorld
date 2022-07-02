@@ -44,6 +44,6 @@
   "Say": {
     "NoChannel": "#_# you didn't mention a channel to send the message...",
     "NoMessage": "-_- you didn't put the message to be sent!",
-    "yes": "(^^) message has been sent to the channel {{canal}}...."
+    "Yes": "(^^) message has been sent to the channel {{canal}}...."
   }
 }
