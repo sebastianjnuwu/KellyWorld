@@ -9,10 +9,13 @@ export default {
  console.log(colors.brightGreen("[Info]")+` having access to ${client.channels.cache.size} channels!`);
  console.log(colors.brightGreen("[Info]")+` containing ${client.users.cache.size} users!`);
  
- // bot activity status...
+ // bot activity status.....
 let list = [`KettraWorld - New Prefix: Kelly`, `KettraWorld - Jogando Pokémon`,`KettraWorld - R.I.P`,`KettraWorld - ouvindo música`];
+
 let status = list[Math.floor(Math.random() * list.length)];
-setInterval(() => client.user.setActivity(`${status}`, { type: 1 }), 3 * 30000);
- 
+
+setInterval(() =>
+  client.user.setActivity(`${status}`, { type: 1 }), 1000 * 60);
+
   }
-}; 
+};
