@@ -11,7 +11,7 @@ export default {
  
  // bot activity status.....
 setInterval(() =>
-  client.user.setActivity(`GITHUB - New kotlin language coming soon! `, { type: 1 }), 1000 * 60);
+  client.user.setActivity(`KettraWorld - The end is near!`, { type: 1 }), 1000 * 60);
 
   }
 };
