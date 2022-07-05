@@ -51,6 +51,10 @@ export default {
 yarn start
 ```
 
+# Contributing
+
+Contributors can also help develop this project through [PR](https://github.com/sebastianjnuwu/KellyWorld/pulls), your contribution helps improve code and implement new things!
+
 # License
 
 This repository is [licensed](https://www.apache.org/licenses/LICENSE-2.0) to protect users and Contributors, we are following all discord [terms and services](https://discord.com/terms) also [Discord Privacy Policy.](https://discord.com/privacy)
