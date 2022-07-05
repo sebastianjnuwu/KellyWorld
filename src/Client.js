@@ -41,7 +41,6 @@ export default class KellyWorld extends Client {
 async start() {
     this.loadEvents();
     this.loadCommands();
-    this.loadSlash();
     this.localeManager = new LocaleManager(this);
     this.localeManager.loadLocales();
    connect(this.config.connections.mongodb).then(() => { console.log(colors.brightGreen("[Info] ") + 'connected to mongodb database.')
