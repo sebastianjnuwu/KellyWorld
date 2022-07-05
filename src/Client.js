@@ -1,9 +1,12 @@
 import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 import pkg from 'mongoose';
+import 'dotenv/config';
 const { connect } = pkg;
-import { Guild, Emojis , util, LocaleManager } from './Util/Index.js';
+import { Guild, Emojis , LocaleManager } from './Util/Index.js';
 import { promisify } from 'util';
 import g from 'glob';
+import colors from 'colors';
+import config from '../config.js';
 const glob = promisify(g);
 
 export default class KellyWorld extends Client {
@@ -26,10 +29,10 @@ export default class KellyWorld extends Client {
     GatewayIntentBits.DirectMessageTyping, 
     GatewayIntentBits.MessageContent ], 
     partials: [Partials.Channel, Partials.Message],
-    ws: { properties: { $browser: 'Discord iOS' }}, shardCount: 2 });
+    shardCount: 1 });
     this.e = Emojis;
-    this.utils = util;
-    this.owners = ['932678185970192404'];
+    this.config = config;
+    this.owners = this.config.owners.user;
     this.commands = new Collection();
     this.aliases = new Collection();
     this.db = { guild: Guild };
@@ -38,12 +41,12 @@ export default class KellyWorld extends Client {
 async start() {
     this.loadEvents();
     this.loadCommands();
+    this.loadSlash();
     this.localeManager = new LocaleManager(this);
     this.localeManager.loadLocales();
-   // connect(global.config.connections.database).catch(() => {});
-   // await super.login(global.config.token);
-   connect(process.env.database).catch(() => {});
-   await super.login(process.env.token);
+   connect(this.config.connections.mongodb).then(() => { console.log(colors.brightGreen("[Info] ") + 'connected to mongodb database.')
+   }).catch((e) => { console.log(colors.brightRed("[Info] - ") + 'nine an error connecting to database: ' + e)});
+   await super.login(this.config.client.token);
   }
   
 async loadEvents() {
@@ -58,12 +61,12 @@ async loadEvents() {
  async loadCommands() {
     await glob(`${global.process.cwd()}/src/Commands/**/*js`, async (err, filePaths) => {
     if (err) return console.log(err);
-      filePaths.forEach(async (file) => {
+    filePaths.forEach(async (file) => {
     const pull = await import(file);
     const { name, aliases } = pull.default;
     if (name) this.commands.set(name, pull.default);
     if (aliases && Array.isArray(aliases)) {
-       aliases.forEach((alias) => this.aliases.set(alias, name));
+        aliases.forEach((alias) => this.aliases.set(alias, name));
         }
       });
     });

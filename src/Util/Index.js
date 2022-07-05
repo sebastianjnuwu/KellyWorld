@@ -1,7 +1,5 @@
 import LocaleManager from './LocaleManager.js';
-import Emojis from './emojis.js';
-import Guild from './Guild.js';
-import util from './util.js';
-import colors from 'colors';
+import Emojis from './utility/emojis.js';
+import Guild from './models/Guild.js';
 
-export { Guild, LocaleManager, util, Emojis };
+export { Guild, LocaleManager, Emojis };

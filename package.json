@@ -13,13 +13,13 @@
   "dependencies": {
     "colors": "^1.4.0",
     "dayjs": "^1.11.3",
-    "express": "^4.18.1",
     "discord.js": "^14.0.0-dev.1655985916-70b42bb",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "glob": "^8.0.3",
     "i18next": "^21.8.10",
     "i18next-fs-backend": "^1.1.4",
-    "js-yaml": "^4.1.0",
-    "mongoose": "^6.4.0",
-    "topgg-autoposter": "^2.0.1"
+    "mongoose": "^6.4.0"
   }
 }

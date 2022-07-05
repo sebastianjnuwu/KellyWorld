@@ -10,8 +10,12 @@ export default {
  console.log(colors.brightGreen("[Info]")+` containing ${client.users.cache.size} users!`);
  
  // bot activity status.....
-setInterval(() =>
-  client.user.setActivity(`KettraWorld - The end is near!`, { type: 1 }), 1000 * 60);
+ let list = [`KettraWorld - New Prefix: Kelly`, `KettraWorld - Jogando Pokémon`,`KettraWorld - ouvindo música`];
+ 
+ let status = list[Math.floor(Math.random() * list.length)];
+
+ setInterval(() =>
+ client.user.setActivity(`${status}`, { type: 1 }), 100 * 60);
 
   }
 };
