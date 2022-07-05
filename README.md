@@ -11,7 +11,7 @@
 
 # About
 
-KellyWorld better known as "Kelly", in Kettra World she helps the admins to take care of the [discord server](), she is always receiving constant updates currently she is made in the language [javascript]() using the [discord.js]() library to interact with the discord [api]().
+KellyWorld better known as "Kelly" I'm 2 years old and I'm a simple bot that takes care of the [kettra server](), she is always receiving constant updates currently she is made in the language [javascript]() using the [discord.js]() library to interact with the discord [api]().
 
 # Installation
 
