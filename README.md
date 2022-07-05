@@ -31,7 +31,7 @@ git clone https://github.com/sebastianjnuwu/KellyWorld
 yarn install
 ```
 
-• configures the information in the `config.js` file:
+• configure the <strong>config.js</strong> file with the following information:
 ```js
 export default {
   client: {
