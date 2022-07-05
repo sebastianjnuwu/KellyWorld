@@ -53,7 +53,7 @@ yarn start
 
 # Contributing
 
-Contributors can also help develop this project through [`Pull requests`](https://github.com/sebastianjnuwu/KellyWorld/pulls), your contribution helps improve code and implement new things!
+You can also contribute to this repository via [`PR`](https://github.com/sebastianjnuwu/KellyWorld/pulls) just have something to implement that is useful or even optimize or improve.
 
 # License
 
