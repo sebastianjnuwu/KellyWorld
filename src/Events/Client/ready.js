@@ -12,10 +12,10 @@ export default {
  // bot activity status.....
  let list = [`KettraWorld - New Prefix: Kelly`, `KettraWorld - Jogando Pokémon`,`KettraWorld - ouvindo música`];
  
- let status = list[Math.floor(Math.random() * list.length)];
+ i = 0;
 
- setInterval(() =>
- client.user.setActivity(`${status}`, { type: 1 }), 100 * 60);
+ setInterval(() => {
+ client.user.setActivity(`${status[i++ % status.length]}`, { type: 1 }) }, 1000 * 30); 
 
   }
 };
