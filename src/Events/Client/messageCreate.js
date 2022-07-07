@@ -9,6 +9,10 @@ export default {
     
   let prefix;
   
+  let USER = await client.db.user.findOne({
+      _id: message.author.id,
+    });
+    
   let GUILD = await client.db.guild.findOne({
       _id: message.guild.id,
     });
@@ -24,7 +28,9 @@ export default {
     }
   
   if (!message.content.toLowerCase().startsWith(prefix)) return;
-
+  
+  if (!USER) USER = await client.db.user.create({ _id: message.author.id });
+  
   const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
   
   let t = GUILD.lang || 1;

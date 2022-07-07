@@ -5,17 +5,23 @@ export default {
   async exec(client,message) {
   
   // console message when bot is powered on...
- console.log(colors.brightGreen("[Info]")+` ${client.user.tag} was started in ${client.guilds.cache.size} servers!`);
- console.log(colors.brightGreen("[Info]")+` having access to ${client.channels.cache.size} channels!`);
- console.log(colors.brightGreen("[Info]")+` containing ${client.users.cache.size} users!`);
+ console.log(colors.brightGreen("[Info] - ") + `${client.user.tag} was started in ${client.guilds.cache.size} servers!`);
+ console.log(colors.brightGreen("[Info] - ") + `Having access to ${client.channels.cache.size} channels!`);
+ console.log(colors.brightGreen("[Info] - ") + `Containing ${client.users.cache.size} users!`);
  
  // bot activity status.....
- let list = [`KettraWorld - New Prefix: Kelly`, `KettraWorld - Jogando Pokémon`,`KettraWorld - ouvindo música`];
+   let status = [
+     `KettraWorld - Instagram Follow us: @kettraworld`,
+     `KettraWorld - Kelly help`,
+     `KettraWorld - Playing minecraft`,
+     `KettraWorld - Looking after ${client.users.cache.size} players`
+  ];
  
- i = 0;
+  let i = 0;
 
- setInterval(() => {
- client.user.setActivity(`${status[i++ % status.length]}`, { type: 1 }) }, 1000 * 30); 
+  setInterval(() => {
+  client.user.setActivity(`${status[i++ % status.length]}`, { type: 1 });
+  }, 1000 * 60 ); 
 
   }
 };

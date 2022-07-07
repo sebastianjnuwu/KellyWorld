@@ -26,7 +26,7 @@ app.set("view engine", "ejs");
 
 // port that the web server will start
 app.listen(process.env.PORT || 8080, (req, res) =>
-  console.log(colors.cyan("[Info]") + ` Web Server connected to port: 8080`)
+  console.log(colors.brightGreen("[Info] - ") + `Web Server connected to port: 8080`)
 );
 
 // prevent the bot from turning off if there is an error...

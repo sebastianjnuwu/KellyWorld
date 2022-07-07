@@ -4,7 +4,8 @@
   "description": "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness.",
   "main": "Kelly.js",
   "scripts": {
-    "start": "node Kelly.js"
+    "start": "node Kelly.js",
+    "dev": "nodemon"
   },
   "type": "module",
   "repository": "https://github.com/sebastianjnuwu/KellyWorld",

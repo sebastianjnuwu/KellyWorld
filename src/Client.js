@@ -2,7 +2,7 @@ import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 import pkg from 'mongoose';
 import 'dotenv/config';
 const { connect } = pkg;
-import { Guild, Emojis , LocaleManager } from './Util/Index.js';
+import { Guild, User, Emojis , LocaleManager } from './Util/Index.js';
 import { promisify } from 'util';
 import g from 'glob';
 import colors from 'colors';
@@ -35,27 +35,34 @@ export default class KellyWorld extends Client {
     this.owners = this.config.owners.user;
     this.commands = new Collection();
     this.aliases = new Collection();
-    this.db = { guild: Guild };
+    this.db = { 
+      user: User, 
+      guild: Guild
+  };
 }
 
 async start() {
     this.loadEvents();
     this.loadCommands();
+    this.loadDatabase();
     this.localeManager = new LocaleManager(this);
     this.localeManager.loadLocales();
-   connect(this.config.connections.mongodb).then(() => { console.log(colors.brightGreen("[Info] ") + 'connected to mongodb database.')
-   }).catch((e) => { console.log(colors.brightRed("[Info] - ") + 'nine an error connecting to database: ' + e)});
    await super.login(this.config.client.token);
   }
-  
+
+async loadDatabase() {
+  connect(this.config.connections.mongodb).then(() => { console.log(colors.brightGreen("[Info] - ") + 'Connected to mongodb database.')
+   }).catch((e) => { console.log(colors.brightRed("[Info] - ") + 'nine an error connecting to database: ' + e)});
+}
+
 async loadEvents() {
   const events = await glob(`${global.process.cwd()}/src/Events/**/*.js`);
   events.forEach(async (eventFile) => {
   const file = await import(eventFile);
   const { name, exec } = file.default;
        super.on(name, exec.bind(null, this));
-    });
-  }
+  });
+}
   
  async loadCommands() {
     await glob(`${global.process.cwd()}/src/Commands/**/*js`, async (err, filePaths) => {

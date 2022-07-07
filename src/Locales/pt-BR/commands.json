@@ -10,6 +10,10 @@
     "ManageWebhooks": "ರ_ರ Eu não tenho a permissão de `Gerenciar Webhooks` estou completamente sem poderes!",
     "ManageMessages": "ರ_ರ Eu não tenho a permissão de `Gerenciar mensagens` estou completamente sem poderes!"
 },
+  "atm": {
+    "title": "Automatic Teller Machine",
+    "description": "**Banco Kethereum** onde as pessoas ganham o que ganham!\n\n╔═━───━━────╗\n  {{ekethereum}} _kethereum:_ **{{kethereum}}**\n  {{ekerein}} _kerein:_ **{{kerein}}**\n╚═━───━━────╝\n\n{{elife}} {{life}}"
+},
   "antiinvite": {
     "Message": "?-? você quer broqueiador de convites ligado ou desligado?",
     "Enabled": "Broqueiador de convites estar ligado, aff...",
@@ -29,6 +33,11 @@
     "NoNumber": "(｡ŏ﹏ŏ) coloque o numero de mensagens a serem apagadas, não quero apagar a sua história...",
     "Mxm": "⊙﹏⊙ só posso apagar ate 99 mensagens, aff...",
     "Yes": "O_0 apagando as mensagens..."
+},
+  "help": {
+    "title": "Ajuda da Kelly UwU",
+    "description": "Olá {{user}} meu nome é KellyWorld mais pode me chamar de \"Kelly\", tenho 8 anos e gosto de jogar Minecraft, no momento estou cuidando do servidor de [Kettra](https://discord.gg/NDzFeDp8YE) ajudando os jogadores a não se perderem nesse mundo.\n\n{{emoji}} Uma das coisas mais legais que eu faço é jogar com outras pessoas buscando sempre me divertir e ficar com o dinheiro delas 💅"
+     
 },
   "Language": {
     "mensagem": "O_o  Tou pagando as parcelas do curso, mas consigo falar esses idiomas:\n🇺🇲 english: `en`  🇧🇷 português: `pt`"

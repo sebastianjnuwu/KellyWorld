@@ -1,11 +1,11 @@
 import Day from 'dayjs';
+import colors from 'colors';
 
 export default { 
   name: 'guildCreate',
   async exec (client, guild) {
-    client.utils.sendLogs({
-      type: 'guild',
-      content: `\`---\`\nData: **${Day(Date.now()).format('DD/MM/YYYY HH:mm:ss')}**\nFui adicionada no servidor: **${guild.name}** (\`${guild.id}\`)\nMembros: **${guild.memberCount}**\nOwner: **${await guild.fetchOwner().then((member) => member.user.tag)}** (\`${guild.ownerId}\`)\n\`---\``
-    });
+
+  console.log(colors.brightGreen("[Info]") + ` Data: ${Day(Date.now()).format('DD/MM/YYYY HH:mm:ss')} Fui adicionada no servidor: ${guild.name}`);
+
   }
 };
