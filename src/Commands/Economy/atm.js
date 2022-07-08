@@ -8,7 +8,7 @@ export default {
    
    const player = message.author;
    
-   const db = await client.db.user.findOne({ userID: player.id });
+   const db = await client.db.user.findOne({ _id: player.id });
    
   const atm = new EmbedBuilder()
    .setColor('Random')
