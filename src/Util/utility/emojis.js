@@ -2,6 +2,7 @@ export default {
   verification: '<:official:994606568765141113>',
   bau: '<:K_caixa:943604540282900490>',
   bank: '<:bank:994634133252886535>',
+  ouro: '<:K_coin:939160141675262022>',
   life: '<:K_minecraftHeart:955490493444288592>',
   kethereum: '<:egg:994665291491581973>',
   kerein: '<:kerein:994700140256444567>',
