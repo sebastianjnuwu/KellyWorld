@@ -21,7 +21,7 @@ export default {
 
   setInterval(() => {
   client.user.setActivity(`${status[i++ % status.length]}`, { type: 1 });
-  }, 1000 * 60 ); 
+  }, 3000 * 60 ); 
 
   }
 };
