@@ -13,6 +13,7 @@ export default {
    .setDescription(`${t('commands:help.description', { 
      atm: client.e.kerein,
      bau: client.e.bau,
+     bet: client.e.bet,
      user: String(message.author), 
      emoji: client.e.PointBlue
      })}`)
