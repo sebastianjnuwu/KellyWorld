@@ -55,3 +55,7 @@ yarn start
 
 This repository is [licensed](https://www.apache.org/licenses/LICENSE-2.0) to protect users and Contributors, we are following all discord [terms and services](https://discord.com/terms) also [Discord Privacy Policy.](https://discord.com/privacy)
 
+# creators 
+
+| [<img src="https://github.com/sebastianjnuwu.png?size=115" width=115><br><sub>@sebastianjnuwu</sub>](https://github.com/sebastianjnuwu) | [<img src="https://github.com/rehhbeka.png?size=115" width=115><br><sub>@rehhbeka</sub>](https://github.com/rehhbeka) |
+| :---: | :---: |]
