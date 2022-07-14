@@ -26,7 +26,7 @@ export default {
  }
  
   let won = 2 * args[0];
-  let bet = Math.floor(Math.random() * 10);
+  let bet = Math.floor(Math.random() * 20);
   
   if(bet < 4) {
    await client.db.user.updateOne({  _id: player.id },
