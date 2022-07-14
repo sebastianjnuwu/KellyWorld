@@ -20,7 +20,10 @@ export default {
      
   const calc = db.cooldowns.work - Date.now()
       
-  return message.reply(`${t('commands:Work.time',{ minutos: String(ms(calc).minutes)})}`);
+  return message.reply(`${t('commands:Work.time',{
+     minutos: String(ms(calc).minutes),
+     segundos: String(ms(calc).seconds)
+  })}`);
  };
  
  const kerein = Math.floor(Math.random() * 15);
