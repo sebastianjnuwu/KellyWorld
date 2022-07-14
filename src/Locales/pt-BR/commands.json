@@ -68,6 +68,6 @@
     "Yes": "(^^) messagem foi enviada para o canal {{canal}}...."
   },
   "Work": {
-     "time": "Ainda não apareceu emprego para vc, volte em {{minutos}} minutos {{secundos}} segundos."
+     "time": "Ainda não apareceu emprego para vc, volte em {{minutos}} minutos {{segundos}} segundos."
   }
 }
