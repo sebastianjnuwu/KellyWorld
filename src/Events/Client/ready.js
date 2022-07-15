@@ -11,7 +11,6 @@ export default {
  
  // bot activity status.....
    let status = [
-     `KettraWorld - Instagram Follow us: @kettraworld`,
      `KettraWorld - Kelly help`,
      `KettraWorld - Playing minecraft`,
      `KettraWorld - Looking after ${client.users.cache.size} players`
@@ -21,7 +20,7 @@ export default {
 
   setInterval(() => {
   client.user.setActivity(`${status[i++ % status.length]}`, { type: 1 });
-  }, 3000 * 60 ); 
+  }, 3000 * 120 ); 
 
   }
 };
