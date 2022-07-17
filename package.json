@@ -1,7 +1,7 @@
 {
   "name": "kellyworld",
   "version": "1.14.0-dev",
-  "description": "⁠People are superficial. They only judge what is on display.",
+  "description": "behind the whole application of a developer who, when he went to sleep, discovered how to fix various bugs....",
   "main": "Kelly.js",
   "scripts": {
     "start": "node Kelly.js",
@@ -15,6 +15,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "dayjs": "^1.11.3",
+    "discord-player": "^5.2.2",
     "discord.js": "^14.0.0-dev.1655985916-70b42bb",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",

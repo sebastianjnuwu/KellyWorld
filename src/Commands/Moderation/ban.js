@@ -4,7 +4,7 @@ export default {
   ownerOnly: false,
   async exec({ client, args, message, d, t }) {
 
-if (!message.guild.members.me.permissions.has('ManageGuild')) return message.reply(`${t('commands:BotPermissions.ManageGuild')}`).then(d);
+ if (!message.guild.members.me.permissions.has('ManageGuild')) return message.reply(`${t('commands:BotPermissions.ManageGuild')}`).then(d);
         
   if (!message.member.permissions.has('ManageGuild') && !client.owners.some(id => id === message.author.id)) return message.reply(`${t('commands:UserPermissions.ManageGuild',{ user: String(message.author)})}`).then(d);
   
