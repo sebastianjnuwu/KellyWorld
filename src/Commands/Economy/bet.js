@@ -25,10 +25,23 @@ export default {
    return message.reply(`${t('commands:Bet.InvalidValue')}`).then(d);
  }
  
-  let won = 2 * args[0];
-  let bet = Math.floor(Math.random() * 10);
-  
-  if(bet < 4) {
+ let won = 2 * args[0];
+ let bet = Math.floor(Math.random() * 10);
+
+ if(db.economy.kerein < 2000) {
+ 
+  if(bet < 2) {
+     await client.db.user.updateOne({  _id: player.id },
+   { $set: { "economy.kerein": db.economy.kerein + won }});
+    return message.reply(`${t('commands:Bet.won',{ ganhou: String(won)})}`);
+  } else {
+    await client.db.user.updateOne({  _id: player.id },
+   { $set: { "economy.kerein": db.economy.kerein - args[0] }});
+    return message.reply(`${t('commands:Bet.lost',{ perdeu: String(args[0])})}`);
+  }
+ }
+ 
+  if(bet < 5) {
    await client.db.user.updateOne({  _id: player.id },
    { $set: { "economy.kerein": db.economy.kerein + won }});
     return message.reply(`${t('commands:Bet.won',{ ganhou: String(won)})}`);
