@@ -1,7 +1,7 @@
 {
   "name": "kellyworld",
   "version": "1.14.0-dev",
-  "description": "This girl has two sides one is the sun the other is the moon. With the sun she expresses happiness and joy. With the moon he expresses his fear and sadness.",
+  "description": "⁠People are superficial. They only judge what is on display.",
   "main": "Kelly.js",
   "scripts": {
     "start": "node Kelly.js",
