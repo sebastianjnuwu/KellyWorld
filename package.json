@@ -5,7 +5,8 @@
   "main": "Kelly.js",
   "scripts": {
     "start": "node Kelly.js",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "local": "bash src/Util/utility/install.sh"
   },
   "type": "module",
   "repository": "https://github.com/sebastianjnuwu/KellyWorld",
