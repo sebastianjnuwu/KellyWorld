@@ -28,7 +28,7 @@ export default {
  let won = 2 * args[0];
  let bet = Math.floor(Math.random() * 10);
 
- if(db.economy.kerein < 2000) {
+ if(db.economy.kerein > 2000) {
  
   if(bet < 2) {
      await client.db.user.updateOne({  _id: player.id },
