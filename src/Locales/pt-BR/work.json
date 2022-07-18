@@ -1,6 +1,9 @@
 {
-   "advogado": "Você é um **advogado** que conseguiu inocentar seu cliente das acusações e ganhou **{{won}} KR**",
+   "advogado": "Você é um **advogado(a)** que conseguiu inocentar seu cliente das acusações e ganhou **{{won}} KR**",
    "comerciante": "Você é um **comerciante** que conseguiu um lucro de **{{won}} KR**",
-   "padeiro": "Você é um **padeiro** que conseguiu **{{won}} KR** vendendo pães.",
-   "medico": "você foi contrado como um **medico** para fazer uma cirurgia e ganhou **{{won}}** KR do paciente."
+   "padeiro": "Você é um **padeiro(a)** que conseguiu **{{won}} KR** vendendo pães.",
+   "medico": "você foi contrado como um **medico(a)** para fazer uma cirurgia e ganhou **{{won}}** KR do paciente.",
+   "programador": "você é um **programador(a)** que fez um programa e ganhou **{{won}}** KR",
+   "eletricista": "",
+   "presidente": ""
 }
