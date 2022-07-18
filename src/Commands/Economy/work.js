@@ -32,6 +32,9 @@ export default {
   `${t('work:advogado', { won: String(kerein) })}`,
   `${t('work:comerciante', { won: String(kerein) })}`,
   `${t('work:medico', { won: String(kerein) })}`,
+  `${t('work:presidente', { won: String(kerein) })}`,
+  `${t('work:eletricista', { won: String(kerein) })}`,
+  `${t('work:programador', { won: String(kerein) })}`,
   `${t('work:advogado', { won: String(kerein) })}`,
   `${t('work:padeiro', { won: String(kerein) })}`
  ];
