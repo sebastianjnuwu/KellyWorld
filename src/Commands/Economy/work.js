@@ -26,7 +26,7 @@ export default {
   })}`);
  };
  
- const kerein = Math.floor(Math.random() * 15) * 3;
+ const kerein = Math.floor(Math.random() * 39) + 21 * 2;
  
  let frase = [
   `${t('work:advogado', { won: String(kerein) })}`,
