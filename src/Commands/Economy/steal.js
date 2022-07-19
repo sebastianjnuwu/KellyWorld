@@ -42,7 +42,7 @@ export default {
      
   const calc = db.cooldowns.steal - Date.now()
       
-  return message.reply(`${t('commands:steal.time',{
+  return message.reply(`${t('commands:Steal.time',{
      minutos: String(ms(calc).minutes),
      segundos: String(ms(calc).seconds)
   })}`);
