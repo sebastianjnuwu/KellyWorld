@@ -40,7 +40,7 @@ export default {
  
   if (Date.now() < db.cooldowns.steal) {
      
-  const calc = db.cooldowns.work - Date.now()
+  const calc = db.cooldowns.steal - Date.now()
       
   return message.reply(`${t('commands:steal.time',{
      minutos: String(ms(calc).minutes),
@@ -51,7 +51,7 @@ export default {
  let steal = Math.floor(Math.random() * 10);
  let won = Math.floor(Math.random() * 90);
 
-   if (steal < 5) {
+   if (steal < 4) {
    await client.db.user.updateOne({  _id: player.id },
    { $set: { 
      "economy.kerein": db.economy.kerein + won,
@@ -62,7 +62,7 @@ export default {
     await client.db.user.updateOne({  _id: usuario.id },
    { $set: { 
      "economy.kerein": userdb.economy.kerein - won,
-    "cooldowns.steal": Date.now() + 480000
+     "cooldowns.steal": Date.now() + 480000
    }});
     return message.reply(`${t('commands:Steal.lost',{ perdeu: String(won)})}`);
   }
