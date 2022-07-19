@@ -36,7 +36,7 @@ export default {
   
   if (db.economy.kerein < 150 ) return message.reply(`${t('commands:Steal.Minimum')}`).then(d);
   
-  if (userdb.economy.kerein < 150) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario.tag) })}`).then(d);
+  if (userdb.economy.kerein < 150) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`).then(d);
  
   if (Date.now() < db.cooldowns.steal) {
      
@@ -57,7 +57,7 @@ export default {
      "economy.kerein": db.economy.kerein + won,
      "cooldowns.steal": Date.now() + 480000
  }});
-    return message.reply(`${t('commands:Steal.won',{ ganhou: String(won), user: String(usuario.username) })}`);
+    return message.reply(`${t('commands:Steal.won',{ ganhou: String(won), user: String(usuario) })}`);
   } else {
     await client.db.user.updateOne({  _id: usuario.id },
    { $set: { 
