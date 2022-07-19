@@ -35,7 +35,7 @@ export default {
   await client.db.user.updateOne({  _id: player.id },
   { $set: {
      "economy.kerein": db.economy.kerein + kerein,
-     "cooldowns.daily": Date.now() + 86400000
+     "cooldowns.daily": Date.now() + 43200000
      }
  });
   
