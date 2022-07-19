@@ -51,7 +51,7 @@ export default {
  let steal = Math.floor(Math.random() * 10);
  let won = Math.floor(Math.random() * 90);
 
-   if (steal < 4) {
+   if (steal < 5) {
    await client.db.user.updateOne({  _id: player.id },
    { $set: { 
      "economy.kerein": db.economy.kerein + won,
