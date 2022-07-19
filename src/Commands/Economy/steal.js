@@ -4,7 +4,7 @@ export default {
   name: 'steal',
   aliases: ['steal','rob','roubar'],
   ownerOnly: false,
-  async exec({ client, args, message, d, t }) {
+  async exec({ client, args, message, t }) {
   
   function ms(ms) {
   const seconds = ~~(ms/1000)
@@ -17,7 +17,7 @@ export default {
   let player = message.author;
   let db = await client.db.user.findOne({ _id: player.id });
   
-  if (!args[0]) return message.reply(`${t('commands:Steal.NoUser')}`).then(d);
+  if (!args[0]) return message.reply(`${t('commands:Steal.NoUser')}`);
   
   let usuario = message.mentions.members.first();
   let userdb = await client.db.user.findOne({ _id: usuario.id });
@@ -28,15 +28,15 @@ export default {
   userdb = await client.db.user.findOne({ _id: usuario.id });
   }
 
-  if (!usuario) return message.reply(`${t('commands:Steal.NoFound')}`).then(d);
+  if (!usuario) return message.reply(`${t('commands:Steal.NoFound')}`);
 
-  if (usuario.id === message.author.id) return message.reply(`${t('commands:Steal.NoAuthor')}`).then(d);
+  if (usuario.id === message.author.id) return message.reply(`${t('commands:Steal.NoAuthor')}`);
   
-  if (usuario.id === client.user.id) return message.reply(`${t('commands:Steal.NoClient')}`).then(d);
+  if (usuario.id === client.user.id) return message.reply(`${t('commands:Steal.NoClient')}`);
   
-  if (db.economy.kerein < 150 ) return message.reply(`${t('commands:Steal.Minimum')}`).then(d);
+  if (db.economy.kerein < 150 ) return message.reply(`${t('commands:Steal.Minimum')}`);
   
-  if (userdb.economy.kerein < 150) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`).then(d);
+  if (userdb.economy.kerein < 150) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
  
   if (Date.now() < db.cooldowns.steal) {
      
