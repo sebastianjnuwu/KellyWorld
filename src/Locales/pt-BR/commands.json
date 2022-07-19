@@ -79,6 +79,18 @@
     "NoMessage": "-_- você não colocou a mensagem para ser enviada!",
     "Yes": "(^^) messagem foi enviada para o canal {{canal}}...."
   },
+ "Steal": {
+   "NoUser": "7-7 você não mencionou quem quer roubar",
+   "NoFound": ":( não consegui encontrar este ser no nosso mundo!",
+   "NoAuthor": "ué quer ser roubado vai para o rio de janeiro kkkk",
+   "NoClient": "vocé não pode roubar a gerente do banco ;-;",
+   "Minimum": "você precisa ter no minimo 150 para roubar",
+   "NoKerein": "{{user}} é pobre, sorry 💅",
+   "time": "A policia estar por perto, volte em {{minutos}} minutos {{segundos}} segundos.",
+   "won": "você conseguiu roubar **{{ganhou}}** KR, {{user}} sorry",
+   "No": "este usuário não estar na minha memória",
+   "lost": "infelizmente não foi dessa vez você perdeu **{{perdeu}}** KR"
+},
   "Work": {
      "time": "Ainda não apareceu emprego para vc, volte em {{minutos}} minutos {{segundos}} segundos."
   }
