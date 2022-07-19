@@ -64,7 +64,8 @@ export default {
      "economy.kerein": userdb.economy.kerein - won,
      "cooldowns.steal": Date.now() + 480000
    }});
-    return message.reply(`${t('commands:Steal.lost',{ perdeu: String(won)})}`);
+ 
+   return message.reply(`${t('commands:Steal.lost',{ perdeu: String(won)})}`);
   }
   
   }
