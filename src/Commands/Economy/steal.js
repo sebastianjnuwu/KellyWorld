@@ -48,10 +48,10 @@ export default {
   })}`);
  };
  
- let steal = Math.floor(Math.random() * 10);
+ let steal = Math.floor(Math.random() * 5);
  let won = Math.floor(Math.random() * 90);
 
-   if (steal < 5) {
+   if (steal < 3) {
    await client.db.user.updateOne({  _id: player.id },
    { $set: { 
      "economy.kerein": db.economy.kerein + won,
