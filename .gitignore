@@ -7,3 +7,8 @@ yarn.lock
 
 # ignoring modules folder
 node_modules
+
+# ignoring useless files 
+.cache
+.config
+.npm
