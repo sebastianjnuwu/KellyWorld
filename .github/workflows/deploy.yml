@@ -1,8 +1,8 @@
 on:
-  push:
-    branches: [ "KellyWorld" ]
-  pull_request:
-    branches: [ "KellyWorld" ]
+  # push:
+   # branches: [ "KellyWorld" ]
+ # pull_request:
+   # branches: [ "KellyWorld" ]
 name: 🚀  
 jobs:
   web-deploy:
