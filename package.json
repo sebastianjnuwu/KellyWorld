@@ -23,5 +23,8 @@
     "i18next": "^21.8.10",
     "i18next-fs-backend": "^1.1.4",
     "mongoose": "^6.4.0"
-  }
+  },
+  "engines": {
+     "node": "16.x"
+    }
 }
