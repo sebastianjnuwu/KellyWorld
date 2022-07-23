@@ -5,8 +5,8 @@
   "main": "Kelly.js",
   "scripts": {
     "start": "node Kelly.js",
-    "dev": "nodemon",
-    "local": "bash src/Util/utility/install.sh"
+    "lint": "eslint src --fix",
+    "dev": "nodemon"
   },
   "type": "module",
   "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
@@ -32,5 +32,9 @@
   },
   "bugs": {
     "url": "https://github.com/sebastianjnuwu/KellyWorld/issues"
+  },
+  "devDependencies": {
+    "eslint": "8.15.0",
+    "nodemon": "2.0.19"
   }
 }
