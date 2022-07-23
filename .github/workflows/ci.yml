@@ -1,3 +1,5 @@
+name: run
+
 on: 
   push:
     branches: [ "KellyWorld" ]
