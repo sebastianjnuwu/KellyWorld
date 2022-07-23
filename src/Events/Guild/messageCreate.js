@@ -28,9 +28,9 @@ export default {
 
       const isInvite = (str) => (/dis(?:board\.org\/(?:pl\/)?server\/join|cord(?:\.me\/server\/join|(?:app\.com\/invite|\.(?:com\/invite|gg\/))))/gi).test(str);
     
-  if (isInvite(message.content)) {
-       message.channel.send(`${t('events:antiinvite', { user: String(message.author)})}`).then(msg => setTimeout(() => msg.delete(), 30000));
-       message.delete().catch(() => {});
+      if (isInvite(message.content)) {
+        message.channel.send(`${t('events:antiinvite', { user: String(message.author)})}`).then(msg => setTimeout(() => msg.delete(), 30000));
+        message.delete().catch(() => {});
       }
     }
   }

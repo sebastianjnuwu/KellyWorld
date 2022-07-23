@@ -1,4 +1,3 @@
-import { ApplicationCommandOptionType } from 'discord.js';
 
 export default {
   name: 'steal',
@@ -6,67 +5,67 @@ export default {
   ownerOnly: false,
   async exec({ client, args, message, t }) {
   
-  function ms(ms) {
-  const seconds = ~~(ms/1000)
-  const minutes = ~~(seconds/60)
-  const hours = ~~(minutes/60)
-  const days = ~~(hours/24)
-  return { days, hours: hours%24, minutes: minutes%60, seconds: seconds%60 }
-}
+    function ms(ms) {
+      const seconds = ~~(ms/1000);
+      const minutes = ~~(seconds/60);
+      const hours = ~~(minutes/60);
+      const days = ~~(hours/24);
+      return { days, hours: hours%24, minutes: minutes%60, seconds: seconds%60 };
+    }
 
-  let player = message.author;
-  let db = await client.db.user.findOne({ _id: player.id });
+    let player = message.author;
+    let db = await client.db.user.findOne({ _id: player.id });
   
-  if (!args[0]) return message.reply(`${t('commands:Steal.NoUser')}`);
+    if (!args[0]) return message.reply(`${t('commands:Steal.NoUser')}`);
   
-  let usuario = message.mentions.members.first();
-  let userdb = await client.db.user.findOne({ _id: usuario.id });
+    let usuario = message.mentions.members.first();
+    let userdb = await client.db.user.findOne({ _id: usuario.id });
   
-  if (!userdb) {
-  const newuser = new client.db.user({ _id: usuario.id });
-  await newuser.save();
-  userdb = await client.db.user.findOne({ _id: usuario.id });
-  }
+    if (!userdb) {
+      const newuser = new client.db.user({ _id: usuario.id });
+      await newuser.save();
+      userdb = await client.db.user.findOne({ _id: usuario.id });
+    }
 
-  if (!usuario) return message.reply(`${t('commands:Steal.NoFound')}`);
+    if (!usuario) return message.reply(`${t('commands:Steal.NoFound')}`);
 
-  if (usuario.id === message.author.id) return message.reply(`${t('commands:Steal.NoAuthor')}`);
+    if (usuario.id === message.author.id) return message.reply(`${t('commands:Steal.NoAuthor')}`);
   
-  if (usuario.id === client.user.id) return message.reply(`${t('commands:Steal.NoClient')}`);
+    if (usuario.id === client.user.id) return message.reply(`${t('commands:Steal.NoClient')}`);
   
-  if (db.economy.kerein < 150 ) return message.reply(`${t('commands:Steal.Minimum')}`);
+    if (db.economy.kerein < 150 ) return message.reply(`${t('commands:Steal.Minimum')}`);
   
-  if (userdb.economy.kerein < 150) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
+    if (userdb.economy.kerein < 150) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
  
-  if (Date.now() < db.cooldowns.steal) {
+    if (Date.now() < db.cooldowns.steal) {
      
-  const calc = db.cooldowns.steal - Date.now()
+      const calc = db.cooldowns.steal - Date.now();
       
-  return message.reply(`${t('commands:Steal.time',{
-     minutos: String(ms(calc).minutes),
-     segundos: String(ms(calc).seconds)
-  })}`);
- };
+      return message.reply(`${t('commands:Steal.time',{
+        minutos: String(ms(calc).minutes),
+        segundos: String(ms(calc).seconds)
+      })}`);
+    }
  
- let steal = Math.floor(Math.random() * 5);
- let won = Math.floor(Math.random() * 90);
+    let steal = Math.floor(Math.random() * 5);
+    let won = Math.floor(Math.random() * 90);
 
-   if (steal < 3) {
-   await client.db.user.updateOne({  _id: player.id },
-   { $set: { 
-     "economy.kerein": db.economy.kerein + won,
-     "cooldowns.steal": Date.now() + 480000
- }});
-    return message.reply(`${t('commands:Steal.won',{ ganhou: String(won), user: String(usuario) })}`);
-  } else {
-    await client.db.user.updateOne({  _id: usuario.id },
-   { $set: { 
-     "economy.kerein": userdb.economy.kerein - won,
-     "cooldowns.steal": Date.now() + 480000
-   }});
+    if (steal < 3) {
+      await client.db.user.updateOne({  _id: player.id },
+        { $set: { 
+          'economy.kerein': db.economy.kerein + won,
+          'cooldowns.steal': Date.now() + 480000
+        }});
+      return message.reply(`${t('commands:Steal.won',{ ganhou: String(won), user: String(usuario) })}`);
+    } else {
+      await client.db.user.updateOne({  _id: usuario.id },
+        { $set: { 
+          'economy.kerein': userdb.economy.kerein - won,
+          'cooldowns.steal': Date.now() + 480000
+        }});
  
-   return message.reply(`${t('commands:Steal.lost',{ perdeu: String(won)})}`);
-  }
+      return message.reply(`${t('commands:Steal.lost',{ perdeu: String(won)})}`);
+    }
   
   }
 };
