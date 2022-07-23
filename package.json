@@ -24,7 +24,7 @@
     "mongoose": "^6.4.0"
   },
   "engines": {
-     "node": "16.x"
+     "node": ">=16.9.0"
   },
  "repository": {
     "type": "git",
