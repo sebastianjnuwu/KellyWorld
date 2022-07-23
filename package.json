@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node Kelly.js",
     "lint": "eslint src --fix",
-    "dev": "nodemon"
+    "dev": "nodemon Kelly.js"
   },
   "type": "module",
   "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
