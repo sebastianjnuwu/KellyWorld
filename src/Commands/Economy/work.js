@@ -2,7 +2,7 @@ export default {
   name: 'work',
   aliases: ['work'],
   ownerOnly: false,
-  async exec({ client, args, message, t }) {
+  async exec({ client, message, t }) {
   
   function ms(ms) {
   const seconds = ~~(ms/1000)
