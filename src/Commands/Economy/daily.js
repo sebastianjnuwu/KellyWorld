@@ -16,12 +16,13 @@ export default {
    
   const db = await client.db.user.findOne({ _id: player.id });
   
+  /*
   if (!db) {
   const newuser = new client.db.user({ _id: player.id });
   await newuser.save();
   db = await client.db.user.findOne({ _id: player.id });
-  }
-    
+  } */
+  
  if (Date.now() < db.cooldowns.daily) {
    const calc = db.cooldowns.daily - Date.now();
    return message.reply(`${t('commands:daily.time',{
