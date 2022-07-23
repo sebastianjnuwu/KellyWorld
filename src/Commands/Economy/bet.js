@@ -30,7 +30,7 @@ export default {
 
  if(db.economy.kerein > 2000) {
  
-  if(bet < 2) {
+  if(bet < 3) {
      await client.db.user.updateOne({  _id: player.id },
    { $set: { "economy.kerein": db.economy.kerein + won }});
     return message.reply(`${t('commands:Bet.won',{ ganhou: String(won)})}`);
@@ -41,7 +41,7 @@ export default {
   }
  }
  
-  if(bet < 4) {
+  if(bet < 6) {
    await client.db.user.updateOne({  _id: player.id },
    { $set: { "economy.kerein": db.economy.kerein + won }});
     return message.reply(`${t('commands:Bet.won',{ ganhou: String(won)})}`);
