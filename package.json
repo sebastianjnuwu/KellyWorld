@@ -9,7 +9,6 @@
     "local": "bash src/Util/utility/install.sh"
   },
   "type": "module",
-  "repository": "https://github.com/sebastianjnuwu/KellyWorld",
   "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
   "license": "Apache-2.0",
   "dependencies": {
@@ -26,5 +25,12 @@
   },
   "engines": {
      "node": "16.x"
-    }
+  },
+ "repository": {
+    "type": "git",
+    "url": "https://github.com/sebastianjnuwu/KellyWorld.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sebastianjnuwu/KellyWorld/issues"
+  }
 }
