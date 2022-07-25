@@ -22,6 +22,8 @@
  
 # Installation
 
+Kelly is a bot made in javascript and to be able to start it you need a software called [nodejs](https://nodejs.org/en/download/) and also [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable) a package manager.
+
 • Clone our repository:
 ```
 git clone https://github.com/sebastianjnuwu/KellyWorld
