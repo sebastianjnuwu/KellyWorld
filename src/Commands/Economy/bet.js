@@ -36,8 +36,8 @@ export default {
         return message.reply(`${t('commands:Bet.won',{ ganhou: String(won)})}`);
       } else {
         await client.db.user.updateOne({  _id: player.id },
-          { $set: { 'economy.kerein': db.economy.kerein - args[0] }});
-        return message.reply(`${t('commands:Bet.lost',{ perdeu: String(args[0])})}`);
+          { $set: { 'economy.kerein': db.economy.kerein - args[0] * 2 }});
+        return message.reply(`${t('commands:Bet.lost',{ perdeu: String(won)})}`);
       }
     }
  
