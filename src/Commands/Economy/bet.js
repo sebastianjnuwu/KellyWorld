@@ -28,9 +28,9 @@ export default {
     let won = 2 * args[0];
     let bet = Math.floor(Math.random() * 10);
 
-    if(db.economy.kerein > 2000) {
+    if(db.economy.kerein > 10000) {
  
-      if(bet < 3) {
+      if(bet < 1) {
         await client.db.user.updateOne({  _id: player.id },
           { $set: { 'economy.kerein': db.economy.kerein + won }});
         return message.reply(`${t('commands:Bet.won',{ ganhou: String(won)})}`);
@@ -41,7 +41,7 @@ export default {
       }
     }
  
-    if(bet < 6) {
+    if(bet < 5) {
       await client.db.user.updateOne({  _id: player.id },
         { $set: { 'economy.kerein': db.economy.kerein + won }});
       return message.reply(`${t('commands:Bet.won',{ ganhou: String(won)})}`);
