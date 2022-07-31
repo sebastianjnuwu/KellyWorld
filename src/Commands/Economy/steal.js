@@ -33,9 +33,9 @@ export default {
   
     if (usuario.id === client.user.id) return message.reply(`${t('commands:Steal.NoClient')}`);
   
-    if (db.economy.kerein < 150 ) return message.reply(`${t('commands:Steal.Minimum')}`);
+    if (db.economy.kerein < 35000 ) return message.reply(`${t('commands:Steal.Minimum')}`);
   
-    if (userdb.economy.kerein < 150) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
+    if (userdb.economy.kerein < 35000) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
  
     if (Date.now() < db.cooldowns.steal) {
      
@@ -48,7 +48,7 @@ export default {
     }
  
     let steal = Math.floor(Math.random() * 5);
-    let won = Math.floor(Math.random() * 90);
+    let won = Math.floor(Math.random() * 35000);
 
     if (steal < 3) {
       await client.db.user.updateOne({  _id: player.id },
