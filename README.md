@@ -52,13 +52,7 @@ export default {
 • Make your changes if you wish, and then turn on the bot:
 ```
 yarn start
-```
-
-# Deploy
-
-a deploy is when an application is put on the air, that is, it is made available for use, whether in a development, test or production environment: 
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sebastianjnuwu/KellyWorld)
+yarn start
 
 # License
 
