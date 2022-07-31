@@ -59,7 +59,6 @@ yarn start
 a deploy is when an application is put on the air, that is, it is made available for use, whether in a development, test or production environment: 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sebastianjnuwu/KellyWorld)
-![Deploy](https://replit.com/badge/github/sebastianjnuwu/KellyWorld)
 
 # License
 
