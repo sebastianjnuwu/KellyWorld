@@ -18,7 +18,7 @@
  
  • Made in [javascript](https://www.w3schools.com/whatis/whatis_js.asp) using [discord.js](https://www.npmjs.com/package/discord.js) library
  
- • Click [here](https://github.com/sebastianjnuwu/KellyWorld.wiki.git) to see the documentation.
+ • Documentation: https://github.com/sebastianjnuwu/KellyWorld/wiki
  
 # Installation
 
