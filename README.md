@@ -52,7 +52,7 @@ export default {
 • Make your changes if you wish, and then turn on the bot:
 ```
 yarn start
-yarn start
+```
 
 # License
 
