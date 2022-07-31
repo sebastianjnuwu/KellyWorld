@@ -55,7 +55,7 @@ yarn start
 ```
 
 # Deploy
-
+![Deploy](https://replit.com/badge/github/sebastianjnuwu/KellyWorld)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sebastianjnuwu/KellyWorld)
 
 # License
