@@ -14,11 +14,11 @@
 
  Hello my name is KellyWorld but you can call me "Kelly", I am 8 years old and I like to play Minecraft, I am currently on [kettra server](https://discord.gg/NDzFeDp8YE) helping players not to get lost in this world.
  
- • Easily interact with the discord [api](https://discord.com/developers/docs/intro).
- 
  • Code easy to perform and understand.
  
  • Made in [javascript](https://www.w3schools.com/whatis/whatis_js.asp) using [discord.js](https://www.npmjs.com/package/discord.js) library
+ 
+ • Click [here](https://github.com/sebastianjnuwu/KellyWorld.wiki.git) to see the documentation.
  
 # Installation
 
