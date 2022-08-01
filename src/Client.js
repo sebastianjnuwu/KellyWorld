@@ -34,7 +34,6 @@ export default class KellyWorld extends Client {
     this.e = Emojis;
     this.config = config;
     this.owners = this.config.owners.user;
-    this.channel = this.config.channel.economy;
     this.commands = new Collection();
     this.aliases = new Collection();
     this.db = { 
