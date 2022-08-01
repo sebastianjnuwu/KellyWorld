@@ -33,9 +33,9 @@ export default {
   
     if (usuario.id === client.user.id) return message.reply(`${t('commands:Steal.NoClient')}`);
   
-    if (db.economy.kerein < 3500 ) return message.reply(`${t('commands:Steal.Minimum')}`);
+    if (db.economy.kerein < 75 ) return message.reply(`${t('commands:Steal.Minimum')}`);
   
-    if (userdb.economy.kerein < 3500) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
+    if (userdb.economy.kerein < 75) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
  
     if (Date.now() < db.cooldowns.steal) {
      
@@ -48,20 +48,20 @@ export default {
     }
  
     let steal = Math.floor(Math.random() * 5);
-    let won = Math.floor(Math.random() * 3500);
+    let won = Math.floor(Math.random() * 75);
 
     if (steal < 3) {
       await client.db.user.updateOne({  _id: player.id },
         { $set: { 
           'economy.kerein': db.economy.kerein + won,
-          'cooldowns.steal': Date.now() + 480000
+          'cooldowns.steal': Date.now() + 250000
         }});
       return message.reply(`${t('commands:Steal.won',{ ganhou: String(won), user: String(usuario) })}`);
     } else {
       await client.db.user.updateOne({  _id: usuario.id },
         { $set: { 
           'economy.kerein': userdb.economy.kerein - won,
-          'cooldowns.steal': Date.now() + 480000
+          'cooldowns.steal': Date.now() + 250000
         }});
  
       return message.reply(`${t('commands:Steal.lost',{ perdeu: String(won)})}`);
