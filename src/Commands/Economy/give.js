@@ -1,4 +1,4 @@
-
+/*
 export default {
   name: 'give',
   aliases: ['give','doar','pay'],
@@ -45,3 +45,4 @@ export default {
   
   }
 }
+*/
