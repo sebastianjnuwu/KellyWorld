@@ -26,7 +26,7 @@ export default {
     }
  
     let won = 2 * args[0];
-    let bet = Math.floor(Math.random() * 10);
+    let bet = Math.floor(Math.random() * 6);
     
     if(args[0] > 1000) {
       
