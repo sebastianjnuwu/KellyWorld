@@ -15,7 +15,7 @@ export default {
   if (!args[1]) return message.reply(`${t('commands:Give.NoValue')}`);
   
   if (isNaN(args[1])) {
-    return message.reply(`${t('commands:Give.NoNumber')}`).then(d);
+    return message.reply(`${t('commands:Give.NoNumber')}`);
     }
   
   let usuario = message.mentions.members.first();
