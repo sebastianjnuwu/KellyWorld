@@ -1,3 +1,4 @@
+// importing the packages used in the bot.
 import {
   Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 import { Guild, User, Emojis , LocaleManager } from './Util/Index.js';
@@ -10,6 +11,7 @@ import 'dotenv/config';
 import g from 'glob';
 const glob = promisify(g);
 
+// We define the bot's main class.
 export default class KellyWorld extends Client {
   constructor() {
     super({ intents: [
@@ -42,6 +44,7 @@ export default class KellyWorld extends Client {
     };
   }
 
+ // starting our discord bot.
   async start() {
     this.loadEvents();
     this.loadCommands();
@@ -50,12 +53,14 @@ export default class KellyWorld extends Client {
     this.localeManager.loadLocales();
     await super.login(this.config.client.token);
   }
-
+ 
+ // loading the database.
   async loadDatabase() {
     connect(this.config.connections.mongodb).then(() => { console.log(colors.brightGreen('[Info] - ') + 'Connected to mongodb database.');
     }).catch((e) => { console.log(colors.brightRed('[Info] - ') + 'nine an error connecting to database: ' + e);});
   }
-
+  
+  // loading the events.
   async loadEvents() {
     const events = await glob(`${global.process.cwd()}/src/Events/**/*.js`);
     events.forEach(async (eventFile) => {
@@ -65,6 +70,7 @@ export default class KellyWorld extends Client {
     });
   }
   
+  // loading commands.
   async loadCommands() {
     await glob(`${global.process.cwd()}/src/Commands/**/*js`, async (err, filePaths) => {
       if (err) return console.log(err);
