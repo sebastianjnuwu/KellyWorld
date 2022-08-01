@@ -1,11 +1,12 @@
-
+// exporting the steal command.
 export default {
   name: 'steal',
   aliases: ['steal','rob','roubar'],
   ownerOnly: false,
   async exec({ client, args, message, t }) {
   
-    function ms(ms) {
+  // time function 
+  function ms(ms) {
       const seconds = ~~(ms/1000);
       const minutes = ~~(seconds/60);
       const hours = ~~(minutes/60);
