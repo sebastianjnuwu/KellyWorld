@@ -1,3 +1,4 @@
+// exporting the main bot variables.
 export default {
   client: {
    token: process.env.token
@@ -7,8 +8,5 @@ export default {
   },
   connections: {
    mongodb: process.env.mongodb 
-  },
-  channel: {
-    economy: '894002116446806066'
   }
 };
