@@ -1,12 +1,13 @@
-import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
-import pkg from 'mongoose';
-import 'dotenv/config';
-const { connect } = pkg;
+import {
+  Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 import { Guild, User, Emojis , LocaleManager } from './Util/Index.js';
-import { promisify } from 'util';
-import g from 'glob';
-import colors from 'colors';
 import config from '../config.js';
+import { promisify } from 'util';
+import colors from 'colors';
+import pkg from 'mongoose';
+const { connect } = pkg;
+import 'dotenv/config';
+import g from 'glob';
 const glob = promisify(g);
 
 export default class KellyWorld extends Client {
@@ -33,6 +34,7 @@ export default class KellyWorld extends Client {
     this.e = Emojis;
     this.config = config;
     this.owners = this.config.owners.user;
+    this.channel = this.config.channel.economy;
     this.commands = new Collection();
     this.aliases = new Collection();
     this.db = { 
