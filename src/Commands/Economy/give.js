@@ -12,11 +12,11 @@ export default {
   
   if(args[1] < '1') return message.reply('7-7');
   
+  if (!args[1]) return message.reply(`${t('commands:Give.NoValue')}`);
+  
   if (isNaN(args[1])) {
     return message.reply(`${t('commands:Give.NoNumber')}`).then(d);
     }
-    
-  if (!args[1]) return message.reply(`${t('commands:Give.NoValue')}`);
   
   let usuario = message.mentions.members.first();
   let userdb = await client.db.user.findOne({ _id: usuario.id });
