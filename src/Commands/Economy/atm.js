@@ -4,7 +4,6 @@ export default {
   name: 'atm',
   aliases: ['atm','bal','saldo'],
   ownerOnly: false,
-  eco: true,
   async exec({ client, message, t }) {
    
     const player = message.author;
