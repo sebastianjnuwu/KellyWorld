@@ -50,7 +50,9 @@ export default {
     if (!command) return;
   
     if(command.ownerOnly && !client.owners.some(id => id === message.author.id)) return;
-  
+   
+   if(command.eco && !client.channel.some(id => id === message.channel.id)) return message.reply(`Ops, Felizmente so posso executar comandos no chat <#894002116446806066>`);
+   
     const d = msg => setTimeout(() => { msg.delete().catch(() => {}); message.delete().catch(() => {});}, 10000);
     
     await command.exec({ client, message, args, d, t });
