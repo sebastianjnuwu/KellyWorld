@@ -34,9 +34,9 @@ export default {
   
     if (usuario.id === client.user.id) return message.reply(`${t('commands:Steal.NoClient')}`);
   
-    if (db.economy.kerein > 75 ) return message.reply(`${t('commands:Steal.Minimum')}`);
+    if (db.economy.kerein < 75 ) return message.reply(`${t('commands:Steal.Minimum')}`);
   
-    if (userdb.economy.kerein > 75) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
+    if (userdb.economy.kerein < 75) return message.reply(`${t('commands:Steal.NoKerein',{ user: String(usuario) })}`);
  
     if (Date.now() < db.cooldowns.steal) {
      
