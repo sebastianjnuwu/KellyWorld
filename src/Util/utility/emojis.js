@@ -6,7 +6,7 @@ export default {
   ouro: '<:K_coin:939160141675262022>',
   life: '<:K_minecraftHeart:955490493444288592>',
   kethereum: '<:egg:994665291491581973>',
-  kerein: '<:kerein:994700140256444567>',
+  kerein: '<:K_coin:939160141675262022>',
   PointBlue: '<:K_:947545349151653898>',
   perm: '<:K_negado:943604703378415688>',
   env: '<:K_env:938833579981566043>',
