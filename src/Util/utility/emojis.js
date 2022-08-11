@@ -5,7 +5,7 @@ export default {
   bet: '<:K_stonks:939162797835710495>',
   ouro: '<:K_coin:939160141675262022>',
   life: '<:K_minecraftHeart:955490493444288592>',
-  kethereum: '<:egg:994665291491581973>',
+  kethereum: '<:K_boster:938874766302019644>',
   kerein: '<:K_coin:939160141675262022>',
   PointBlue: '<:K_:947545349151653898>',
   perm: '<:K_negado:943604703378415688>',
