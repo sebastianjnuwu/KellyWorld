@@ -8,6 +8,7 @@ export default model('Users', new Schema({
     kerein: { type: Number, default: 0 },
   },
   cooldowns: { 
+    steal: { type: String, default: 0 },
     work: { type: String, default: 0 },
     daily: { type: String, default: 0 },
   }

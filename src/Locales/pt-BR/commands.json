@@ -2,13 +2,15 @@
   "UserPermissions" : {
     "Administrator" : "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Administrador.`",
     "ManageGuild" : "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Servidor.`",
-    "ManageMessages": "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Mensagens.`"
+    "ManageMessages": "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Gerenciar Mensagens.`",
+    "KickMembers": "ಠ_ಠ ➥ {{user}} Você não tem permissão para usar este comando! Para usá-lo, você precisa ter permissão de `Expulsar membros`."
 },
   "BotPermissions" : {
     "Administrator": "ರ_ರ Eu não tenho a permissão de `Administrador` estou completamente sem poderes!",
     "ManageGuild": "ರ_ರ Eu não tenho a permissão de `Gerenciar servidor` estou completamente sem poderes!",
     "ManageWebhooks": "ರ_ರ Eu não tenho a permissão de `Gerenciar Webhooks` estou completamente sem poderes!",
-    "ManageMessages": "ರ_ರ Eu não tenho a permissão de `Gerenciar mensagens` estou completamente sem poderes!"
+    "ManageMessages": "ರ_ರ Eu não tenho a permissão de `Gerenciar mensagens` estou completamente sem poderes!",
+    "KickMembers": "ರ_ರ Eu não tenho a permissão de `Expulsar membros` estou completamente sem poderes!"
 },
   "atm": {
     "title": "Automatic Teller Machine",
@@ -29,6 +31,14 @@
     "NoRole": "(°﹏°;) meu cargo é menor....",
     "YesBan": "(;ŏ﹏ŏ) pode ir ate para o céu mais aqui não entrará mais..."
 },
+  "Bet": {
+    "NoMoney": "você não colocou um valor para apostar!",
+    "Minimum": "você precisa ter no mínimo 50 KR para poder apostar!",
+    "NoNumber": "pera! isso nao é número...",
+    "InvalidValue": "este valor é maior do que você tem, não seja esperto!",
+    "won": "você ganhou {{ganhou}} KR, por um numero eu nao ganhei aff...",
+    "lost": "Aeee você perdeu {{perdeu}} KR!"
+  },
   "clear": {
     "NoNumber": "(｡ŏ﹏ŏ) coloque o numero de mensagens a serem apagadas, não quero apagar a sua história...",
     "Mxm": "⊙﹏⊙ só posso apagar ate 99 mensagens, aff...",
@@ -38,11 +48,31 @@
     "time": "7-7 não tente burla o sistema, ainda falta **{{hora}}h {{minutos}}m {{segundos}}s** para você pegar seu prêmio diário!",
     "won": "UwU Parabéns {{user}} você ganhou {{ekerein}} {{kerein}} KR no prêmio diário!"
   },
+  "Give": {
+    "NoUser": "Ops, você não mencionou ninguém!",
+    "NoValue": "você não colocou um valor!",
+    "NoNumber": "este é numero? So no seu planeta!",
+    "NoFound": "não consegui encontrar esta pessoa!",
+    "NoAuthor": "você não pode enviar dinheiro para se mesmo!",
+    "NoClient": "Eu não vou aceitar suas esmolas!",
+    "Minimum": "você não tem esse valor 7-7",
+    "won": "Parabéns {{user}} acabou de receber {{ganhou}} KR"
+},
   "help": {
     "title": "Ajuda da Kelly UwU",
-    "description": "Olá {{user}} meu nome é KellyWorld mais pode me chamar de \"Kelly\", tenho 8 anos e gosto de jogar Minecraft, no momento estou cuidando do servidor de [Kettra](https://discord.gg/NDzFeDp8YE) ajudando os jogadores a não se perderem nesse mundo.\n\n{{emoji}} Uma das coisas mais legais que eu faço é jogar com outras pessoas buscando sempre me divertir e ficar com o dinheiro delas 💅\n• {{atm}} atm - _ver seu saldo._\n• {{bau}} daily - _Prêmio diário!_\n• :bar_chart: rank - _ranking dos players._"
+    "description": "Olá {{user}} meu nome é KellyWorld mais pode me chamar de \"Kelly\", tenho 8 anos e gosto de jogar Minecraft, no momento estou cuidando do servidor de [Kettra](https://discord.gg/NDzFeDp8YE) ajudando os jogadores a não se perderem nesse mundo.\n\n{{emoji}} Uma das coisas mais legais que eu faço é jogar com outras pessoas buscando sempre me divertir e ficar com o dinheiro delas 💅\n• {{atm}} atm - _ver seu saldo._\n• {{bet}} bet - _apostar para perder!_\n• {{bau}} daily - _Prêmio diário!_\n• :ninja: steal - _Roubar alguém._\n• :bar_chart: rank - _ranking dos players._\n• :toolbox: work - _Trabalhar para ganhar._"
      
 },
+  "Kick": {
+   "Reason": "Não especificado...",
+   "Message": "(✿^‿^) Eu não tenho bola de cristal para saber quem você quer expulsar, mencione ou insira o id...",
+   "InvalidUser": "ಥ╭╮ಥ Não consegui encontrar este usuário, acho que ele não faz parte deste mundo...",
+   "NoOwner": "⊙.☉ Muito ousado querendo banir alguém de alta importância...",
+   "NoAuthor": "Eu não posso te expulsar ;)",
+   "NoClient": "(╯︵╰,) você quer me banir que ódio.....",
+   "NoRole": "(°﹏°;) meu cargo é menor....",
+   "Yes": ";-) esse usuário foi expuso aeee..."
+ },
   "Language": {
     "mensagem": "O_o  Tou pagando as parcelas do curso, mas consigo falar esses idiomas:\n🇺🇲 english: `en`  🇧🇷 português: `pt`"
 },
@@ -58,5 +88,20 @@
     "NoChannel": "#_# você não mencionou um canal para ser enviada a mensagem...",
     "NoMessage": "-_- você não colocou a mensagem para ser enviada!",
     "Yes": "(^^) messagem foi enviada para o canal {{canal}}...."
+  },
+ "Steal": {
+   "NoUser": "7-7 você não mencionou quem quer roubar",
+   "NoFound": ":( não consegui encontrar este ser no nosso mundo!",
+   "NoAuthor": "ué quer ser roubado vai para o rio de janeiro kkkk",
+   "NoClient": "vocé não pode roubar a gerente do banco ;-;",
+   "Minimum": "você precisa ter no minimo 75 para roubar",
+   "NoKerein": "{{user}} é pobre, sorry 💅",
+   "time": "A policia estar por perto, volte em {{minutos}} minutos {{segundos}} segundos.",
+   "won": "você conseguiu roubar **{{ganhou}}** KR, {{user}} sorry",
+   "No": "este usuário não estar na minha memória",
+   "lost": "infelizmente não foi dessa vez você perdeu **{{perdeu}}** KR"
+},
+  "Work": {
+     "time": "Ainda não apareceu emprego para vc, volte em {{minutos}} minutos {{segundos}} segundos."
   }
 }

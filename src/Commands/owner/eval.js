@@ -4,37 +4,36 @@ export default {
   name: 'eval',
   aliases: ['e', 'eval'],
   ownerOnly: true,
-  async exec({ message, client, args, t }) {
+  async exec({ message, args }) {
     
-  const code = args.join(" ");
+    const code = args.join(' ');
   
-  if(!code) return message.reply("enfim.... cadê o código?");
+    if (!code) return message.reply('enfim.... cadê o código?');
   
-  	try{
-	   
-	 const result = await eval(code)
-   let output = result
+    try {
+      const result = await eval(code);
+      let output = result;
 
-	if(typeof output !== 'string') {
-						output = inspect(result);
-		}
+      if(typeof output !== 'string') {
+        output = inspect(result);
+      }
 	
-		message.reply(`**Console:**\`\`\`js 
+      message.reply(`**Console:**\`\`\`js 
 ${code} 
 \`\`\`	
 **Resultado:**
 \`\`\`js
 ${output}
 \`\`\``);
-			
-				} catch (error){
 
-	message.reply(`**Ocorreu um erro:**
+    } catch (error){
+
+      message.reply(`**Ocorreu um erro:**
 \`\`\`js 
 ${error} \`\`\`
 `);
-					message.react('❌');
+      message.react('❌');
 	
-  	}
+    }
   },
 };
