@@ -1,6 +1,6 @@
 {
   "name": "kellyworld",
-  "version": "1.14.3",
+  "version": "1.3.4",
   "description": "behind the whole application of a developer who, when he went to sleep, discovered how to fix various bugs...",
   "main": "Kelly.js",
   "scripts": {
