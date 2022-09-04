@@ -7,7 +7,6 @@ import { promisify } from 'util';
 import colors from 'colors';
 import pkg from 'mongoose';
 const { connect } = pkg;
-import 'dotenv/config';
 import g from 'glob';
 const glob = promisify(g);
 

@@ -29,14 +29,14 @@ export default {
     const kerein = Math.floor(Math.random() * 123) * 7;
  
     let frase = [
-      `${t('work:advogado', { won: String(kerein) })}`,
-      `${t('work:comerciante', { won: String(kerein) })}`,
-      `${t('work:medico', { won: String(kerein) })}`,
-      `${t('work:presidente', { won: String(kerein) })}`,
-      `${t('work:eletricista', { won: String(kerein) })}`,
-      `${t('work:programador', { won: String(kerein) })}`,
-      `${t('work:advogado', { won: String(kerein) })}`,
-      `${t('work:padeiro', { won: String(kerein) })}`
+      `${t('commands:', { won: String(kerein) })}`,
+      `${t('commands:comerciante', { won: String(kerein) })}`,
+      `${t('commands:medico', { won: String(kerein) })}`,
+      `${t('commands:Work.presidente', { won: String(kerein) })}`,
+      `${t('commands:Work.eletricista', { won: String(kerein) })}`,
+      `${t('commands:Work.programador', { won: String(kerein) })}`,
+      `${t('commands:Work.advogado', { won: String(kerein) })}`,
+      `${t('commands:Work.padeiro', { won: String(kerein) })}`
     ];
  
     let work = frase[Math.floor(Math.random() * frase.length)];

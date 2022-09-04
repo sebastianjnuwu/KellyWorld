@@ -1,5 +1,5 @@
 export default {
-  verification: '<:official:994606568765141113>',
+  verification: '<:K_Confirmado:947545327374843965>',
   bau: '<:K_caixa:943604540282900490>',
   bank: '<:bank:994634133252886535>',
   bet: '<:K_stonks:939162797835710495>',

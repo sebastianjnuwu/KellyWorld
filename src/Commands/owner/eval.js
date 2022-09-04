@@ -22,14 +22,14 @@ export default {
 ${code} 
 \`\`\`	
 **Resultado:**
-\`\`\`js
+\`\`\`
 ${output}
 \`\`\``);
 
     } catch (error){
 
       message.reply(`**Ocorreu um erro:**
-\`\`\`js 
+\`\`\`
 ${error} \`\`\`
 `);
       message.react('❌');

@@ -102,6 +102,13 @@
    "lost": "infelizmente não foi dessa vez você perdeu **{{perdeu}}** KR"
 },
   "Work": {
-     "time": "Ainda não apareceu emprego para vc, volte em {{minutos}} minutos {{segundos}} segundos."
+    "time": "Ainda não apareceu emprego para vc, volte em {{minutos}} minutos {{segundos}} segundos.",
+    "advogado": "Você é um **advogado** que conseguiu inocentar seu cliente das acusações e ganhou **{{won}} KR**",
+    "comerciante": "Você é um **comerciante** que conseguiu um lucro de **{{won}} KR**",
+    "padeiro": "Você é um **padeiro** que conseguiu **{{won}} KR** vendendo pães.",
+    "medico": "você foi contratado como um **medico** para fazer uma cirurgia e ganhou **{{won}}** KR do paciente.",
+    "programador": "você é um **programador** que fez um programa e ganhou **{{won}}** KR",
+    "eletricista": "você é um **eletricista** que ganhou **{{won}}** KR fazendo uma afiação.",
+    "presidente": "você é um **presidente** que ganhou **{{won}}** KR"
   }
 }
