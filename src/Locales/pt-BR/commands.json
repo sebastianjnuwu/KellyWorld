@@ -17,9 +17,9 @@
     "description": "**Banco Kethereum** onde as pessoas ganham o que ganham!\n\n╔═━───━━────╗\n  {{ekethereum}} _kethereum:_ **{{kethereum}}**\n  {{ekerein}} _kerein:_ **{{kerein}}**\n╚═━───━━────╝"
 },
   "antiinvite": {
-    "Message": "?-? você quer broqueiador de convites ligado ou desligado?",
-    "Enabled": "Broqueiador de convites estar ligado, aff...",
-    "Disabled": "Ufa.... Menos trabalho, Broqueiador de convites estar desligado."
+    "Message": "?-? você quer o bloqueiador de convites ligado ou desligado?",
+    "Enabled": "Bloqueiador de convites estar ligado, aff...",
+    "Disabled": "Ufa.... Menos trabalho, Bloqueiador de convites estar desligado."
 },
   "Ban": {
     "Reason" : "Não especificado...",
