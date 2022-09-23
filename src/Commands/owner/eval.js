@@ -4,7 +4,7 @@ export default {
   name: 'eval',
   aliases: ['e', 'eval'],
   ownerOnly: true,
-//  eslint-disable-next-line no-unused-vars
+ // eslint-disable-next-line no-unused-vars
   async exec({ message, client, t, args }) {
     
   const code = args.join(' ');
