@@ -5,7 +5,7 @@ export default {
   name: 'shell',
   aliases: ['terminal', 'sh'],
   ownerOnly: true,
-  async exec({ message, args }) {
+  async exec({ message, t, args }) {
  
   const cmd = args.join(' ');
  
