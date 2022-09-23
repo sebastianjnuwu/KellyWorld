@@ -10,7 +10,7 @@ export default class LocaleManager {
   async loadLocales() {
     this.client.i18next = i18next;
     await i18next.use(i18nbackend).init({
-      ns: ['commands','events','work'],
+      ns: ['TEXT','commands','events','work'],
       defaultNS: 'commands',
       preload: readdirSync('src/Locales'),
       fallbackLng: 'en-US',
