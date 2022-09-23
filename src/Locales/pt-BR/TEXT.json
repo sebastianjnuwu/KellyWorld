@@ -18,7 +18,7 @@
    "message": "Ops... você não colocou nenhum comando para ser executado 😕"
  },
   "say": {
-    "nomessage": "Ops, cadê a mensagem para ser enviada?",
+    "nomessage": "Ops, você esqueceu de digitar a mensagem...",
     "nochannel": "Ops, você esqueceu de mencionar um o canal..."
   }
 }
