@@ -1,4 +1,7 @@
-{
+{ 
+  "Administrator": {
+   "message": "😑 você não tem permissão para isso!"
+},
   "antiinvite": {
    "information": "🤔 você prefere o anti-invite ligado ou desligado? ",
    "enabled": "anti-invite está ligado :)",
