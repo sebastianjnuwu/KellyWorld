@@ -8,7 +8,7 @@ export default {
     
   const code = args.join(' ');
   
-  if (!code) return message.reply(`${t('TEXT:eval.message', { username: String(message.author.username)})}`);
+  if (!code) return message.reply(`${t('TEXT:eval.message', { username: String(message.author)})}`);
   
  try {
     
