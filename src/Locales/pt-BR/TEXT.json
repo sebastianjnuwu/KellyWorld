@@ -1,5 +1,7 @@
 {
   "antiinvite": {
+   "enabled": "anti-invite está ligado :)",
+   "disabled": "anti-invite está desligado :(",
    "message": "🙃 Ops {{user}} Aqui não é permitido compartilhar links de servidores!"
 },
   "mention": {
