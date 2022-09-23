@@ -1,14 +1,14 @@
 {
   "antiinvite": {
-   "message": "Ops {{user}} Aqui não é permitido compartilhar links de servidores!"
+   "message": "🙃 Ops {{user}} Aqui não é permitido compartilhar links de servidores!"
 },
   "mention": {
-   "message": "Oiii tou jogando hahahahah"
+   "message": "🔍 huuuummm..."
 },
   "eval": {
-   "message": "Ops, você não colocou nenhum código para ser executado!"
+   "message": "Ops... você esqueceu de colocar o código 🙁"
 },
   "console": {
-   "message": "Ops, você não colocou nenhum comando para ser executado!"
+   "message": "Ops... você não colocou nenhum comando para ser executado 😕"
  }
 }
