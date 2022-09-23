@@ -6,9 +6,10 @@ export default {
   aliases: ['terminal', 'sh'],
   ownerOnly: true,
   async exec({ message, args }) {
-     
-    const cmd = args.join(' ');
-    if(!cmd) return;
+ 
+  const cmd = args.join(' ');
+ 
+  if (!cmd) return message.reply(`${t('TEXT:console.message')}`);
 
     exec(cmd, (err, res) => {
       if(err) return message.reply(`\`\`\`${err}\`\`\``);
