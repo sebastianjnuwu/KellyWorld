@@ -3,7 +3,7 @@
    "message": "😑 você não tem permissão para isso!"
 },
   "antiinvite": {
-   "information": "🤔 você prefere o anti-invite ligado ou desligado? ",
+   "information": "🤔 você prefere o anti-invite _on_ ou _off_? ",
    "enabled": "anti-invite está ligado :)",
    "disabled": "anti-invite está desligado :(",
    "message": "🙃 Ops {{user}} Aqui não é permitido compartilhar links de servidores!"
@@ -16,5 +16,9 @@
 },
   "console": {
    "message": "Ops... você não colocou nenhum comando para ser executado 😕"
- }
+ },
+  "say": {
+    "nomessage": "Ops, cadê a mensagem para ser enviada?",
+    "nochannel": "Ops, você esqueceu de mencionar um o canal..."
+  }
 }
