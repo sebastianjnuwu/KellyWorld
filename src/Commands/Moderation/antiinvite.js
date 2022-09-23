@@ -14,13 +14,13 @@ export default {
     if (['on','ativar','enable'].some((x) => x == args[0].toLowerCase())) {
       await client.db.guild.findOneAndUpdate({ _id: message.guild.id },{ $set: { 'antiinvite': true } });
       
-      message.reply(`${t('commands:antiinvite.Enabled')}`);
+      message.reply(`${t('TEXT:antiinvite.enabled')}`);
     }
   
     if (['off','desativar', 'desactivado','disable'].some((x) => x == args[0].toLowerCase())) {
       await client.db.guild.findOneAndUpdate({ _id: message.guild.id }, { $set: { 'antiinvite': false } });
        
-      message.reply(`${t('commands:antiinvite.Disabled')}**`);
+      message.reply(`${t('TEXT:antiinvite.disabled')}**`);
     }
   }
 };
