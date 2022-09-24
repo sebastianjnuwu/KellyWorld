@@ -2,9 +2,9 @@ export default {
   name: 'say',
   aliases: ['say'],
   ownerOnly: false,
-  async exec({ client, args, message, d, t }) {
+async exec({ client, args, message, d, t }) {
   
-    if (!message.member.permissions.has('Administrator') && !client.owners.some(id => id === message.author.id) ) return message.reply(`${t('commands:Administrator')}`);
+  if (!message.member.permissions.has('Administrator') && !client.owners.some(id => id === message.author.id) ) return message.reply(`${t('commands:Administrator')}`);
   
     let canal = message.mentions.channels.first();
  
@@ -16,6 +16,7 @@ export default {
  
     canal.send(mensagem);
     
-    
+    message.react('<:K_ACEITO:947545423952871496>');
+
   }
 };
