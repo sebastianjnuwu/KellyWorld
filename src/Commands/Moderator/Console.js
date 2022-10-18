@@ -9,7 +9,7 @@ export default {
  
   const cmd = args.join(' ');
  
-  if (!cmd) return message.reply(`${t('TEXT:console.message')}`);
+  if (!cmd) return message.reply(`${t('language:console')}`);
 
     exec(cmd, (err, res) => {
       if(err) return message.reply(`\`\`\`${err}\`\`\``);

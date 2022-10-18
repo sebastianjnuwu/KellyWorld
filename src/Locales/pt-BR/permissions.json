@@ -1,0 +1,12 @@
+{
+  "bot": {
+    "Administrator": "Ops, estou sem a permissão de _Administrador!_",
+    "ManageGuild": "Ops, estou sem a permissão de _Gerenciar o servidor!_",
+    "ManageMessages": "Ops, estou sem a permissão de _Gerenciar mensagens!_""
+  },
+  "user": {
+    "Administrator": "Ops, você não tem a permissão de _Administrador!_",
+    "ManageGuild": "Ops, Você não tem a permissão para _Gerenciar o servidor!_",
+    "ManageMessages": "Ops, Você não tem a permissão para _Gerenciar mensagens!_"
+  }
+}

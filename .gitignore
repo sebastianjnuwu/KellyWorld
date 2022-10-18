@@ -1,5 +1,6 @@
 # ignoring the file that contains important information
 .env
+config.yml
 
 # ignoring the file that contains garbage.
 yarn-error.log

@@ -1,16 +1,14 @@
-// importing the main packages...
-import express from 'express';
-import colors from 'colors';
+// ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ Milk is importan...
 import KellyWorld from './src/Client.js';
-const client = new KellyWorld();
-const app = express();
-client.start();
+import { readFileSync } from 'node:fs';
+const Client = new KellyWorld();
+import { load } from 'js-yaml';
+global.config = load(readFileSync('./config.yml', 'utf8'));
 
-const trainerror = (error) => {
-  console.error(colors.brightRed("[Info] - ") + error.stack); 
-};
+Client.start();
 
-global.process.on('unhandledRejection', trainerror);
-global.process.on('uncaughtException', trainerror);
 
-export default client;
+global.process.on('unhandledRejection', (() => {}));
+global.process.on('uncaughtException', (() => {})); 
+
+export default Client;

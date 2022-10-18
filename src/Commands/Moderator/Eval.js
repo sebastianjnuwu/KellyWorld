@@ -9,7 +9,7 @@ export default {
     
   const code = args.join(' ');
   
-  if (!code) return message.reply(`${t('TEXT:eval.message')}`);
+  if (!code) return message.reply(`${t('language:eval')}`);
   
  try {
     

@@ -1,38 +1,37 @@
 {
   "name": "kellyworld",
-  "version": "1.3.4",
-  "description": "behind the whole application of a developer who, when he went to sleep, discovered how to fix various bugs...",
+  "version": "1.1.14",
+  "description": "Kelly helps in managing Discord channels and they are very useful to add functions that the platform does not have natively.",
   "main": "Kelly.js",
-  "scripts": {
-    "start": "node Kelly.js",
-    "lint": "eslint src --fix",
-    "dev": "nodemon Kelly.js"
-  },
   "type": "module",
-  "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
+  "author": "sebastianjnuwu",
   "license": "Apache-2.0",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "dayjs": "^1.11.3",
-    "discord.js": "^14.0.3",
-    "express": "^4.18.1",
-    "glob": "^8.0.3",
-    "i18next": "^21.8.10",
-    "i18next-fs-backend": "^1.1.4",
-    "mongoose": "^6.4.0"
+  "scripts": {
+    "dev": "nodemon Kelly.js",
+    "lint": "eslint src --fix",
+    "start": "node Kelly.js"
   },
-  "engines": {
-     "node": ">=16.9.0"
-  },
- "repository": {
+  "repository": {
     "type": "git",
-    "url": "https://github.com/sebastianjnuwu/KellyWorld.git"
+    "url": "https://github.com/sebastianjnuwu/KellyWorld"
   },
   "bugs": {
     "url": "https://github.com/sebastianjnuwu/KellyWorld/issues"
   },
-  "devDependencies": {
-    "eslint": "8.25.0",
-    "nodemon": "2.0.20"
+  "engines": {
+    "node": ">=16.9.0"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "colors": "^1.4.0",
+    "discord.js": "^14.6.0",
+    "eslint": "^8.25.0",
+    "glob": "^8.0.3",
+    "i18next": "^21.10.0",
+    "i18next-fs-backend": "^1.1.5",
+    "js-yaml": "^4.1.0",
+    "mongoose": "^6.6.5",
+    "nodemon": "^2.0.20",
+    "util": "^0.12.4"
   }
 }

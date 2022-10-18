@@ -1,17 +1,16 @@
-// importing the packages used in the bot.
-import {
-  Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
-import { Guild, User, Emojis , LocaleManager } from './Util/Index.js';
-import config from '../config.js';
+import { Client, GatewayIntentBits, Partials, Collection, REST, Routes } from 'discord.js';
+import LocaleManager from './Structure/LocaleManager.js';
+import Guild from './Structure/Models/Guild.js';
+import User from './Structure/Models/User.js';
 import { promisify } from 'util';
-import colors from 'colors';
-import pkg from 'mongoose';
-const { connect } = pkg;
 import g from 'glob';
 const glob = promisify(g);
+import pkg from 'mongoose';
+const { connect } = pkg;
 
 // We define the bot's main class.
-export default class KellyWorld extends Client {
+export default class KellyWorld extends
+  Client {
   constructor() {
     super({ intents: [
       GatewayIntentBits.Guilds,
@@ -30,11 +29,8 @@ export default class KellyWorld extends Client {
       GatewayIntentBits.DirectMessageReactions, 
       GatewayIntentBits.DirectMessageTyping, 
       GatewayIntentBits.MessageContent ], 
-    partials: [Partials.Channel, Partials.Message],
-    shardCount: 1 });
-    this.e = Emojis;
-    this.config = config;
-    this.owners = this.config.owners.user;
+    partials: [Partials.Channel, Partials.Message], shardCount: 1 });
+    this.owners = ['932678185970192404','591437825790967836','463384487569522689'];
     this.commands = new Collection();
     this.aliases = new Collection();
     this.db = { 
@@ -42,24 +38,17 @@ export default class KellyWorld extends Client {
       guild: Guild
     };
   }
-
- // starting our discord bot.
+   
   async start() {
     this.loadEvents();
     this.loadCommands();
-    this.loadDatabase();
     this.localeManager = new LocaleManager(this);
     this.localeManager.loadLocales();
-    await super.login(this.config.client.token);
+    connect(global.config.database);
+    await super.login(global.config.token);
   }
  
- // loading the database.
-  async loadDatabase() {
-    connect(this.config.connections.mongodb).then(() => { console.log(colors.brightGreen('[Info] - ') + 'Connected to mongodb database.');
-    }).catch((e) => { console.log(colors.brightRed('[Info] - ') + 'nine an error connecting to database: ' + e);});
-  }
-  
-  // loading the events.
+  // loading events...
   async loadEvents() {
     const events = await glob(`${global.process.cwd()}/src/Events/**/*.js`);
     events.forEach(async (eventFile) => {
@@ -69,7 +58,7 @@ export default class KellyWorld extends Client {
     });
   }
   
-  // loading commands.
+  // loading commands...
   async loadCommands() {
     await glob(`${global.process.cwd()}/src/Commands/**/*js`, async (err, filePaths) => {
       if (err) return console.log(err);

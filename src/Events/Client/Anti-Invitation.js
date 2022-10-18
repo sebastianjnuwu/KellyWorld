@@ -21,7 +21,7 @@ export default {
       break;
     }
     
-    if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) return message.reply({ content: t('TEXT:mention.message')});
+    if (message.content == `<@${client.user.id}>` || message.content == `<@!${client.user.id}>`) return message.reply(`${t('language:event.mention')}`);
     
     if (GUILD.antiinvite && message.member) {
       if (message.member.permissions.has('ManageMessages')) return;
@@ -29,7 +29,7 @@ export default {
       const isInvite = (str) => (/dis(?:board\.org\/(?:pl\/)?server\/join|cord(?:\.me\/server\/join|(?:app\.com\/invite|\.(?:com\/invite|gg\/))))/gi).test(str);
     
       if (isInvite(message.content)) {
-        message.channel.send(`${t('TEXT:antiinvite.message', { user: String(message.author)})}`).then(msg => setTimeout(() => msg.delete(), 30000));
+        message.channel.send(`${t('language:invitation.blocked', { server: String(message.guild.name)})}`).then(msg => setTimeout(() => msg.delete(), 30000));
         message.delete().catch(() => {});
       }
     }
