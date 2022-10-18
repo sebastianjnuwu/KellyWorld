@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits, Partials, Collection, REST, Routes } from 'discord.js';
+import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 import LocaleManager from './Structure/LocaleManager.js';
 import Guild from './Structure/Models/Guild.js';
 import User from './Structure/Models/User.js';

@@ -3,7 +3,7 @@ export default {
   name: 'ping',
   aliases: ['ping'],
   ownerOnly: false,
-  async exec({ client, args, message, t }) {
+  async exec({ client, message }) {
     
     
     const gateway = Date.now() - message.createdTimestamp;
@@ -14,4 +14,4 @@ export default {
     message.reply({ content: `**🏓 Pong!**\n> :zap: **Api ping** › __${client.ws.ping}__ms\n> :stopwatch: **Gateway Ping** › __${gateway}__ms\n> 📡 **Shards** ›   __${message.guild.shard.id + 1}/${client.ws.shards.size}__\n> :hourglass_flowing_sand: **Uptime** › __${hours}__ hours, __${minutes}__ minutes and __${seconds}__ seconds`});
    
   }
-}
+};

@@ -4,7 +4,7 @@ export default {
   name: 'help',
   aliases: ['ajuda','help'],
   ownerOnly: false,
-  async exec({ client, args, message, t }) {
+  async exec({ client, message, t }) {
     
     const help = new EmbedBuilder()
       .setColor('Random')
@@ -16,5 +16,5 @@ export default {
 
     message.reply({ embeds: [help] });
    
-   }
   }
+};

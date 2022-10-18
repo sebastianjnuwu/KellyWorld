@@ -4,29 +4,29 @@ export default {
   name: 'eval',
   aliases: ['e', 'eval'],
   ownerOnly: true,
- // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   async exec({ message, client, t, args }) {
     
-  const code = args.join(' ');
+    const code = args.join(' ');
   
-  if (!code) return message.reply(`${t('language:eval')}`);
+    if (!code) return message.reply(`${t('language:eval')}`);
   
- try {
+    try {
     
-  const result = await eval(code);
-  let output = result;
+      const result = await eval(code);
+      let output = result;
 
-  if (typeof output !== 'string') {
-     output = inspect(result);
- }
+      if (typeof output !== 'string') {
+        output = inspect(result);
+      }
 	
-   message.reply(`**Console:**\`\`\`js\n${code}\n\`\`\`\n**Result:**\n\`\`\`\n${output}\n\`\`\``);
+      message.reply(`**Console:**\`\`\`js\n${code}\n\`\`\`\n**Result:**\n\`\`\`\n${output}\n\`\`\``);
 
-  } catch (error){
+    } catch (error){
 
-  message.reply(`**Error:**\n\`\`\`\n${error}\n\`\`\``);
+      message.reply(`**Error:**\n\`\`\`\n${error}\n\`\`\``);
  
-  message.react('❌');
+      message.react('❌');
 	
     }
   },

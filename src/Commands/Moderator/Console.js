@@ -7,9 +7,9 @@ export default {
   ownerOnly: true,
   async exec({ message, t, args }) {
  
-  const cmd = args.join(' ');
+    const cmd = args.join(' ');
  
-  if (!cmd) return message.reply(`${t('language:console')}`);
+    if (!cmd) return message.reply(`${t('language:console')}`);
 
     exec(cmd, (err, res) => {
       if(err) return message.reply(`\`\`\`${err}\`\`\``);
