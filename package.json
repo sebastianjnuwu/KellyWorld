@@ -30,7 +30,7 @@
     "i18next": "^22.0.1",
     "i18next-fs-backend": "^1.1.5",
     "js-yaml": "^4.1.0",
-    "mongoose": "^6.6.7",
+    "mongoose": "^6.7.0",
     "nodemon": "^2.0.20",
     "util": "^0.12.4"
   }
