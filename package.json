@@ -28,7 +28,7 @@
     "eslint": "^8.26.0",
     "glob": "^8.0.3",
     "i18next": "^22.0.2",
-    "i18next-fs-backend": "^1.1.5",
+    "i18next-fs-backend": "^2.0.0",
     "js-yaml": "^4.1.0",
     "mongoose": "^6.7.0",
     "nodemon": "^2.0.20",
