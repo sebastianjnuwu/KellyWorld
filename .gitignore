@@ -5,6 +5,7 @@ config.yml
 # ignoring the file that contains garbage.
 yarn-error.log
 yarn.lock
+package-lock.json
 
 # ignoring modules folder
 node_modules
