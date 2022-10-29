@@ -10,11 +10,10 @@ export default {
  
     console.log(colors.brightGreen('[Info]')+` containing ${client.users.cache.size} users!`);
 
-  let status = [
-        `com ${client.users.cache.size} jogadores!`
-      ],
-      kelly = 0;
-    setInterval( () => client.user.setActivity(`${status[kelly++ % status.length]}`, {
+ let status = 'no mundo de kettra!';
+ 
+  setInterval( () => 
+  client.user.setActivity(`${status}`, {
           type: "PLAYING" 
         }), 1000 * 30); 
     client.user
