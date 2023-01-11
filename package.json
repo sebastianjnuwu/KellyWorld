@@ -1,6 +1,6 @@
 {
   "name": "kellyworld",
-  "version": "1.1.14",
+  "version": "1.14.1",
   "description": "Kelly helps in managing Discord channels and they are very useful to add functions that the platform does not have natively.",
   "main": "Kelly.js",
   "type": "module",
