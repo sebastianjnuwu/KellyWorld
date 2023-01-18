@@ -1,5 +1,5 @@
 <p align="center">
-<a><img alt="perfil" src="https://media.discordapp.net/attachments/981125508165169162/1008763926739177522/1660577391839.png" width=300 height=275></a>
+<!---- <a><img alt="perfil" src="https://media.discordapp.net/attachments/981125508165169162/1008763926739177522/1660577391839.png" width=300 height=275></a> ----->
 </p>
 
 "⁠Everyone has a part of themselves that they don't show to others. Not friends, not boyfriends, not even family. With false smiles and lies, they hide their true thoughts, your true self. This is how the world covers things up for a fragile peace."
