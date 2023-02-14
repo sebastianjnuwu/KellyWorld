@@ -17,6 +17,6 @@ jobs:
         with:
           node-version: 19
       - name: ✨ Install dependencies
-        run: npm install --workspaces
+        run: npm install
       - name: 🌈 Run ESLint
         run: yarn lint
