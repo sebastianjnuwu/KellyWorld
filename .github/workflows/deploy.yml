@@ -20,4 +20,4 @@ jobs:
           USER: ${{ secrets.USER }}
           KEY: ${{ secrets.KEY }}
           FOLDER: 'root/.deploy'
-          RUN: "docker-compose up --build -d"
+          RUN: "cd .deploy && docker-compose up --build -d"
