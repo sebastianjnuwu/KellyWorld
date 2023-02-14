@@ -2,9 +2,9 @@ name: 💡 api
 
 on: 
   push:
-    branches: [ "dev", "KellyWorld" ]
+    branches: [ "KellyWorld" ]
   pull_request:
-    branches: [ "dev", "KellyWorld" ]
+    branches: [ "KellyWorld" ]
  
 jobs:
   eslint:
