@@ -1,4 +1,4 @@
-name: 🐥 Lint
+name: 🐥 ESLint
 
 on: 
   push:
