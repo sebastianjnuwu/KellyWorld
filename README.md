@@ -14,8 +14,9 @@
 <div>
 
 # Install
- 
- ## junior 
+  
+  This is how the junior developer installs and runs this application, but a senior is lazy and created [it](https://github.com/sebastianjnuwu/discord-bot/blob/KellyWorld/.github/workflows/deploy.yml), wants to use just make a [fork](https://github.com/sebastianjnuwu/discord-bot/fork) or be a junior!
+  
  **•** Clone the repository:
  ```bash
  $ git clone https://github.com/sebastianjnuwu/discord-bot
