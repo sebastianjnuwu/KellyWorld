@@ -20,4 +20,4 @@ jobs:
           USER: ${{ secrets.USER }}
           KEY: ${{ secrets.KEY }}
           FOLDER: 'root/.deploy'
-          RUN: 'echo "${{ inputs.CONFIG }}" > config.yml'
+          RUN: 'echo "${{ secrets.CONFIG }}" > config.yml'
