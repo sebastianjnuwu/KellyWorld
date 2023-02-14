@@ -15,6 +15,7 @@
 
 # Install
  
+ ## junior 
  **•** Clone the repository:
  ```bash
  $ git clone https://github.com/sebastianjnuwu/discord-bot
