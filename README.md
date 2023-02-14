@@ -14,8 +14,6 @@
 <div>
 
 # Install
-
- As "Kelly World" is open source it allows you to run the bot, but there are three ways to install the bot, like junior or senior more also normal.
  
  **•** Clone the repository:
  ```bash
@@ -24,7 +22,7 @@
  
  **•** Create the `config.yml` file:
  ```yml
- # make the necessary settings.
+ # this file must be in the root directory of the repository for the application to start.
  
  # bot token
  token: '' 
@@ -35,12 +33,12 @@
  
  **•** Install the dependencies:
  ```bash
- $ yarn
+ $ npm install
  ```
  
  **•** Start the bot:
  ```bash
- $ yarn start
+ $ npm run start
  ```
 
 # License
