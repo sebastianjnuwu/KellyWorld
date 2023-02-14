@@ -4,7 +4,7 @@ name: 🐦 deploy
 
 on:
   push:
-    branches: [  "KellyWorld" ]
+    branches: [ "KellyWorld" ]
 
 jobs:
   build:
