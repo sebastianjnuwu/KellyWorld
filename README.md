@@ -13,6 +13,36 @@
 </p>
 <div>
 
+# Install
+
+ As "Kelly World" is open source it allows you to run the bot, but there are three ways to install the bot, like junior or senior more also normal.
+ 
+ **•** Clone the repository:
+ ```bash
+ $ git clone https://github.com/sebastianjnuwu/discord-bot
+ ```
+ 
+ **•** Create the `config.yml` file:
+ ```yml
+ # make the necessary settings.
+ 
+ # bot token
+ token: '' 
+ 
+ # mongodb url 
+ mongodb: '' 
+ ```
+ 
+ **•** Install the dependencies:
+ ```bash
+ $ yarn
+ ```
+ 
+ **•** Start the bot:
+ ```bash
+ $ yarn start
+ ```
+
 # License
 
 This repository is [licensed](https://www.apache.org/licenses/LICENSE-2.0) to protect users and Contributors, we are following all discord [terms and services](https://discord.com/terms) also [Discord Privacy Policy.](https://discord.com/privacy)
