@@ -16,7 +16,7 @@ jobs:
       - name: ✨ Removing old files...
         run: |
           cat >>./config.yml <<END
-          ${{ secrets.config }}
+            ${{ secrets.config }}
           END
         shell: bash 
       - name: 🌈 Deploy with ssh...
