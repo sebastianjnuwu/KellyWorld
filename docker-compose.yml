@@ -5,7 +5,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    container_name: Discord-Bot 
+    container_name: Bot 
     command: yarn start
     restart: unless-stopped
     ports:
