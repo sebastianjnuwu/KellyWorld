@@ -10,6 +10,9 @@
   <br>
   <br>
    <i>"KellyWorld is a bot for discord, simple and easy to use, you think of a bot, you think of Lorita, don't you? Kelly too!"</i>
+  
+   - It has several languages
+   - Easy to understand code 
 </p>
 <div>
 
