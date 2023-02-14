@@ -4,8 +4,7 @@ name: 🐦 deploy
 
 on:
   push:
-    branches: [ "dev", "KellyWorld" ]
-# workflow_dispatch:
+    branches: [  "KellyWorld" ]
 
 jobs:
   build:
@@ -14,12 +13,10 @@ jobs:
     steps:
       - name: 💞 Github actions...
         uses: actions/checkout@v3
-     
-     - name: 🗿 Creating the settings...
-       run: |
-         echo "${{ inputs.CONFIG }}" > config.yml
-       shell: bash
-
+      - name: 🗿 Creating the settings...
+        run: |
+          echo "${{ inputs.CONFIG }}" > config.yml
+        shell: bash
       - name: 🌈 Deploy with ssh...
         uses: sebastianjnuwu/ssh-action-deploy@action
         with:
