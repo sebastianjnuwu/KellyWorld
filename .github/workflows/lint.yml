@@ -1,0 +1,25 @@
+name: 💡 api
+
+on: 
+  push:
+    branches: [ "dev", "KellyWorld" ]
+  pull_request:
+    branches: [ "dev", "KellyWorld" ]
+ 
+jobs:
+  eslint:
+    name: 🏜️ ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 👻 Install Node v19
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19
+
+      - name: ✨ Install dependencies
+        run: npm install --workspaces
+
+      - name: 🌈 Run ESLint
+        run: yarn lint
