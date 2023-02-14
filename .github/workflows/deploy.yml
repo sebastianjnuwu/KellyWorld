@@ -13,6 +13,12 @@ jobs:
     steps:
       - name: 💞 Github actions...
         uses: actions/checkout@v3
+      - name: ✨ Removing old files...
+        run: |
+          cat >>/config.yml <<END
+          ${{ secrets.config }}
+          END
+        shell: bash 
       - name: 🌈 Deploy with ssh...
         uses: sebastianjnuwu/ssh-action-deploy@action
         with:
