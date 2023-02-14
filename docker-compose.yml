@@ -18,3 +18,4 @@ services:
           cpus: "0.50"
           memory: 256M
           
+          
