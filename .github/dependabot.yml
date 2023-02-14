@@ -5,26 +5,22 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     labels:
-      - "package"
-      - "update"
-    commit-message:
-      prefix: "[package] "
-    reviewers:
-      - "sebastianjnuwu"
+      - git-action
+      - update
     schedule:
-      interval: "daily"
-      
-  - package-ecosystem: "github-actions"
-    directory: "/"
+      interval: daily
+    reviewers:
+      - sebastianjnuwu
+
+  - package-ecosystem: npm
+    directory: /
     labels:
-      - "git-action"
-      - "update"
-    commit-message:
-      prefix: "[github-actions] "
-    reviewers:
-      - "sebastianjnuwu"
+      - package
+      - update
     schedule:
-      interval: "daily"
+      interval: daily
+    reviewers:
+      - sebastianjnuwu
