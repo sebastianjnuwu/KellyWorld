@@ -9,7 +9,7 @@
   <a href="https://discord.gg/NDzFeDp8YE"><img src="https://discordapp.com/api/guilds/893997835412971570/widget.png"></a>
   <br>
   <br>
-   <i>"KellyWorld is a bot for discord, simple and easy to use, you think of a bot, you think of Lorita, don't you? Kelly too!"</i>
+   <i>"KellyWorld is a bot for discord, simple and easy to use, you think of a bot, you think of Mee6, don't you? Kelly too!"</i>
   
    - It has several languages
    - Easy to understand code 
