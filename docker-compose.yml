@@ -11,7 +11,7 @@ services:
     ports:
       - "7777:7777"
     volumes:
-      - ../config.yml:/config.yml
+      - /root/config.yml:/config.yml
     deploy:
       resources:
         limits:
