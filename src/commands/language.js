@@ -38,10 +38,10 @@ const create = () => {
         name: '🇧🇷 Português', value: '1'
       },
       {
-        name: '🇪🇸 Español', value: '2'
+        name: '🇺🇸 English', value: '2'
       },
       {
-        name: '🇺🇸 English', value: '3'
+        name: '🇪🇸 Español', value: '3'
       },
     ))
   return command.toJSON();
@@ -62,14 +62,15 @@ const KellyWorld = async (client, interaction) => {
   if (value == 1) return interaction.reply({
     content: `(^^) Você fala este idioma não é? legal!`, ephemeral: true
   });
-
+  
   if (value == 2) return interaction.reply({
-    content: `(^^) Hablas este idioma, ¿no? ¡Fresco!`, ephemeral: true
+    content: `(^^) You speak this language don't you? Cool!`, ephemeral: true
   });
 
   if (value == 3) return interaction.reply({
-    content: `(^^) You speak this language don't you? Cool!`, ephemeral: true
+    content: `(^^) Hablas este idioma, ¿no? ¡Fresco!`, ephemeral: true
   });
+
 
 }
 

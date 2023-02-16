@@ -1,4 +1,4 @@
-import { InteractionType } from 'discord.js';
+import { InteractionType, PermissionFlagsBits } from 'discord.js';
 import i18next from 'i18next';
 
 export default {
@@ -27,9 +27,12 @@ export default {
        lang = i18next.getFixedT('es-ES');
       break;
   }
+ 
+  if (!interaction.guild.members.me.permissions.has(PermissionFlagsBits.Administrator)) return interaction.reply({ content: `${lang('language:nopermission')}`, ephemeral: true,
+  }); 
   
   if (interaction.type === InteractionType.ApplicationCommand)
-	
+  
 	(await import(`#commands/${interaction.commandName}`)).KellyWorld(client, interaction, lang)
 	
   }

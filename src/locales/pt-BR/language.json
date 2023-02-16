@@ -1,5 +1,6 @@
 {
   "cleardm": {
     "msg": "^^ Felizmente as minhas mensagens em sua dm foram deletadas..."
-  }
+  },
+  "nopermission": "(+_+) Eu não tenho a permissão de \"Administrador\"..."
 }
