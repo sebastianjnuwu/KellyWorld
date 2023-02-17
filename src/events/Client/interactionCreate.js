@@ -3,7 +3,7 @@ import i18next from 'i18next';
 
 export default {
    name: 'interactionCreate',
-   type: false,
+   type: 'on',
  async exec(client, interaction) {
   
   const GUILD = await client.db.guild.findOne({

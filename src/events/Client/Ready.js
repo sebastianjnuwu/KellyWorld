@@ -3,7 +3,7 @@ import colors from 'colors';
 
 export default {
   name: 'ready',
-  type: true,
+  type: 'once',
   async exec(client) {
   
   const commands = readdirSync('./src/commands').filter((file) => file.endsWith('.js')).map((file) => file.slice(0, -3));
@@ -18,6 +18,7 @@ export default {
 	}
 
 	client.application.commands.set(slash);
+  client.vulkava.start(client.user.id);
 
   console.log(colors.brightGreen('• ') + `${client.user.username} is finally alive...`);
   
