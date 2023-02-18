@@ -5,7 +5,7 @@ export default {
 
   const channel = client.channels.cache.get(player.textChannelId);
 
-  channel.send(`👻 \`${track.title}\``);
+  channel.send(`♪⁠┌⁠|⁠∵⁠|⁠┘⁠♪ \`${track.title}\``);
 
   },
 };
