@@ -1,6 +1,6 @@
 {
   "name": "kellyworld",
-  "version": "1.14-KW",
+  "version": "1.14-notchecking",
   "description": "simple discord bot in slash commands using djs",
   "main": "src/start.js",
   "type": "module",
