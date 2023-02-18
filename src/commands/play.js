@@ -16,6 +16,7 @@ const create = () => {
       "en-US": 'nombre',
       "es-ES": 'nombre',
     })
+    .setRequired(true)
 		.setDescription('What is the name of the song?')
     .setDescriptionLocalizations({
       "pt-BR": 'Qual é o nome da música?',
