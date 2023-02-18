@@ -6,7 +6,7 @@ export default {
     
   const channel = client.channels.cache.get(player.textChannelId);
 
-  //channel.send(`Agora tocando: \`${track.title}\``); 
+  channel.send(`Agora tocando: \`${track.title}\``); 
   
   }
 }

@@ -10,14 +10,14 @@ const create = () => {
     "en-US": 'want to hear a song?',
     "es-ES": '¿quieres escuchar una canción?',
   }).addStringOption(option => option
-	  .setName('nombre')
-	  .setNameLocalizations({
+   .setName('nombre')
+   .setNameLocalizations({
       "pt-BR": 'nome',
       "en-US": 'nombre',
       "es-ES": 'nombre',
     })
 		.setDescription('What is the name of the song?')
-	  .setDescriptionLocalizations({
+    .setDescriptionLocalizations({
       "pt-BR": 'Qual é o nome da música?',
       "en-US": 'What is the name of the song?',
       "es-ES": '¿Cuál es el nombre de la canción?',
