@@ -14,16 +14,16 @@ export default class Locale {
       defaultNS: 'language',
       preload: readdirSync('src/locales'),
       fallbackLng: 'en-US',
-      backend: { 
-        loadPath: 'src/locales/{{lng}}/{{ns}}.json'
+      backend: {
+        loadPath: 'src/locales/{{lng}}/{{ns}}.json',
       },
       load: 'all',
       interpolation: {
         escapeValue: false,
-        useRawValueToEscape: true
+        useRawValueToEscape: true,
       },
       returnEmptyString: false,
-      returnObjects: true
+      returnObjects: true,
     });
   }
 }

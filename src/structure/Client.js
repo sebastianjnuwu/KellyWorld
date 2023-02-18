@@ -34,13 +34,13 @@ export default class KellyWorld extends
           GatewayIntentBits.MessageContent],
       });
       this.db = {
-        guild: Guild
+        guild: Guild,
       };
       this.vulkava = new Vulkava({
         nodes: [ config.nodes ],
         sendWS: (guild, payload) => {
           this.guilds.cache.get(guild)?.shard.send(payload);
-        }
+        },
       });
     }
 
@@ -59,7 +59,7 @@ export default class KellyWorld extends
       events.forEach(async (event) => {
         const file = await import(event);
         const {
-          name, type, exec
+          name, type, exec,
         } = file.default;
         switch (type) {
         case 'once':
@@ -84,4 +84,3 @@ export default class KellyWorld extends
       });
     }
   }
-  

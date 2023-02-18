@@ -5,17 +5,17 @@ export default {
    name: 'interactionCreate',
    type: 'on',
  async exec(client, interaction) {
-  
+
   const GUILD = await client.db.guild.findOne({
      _id: interaction.guild.id,
   });
-   
+
   if (!GUILD) return await client.db.guild.create({
       _id: interaction.guild.id,
   });
-  
+
   let lang = GUILD.lang || 1;
- 
+
   switch(lang) {
     case 1:
        lang = i18next.getFixedT('pt-BR');
@@ -27,13 +27,13 @@ export default {
        lang = i18next.getFixedT('es-ES');
       break;
   }
- 
+
   if (!interaction.guild.members.me.permissions.has(PermissionFlagsBits.Administrator)) return interaction.reply({ content: `${lang('language:nopermission')}`, ephemeral: true,
-  }); 
-  
+  });
+
   if (interaction.type === InteractionType.ApplicationCommand)
-  
-	(await import(`#commands/${interaction.commandName}`)).KellyWorld(client, interaction, lang)
-	
-  }
-}
+
+	(await import(`#commands/${interaction.commandName}`)).KellyWorld(client, interaction, lang);
+
+  },
+};

@@ -9,7 +9,7 @@ const create = () => {
     "pt-BR": 'Posso apagar minhas mensagens em sua dm?',
     "en-US": 'Can I delete my messages in your dm?',
     "es-ES": '¿Puedo borrar mis mensajes en tu dm?',
-  })
+  });
   return command.toJSON();
 };
 
@@ -22,7 +22,7 @@ const KellyWorld = async (client, interaction, lang) => {
   });
 
   const Delete = await client.channels.cache.get(dm.id).messages.fetch({
-    limit: 99
+    limit: 99,
   });
 
   await Delete.map((msg) => {
@@ -30,6 +30,6 @@ const KellyWorld = async (client, interaction, lang) => {
       msg.delete();
     }
   });
- }
+ };
 
 export { create, KellyWorld };
