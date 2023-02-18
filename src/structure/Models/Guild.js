@@ -1,9 +1,9 @@
 import { Schema, model } from 'mongoose';
 
-export default model('Guilds', 
+export default model('Guilds',
  new Schema({
   _id: { type: String },
   invite: { type: Boolean, default: false },
   prefix: { type: String, default: '&' },
-  lang: { type: Number, default: 1 }
+  lang: { type: Number, default: 1 },
 }));

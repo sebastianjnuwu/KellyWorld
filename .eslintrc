@@ -1,15 +1,29 @@
 {
  "env": {
-   "browser": true,
-   "es2021": true,
-   "node": true
+   "node": true,
+   "es6": true
  },
+ "plugins": [ ],
  "extends": [ "eslint:recommended" ],
- "plugins": [],
  "ignorePatterns": [],
  "parserOptions": {
    "ecmaVersion": "latest",
    "sourceType": "module"
  },
- "rules": { }
+ "rules": {
+   "semi": ["error", "always"],
+   "no-use-before-define": ["error", {
+     "functions": true,
+     "classes": true,
+     "variables": true,
+     "allowNamedExports": false
+    }],
+   "comma-dangle": ["error", "always-multiline"],
+   "comma-spacing": "error",
+   "comma-style": "error",
+   "no-multi-spaces": "error",
+   "no-lonely-if": "error",
+   "no-trailing-spaces": ["error"],
+   "no-var": "error"
+ }
 }

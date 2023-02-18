@@ -2,5 +2,18 @@
   "cleardm": {
     "msg": "^^ Por suerte mis mensajes en tu dm fueron borrados..."
   },
-  "nopermission": "(+_+) No tengo permiso de \"Administrador\"..."
+  "nopermission": "(+_+) No tengo permiso de \"Administrador\"...",
+  "music": {
+    "novoice": ":/ ¡Primero debes unirte a un canal de voz!",
+    "nomevoice": "._. No estás en el mismo canal de voz que yo...",
+    "search": "=⁠_⁠= Buscando música \"{{track}}\"",
+    "failed": ":( No puedo encontrar esta canción, ¡tal vez mi prima se agotó!",
+    "matches": "Wo matches....",
+    "stop": "^⁠_⁠^ Paramos toda la música ok?",
+    "nomusic": ":( no hay musica sonando...",
+    "toc": "<:K_env:938833579981566043> buena musica, siguiente musica {{music}}",
+    "skip": "(⁠^⁠^⁠) Pondré la siguiente canción...",
+    "nomusicplay": ":( ¡No hay otra música para tocar!",
+    "playlist": "^^ agregar la lista de reproducción a la música: `{{music}}`"
+  }
 }

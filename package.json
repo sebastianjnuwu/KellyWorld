@@ -1,6 +1,6 @@
 {
   "name": "kellyworld",
-  "version": "1.14-KW",
+  "version": "1.14-notchecking",
   "description": "simple discord bot in slash commands using djs",
   "main": "src/start.js",
   "type": "module",
@@ -34,7 +34,8 @@
     "i18next-fs-backend": "^2.1.1",
     "js-yaml": "^4.1.0",
     "mongoose": "^6.9.1",
-    "util": "^0.12.5"
+    "util": "^0.12.5",
+    "vulkava": "^1.6.0"
   },
   "devDependencies": {
     "eslint": "^8.34.0",
