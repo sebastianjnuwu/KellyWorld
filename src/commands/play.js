@@ -26,22 +26,22 @@ const create = () => {
   return command.toJSON();
 };
 
-const KellyWorld = async (client, interaction) => {
+const KellyWorld = async (client, interaction, lang) => {
 
-  if (!interaction.member.voice.channel) return interaction.reply({ content: `Você precisa entrar em um canal de voz primeiro!`, ephemeral: true });
+  if (!interaction.member.voice.channel) return interaction.reply({ content: `${lang('language:music.novoice')}`, ephemeral: true });
 
-  if (interaction.guild.members.me.voice?.channel && interaction.member.voice.channelId !== interaction.guild.members.me.voice.channelId) return interaction.reply({ content: `Você não está no mesmo canal de voz que eu.`, ephemeral: true });
+  if (interaction.guild.members.me.voice?.channel && interaction.member.voice.channelId !== interaction.guild.members.me.voice.channelId) return interaction.reply({ content: `${lang('language:music.nomevoice')}`, ephemeral: true });
 
   const track = interaction.options.getString('nombre');
 
-  await interaction.reply({ content: `Procurando musica "${track}"`});
+  await interaction.reply({ content: `${lang('language:music.search', { track: track })}`});
 
   const res = await client.vulkava.search(track);
 
   if (res.loadType === "LOAD_FAILED") {
-    return interaction.editReply({ content: `:x: Erro de carregamento. Erro: ${res.exception.message}`});
+   return interaction.editReply({ content: `${lang('language:music.failed')}` });
   } else if (res.loadType === "NO_MATCHES") {
-    return interaction.editReply({ content: ':x: Não combine!'});
+  return interaction.editReply({ content: `${lang('language:music.matches')}` });
   }
 
   const player = client.vulkava.createPlayer({
@@ -58,13 +58,15 @@ const KellyWorld = async (client, interaction) => {
       track.setRequester(interaction.user);
       player.queue.add(track);
     }
-   interaction.editReply({ content: `Playlist \`${res.playlistInfo.name}\` loaded!`});
+
+   interaction.editReply({ content: `${lang('language:music.playlist', { music: res.playlistInfo.name })}` });
+
   } else {
     const track = res.tracks[0];
     track.setRequester(interaction.user);
 
     player.queue.add(track);
-    interaction.editReply({ content: `enfileiradas \`${track.title}\``});
+    interaction.editReply({ content: `${lang('language:music.toc', { music: track.title })}` });
   }
 
   if (!player.playing) player.play();
