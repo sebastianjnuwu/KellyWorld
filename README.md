@@ -33,7 +33,15 @@
  token: '' 
  
  # mongodb url 
- mongodb: '' 
+ mongodb: ''
+
+# lavalink
+nodes:
+   id: 'kioshan'
+   hostname: 'nonssl.freelavalink.ga'
+   port: 80
+   password: 'www.freelavalink.ga'
+   secure: false
  ```
  
  **•** Install the dependencies:
