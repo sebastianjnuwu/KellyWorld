@@ -2,25 +2,26 @@ import { readdirSync } from 'node:fs';
 import colors from 'colors';
 
 export default {
-  name: 'ready',
-  type: 'once',
-  async exec(client) {
+	async exec(client) {
+		const commands = readdirSync('./src/commands')
+			.filter(file => file.endsWith('.js'))
+			.map(file => file.slice(0, -3));
 
-  const commands = readdirSync('./src/commands').filter((file) => file.endsWith('.js')).map((file) => file.slice(0, -3));
+		const slash = [];
 
-	const slash = [];
+		for (let name of commands) {
+			const file = await import(`#commands/${name}`);
 
- for (let name of commands) {
+			slash.push(file.create());
+		}
 
-  const file = await import(`#commands/${name}`);
+		client.application.commands.set(slash);
+		client.vulkava.start(client.user.id);
 
-    slash.push(file.create());
-	}
-
-	client.application.commands.set(slash);
-  client.vulkava.start(client.user.id);
-
-  console.log(colors.brightGreen('• ') + `${client.user.username} is finally alive...`);
-
-  },
+		console.log(
+			colors.brightGreen('• ') + `${client.user.username} is finally alive...`,
+		);
+	},
+	name: 'ready',
+	type: 'once',
 };

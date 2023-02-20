@@ -1,13 +1,11 @@
 export default {
-  name: 'queueEnd',
-  type: 'vulkava',
-  async exec(client, player) {
+	async exec(client, player) {
+		const channel = client.channels.cache.get(player.textChannelId);
 
-  const channel = client.channels.cache.get(player.textChannelId);
+		channel.send(`🐦`);
 
-  channel.send(`Fila encerrada!`);
-
-  player.destroy();
-
-  },
+		player.destroy();
+	},
+	name: 'queueEnd',
+	type: 'vulkava',
 };
