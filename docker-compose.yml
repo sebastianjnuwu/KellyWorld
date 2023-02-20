@@ -2,7 +2,7 @@ version: "3"
 
 services:
   bot:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     container_name: Bot 
@@ -17,5 +17,3 @@ services:
         limits:
           cpus: "0.50"
           memory: 256M
-          
-          

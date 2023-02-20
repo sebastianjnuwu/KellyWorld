@@ -1,6 +1,6 @@
 # this action deploys this repository to the ssh server that was configured for more information visit: https://github.com/marketplace/actions/ssh-action-deploy
 
-name: 🐦 deploy 
+name: 🐦 deploy
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
           cat >>./config.yml <<END
             ${{ secrets.config }}
           END
-        shell: bash 
+        shell: bash
       - name: 🌈 Deploy with ssh...
         uses: sebastianjnuwu/ssh-action-deploy@action
         with:

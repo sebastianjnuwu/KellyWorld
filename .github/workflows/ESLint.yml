@@ -1,11 +1,11 @@
 name: 🐥 ESLint
 
-on: 
+on:
   push:
     branches: [ "KellyWorld" ]
   pull_request:
     branches: [ "KellyWorld" ]
- 
+
 jobs:
   eslint:
     name: 🏜️ ESLint

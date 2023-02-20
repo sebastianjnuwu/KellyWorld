@@ -1,11 +1,9 @@
 export default {
-  name: 'trackStart',
-  type: 'vulkava',
-  async exec(client, player, track) {
+	async exec(client, player, track) {
+		const channel = client.channels.cache.get(player.textChannelId);
 
-  const channel = client.channels.cache.get(player.textChannelId);
-
-  channel.send(`♪⁠┌⁠|⁠∵⁠|⁠┘⁠♪ \`${track.title}\``);
-
-  },
+channel.send(`♪⁠┌⁠|⁠∵⁠|⁠┘⁠♪ \`${track.title}\` >> <#${player.voiceChannelId}>`);
+	},
+	name: 'trackStart',
+	type: 'vulkava',
 };

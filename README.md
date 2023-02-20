@@ -38,9 +38,9 @@
 # lavalink
 nodes:
    id: 'kioshan'
-   hostname: 'nonssl.freelavalink.ga'
-   port: 80
-   password: 'www.freelavalink.ga'
+   hostname: ''
+   port: 8080
+   password: ''
    secure: false
  ```
  
