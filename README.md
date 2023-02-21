@@ -13,46 +13,42 @@
   
    - It has several languages
    - Easy to understand code 
+   - Music commands working 
 </p>
 <div>
 
 # Install
   
-  This is how the junior developer installs and runs this application, but a senior is lazy and created [it](https://github.com/sebastianjnuwu/discord-bot/blob/KellyWorld/.github/workflows/deploy.yml), wants to use just make a [fork](https://github.com/sebastianjnuwu/discord-bot/fork) or be a junior!
-  
- **•** Clone the repository:
- ```bash
- $ git clone https://github.com/sebastianjnuwu/discord-bot
- ```
- 
- **•** Create the `config.yml` file:
- ```yml
- # this file must be in the root directory of the repository for the application to start.
- 
- # bot token
- token: '' 
- 
- # mongodb url 
- mongodb: ''
+ <div>
+ <p align="center">
+   <img alt="docker" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" width=268 height=153 />
+ </p>
+</div>
 
-# lavalink
-nodes:
-   id: 'kioshan'
-   hostname: ''
-   port: 8080
-   password: ''
-   secure: false
- ```
- 
- **•** Install the dependencies:
- ```bash
- $ npm install
- ```
- 
- **•** Start the bot:
- ```bash
- $ npm run start
- ```
+  Docker is a set of platform-as-a-service products that use operating system-level virtualization to deliver software in packages called containers. 
+
+  • Install docker e docker compose:
+```bash
+$ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+$ sudo apt install docker-compose -y
+```
+  
+  • Start docker:
+```bash
+$ sudo systemctl restart docker
+$ sudo gpasswd -a $USER docker
+```
+
+  • Clone the repository:
+```bash 
+$ git clone https://github.com/sebastianjnuwu/discord-bot
+$ cd discord-bot
+```
+
+  • Start the bot:
+```bash
+$ docker-compose up --build -d
+```
 
 # License
 
