@@ -1,14 +1,14 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:base"],
-    "assignees": ["sebastianjnuwu"],
-    "reviewers": ["sebastianjnuwu"],
-    "dependencyDashboard": false,
-    "fetchReleaseNotes": true,
-    "packageRules": [{
-       "matchPackagePatterns": ["*"],
-       "matchUpdateTypes": ["major", "patch"],
-       "labels": ["dependencies"]
-     }
-  ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "assignees": ["sebastianjnuwu"],
+  "reviewers": ["sebastianjnuwu"],
+  "dependencyDashboard": false,
+  "fetchReleaseNotes": true,
+  "packageRules": [{
+   "matchPackagePatterns": ["*"],
+   "matchUpdateTypes": ["major", "patch"],
+    "labels": ["dependencies"]
+   }
+ ]
 }

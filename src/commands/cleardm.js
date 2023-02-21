@@ -7,7 +7,6 @@ const create = () => {
 		.setDescription('Can I delete my messages in your dm?')
 		.setDescriptionLocalizations({
 			'en-US': 'Can I delete my messages in your dm?',
-			'es-ES': '¿Puedo borrar mis mensajes en tu dm?',
 			'pt-BR': 'Posso apagar minhas mensagens em sua dm?',
 		});
 	return command.toJSON();

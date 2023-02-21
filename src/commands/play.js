@@ -7,7 +7,6 @@ const create = () => {
 		.setDescription('want to hear a song?')
 		.setDescriptionLocalizations({
 			'en-US': 'want to hear a song?',
-			'es-ES': '¿quieres escuchar una canción?',
 			'pt-BR': 'quer ouvir uma música?',
 		})
 		.addStringOption(option =>
@@ -15,14 +14,12 @@ const create = () => {
 				.setName('nombre')
 				.setNameLocalizations({
 					'en-US': 'nombre',
-					'es-ES': 'nombre',
 					'pt-BR': 'nome',
 				})
 				.setRequired(true)
 				.setDescription('What is the name of the song?')
 				.setDescriptionLocalizations({
 					'en-US': 'What is the name of the song?',
-					'es-ES': '¿Cuál es el nombre de la canción?',
 					'pt-BR': 'Qual é o nome da música?',
 				}),
 		);

@@ -37,7 +37,7 @@ export default class KellyWorld extends Client {
 			guild: Guild,
 		};
 		this.vulkava = new Vulkava({
-			nodes: [config.nodes],
+			nodes: [ config.nodes ],
 			sendWS: (guild, payload) => {
 				this.guilds.cache.get(guild)?.shard.send(payload);
 			},

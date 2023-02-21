@@ -12,7 +12,7 @@ export default {
 				_id: interaction.guild.id,
 			});
 
-		let lang = GUILD.lang || 1;
+		let lang = GUILD.lang || 2;
 
 		switch (lang) {
 			case 1:
@@ -20,9 +20,6 @@ export default {
 				break;
 			case 2:
 				lang = i18next.getFixedT('en-US');
-				break;
-			case 3:
-				lang = i18next.getFixedT('es-ES');
 				break;
 		}
 

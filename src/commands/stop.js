@@ -7,7 +7,6 @@ const create = () => {
 		.setDescription('stop all the music!')
 		.setDescriptionLocalizations({
 			'en-US': 'stop all the music!',
-			'es-ES': '¡Pare toda la música!',
 			'pt-BR': 'pare todas as música!',
 		});
 	return command.toJSON();

@@ -7,7 +7,6 @@ const create = () => {
 		.setDescription('skip to next song...')
 		.setDescriptionLocalizations({
 			'en-US': 'skip to next song...',
-			'es-ES': 'pasar a la siguiente canción...',
 			'pt-BR': 'pule para a próxima música...',
 		});
 	return command.toJSON();

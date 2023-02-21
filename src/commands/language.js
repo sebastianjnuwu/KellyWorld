@@ -5,7 +5,6 @@ const create = () => {
 		.setName('language')
 		.setNameLocalizations({
 			'en-US': 'language',
-			'es-ES': 'idioma',
 			'pt-BR': 'idioma',
 		})
 		.setDMPermission(false)
@@ -13,7 +12,6 @@ const create = () => {
 		.setDescription('Select a language for your server...')
 		.setDescriptionLocalizations({
 			'en-US': 'Select a language for your server...',
-			'es-ES': 'Seleccione un idioma para su servidor...',
 			'pt-BR': 'Selecione um idioma para o seu servidor...',
 		})
 		.addStringOption(option =>
@@ -21,13 +19,11 @@ const create = () => {
 				.setName('select')
 				.setNameLocalizations({
 					'en-US': 'select',
-					'es-ES': 'seleccionar',
 					'pt-BR': 'selecionar',
 				})
 				.setDescription('What is your preferred language?')
 				.setDescriptionLocalizations({
 					'en-US': 'What is your preferred language?',
-					'es-ES': '¿Cuál es tu idioma preferido?',
 					'pt-BR': 'Qual é o seu idioma preferido?',
 				})
 				.setRequired(true)
@@ -39,10 +35,6 @@ const create = () => {
 					{
 						name: '🇺🇸 English',
 						value: '2',
-					},
-					{
-						name: '🇪🇸 Español',
-						value: '3',
 					},
 				),
 		);
@@ -72,12 +64,6 @@ const KellyWorld = async (client, interaction) => {
 	if (value == 2)
 		return interaction.reply({
 			content: `(^^) You speak this language don't you? Cool!`,
-			ephemeral: true,
-		});
-
-	if (value == 3)
-		return interaction.reply({
-			content: `(^^) Hablas este idioma, ¿no? ¡Fresco!`,
 			ephemeral: true,
 		});
 };
