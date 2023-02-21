@@ -56,5 +56,5 @@ This repository is [licensed](https://www.apache.org/licenses/LICENSE-2.0) to pr
 
 # Creators 
 
-| [<img src="https://github.com/sebastianjnuwu.png?size=115" width=115><br><sub>@sebastianjnuwu</sub>](https://github.com/sebastianjnuwu) | 
+| [<img src="https://github.com/sebastianjnuwu.png?size=115" width=115><br>Creator<br><sub>@sebastianjnuwu</sub>](https://github.com/sebastianjnuwu) | 
 | :---: |
