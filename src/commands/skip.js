@@ -46,7 +46,7 @@ const KellyWorld = async (client, interaction, lang) => {
 	stop.skip();
 
 	interaction.reply({ content: `${lang('language:music.skip')}` });
-	console.log(stop?.current.title);
+	
 };
 
 export { create, KellyWorld };

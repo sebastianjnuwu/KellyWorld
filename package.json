@@ -27,7 +27,7 @@
     "url": "https://github.com/sebastianjnuwu/discord-bot/issues"
   },
   "engines": {
-    "node": ">=19.0.0"
+    "node": ">=17.0.0"
   },
   "dependencies": {
     "colors": "^1.4.0",

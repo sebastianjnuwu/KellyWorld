@@ -66,7 +66,7 @@ const KellyWorld = async (client, interaction, lang) => {
 
 	const player = client.vulkava.createPlayer({
 		guildId: interaction.guild.id,
-		selfDeaf: true,
+		selfDeaf: false,
 		textChannelId: interaction.channel.id,
 		voiceChannelId: interaction.member.voice.channelId,
 	});
