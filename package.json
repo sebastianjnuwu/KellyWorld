@@ -11,11 +11,20 @@
     "test": "echo \"Test: yes that was a test!\" && exit 1",
     "start": "node src/start.js",
     "lint": "eslint src --fix",
-    "dev": "nodemon src/start.js"
+    "dev": "nodemon src/start.js",
+    "commit": "git add . && cz"
   },
   "keywords": [
     "discord.js"
   ],
+  "lint-staged": {
+    "*.js": [ "eslint --fix", "git add" ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "imports": {
     "#commands/*": "./src/commands/*.js"
   },
@@ -42,6 +51,10 @@
     "vulkava": "^1.6.0"
   },
   "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -52,5 +65,10 @@
     "legacyWatch": true,
     "delay": 1000,
     "ignore": []
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
