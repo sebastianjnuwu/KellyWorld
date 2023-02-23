@@ -1,4 +1,4 @@
-# KellyWorld
+# <img align="center" src="https://cdn.discordapp.com/attachments/1078405618139922532/1078417147325333565/9037-eyespy.gif" width="32px"> Kelly World
 
 <div>
  <p align="center">
