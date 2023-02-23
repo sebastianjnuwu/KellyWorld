@@ -50,7 +50,7 @@ $ cd discord-bot
 $ docker-compose up --build -d
 ```
 
-## <img align="center" src="https://cdn.discordapp.com/attachments/1078405618139922532/1078411231863509032/alerta.png" width="32px"> License
+## <img align="center" src="https://cdn.discordapp.com/attachments/1078405618139922532/1078411231863509032/rules.png" width="32px"> License
 
 This repository is [licensed](https://www.apache.org/licenses/LICENSE-2.0) to protect users and Contributors, we are following all discord [terms and services](https://discord.com/terms) also [Discord Privacy Policy.](https://discord.com/privacy)
 
