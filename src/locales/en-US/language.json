@@ -6,14 +6,15 @@
   "music": {
     "novoice": ":/ You need to join a voice channel first!",
     "nomevoice": "._. You are not on the same voice channel as me...",
-    "search": "=⁠_⁠= Looking for musicca \"{{track}}\"",
+    "search": "=⁠_⁠= looking for the music \"{{track}}\"",
     "failed": ":( I can't find this song, maybe my premium ran out!",
     "matches": "Wo matches....",
-    "stop": "^⁠_⁠^ We stopped all songs ok?",
-    "nomusic": ":( There is no music playing..",
-    "toc": "<:K_env:938833579981566043> nice song, next song: {{music}}",
-    "skip": "(⁠^⁠^⁠) I will play the next song...",
+    "stop": "^⁠_⁠^ We stopped all music ok?",
+    "nomusic": ":( There is no music playing...",
+    "toc": "<:K_env:938833579981566043> you will hear the song: `{{music}}`",
+    "skip": "(⁠^⁠^⁠) I'll play the next song...",
     "nomusicplay": ":( There's no other music to play!",
-    "playlist": "^^ adding the playlist to music: `{{music}}`"
+    "playlist": "^^ adding the playlist to music: `{{music}}`",
+    "start": "{{emoji}} I'm not **Spotify**, but I'm tapping on <#{{channel}}> the music: `{{title}}`"
   }
 }

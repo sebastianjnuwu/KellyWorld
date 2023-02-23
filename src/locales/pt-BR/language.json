@@ -11,9 +11,10 @@
     "matches": "Wo matches....",
     "stop": "^⁠_⁠^ Paramos todas as musicas ok?",
     "nomusic": ":( Não há nenhuma musica sendo reproduzida...",
-    "toc": "<:K_env:938833579981566043> musica legal, próxima musica: `{{music}}`",
+    "toc": "<:K_env:938833579981566043> você vai ouvir a música: `{{music}}`",
     "skip": "(⁠^⁠^⁠) vou tocar a próxima música...",
     "nomusicplay": ":( Não tem nenhuma outra música para ser tocada!",
-    "playlist": "^^ adicionando a playlist a música: `{{music}}`"
+    "playlist": "^^ adicionando a playlist a música: `{{music}}`",
+    "start": "{{emoji}} Eu não sou **Spotify**, mais estou tocando em <#{{channel}}> a música: `{{title}}`"
   }
 }

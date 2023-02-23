@@ -1,29 +1,42 @@
 {
   "name": "kellyworld",
-  "version": "1.14.4",
+  "version": "1.14-NotVerified",
   "description": "simple discord bot in slash commands using djs",
   "main": "src/start.js",
   "type": "module",
-  "author": "sebastianjnuwu",
+  "private": true,
+  "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
+    "test": "echo \"Test: yes that was a test!\" && exit 1",
     "start": "node src/start.js",
     "lint": "eslint src --fix",
-    "dev": "nodemon src/start.js"
+    "dev": "nodemon src/start.js",
+    "commit": "git add . && cz"
+  },
+  "keywords": [
+    "discord.js"
+  ],
+  "lint-staged": {
+    "*.js": [ "eslint --fix", "git add" ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "imports": {
-    "#events/*": "./src/events/*",
     "#commands/*": "./src/commands/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sebastianjnuwu/KellyWorld"
+    "url": "https://github.com/sebastianjnuwu/discord-bot"
   },
   "bugs": {
-    "url": "https://github.com/sebastianjnuwu/KellyWorld/issues"
+    "url": "https://github.com/sebastianjnuwu/discord-bot/issues"
   },
   "engines": {
-    "node": ">=19.0.0"
+    "node": ">=17.0.0"
   },
   "dependencies": {
     "colors": "^1.4.0",
@@ -38,10 +51,24 @@
     "vulkava": "^1.6.0"
   },
   "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.4"
+  },
+  "nodemonConfig": {
+    "legacyWatch": true,
+    "delay": 1000,
+    "ignore": []
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

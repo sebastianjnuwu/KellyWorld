@@ -1,11 +1,11 @@
 export default {
-	async exec(client, player) {
-		const channel = client.channels.cache.get(player.textChannelId);
+    async exec(client, player) {
+        const channel = client.channels.cache.get(player.textChannelId);
 
-		channel.send(`🐦`);
+        channel.send(`🐦`);
 
-		player.destroy();
-	},
-	name: 'queueEnd',
-	type: 'vulkava',
+        player.destroy();
+    },
+    name: 'queueEnd',
+    type: 'vulkava',
 };

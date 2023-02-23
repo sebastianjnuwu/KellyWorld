@@ -1,4 +1,6 @@
-name: 🐥 ESLint
+# ESLint is a great tool to help us automate code standardization with it we can define standardization rules, find non-standard codes and fix them automatically...
+
+name: 🐥 Eslint
 
 on:
   push:
@@ -8,7 +10,7 @@ on:
 
 jobs:
   eslint:
-    name: 🏜️ ESLint
+    name: 🏜️ Starting the action 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
