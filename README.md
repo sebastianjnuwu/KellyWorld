@@ -17,7 +17,7 @@
 </p>
 <div>
 
-## <img src="https://cdn.discordapp.com/attachments/1078405618139922532/1078407637349175396/1677182777554.png" width="15%"> Install
+## <img align="center" src="https://cdn.discordapp.com/attachments/1078405618139922532/1078407637349175396/1677182777554.png" width="32px"> Install
   
  <div>
  <p align="center">
@@ -50,11 +50,11 @@ $ cd discord-bot
 $ docker-compose up --build -d
 ```
 
-# License
+## License
 
 This repository is [licensed](https://www.apache.org/licenses/LICENSE-2.0) to protect users and Contributors, we are following all discord [terms and services](https://discord.com/terms) also [Discord Privacy Policy.](https://discord.com/privacy)
 
-# Creators 
+## Creators 
 
 | [<img src="https://github.com/sebastianjnuwu.png?size=115" width=115><br>Creator<br><sub>@sebastianjnuwu</sub>](https://github.com/sebastianjnuwu) | 
 | :---: |
