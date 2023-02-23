@@ -2,7 +2,7 @@
 
 <div>
  <p align="center">
-  <img alt="profile" src="https://media.discordapp.net/attachments/1030523150129188866/1075117570446852208/CC_20230214_151231.png" width="72%%"  />
+  <img alt="profile" src="https://media.discordapp.net/attachments/1030523150129188866/1075117570446852208/CC_20230214_151231.png" width="72%"  />
   <br>
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-orange.svg"/></a>
   <a href="https://github.com/sebastianjnuwu/KellyWorld/actions/workflows/Eslint.yml"><img alt="ESlint" src="https://github.com/sebastianjnuwu/KellyWorld/actions/workflows/Eslint.yml/badge.svg" /></a>
@@ -17,7 +17,7 @@
 </p>
 <div>
 
-# Install
+## <img src="https://cdn.discordapp.com/attachments/1078405618139922532/1078407637349175396/1677182777554.png" width="15%"> Install
   
  <div>
  <p align="center">
