@@ -4,13 +4,11 @@ import Ticket from './Models/Ticket.js';
 import Locale from './Locale.js';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
-import { readFileSync } from 'fs';
+import node from './Nodes.js';
 import { Vulkava } from 'vulkava';
-import { load } from 'js-yaml';
 import g from 'glob';
 const glob = promisify(g);
 import colors from 'colors';
-const config = load(readFileSync('./config.yml', 'utf8'));
 
 export default class KellyWorld extends Client {
     constructor() {
@@ -39,7 +37,7 @@ export default class KellyWorld extends Client {
             ticket: Ticket,
         };
         this.vulkava = new Vulkava({
-            nodes: [config.nodes],
+            nodes: node,
             sendWS: (guild, payload) => {
                 this.guilds.cache.get(guild)?.shard.send(payload);
             },
@@ -51,7 +49,7 @@ export default class KellyWorld extends Client {
         this.LoadDatabase();
         this.Locale = new Locale(this);
         this.Locale.loadLocales();
-        await super.login(config.token);
+        await super.login(process.env.token);
     }
 
     async loadEvents() {
@@ -77,7 +75,7 @@ export default class KellyWorld extends Client {
     async LoadDatabase() {
         mongoose.set('strictQuery', false);
         mongoose
-            .connect(config.mongodb)
+            .connect(process.env.mongodb)
             .then(() => {
                 console.log(
                     colors.brightGreen('• ') + `My memory is up to date...`,

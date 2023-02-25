@@ -9,11 +9,11 @@ services:
     command: yarn start
     restart: unless-stopped
     ports:
-      - "7777:7777"
+      - "8080:8080"
     volumes:
       - /root/config.yml:/config.yml
     deploy:
       resources:
         limits:
-          cpus: "0.50"
-          memory: 128M
+          cpus: "0.1"
+          memory: 465M
