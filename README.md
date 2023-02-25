@@ -13,6 +13,7 @@
   
    - It has several languages
    - Easy to understand code 
+   - private ticket
    - Music commands working 
 </p>
 <div>
