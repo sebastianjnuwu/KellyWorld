@@ -8,10 +8,11 @@ services:
     container_name: Bot 
     command: yarn start
     restart: unless-stopped
+    environment:
+      token: ''
+      mongodb: ''
     ports:
       - "8080:8080"
-    volumes:
-      - /root/config.yml:/config.yml
     deploy:
       resources:
         limits:
