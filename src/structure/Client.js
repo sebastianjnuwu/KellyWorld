@@ -1,5 +1,6 @@
 import { Client, GatewayIntentBits } from 'discord.js';
 import Guild from './Models/Guild.js';
+import Ticket from './Models/Ticket.js';
 import Locale from './Locale.js';
 import { promisify } from 'util';
 import mongoose from 'mongoose';
@@ -35,6 +36,7 @@ export default class KellyWorld extends Client {
         });
         this.db = {
             guild: Guild,
+            ticket: Ticket,
         };
         this.vulkava = new Vulkava({
             nodes: [config.nodes],
