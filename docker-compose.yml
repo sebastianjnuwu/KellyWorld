@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: Bot 
+    container_name: KellyWorld
     command: yarn start
     restart: unless-stopped
     environment:
@@ -16,5 +16,5 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
-          memory: 465M
+          cpus: "0.75"
+          memory: 521M
