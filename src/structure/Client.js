@@ -9,6 +9,7 @@ import { Vulkava } from 'vulkava';
 import g from 'glob';
 const glob = promisify(g);
 import colors from 'colors';
+import '#http';
 
 export default class KellyWorld extends Client {
     constructor() {
