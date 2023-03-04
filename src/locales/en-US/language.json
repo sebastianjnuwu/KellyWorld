@@ -16,5 +16,6 @@
     "nomusicplay": ":( There's no other music to play!",
     "playlist": "^^ adding the playlist to music: `{{music}}`",
     "start": "{{emoji}} I'm not **Spotify**, but I'm tapping on <#{{channel}}> the music: `{{title}}`"
-  }
+  },
+  "block-invite": "{{user}} you are not allowed to send invites on this server."
 }
