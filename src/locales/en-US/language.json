@@ -18,7 +18,6 @@
     "start": "{{emoji}} I'm not **Spotify**, but I'm tapping on <#{{channel}}> the music: `{{title}}`"
   },
   "block-invite": {
-    "msg": "{{user}} you are not allowed to send invites on this server.",
-    "on": "Discord server invites will be blocked!",
-    "off": "Discord server invites will not be blocked!"
+    "msg": "{{user}} you are not allowed to send invites on this server."
+  }
 }

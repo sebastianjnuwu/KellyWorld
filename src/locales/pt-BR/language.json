@@ -18,7 +18,6 @@
     "start": "{{emoji}} Eu não sou **Spotify**, mais estou tocando em <#{{channel}}> a música: `{{title}}`"
   },
   "block-invite": {
-    "msg": "{{user}} você não tem permissão para enviar convites neste servidor.",
-    "on": "Convites de servidores do discord seram broqueiados!",
-    "off": "Convites de servidores do discord não seram broqueiados!"
+    "msg": "{{user}} você não tem permissão para enviar convites neste servidor."
+  }
 }

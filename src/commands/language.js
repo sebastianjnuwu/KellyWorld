@@ -3,10 +3,6 @@ import { SlashCommandBuilder, PermissionFlagsBits } from 'discord.js';
 const create = () => {
     let command = new SlashCommandBuilder()
         .setName('language')
-        .setNameLocalizations({
-            'en-US': 'language',
-            'pt-BR': 'idioma',
-        })
         .setDMPermission(false)
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
         .setDescription('Select a language for your server...')

@@ -11,9 +11,9 @@ const create = () => {
         })
         .addStringOption(option =>
             option
-                .setName('nombre')
+                .setName('name')
                 .setNameLocalizations({
-                    'en-US': 'nombre',
+                    'en-US': 'name',
                     'pt-BR': 'nome',
                 })
                 .setRequired(true)
