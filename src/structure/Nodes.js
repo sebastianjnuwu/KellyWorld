@@ -1,9 +1,9 @@
 const node = [
     {
         id: 'kioshan',
-        hostname: 'lavalink.joshsevero.dev',
-        port: 80,
-        password: 'oxygen',
+        hostname: 'lavalink.cyber-host.eu',
+        port: 2333,
+        password: 'discord.gg/cyberhost',
         secure: false,
     },
 ];
