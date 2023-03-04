@@ -8,7 +8,7 @@ const create = () => {
             'pt-BR': 'idioma',
         })
         .setDMPermission(false)
-        .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
         .setDescription('Select a language for your server...')
         .setDescriptionLocalizations({
             'en-US': 'Select a language for your server...',
