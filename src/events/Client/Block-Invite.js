@@ -23,8 +23,8 @@ export default {
                 break;
         }
 
-        if (!GUILD.invite && message.member) {
-            // if (message.member.permissions.has('ManageMessages')) return;
+        if (GUILD.invite && message.member) {
+            if (message.member.permissions.has('ManageMessages')) return;
 
             const isInvite = str =>
                 /dis(?:board\.org\/(?:pl\/)?server\/join|cord(?:\.me\/server\/join|(?:app\.com\/invite|\.(?:com\/invite|gg\/))))/gi.test(
@@ -34,7 +34,7 @@ export default {
             if (isInvite(message.content)) {
                 message.channel
                     .send(
-                        `${t('language:block-invite', {
+                        `${t('language:block-invite.msg', {
                             user: String(message.author),
                         })}`,
                     )
