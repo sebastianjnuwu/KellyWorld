@@ -43,7 +43,7 @@ const KellyWorld = async (client, interaction, lang) => {
             ephemeral: true,
         });
 
-    const track = interaction.options.getString('nombre');
+    const track = interaction.options.getString('name');
 
     await interaction.reply({
         content: `${lang('language:music.search', { track: track })}`,
