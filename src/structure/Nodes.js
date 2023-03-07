@@ -1,10 +1,17 @@
 const node = [
 	{
 		id: 'kioshan',
-		hostname: 'lavalink.cyber-host.eu',
+		hostname: 'lavalink.game-energy.de',
 		port: 2333,
-		password: 'discord.gg/cyberhost',
+		password: 'gameEnergyHost23!',
 		secure: false,
+	},
+	{
+		id: 'kioshaby',
+		hostname: 'lavalink.botsuniversity.ml',
+		port: 443,
+		password: 'mathiscool',
+		secure: true,
 	},
 ];
 
