@@ -1,9 +1,9 @@
 const node = [
 	{
 		id: 'kioshan',
-		hostname: 'lavalink.game-energy.de',
-		port: 2333,
-		password: 'gameEnergyHost23!',
+		hostname: 'server.alfari.id',
+		port: 6969,
+		password: 'youshallnotpass',
 		secure: false,
 	},
 	{
