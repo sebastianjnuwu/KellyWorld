@@ -51,17 +51,16 @@ const KellyWorld = async (client, interaction, lang) => {
 		},
 	);
 
-	if (value) {
-		interaction.reply({
-			content: `${lang('language:block-invite.activated')}`,
-			ephemeral: true,
-		});
-	} else {
-		interaction.reply({
+	if (value == 'false')
+		return interaction.reply({
 			content: `${lang('language:block-invite.disabled')}`,
 			ephemeral: true,
 		});
-	}
+
+	interaction.reply({
+		content: `${lang('language:block-invite.activated')}`,
+		ephemeral: true,
+	});
 };
 
 export { create, KellyWorld };
