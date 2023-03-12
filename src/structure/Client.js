@@ -9,6 +9,8 @@ import { Vulkava } from 'vulkava';
 import g from 'glob';
 const glob = promisify(g);
 import colors from 'colors';
+import _ from 'dotenv';
+_.config({ path: './.env' });
 import '#http';
 
 export default class KellyWorld extends Client {
