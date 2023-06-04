@@ -43,7 +43,7 @@ $ sudo gpasswd -a $USER docker
   • Clone the repository:
 ```bash 
 $ git clone https://github.com/sebastianjnuwu/discord-bot
-$ cd discord-bot
+$ cd KellyWorld
 ```
 
   • Start the bot:
