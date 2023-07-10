@@ -1,4 +1,4 @@
-# <img align="center" src="https://media.discordapp.net/attachments/894001719078432828/1127977428015403139/detetive.gif" width="32px"> Kelly World
+# <img align="center" src="https://emoji.discadia.com/emojis/lookingaroundeyes_hyper.gif" width="32px"> Kelly World
 
 <div>
  <p align="center">
