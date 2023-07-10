@@ -1,4 +1,4 @@
-# <img align="center" src="https://emoji.discadia.com/emojis/lookingaroundeyes_hyper.gif" width="32px"> Kelly World
+# Kelly World 
 
 <div>
  <p align="center">
@@ -17,45 +17,3 @@
    - Music commands working 
 </p>
 <div>
-
-## <img align="center" src="https://cdn.discordapp.com/attachments/1078405618139922532/1078407637349175396/1677182777554.png" width="32px"> Install
-  
- <div>
- <p align="center">
-   <img alt="docker" src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" width=268 height=153 />
- </p>
-</div>
-
-  Docker is a set of platform-as-a-service products that use operating system-level virtualization to deliver software in packages called containers. 
-
-  • Install docker e docker compose:
-```bash
-$ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
-$ sudo apt install docker-compose -y
-```
-  
-  • Start docker:
-```bash
-$ sudo systemctl restart docker
-$ sudo gpasswd -a $USER docker
-```
-
-  • Clone the repository:
-```bash 
-$ git clone https://github.com/sebastianjnuwu/discord-bot
-$ cd KellyWorld
-```
-
-  • Start the bot:
-```bash
-$ docker-compose up --build -d
-```
-
-## <img align="center" src="https://cdn.discordapp.com/attachments/1078405618139922532/1078414012179566694/rules.png" width="32px"> License
-
-This repository is [licensed](https://www.apache.org/licenses/LICENSE-2.0) to protect users and Contributors, we are following all discord [terms and services](https://discord.com/terms) also [Discord Privacy Policy.](https://discord.com/privacy)
-
-## <img align="center" src="https://cdn.discordapp.com/attachments/1078405618139922532/1078415340758909028/checked.gif" width="32px"> Creators 
-
-| [<img src="https://github.com/sebastianjnuwu.png?size=115" width=115><br>Creator<br><sub>@sebastianjnuwu</sub>](https://github.com/sebastianjnuwu) | 
-| :---: |
