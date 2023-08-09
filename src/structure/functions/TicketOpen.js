@@ -37,6 +37,14 @@ async function TicketOpen(interaction, client) {
 				],
 			},
 			{
+				id: '975527943319199744',
+				allow: [
+					PermissionFlagsBits.ViewChannel,
+					PermissionFlagsBits.SendMessages,
+					PermissionFlagsBits.ReadMessageHistory,
+				],
+			},
+			{
 				id: interaction.guild.id,
 				deny: [
 					PermissionFlagsBits.ViewChannel,
