@@ -49,7 +49,7 @@
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "glob": "^8.1.0",
+    "glob": "^10.0.0",
     "i18next": "^22.4.9",
     "i18next-fs-backend": "^2.1.1",
     "mongoose": "^6.9.1",
