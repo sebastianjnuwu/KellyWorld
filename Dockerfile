@@ -1,4 +1,4 @@
-FROM node:19.9.0-alpine
+FROM node:21.0.0-alpine
 
 WORKDIR /docker/bot
 COPY package*.json ./
