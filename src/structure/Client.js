@@ -6,7 +6,7 @@ import { promisify } from 'util';
 import mongoose from 'mongoose';
 import node from './Nodes.js';
 import { Vulkava } from 'vulkava';
-import { Glob } from 'glob';
+import { Glob } from 'Glob';
 import colors from 'colors';
 import _ from 'dotenv';
 _.config({ path: './.env' });
@@ -59,7 +59,7 @@ export default class KellyWorld extends Client {
 	}
 
 	async loadEvents() {
-		const events = await glob(`${global.process.cwd()}/src/events/**/*.js`);
+		const events = await Glob(`${Global.process.cwd()}/src/events/**/*.js`);
 
 		events.forEach(async event => {
 			const file = await import(event);
