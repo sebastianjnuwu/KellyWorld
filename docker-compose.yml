@@ -9,7 +9,7 @@ services:
     command: npm run dev
     restart: unless-stopped
     environment:
-      TOKEN: ''
+      token: ''
     ports:
       - "8080:8080"
     deploy:
