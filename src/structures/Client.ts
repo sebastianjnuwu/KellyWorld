@@ -7,14 +7,13 @@ import {
 	GatewayIntentBits,
 	Options,
 } from "discord.js";
-import glob from "glob";
-import { promisify } from "util";
+import Locale from './Locale';
+import { promises as fs } from "fs";
+import path from "path";
 // @ts-ignore
 import { CommandType } from "./Command";
 import { Event } from "./Event";
 import { createLogger, Logger } from "./Logger";
-
-const globPromise = promisify(glob);
 
 export class KellyWorld extends Client {
 	public commands: Collection<string, CommandType>;
@@ -40,7 +39,6 @@ export class KellyWorld extends Client {
 				GatewayIntentBits.GuildMessages,
 				GatewayIntentBits.MessageContent,
 				GatewayIntentBits.GuildMembers,
-				GatewayIntentBits.GuildVoiceStates,
 			],
 			presence: {
 				status: "idle",
@@ -69,54 +67,70 @@ export class KellyWorld extends Client {
 			this,
 		);
 		this.register();
+		this.Locale = new Locale(this);
+		this.Locale.loadLocales();
 		await this.login(process.env.token);
 	}
 
 	register() {
 		this.loadCommands();
-		this.loadEvents();
-	}
+  	this.loadEvents();
+	};
 
-	async loadCommands() {
-		const slashCommands: ApplicationCommandDataResolvable[] = [];
-		const commandFiles = await globPromise(
-			`${__dirname}/../commands/*/*{.ts,.js}`,
-		);
+  async loadCommands() {
+  const slashCommands = [];
+  const commandFiles = await fs.readdir(path.join(__dirname, "../commands"));
 
-		commandFiles.forEach(async (file) => {
-			const command: CommandType = await this.importFile(file);
-			if (!command.name) return;
-			this.commands.set(command.name, command);
-			if (command.aliases) {
-				command.aliases.forEach((alias) => {
-					this.aliases.set(alias, command.name);
-				});
-			}
-			slashCommands.push(command);
-		});
+  for (const file of commandFiles) {
+    if (file.endsWith(".ts") || file.endsWith(".js")) {
+      const filePath = path.join(__dirname, "../commands", file);
+      const command = await this.importFile(filePath);
 
-		this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, {
-			tags: ["Commands"],
-		});
+      if (command.name) {
+        this.commands.set(command.name, command);
 
-		this.on("ready", () => {
-			this.application.commands.set(slashCommands);
-		});
-	}
+        if (command.aliases) {
+          command.aliases.forEach((alias) => {
+            this.aliases.set(alias, command.name);
+          });
+        }
 
-	async loadEvents() {
-		const eventFiles = await globPromise(`${__dirname}/../events/*{.ts,.js}`);
-		eventFiles.forEach(async (file) => {
-			const event: Event<keyof ClientEvents> = await this.importFile(file);
-			this.on(event.name, event.exec);
-		});
+        slashCommands.push(command);
+      }
+    }
+  }
 
-		this.logger.info(`Loaded ${eventFiles.length} events successfully!`, {
+  this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, {
+    tags: ["Commands"],
+  });
+
+  this.on("ready", () => {
+    this.application.commands.set(slashCommands);
+  });
+};
+
+  async loadEvents() {
+    
+  const eventFiles = await fs.readdir(path.join(__dirname, "../events"));
+	  
+	 for (const file of eventFiles) {
+ 
+  if (file.endsWith(".ts") || file.endsWith(".js")) {
+     const filePath = path.join(__dirname, "../events", file);
+     const event = await this.importFile(filePath);
+     this.on(event.name, event.exec);
+      
+    }
+  }
+   
+   this.logger.info(`Loaded ${eventFiles.length} events successfully!`, {
 			tags: ["Events"],
 		});
+		
 	}
 
 	async importFile(file: string) {
 		return (await import(file))?.default;
-	}
-}
+	};
+	
+};

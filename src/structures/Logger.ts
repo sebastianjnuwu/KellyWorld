@@ -7,7 +7,7 @@ import {
 import { Console, File } from "winston/lib/winston/transports";
 import { inspect } from "node:util";
 import type { KellyWorld } from "./Client";
-import chalk from "chalk";
+import colors from "colors";
 
 function loadWinstonLogger(
 	logger: Logger,
@@ -26,7 +26,7 @@ function loadWinstonLogger(
 								?.map((t: string) => `\x1B[36m${t}\x1B[39m`)
 								.join(", ") ?? "";
 						const shardPrefix = `--- [\x1B[36mShard ${shardId}\x1B[39m, ${tags}]:`;
-						return `${chalk.green(info.timestamp)} ${shardPrefix} ${
+						return `${colors.green(info.timestamp)} ${shardPrefix} ${
 							info.message instanceof Error
 								? inspect(info.message, { depth: 0 })
 								: info.message

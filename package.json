@@ -16,15 +16,15 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "chalk": "^5.0.0",
+    "colors": "^1.4.0",
     "discord.js": "^14.14.1",
-    "glob": "^10.0.0",
+    "i18next": "^23.7.12",
+    "i18next-fs-backend": "^2.3.1",
     "undici": "^6.0.0",
     "winston": "^3.8.1"
   },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
-    "@types/glob": "^8.0.0",
     "@types/node": "^16.11.6",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",

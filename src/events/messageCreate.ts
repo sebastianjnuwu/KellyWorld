@@ -1,8 +1,8 @@
-import chalk from "chalk";
 import { GuildMember } from "discord.js";
 import client from "../main";
 import CommandContext from "../structures/CommandContext";
 import { Event } from "../structures/Event";
+import colors from "colors";
 
 export default new Event("messageCreate", async (message) => {
 	if (!message.inGuild || message.author.bot) return;
@@ -55,9 +55,9 @@ export default new Event("messageCreate", async (message) => {
 	const context = new CommandContext(client, message, args);
 
 	client.logger.info(
-		`Command ${chalk.bold(command.name)} used in ${chalk.bold(
+		`Command ${colors.blue(command.name)} used in ${colors.blue(
 			context.guild.name,
-		)} by ${chalk.bold(context.user.username)}`,
+		)} by ${colors.blue(context.user.username)}`,
 		{
 			tags: ["Command"],
 		},

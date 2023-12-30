@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import chalk from "chalk";
+import colors from "colors";
 import {
 	ApplicationCommandOptionType,
 	AutocompleteInteraction,
@@ -37,9 +37,9 @@ export default new Event(
 			const context = new CommandContext(client, interaction, args);
 
 			client.logger.info(
-				`Command ${chalk.bold(command.name)} used in ${chalk.bold(
+				`Command ${colors.blue(command.name)} used in ${colors.blue(
 					context.guild ? context.guild.name : "DM",
-				)} by ${chalk.bold(context.user.username)}`,
+				)} by ${colors.blue(context.user.username)}`,
 				{
 					tags: ["Command"],
 				},
