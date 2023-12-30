@@ -1,9 +1,9 @@
-import { formatTime } from "../../functions/time";
-import { Command } from "../../structures/Command";
+import { formatTime } from "../functions/time";
+import { Command } from "../structures/Command";
 
 export default new Command({
 	name: "ping",
-	descriptions: "🛰️ › Replies with the bot latency",
+	description: "› Replies with the bot latency",
 	prefix: true,
 	exec({ context, client }) {
 		context.reply({

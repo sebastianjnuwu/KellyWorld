@@ -77,41 +77,37 @@ export class KellyWorld extends Client {
   	this.loadEvents();
 	};
 
+  
   async loadCommands() {
+  
+    const slashCommands: ApplicationCommandDataResolvable[] = [];
     
-   const slashCommands = [];
-   const commandFiles = await fs.readdir(path.join(__dirname, "../commands"));
+    const commandFiles = await fs.readdir(path.join(__dirname, "../commands"));
+	  
+	 for (const file of commandFiles) {
+	  if (file.endsWith(".ts") || file.endsWith(".js")) {
+      const _file = path.join(__dirname, "../commands", file);
+      
+      const command: CommandType = await this.importFile(_file);
+      
+      if (!command.name) return;
+      this.commands.set(command.name, command);
+      if (command.aliases) {
+        command.aliases.forEach(alias => {
+          this.aliases.set(alias, command.name);
+        });
+      }
+      slashCommands.push(command);
+	 }
+	 };
 
-   for (const file of commandFiles) {
-    if (file.endsWith(".ts") || file.endsWith(".js")) {
-      const filePath = path.join(__dirname, "../commands", file);
-      const command = await this.importFile(filePath);
+    this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, { tags: ['Commands'] });
 
-      if (command.name) {
+    this.on('ready', () => {
+      this.application.commands.set(slashCommands);
+    });
+  }
   
-        this.commands.set(command.name, command);
-
-        if (command.aliases) {
-          command.aliases.forEach((alias) => {
-            this.aliases.set(alias, command.name);
-          });
-        }
-
-        slashCommands.push(command);
-      };
-    };
-  };
-
-   this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, {
-    tags: ["Commands"],
-  });
-
-   this.on("ready", () => {
-    this.application.commands.set(slashCommands);
-  });
-  
- };
-
   async loadEvents() {
     
    const eventFiles = await fs.readdir(path.join(__dirname, "../events"));
@@ -119,8 +115,9 @@ export class KellyWorld extends Client {
 	  for (const file of eventFiles) {
  
     if (file.endsWith(".ts") || file.endsWith(".js")) {
-     const filePath = path.join(__dirname, "../events", file);
-     const event = await this.importFile(filePath);
+     const _file = path.join(__dirname, "../events", file);
+     const event: Event<keyof ClientEvent> = await this.importFile(_file);
+   
      this.on(event.name, event.exec);
       
     };
