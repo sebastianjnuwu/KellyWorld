@@ -6,15 +6,14 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: KellyWorld
-    command: yarn start
+    command: npm run start
     restart: unless-stopped
     environment:
-      token: ''
-      mongodb: ''
+      TOKEN: ''
     ports:
       - "8080:8080"
     deploy:
       resources:
         limits:
-          cpus: "0.75"
-          memory: 521M
+          cpus: "0.95"
+          memory: 1020M

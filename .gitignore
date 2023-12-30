@@ -1,10 +1,6 @@
-# ignoring packages folder 
-node_modules
-
-# ignoring *.lock files
 package-lock.json
-yarn-error.log
-yarn.lock
-
-# environment 
+node_modules
+build
+logs
+*lock
 .env

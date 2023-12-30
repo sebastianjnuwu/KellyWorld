@@ -1,5 +1,3 @@
 {
-    "recommendations": [
-        "pkief.material-icon-theme"
-    ]
+	"recommendations": ["pkief.material-icon-theme"]
 }

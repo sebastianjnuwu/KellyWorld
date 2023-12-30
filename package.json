@@ -1,81 +1,43 @@
 {
   "name": "kellyworld",
-  "version": "1.14.68",
-  "description": "simple discord bot in slash commands using djs",
-  "main": "src/start.js",
-  "type": "module",
+  "version": "3.0.1",
   "private": true,
+  "description": "simple discord bot",
+  "main": "build/main.js",
   "author": "sebastianjnuwu <sebastianjnuwu@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
-    "test": "echo \"Test: yes that was a test!\" && exit 1",
-    "start": "node src/start.js",
-    "lint": "eslint src --fix",
-    "dev": "nodemon src/start.js",
-    "commit": "git add . && cz"
+    "build": "tsc --project tsconfig.json",
+    "build:watch": "tsc --project tsconfig.json -w",
+    "start": "node build/main.js",
+    "dev": "tsnd --expose-gc --transpile-only --ignore-watch node_modules --respawn src/main.ts",
+    "types:check": "tsc --noEmit",
+    "lint:fix": "eslint src --fix",
+    "lint": "eslint"
   },
-  "keywords": [
-    "discord.js"
-  ],
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "discord.js": "^14.14.1",
+    "glob": "^7.2.0",
+    "undici": "^5.8.2",
+    "winston": "^3.8.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "imports": {
-    "#http": "./src/http/start.js",
-    "#ticket": "./src/structure/functions/functions.js",
-    "#commands/*": "./src/commands/*.js"
+  "devDependencies": {
+    "@biomejs/biome": "1.4.1",
+    "@types/glob": "^7.2.0",
+    "@types/node": "^16.11.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/sebastianjnuwu/KellyWorld"
   },
   "bugs": {
-    "url": "https://github.com/sebastianjnuwu/discord-bot/issues"
+    "url": "https://github.com/sebastianjnuwu/KellyWorld/issues"
   },
   "engines": {
     "node": ">=17.0.0"
-  },
-  "dependencies": {
-    "colors": "^1.4.0",
-    "cors": "^2.8.5",
-    "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "glob": "^10.0.0",
-    "i18next": "^23.0.0",
-    "i18next-fs-backend": "^2.1.1",
-    "mongoose": "^8.0.0",
-    "socket.io": "^4.6.1",
-    "util": "^0.12.5",
-    "vulkava": "^1.6.0"
-  },
-  "devDependencies": {
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^10.4.0",
-    "nodemon": "^3.0.0",
-    "prettier": "^3.0.0"
-  },
-  "nodemonConfig": {
-    "legacyWatch": true,
-    "delay": 1000,
-    "ignore": []
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
