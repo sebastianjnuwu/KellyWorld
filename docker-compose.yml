@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: KellyWorld
-    command: npm run start
+    command: npm run dev
     restart: unless-stopped
     environment:
       TOKEN: ''
