@@ -3,7 +3,7 @@ import { Command } from "../../structures/Command";
 
 export default new Command({
 	name: "ping",
-	description: "🛰️ › Replies with the bot latency.",
+	descriptions: "🛰️ › Replies with the bot latency",
 	prefix: true,
 	exec({ context, client }) {
 		context.reply({

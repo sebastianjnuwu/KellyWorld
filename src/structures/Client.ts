@@ -78,15 +78,17 @@ export class KellyWorld extends Client {
 	};
 
   async loadCommands() {
-  const slashCommands = [];
-  const commandFiles = await fs.readdir(path.join(__dirname, "../commands"));
+    
+   const slashCommands = [];
+   const commandFiles = await fs.readdir(path.join(__dirname, "../commands"));
 
-  for (const file of commandFiles) {
+   for (const file of commandFiles) {
     if (file.endsWith(".ts") || file.endsWith(".js")) {
       const filePath = path.join(__dirname, "../commands", file);
       const command = await this.importFile(filePath);
 
       if (command.name) {
+  
         this.commands.set(command.name, command);
 
         if (command.aliases) {
@@ -96,38 +98,39 @@ export class KellyWorld extends Client {
         }
 
         slashCommands.push(command);
-      }
-    }
-  }
+      };
+    };
+  };
 
-  this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, {
+   this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, {
     tags: ["Commands"],
   });
 
-  this.on("ready", () => {
+   this.on("ready", () => {
     this.application.commands.set(slashCommands);
   });
-};
+  
+ };
 
   async loadEvents() {
     
-  const eventFiles = await fs.readdir(path.join(__dirname, "../events"));
+   const eventFiles = await fs.readdir(path.join(__dirname, "../events"));
 	  
-	 for (const file of eventFiles) {
+	  for (const file of eventFiles) {
  
-  if (file.endsWith(".ts") || file.endsWith(".js")) {
+    if (file.endsWith(".ts") || file.endsWith(".js")) {
      const filePath = path.join(__dirname, "../events", file);
      const event = await this.importFile(filePath);
      this.on(event.name, event.exec);
       
-    }
-  }
+    };
+  };
    
    this.logger.info(`Loaded ${eventFiles.length} events successfully!`, {
 			tags: ["Events"],
 		});
 		
-	}
+	};
 
 	async importFile(file: string) {
 		return (await import(file))?.default;
