@@ -16,6 +16,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.2.0",
     "colors": "^1.4.0",
     "discord.js": "^14.14.1",
     "i18next": "^23.7.12",

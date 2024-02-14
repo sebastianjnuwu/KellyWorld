@@ -69,15 +69,14 @@ export class KellyWorld extends Client {
 		this.register();
 		this.Locale = new Locale(this);
 		this.Locale.loadLocales();
-		await this.login(process.env.token);
+		await this.login(process.env.DISCORD_TOKEN);
 	}
 
-	register() {
+	async register() {
 		this.loadCommands();
   	this.loadEvents();
 	};
 
-  
   async loadCommands() {
   
     const slashCommands: ApplicationCommandDataResolvable[] = [];
@@ -92,6 +91,8 @@ export class KellyWorld extends Client {
       
       if (!command.name) return;
       this.commands.set(command.name, command);
+      
+     // console.log(command)
       if (command.aliases) {
         command.aliases.forEach(alias => {
           this.aliases.set(alias, command.name);
