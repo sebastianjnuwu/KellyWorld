@@ -1,6 +1,6 @@
 {
   "name": "kellyworld",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "private": true,
   "description": "simple discord bot",
   "main": "build/main.js",
@@ -11,21 +11,22 @@
     "build:watch": "tsc --project tsconfig.json -w",
     "start": "node build/main.js",
     "dev": "tsnd --expose-gc --transpile-only --ignore-watch node_modules --respawn src/main.ts",
-    "types:check": "tsc --noEmit",
-    "lint:fix": "eslint src --fix",
-    "lint": "eslint"
+    "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.2.0",
+    "@prisma/client": "^5.9.1",
+    "child_process": "^1.0.2",
     "colors": "^1.4.0",
     "discord.js": "^14.14.1",
     "i18next": "^23.7.12",
     "i18next-fs-backend": "^2.3.1",
-    "undici": "^6.0.0",
+    "prisma": "^5.9.1",
+    "undici": "^6.6.2",
+    "util": "^0.12.5",
+    "vulkava": "^1.6.2",
     "winston": "^3.8.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.5.3",
     "@types/node": "^16.11.6",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",

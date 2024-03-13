@@ -1,4 +1,4 @@
-import { formatTime } from "../functions/time";
+import { Time } from "../functions/time";
 import { Command } from "../structures/Command";
 
 export default new Command({
@@ -8,12 +8,11 @@ export default new Command({
    'pt-BR': '🐾 › Resposta da latência do bot'
   },
 	dm_permission: false,
-	prefix: true,
 	exec({ context, client }) {
 		context.reply({
 			content: `**🏓 Pong!\n🛰️ Api - __${
 				client.ws.ping
-			}__ms\n⏱️ Uptime - __${formatTime(client.uptime)}__**`,
+			}__ms\n⏱️ Uptime - __${Time(client.uptime)}__**`,
 		});
 	},
 });

@@ -1,4 +1,4 @@
-export const formatTime = (ms) => {
+export const Time = (ms) => {
 	let s = ms / 1000,
 		d = Math.floor(s / 86400);
 	s %= 86400;

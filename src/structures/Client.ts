@@ -7,38 +7,51 @@ import {
 	GatewayIntentBits,
 	Options,
 } from "discord.js";
-import Locale from './Locale';
+import { 
+  PrismaClient 
+} from '@prisma/client';
 import { promises as fs } from "fs";
 import path from "path";
 // @ts-ignore
 import { CommandType } from "./Command";
+import i18next from 'i18next';
+import i18nbackend from 'i18next-fs-backend';
+import { readdirSync } from 'node:fs';
 import { Event } from "./Event";
-import { createLogger, Logger } from "./Logger";
+import { Nodes } from '../Nodes';
+import { Manager } from './Music';
+import { 
+  createLogger, Logger
+} from "./Logger";
 
-export class KellyWorld extends Client {
+export class KellyWorld extends Client { 
+  
 	public commands: Collection<string, CommandType>;
-	public aliases: Collection<string, string>;
+	public owner: string[];
 	public logger: Logger;
+	public manager: Manager;
+	public db: PrismaClient;
 
 	constructor() {
 		super({
-			makeCache: Options.cacheWithLimits({
-				ApplicationCommandManager: 0,
-				BaseGuildEmojiManager: 0,
-				GuildMemberManager: Infinity,
-				GuildStickerManager: 0,
-				GuildScheduledEventManager: 0,
-				MessageManager: 0,
-				StageInstanceManager: 0,
-				ThreadManager: 0,
-				ThreadMemberManager: 0,
-				UserManager: 0,
-			}),
+		  makeCache: Options.cacheWithLimits({
+        ApplicationCommandManager: 0,
+        BaseGuildEmojiManager: 0,
+        GuildMemberManager: Infinity,
+        GuildStickerManager: 0,
+        GuildScheduledEventManager: 0,
+        MessageManager: Infinity,
+        StageInstanceManager: 0,
+        ThreadManager: 0,
+        ThreadMemberManager: 0,
+        UserManager: 0
+      }),
 			intents: [
-				GatewayIntentBits.Guilds,
-				GatewayIntentBits.GuildMessages,
-				GatewayIntentBits.MessageContent,
-				GatewayIntentBits.GuildMembers,
+		  	GatewayIntentBits.Guilds,
+		  	GatewayIntentBits.GuildMessages,
+		  	GatewayIntentBits.MessageContent,
+		  	GatewayIntentBits.GuildMembers,
+		  	GatewayIntentBits.GuildVoiceStates
 			],
 			presence: {
 				status: "idle",
@@ -55,25 +68,24 @@ export class KellyWorld extends Client {
 			},
 		});
 		this.commands = new Collection();
-		this.aliases = new Collection();
+		this.db = new PrismaClient();
+		this.manager = new Manager(this, Nodes);
+		this.owner = ["932678185970192404"];
 	}
 
 	async init() {
-		this.logger = createLogger(
-			{
-				handleExceptions: true,
-				handleRejections: true,
-			},
-			this,
-		);
+	  this.logger = createLogger({
+	    handleExceptions: true,
+			handleRejections: true,
+		}, this);
 		this.register();
-		this.Locale = new Locale(this);
-		this.Locale.loadLocales();
 		await this.login(process.env.DISCORD_TOKEN);
-	}
+	};
 
 	async register() {
+	  this.loadLanguage();
 		this.loadCommands();
+    this.loadDatabase();
   	this.loadEvents();
 	};
 
@@ -84,40 +96,46 @@ export class KellyWorld extends Client {
     const commandFiles = await fs.readdir(path.join(__dirname, "../commands"));
 	  
 	 for (const file of commandFiles) {
+	
 	  if (file.endsWith(".ts") || file.endsWith(".js")) {
-      const _file = path.join(__dirname, "../commands", file);
+   
+    const _file = path.join(__dirname, "../commands", file);
       
-      const command: CommandType = await this.importFile(_file);
+    const command: CommandType = await this.importFile(_file);
       
-      if (!command.name) return;
-      this.commands.set(command.name, command);
+    if (!command.name) return;
+    this.commands.set(command.name, command);
+    await slashCommands.push(command);
       
-     // console.log(command)
-      if (command.aliases) {
-        command.aliases.forEach(alias => {
-          this.aliases.set(alias, command.name);
-        });
-      }
-      slashCommands.push(command);
-	 }
-	 };
+	  }
+  };
 
     this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, { tags: ['Commands'] });
 
     this.on('ready', () => {
       this.application.commands.set(slashCommands);
     });
-  }
+  };
+  
+  async loadDatabase() {
+   try {
+    this.db.$connect();
+   } catch (err) {
+     
+   };
+  };
   
   async loadEvents() {
     
    const eventFiles = await fs.readdir(path.join(__dirname, "../events"));
 	  
-	  for (const file of eventFiles) {
+   for (const file of eventFiles) {
  
     if (file.endsWith(".ts") || file.endsWith(".js")) {
+    
      const _file = path.join(__dirname, "../events", file);
-     const event: Event<keyof ClientEvent> = await this.importFile(_file);
+   
+     const event = await this.importFile(_file);
    
      this.on(event.name, event.exec);
       
@@ -128,6 +146,26 @@ export class KellyWorld extends Client {
 			tags: ["Events"],
 		});
 		
+	};
+	
+	async loadLanguage() {
+	  await i18next.use(i18nbackend).init({
+			backend: {
+				loadPath: 'src/locales/{{lng}}/{{ns}}.json',
+			},
+			defaultNS: 'language',
+			fallbackLng: 'en-US',
+			interpolation: {
+				escapeValue: false,
+				useRawValueToEscape: true,
+			},
+			load: 'all',
+			ns: ['language'],
+			preload: readdirSync('src/locales'),
+		//	debug: true,
+			returnEmptyString: false,
+			returnObjects: true,
+		});
 	};
 
 	async importFile(file: string) {

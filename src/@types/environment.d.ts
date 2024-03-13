@@ -1,8 +1,9 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      token: string;
-      mongo_url: string;
+      DISCORD_TOKEN: string;
+      GEMINI_TOKEN: string;
+      MONGO_URL: string;
     }
   }
 }

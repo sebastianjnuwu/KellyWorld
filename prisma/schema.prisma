@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_URL")
+}
+
+type TypeWelcome {
+  enable  Boolean @default(false)
+  message String  @default("")
+  channel String  @default("")
+}
+
+model guild {
+  id       String   @id @map("_id")
+  language String   @default("pt-BR")
+  premium  Boolean  @default(false)
+  welcome TypeWelcome?
+}
