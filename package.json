@@ -21,7 +21,7 @@
     "prepare-commit-msg": "npx --no -- commitlint --edit $1; exec < /dev/tty && npx cz --hook || true"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.23.0",
+    "@google/generative-ai": "^0.24.0",
     "@prisma/client": "^6.0.0",
     "child_process": "^1.0.2",
     "colors": "^1.4.0",
