@@ -32,8 +32,12 @@ export default new Event(
           l = i18next.getFixedT("en-US");
       }
 
-      if (command.owner && !client.owner.some((id) => interaction.user.id === id)) return;
-     
+      if (
+        command.owner &&
+        !client.owner.some((id) => interaction.user.id === id)
+      )
+        return;
+
       const args = [];
 
       const context = new CommandContext(client, interaction, args);

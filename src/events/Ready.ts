@@ -3,7 +3,7 @@ import { Event } from "../structures/Event";
 import chalk from "chalk";
 
 export default new Event("ready", () => {
-
-  console.log(`• Logged in as: ${chalk.blue(Client.user.username + ` (${Client.user.id})`)}`);
-
+  console.log(
+    `• Logged in as: ${chalk.blue(`${Client.user.username} (${Client.user.id})`)}`,
+  );
 });
