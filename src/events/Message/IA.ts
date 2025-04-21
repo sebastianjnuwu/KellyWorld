@@ -8,7 +8,7 @@ import { Event } from "../../structures/Event";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_TOKEN);
 
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 const safetySettings = [
   {
