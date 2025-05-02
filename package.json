@@ -1,6 +1,6 @@
 {
   "name": "SoulKitten",
-  "version": "07.01.2025",
+  "version": "02.05.2025",
   "private": true,
   "description": "simple discord bot",
   "main": "build/main.js",
