@@ -1,3 +1,10 @@
+```bash
+git clone https://github.com/sebastianjnuwu/SoulKitten
+```
+
+```bash
+cd SoulKitten
+```
 
 ```bash
 npm install
