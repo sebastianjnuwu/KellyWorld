@@ -29,28 +29,25 @@ export default class CommandContext {
     opts: BaseMessageOptions | InteractionReplyOptions,
   ): Promise<unknown> {
     if (this.interaction instanceof ChatInputCommandInteraction) {
+      const safeOptions = { ...opts };
+      delete (safeOptions as any).flags;
+
       if (this.interaction.replied) {
-        return this.interaction.followUp(
-          Object.assign(opts, {
-            withResponse: true,
-          }) as InteractionReplyOptions,
-        );
+        return this.interaction.followUp(safeOptions as InteractionReplyOptions);
       }
+
       if (this.interaction.deferred) {
-         // @ts-ignore
-        return this.interaction.editReply(
-          Object.assign(opts, {
-            withResponse: true,
-          }) as InteractionReplyOptions,
-        );
+        return this.interaction.editReply(safeOptions as InteractionEditReplyOptions);
       }
-      return this.interaction.reply(
-        Object.assign(opts, { withResponse: true }) as InteractionReplyOptions,
-      );
+
+      return this.interaction.reply(opts as InteractionReplyOptions);
     }
+
     if (this.interaction instanceof Message) {
       return this.interaction.reply(opts as BaseMessageOptions);
     }
+
+    return Promise.reject(new Error("Unsupported interaction type"));
   }
 
   public get subCommand(): string | boolean {
