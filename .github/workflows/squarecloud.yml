@@ -1,0 +1,48 @@
+name: ☁️ Deploy (Square Cloud)
+
+on:
+  push:
+    branches:
+      - SoulKitten
+
+jobs:
+  publish-production:
+    name: Publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Create squarecloud.config
+        run: |
+          echo "DISPLAY_NAME=SoulKitten" > squarecloud.config
+          echo "MAIN=build/main.js" >> squarecloud.config
+          echo "VERSION=recommended" >> squarecloud.config
+          echo "MEMORY=1024" >> squarecloud.config
+          echo "AUTORESTART=true" >> squarecloud.config
+          echo "DESCRIPTION=Nothing to say about this app" >> squarecloud.config
+          echo "START=npm run start" >> squarecloud.config
+
+      - name: Create .env file from secrets
+        run: |
+          echo "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }}" > .env
+          echo "GEMINI_TOKEN=${{ secrets.GEMINI_TOKEN }}" >> .env
+          echo "MONGO_URL=${{ secrets.MONGO_URL }}" >> .env
+
+      - name: Setup Square Cloud
+        uses: squarecloudofc/github-action@v2
+        with:
+          command: commit ${{ secrets.SQUARE_APPLICATION_ID }} --restart
+          token: '${{ secrets.SQUARE_TOKEN }}'
