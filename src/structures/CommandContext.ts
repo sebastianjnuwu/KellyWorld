@@ -2,6 +2,7 @@ import {
   ChatInputCommandInteraction,
   type Guild,
   type GuildMember,
+  type InteractionEditReplyOptions,
   type InteractionReplyOptions,
   Message,
   type BaseMessageOptions,
