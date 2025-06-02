@@ -37,6 +37,7 @@ export default class CommandContext {
         );
       }
       if (this.interaction.deferred) {
+         // @ts-ignore
         return this.interaction.editReply(
           Object.assign(opts, {
             withResponse: true,
