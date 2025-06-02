@@ -1,10 +1,11 @@
-import type { Awaitable, ChatInputApplicationCommandData } from "discord.js";
+import type { Awaitable, ChatInputApplicationCommandData, ChatInputCommandInteraction, Message } from "discord.js";
 import type { SoulKitten } from "./Client";
 import i18next, { type TFunction } from "i18next";
 import type CommandContext from "./CommandContext";
 
 interface ExecuteOptions {
   context: CommandContext;
+  interaction: ChatInputCommandInteraction | Message;
   client: SoulKitten;
   lang: TFunction;
 }
