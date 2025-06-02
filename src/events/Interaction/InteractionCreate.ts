@@ -19,17 +19,17 @@ export default new Event(
 
       if (!command) return;
 
-      let l: TFunction | undefined;
+      let lang: TFunction | undefined;
 
       switch (null) {
         case "pt-BR":
-          l = i18next.getFixedT("pt-BR");
+          lang = i18next.getFixedT("pt-BR");
           break;
         case "en-US":
-          l = i18next.getFixedT("en-US");
+          lang = i18next.getFixedT("en-US");
           break;
         default:
-          l = i18next.getFixedT("en-US");
+          lang = i18next.getFixedT("en-US");
       }
 
       if (
@@ -46,7 +46,7 @@ export default new Event(
         context,
         client,
         interaction,
-        l,
+        lang,
       });
     }
   },
