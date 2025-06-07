@@ -41,6 +41,7 @@ export class SoulKitten extends Client {
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.DirectMessages,
         GatewayIntentBits.GuildVoiceStates,
       ],
       presence: {
