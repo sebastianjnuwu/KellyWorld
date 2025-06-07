@@ -15,7 +15,7 @@ const model = genAI.getGenerativeModel({
 const chat = model.startChat({ history: [] });
 
 export default new Event("messageCreate", async (message) => {
-  if (!message.inGuild()) return;
+  if (message.inGuild()) return;
   if (!message.content.startsWith("SoulKitten")) return;
 
   const prompt = message.content.replace("SoulKitten", "").trim();
