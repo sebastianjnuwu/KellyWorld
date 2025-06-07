@@ -16,9 +16,9 @@ const chat = model.startChat({ history: [] });
 
 export default new Event("messageCreate", async (message) => {
   if (!message.inGuild()) return;
-  if (!message.content.startsWith("Kelly")) return;
+  if (!message.content.startsWith("SoulKitten")) return;
 
-  const prompt = message.content.replace("Kelly", "").trim();
+  const prompt = message.content.replace("SoulKitten", "").trim();
   await message.channel.sendTyping();
 
   const result = await chat.sendMessage(prompt);
