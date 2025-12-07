@@ -61,9 +61,9 @@ export class SoulKitten extends Client {
   }
 
   async loadEvents() {
-    const readDirRecursively = async (dir) => {
+    const readDirRecursively = async (dir: string): Promise<string[]> => {
       const files = await fs.readdir(dir, { withFileTypes: true });
-      let eventFiles = [];
+      let eventFiles: string[] = [];
 
       for (const file of files) {
         const fullPath = path.join(dir, file.name);
