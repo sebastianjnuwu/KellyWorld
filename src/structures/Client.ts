@@ -36,7 +36,7 @@ export class SoulKitten extends Client {
         status: "idle",
         activities: [
           {
-            name: "SoulKitten",
+            name: "🎮 Jogando na caBRAPI.",
             type: ActivityType.Listening,
           },
         ],
