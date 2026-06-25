@@ -4,6 +4,6 @@ import chalk from "chalk";
 
 export default new Event("clientReady", () => {
   console.log(
-    `• Logged in as: ${chalk.blue(`${Client.user?.username ?? "unknown"} (${Client.user?.id ?? "unknown"})`)}`,
+    `[Events] Logged in as: ${chalk.blue(`${Client.user?.username ?? "unknown"} (${Client.user?.id ?? "unknown"})`)}`,
   );
 });

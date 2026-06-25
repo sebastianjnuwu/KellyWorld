@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "rootDir": ".",
+    "ignoreDeprecations": "6.0",
     "lib": ["ESNext"],
     "module": "commonjs",
     "moduleResolution": "node",
@@ -18,6 +20,5 @@
     "resolveJsonModule": true,
     "importHelpers": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "include": ["src", "!node_modules"],
 }
