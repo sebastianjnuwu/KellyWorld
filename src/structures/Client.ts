@@ -83,7 +83,7 @@ export class SoulKitten extends Client {
       console.log("[Database] Connected successfully.");
     } catch (error) {
       console.error("[Database] Error connecting:", error);
-      process.exit(1); 
+      process.exit(1);
     }
   }
 
@@ -106,7 +106,7 @@ export class SoulKitten extends Client {
     };
 
     const eventFiles = await readDirRecursively(
-      path.join(__dirname, "../events")
+      path.join(__dirname, "../events"),
     );
 
     for (const file of eventFiles) {
